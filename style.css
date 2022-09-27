@@ -148,14 +148,9 @@ p {
     height: 80vh;
 }
 
-.g-img:nth-child(1) {
+.g-img {
     transform-origin: top center;
-    transform: perspective(1000px) rotateX(-90deg);
-}
-
-.g-img:nth-child(2), .g-img:nth-child(3) {
-    transform-origin: bottom center;
-    transform: perspective(1000px) rotateX(-90deg);
+    /* transform: perspective(1000px) rotateX(-90deg); */
 }
 
 .g-img {
