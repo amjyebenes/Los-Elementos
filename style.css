@@ -31,7 +31,7 @@ body {
     font-family: 'Reem Kufi Ink', sans-serif;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Newake';
     font-weight: lighter;
 }
@@ -117,6 +117,8 @@ p {
     width: 10%;
     font-size: 1.1rem;
     text-align: center;
+    position: relative;
+    top: -2px;
 }
 
 .left-nav, .right-nav {
@@ -248,4 +250,48 @@ p {
     width: 100%;
     height: 100vh;
     padding: 0 5vw !important;
+}
+
+.event-title {
+    width: 100%;
+}
+
+.vid-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 5rem;
+    mix-blend-mode: overlay;
+}
+
+.s2-vid-con {
+    position: relative;
+    transform-origin: top center;
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.event-location, .event-location-pin {
+    color: #FF6701;
+}
+
+.event-date {
+    color: rgb(71, 71, 71);
+}
+
+.buy-button {
+    padding: 10px;
+    background: #ff7f2a;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.buy-button:hover {
+    background: #FEA82F;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
