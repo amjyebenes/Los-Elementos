@@ -8,29 +8,18 @@ window.onload = (e) => {
             window.scrollTo(0, 0);
         }
     }
+    checkWidth();
 }
+
+const sizeObserver = new ResizeObserver(entries => {
+    entries.forEach(e => {
+        checkWidth();
+    });
+});
+sizeObserver.observe(document.body);
 
 const navBar = document.querySelector('.nav-bar');
 const navBarLine = document.querySelector('.nav-bar-line');
-
-window.addEventListener('scroll', e => {
-    if (scrollY > 0) {
-        navBar.style.color = "black";
-        navBar.style.backdropFilter = "blur(5px)";
-        navBar.style.background = "rgb(252, 236, 221, .8)";
-        navBarLine.style.height = "1px";
-        navBarLine.style.bottom = "0";
-        // navBar.style.opacity = .8;
-    }
-    else {
-        navBar.style.color = "#FCECDD";
-        // navBar.style.opacity = 1;
-        navBar.style.backdropFilter = "none";
-        navBar.style.background = "rgb(252, 236, 221, 0)";
-        navBarLine.style.height = "0px";
-        navBarLine.style.bottom = "20vh";
-    }
-})
 
 // PARALLAX
 const homeBG = document.querySelector('.intro-img');
@@ -45,7 +34,7 @@ const moveBG = (e) => {
         homeBG.style.transform = `translateY(${scrollY * 0.2}px`;
     }
 }
-window.addEventListener('scroll', moveBG);
+
 
 const textTrack = document.querySelector('.text-track');
 const moveText = (e)=> {
@@ -55,7 +44,7 @@ const moveText = (e)=> {
     textTrack.style.transform = `translate3d(${mouseX - 50}px, ${mouseY - 50}px, 0)`;
 }
 
-window.addEventListener('mousemove', moveText);
+
 
 // IMG HOVER
 const imgs = document.querySelectorAll('.g-img');
@@ -90,4 +79,36 @@ observer.observe(video);
 function showVideo() {
     video.style.transform = "perspective(1000px) rotateX(0)";
     video.style.opacity = 1;
+}
+
+document.querySelector('.navbar-toggler').addEventListener('click', function (e) {
+    console.log('The button was clicked!');
+    e.stopPropagation();
+});
+
+function checkWidth() {
+    if (window.innerWidth >= 992) {
+        window.addEventListener('scroll', e => {
+            if (scrollY > 0) {
+                navBar.style.color = "black";
+                navBar.style.backdropFilter = "blur(5px)";
+                navBar.style.background = "rgb(252, 236, 221, .8)";
+                navBarLine.style.height = "1px";
+                navBarLine.style.bottom = "0";
+                // navBar.style.opacity = .8;
+            }
+            else {
+                navBar.style.color = "#FCECDD";
+                // navBar.style.opacity = 1;
+                navBar.style.backdropFilter = "none";
+                navBar.style.background = "rgb(252, 236, 221, 0)";
+                navBarLine.style.height = "0px";
+                navBarLine.style.bottom = "20vh";
+            }
+        });
+
+        window.addEventListener('scroll', moveBG);
+
+        window.addEventListener('mousemove', moveText);
+    }
 }
