@@ -72,18 +72,16 @@ const conTextTrackP = document.querySelector('.con-textTrackP');
 // VIDEO SHOW-OFF OBSERVER (Desktop)
 const video = document.querySelector(".s2-vid-con");
 var observer = new IntersectionObserver(function(e) {
-    // if(entries[0].isIntersecting === true)
-    //     console.log('Element has just become visible in screen');
-    //     setTimeout(showVideo, 200);
     if (e[0].intersectionRatio > 0) {
         console.log('Element has just become visible in screen');
         setTimeout(showVideo, 100);
     } 
 }, { threshold: [1] });
 
-observer.observe(video);
+observer.observe(document.querySelector(".s2-b-line"));
 
 function showVideo() {
+    console.log("Video Showed");
     video.style.transform = "perspective(1000px) rotateX(0)";
     video.style.opacity = 1;
 }
