@@ -149,23 +149,17 @@ p, a {
 
 .navbar-toggler > div {
     background-color: black;
-    height: 2px;
+    height: 1px;
     width: 100%;
     border-radius: 5px;
     transition: all .5s;
     transform-origin: left;
+    opacity: 1;
 }
 
-.navbar-toggler:hover div:first-child {
-    transform: rotate(45deg);
-}
-
-.navbar-toggler:hover div:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggler:hover div:nth-child(3) {
-    transform: rotate(-45deg);
+.nav-link {
+    font-size: 1.5rem !important;
+    border-bottom: .5px solid black;
 }
 
 /* END BOOTSTRAP NAVBAR */
@@ -259,6 +253,7 @@ p, a {
     border-left: none;
     border-right: none;
     background: none;
+    font-size: 1.2rem !important;
 }
 
 .search-bar:focus {
