@@ -2,7 +2,11 @@
 // Typography
 // 
 
-$font-family-sans-serif: "Lato",
+@import './fuenteNewake';
+@import './fuenteReemKufi';
+
+$font-family-sans-serif: "Reem Kufi",
+"Lato",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -16,7 +20,7 @@ sans-serif,
 "Segoe UI Symbol",
 'Noto Color Emoji';
 
-$headings-font-family: "Montserrat",
+$headings-font-family: "Newake",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
