@@ -56,7 +56,7 @@
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-bg-rgb: 252, 236, 221;
   --bs-font-sans-serif: "Reem Kufi", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -65,7 +65,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #FCECDD;
   --bs-border-width: 0.125rem;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -606,7 +606,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #FCECDD;
   border: 0.125rem solid var(--bs-border-color);
   border-radius: 0rem;
   max-width: 100%;
@@ -2005,7 +2005,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #FCECDD;
   background-clip: padding-box;
   border: 0.125rem solid #ced4da;
   appearance: none;
@@ -2025,7 +2025,7 @@ progress {
 }
 .form-control:focus {
   color: #212529;
-  background-color: #fff;
+  background-color: #FCECDD;
   border-color: #ffb380;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
@@ -2153,7 +2153,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #FCECDD;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2233,7 +2233,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #FCECDD;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2339,10 +2339,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
+  box-shadow: 0 0 0 1px #FCECDD, 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
+  box-shadow: 0 0 0 1px #FCECDD, 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -3603,7 +3603,7 @@ textarea.form-control-lg {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-color: black;
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
   --bs-nav-link-disabled-color: #6c757d;
   display: flex;
@@ -3642,8 +3642,8 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-radius: 0rem;
   --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
   --bs-nav-tabs-link-active-color: #495057;
-  --bs-nav-tabs-link-active-bg: #fff;
-  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
+  --bs-nav-tabs-link-active-bg: #FCECDD;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #FCECDD;
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 .nav-tabs .nav-link {
@@ -4327,7 +4327,7 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: #fff;
+  --bs-accordion-bg: #FCECDD;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 0.125rem;
@@ -11032,7 +11032,7 @@ html {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #FEA82F;
-  color: #fff;
+  color: #000;
 }
 
 .copyright {
