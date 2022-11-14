@@ -10888,6 +10888,9 @@ html {
 #mainNav .navbar-brand {
   color: #fff;
 }
+#mainNav .navbar-botones {
+  font-family: "Reem Kufi", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 #mainNav .navbar-nav {
   margin-top: 2rem;
 }

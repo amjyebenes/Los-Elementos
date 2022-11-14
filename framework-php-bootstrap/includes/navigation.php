@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto navbar-botones">
                 <li class="nav-item dropdown">
                     <a class="nav-link py-3 px-0 px-lg-3  dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
