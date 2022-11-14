@@ -9918,34 +9918,16 @@ html {
   color: #6c757d;
 }
 
-.masthead {
-  padding-top: calc(1rem + 54px);
-  padding-bottom: 1rem;
-}
-.masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
-}
-.masthead .masthead-subheading {
-  font-size: 1.25rem;
-}
-.masthead .masthead-avatar {
-  width: 15rem;
+.navbar a {
+  text-decoration: none;
+  color: #291F1F;
+  font-weight: lighter;
 }
 
-@media (min-width: 992px) {
-  .masthead {
-    padding-top: calc(1rem + 104px);
-    padding-bottom: 1rem;
-  }
-  .masthead .masthead-heading {
-    font-size: 4rem;
-    line-height: 3.5rem;
-  }
-  .masthead .masthead-subheading {
-    font-size: 1.5rem;
-  }
+.navbar .nav-item {
+  text-transform: capitalize;
 }
+
 .portfolio .portfolio-item {
   cursor: pointer;
   position: relative;
