@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="col-auto text-center">
-                <a class="navbar-brand p-0 m-0" href="index.php">Start Bootstrap</a>
+                <a class="navbar-brand p-0 m-0" href="index.php">Eletickets</a>
             </div>
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
