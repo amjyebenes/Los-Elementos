@@ -209,11 +209,11 @@ sup {
 }
 
 a {
-  color: #FF6701;
-  text-decoration: underline;
+  color: #291F1F;
+  text-decoration: none;
 }
 a:hover {
-  color: #cc5201;
+  color: #FEA82F;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2667,7 +2667,6 @@ textarea.form-control-lg {
   line-height: 1.5;
   color: #212529;
   text-align: center;
-  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
@@ -3137,11 +3136,11 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #FF6701;
-  text-decoration: underline;
+  color: #291F1F;
+  text-decoration: none;
 }
 .btn-link:hover {
-  color: #cc5201;
+  color: #FEA82F;
 }
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
@@ -3424,7 +3423,6 @@ textarea.form-control-lg {
   font-weight: 400;
   color: #212529;
   text-align: inherit;
-  text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
@@ -3600,7 +3598,6 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   color: black;
-  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3609,7 +3606,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #cc5201;
+  color: #FEA82F;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -3710,7 +3707,6 @@ textarea.form-control-lg {
   padding-bottom: -0.0625rem;
   margin-right: 1rem;
   font-size: calc(1.3rem + 0.6vw);
-  text-decoration: none;
   white-space: nowrap;
 }
 @media (min-width: 1200px) {
@@ -4315,8 +4311,7 @@ textarea.form-control-lg {
 .page-link {
   position: relative;
   display: block;
-  color: #FF6701;
-  text-decoration: none;
+  color: #291F1F;
   background-color: #fff;
   border: 0.125rem solid #dee2e6;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4328,13 +4323,13 @@ textarea.form-control-lg {
 }
 .page-link:hover {
   z-index: 2;
-  color: #cc5201;
+  color: #FEA82F;
   background-color: #e9ecef;
   border-color: #dee2e6;
 }
 .page-link:focus {
   z-index: 3;
-  color: #cc5201;
+  color: #FEA82F;
   background-color: #e9ecef;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(255, 103, 1, 0.25);
@@ -4603,7 +4598,6 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   color: #212529;
-  text-decoration: none;
   background-color: #fff;
   border: 0.125rem solid rgba(0, 0, 0, 0.125);
 }
@@ -9836,9 +9830,30 @@ html {
   align-items: center;
 }
 
+.navbar {
+  text-decoration: none;
+  color: #291F1F;
+  font-weight: lighter;
+  background: rgba(252, 236, 221, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.navbar a {
+  font-weight: lighter;
+}
+
+.navbar .nav-item {
+  text-transform: capitalize;
+}
+
+.navbar .nav-line {
+  width: 100%;
+  height: 0.5px;
+  background: #291F1F;
+  margin-top: 0.5rem;
+}
+
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   font-family: "Newake", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
@@ -9873,8 +9888,6 @@ html {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
@@ -9916,16 +9929,6 @@ html {
 .form-floating label {
   font-size: 1.5rem;
   color: #6c757d;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #291F1F;
-  font-weight: lighter;
-}
-
-.navbar .nav-item {
-  text-transform: capitalize;
 }
 
 .portfolio .portfolio-item {
