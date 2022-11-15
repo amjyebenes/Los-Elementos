@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse row justify-content-between align-items-center" id="navbarResponsive">
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
-                    <li class="nav-item"><a href="">Conciertos</a></li>
+                    <li class="nav-item"><a href="conciertos.php">Conciertos</a></li>
                     <li class="nav-item"><a href="">Festivales</a></li>
                     <li class="nav-item"><a href="">Merch</a></li>
                 </ul>
