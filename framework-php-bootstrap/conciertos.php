@@ -13,17 +13,20 @@
 <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-left text-uppercase text-black fw-light mb-0">Conciertos</h2>
+            <h2 class="text-left text-uppercase text-black fw-light mb-0">Conciertos</h2>
             <!-- Icon Divider-->
         </div>
 </section>
 <section>
-    <div class="card" style="background-color:orangered; border-color:darkblue;">
-      <img class="card-img-top" src="holder.js/100x180/" alt="Title">
-      <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                aqui va la imagen
+            </div>
+            <div class="col-8">
+                <h3>Cruz cafune</h3>
+            </div>
+        </div>
     </div>
 
 </section>
