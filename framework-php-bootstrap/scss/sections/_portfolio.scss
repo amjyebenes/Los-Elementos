@@ -10,6 +10,10 @@
         max-width: 25rem;
         border-radius: $border-radius;
         overflow: hidden;
+        padding-left: $margenLateral;
+        padding-right: $margenLateral;
+        padding-top: $margenVertical;
+        padding-bottom: $margenVertical;
 
         .portfolio-item-caption {
             position: absolute;
