@@ -8,6 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: $margenLateral;
+    padding-right: $margenLateral;
+    padding-top: $margenVertical;
+    padding-bottom: $margenVertical;
 
     .divider-custom-line {
         width: 100%;
