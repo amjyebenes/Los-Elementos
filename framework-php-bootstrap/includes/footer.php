@@ -11,7 +11,7 @@
                 <!-- Footer Contacto-->
                 <div class="col-lg-6 col-sm-8 col-8 d-flex gap-2 justify-content-end align-items-center">
                     <span>
-                        <p class="m-0 pe-3">© Copyrigth - The Elements - 2022</p>
+                        <p class="m-0 pe-3">© Copyright - The Elements - 2022</p>
                     </span>
                     <span>                        
                         <p class="m-0">Contacto +34 922 928 789</p>
