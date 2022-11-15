@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<?php include("includes/design-top.php");?>
+<!-- <?php include("includes/design-top.php");?> -->
 <?php include("includes/navigation.php");?>
 <main>
 <!-- Portfolio Section-->
