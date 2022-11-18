@@ -18,8 +18,8 @@
 }
 
 .navbar .nav-line {
-    width: 100%;
-    height: .5px;
+    width: 100% !important;
+    height: .5px !important;
     background: $mydark;
     margin-top: $navbar-padding-y;
 }
