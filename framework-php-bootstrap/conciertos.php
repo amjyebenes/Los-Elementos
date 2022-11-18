@@ -14,6 +14,7 @@
             <!-- Portfolio Section Heading-->
             <h2 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h2>
             <!-- Icon Divider-->
+            <div class="nav-line"></div>
         </div>
 </section>
 

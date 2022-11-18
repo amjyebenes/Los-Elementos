@@ -10895,7 +10895,7 @@ html {
 
 .navbar .nav-line {
   width: 100% !important;
-  height: 0.5px !important;
+  height: 1px !important;
   background: #291F1F;
   margin-top: 0.5rem;
 }
