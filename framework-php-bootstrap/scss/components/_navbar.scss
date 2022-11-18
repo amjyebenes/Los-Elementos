@@ -5,8 +5,11 @@
     text-decoration: none;
     color: $mydark;
     font-weight: lighter;
-    background: $mynavbg;
+}
+
+.navbar.active {
     backdrop-filter: blur(5px);
+    background: $mynavbg;
 }
 
 .navbar a {
