@@ -9771,6 +9771,8 @@ html {
 
 .page-section {
   padding: 6rem 0;
+  position: relative;
+  z-index: 10;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -9853,8 +9855,11 @@ html {
   text-decoration: none;
   color: #291F1F;
   font-weight: lighter;
-  background: rgba(252, 236, 221, 0.8);
+}
+
+.navbar.active {
   backdrop-filter: blur(5px);
+  background: rgba(252, 236, 221, 0.8);
 }
 
 .navbar a {
@@ -10007,6 +10012,42 @@ html {
 
 .copyright {
   background-color: #f99201;
+}
+
+.home-heading .main-title {
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  color: #FCECDD;
+}
+
+.home-heading {
+  height: 65vh;
+  overflow: hidden;
+}
+
+.home-heading .intro-img {
+  position: fixed !important;
+  bottom: 35vh !important;
+  top: auto !important;
+  display: block !important;
+  transform: translateY(0px) !important;
+}
+
+.home-heading .brand-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  letter-spacing: 0.8rem;
+  transform-origin: bottom center;
+  transform: perspective(1000px) scaleY(1.5) rotateX(20deg);
+  filter: sepia(1);
+}
+
+.home-heading .from {
+  font-size: 0.8rem;
+  margin-bottom: 2vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
