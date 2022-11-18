@@ -6,20 +6,17 @@
 </head>
 <body>
 
-<?php include("includes/design-top.php");?>
 <?php include("includes/navigation.php");?>
-<main>
+<main class="fondoContacto">
 <!-- Contact Section-->
 <section class="page-section" id="contact">
         <div class="container">
-            <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
+            <!-- Icon -->
+            <div class="w-50 mx-auto text-light my-3 text-center">
+                <div class="sizeIcono mx-auto bg-info p-4"><i class="fa-solid fa-info fs-1"></i></div>
             </div>
+            <!-- Contact Section Heading-->
+            <h2 class=" text-uppercase text-light mb-0 shadowText">Contacta con nosotros</h2>
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
