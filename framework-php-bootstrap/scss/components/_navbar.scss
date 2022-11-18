@@ -5,8 +5,11 @@
     text-decoration: none;
     color: $mydark;
     font-weight: lighter;
-    background: $mynavbg;
+}
+
+.navbar.active {
     backdrop-filter: blur(5px);
+    background: $mynavbg;
 }
 
 .navbar a {
@@ -18,8 +21,8 @@
 }
 
 .navbar .nav-line {
-    width: 100%;
-    height: .5px;
+    width: 100% !important;
+    height: 1px !important;
     background: $mydark;
     margin-top: $navbar-padding-y;
 }
