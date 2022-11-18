@@ -11022,8 +11022,9 @@ html {
 }
 
 .footer {
-  padding-top: 5rem;
+  /*padding-top: 5rem;
   padding-bottom: 5rem;
+  */
   background-color: #291F1F;
   color: #FF6701;
   padding-left: 2vh;
