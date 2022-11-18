@@ -5,21 +5,20 @@
 	<?php include("includes/head-tag-contents.php");?>
 </head>
 <body>
-
-<!-- <?php include("includes/design-top.php");?> -->
 <?php include("includes/navigation.php");?>
 <main>
 <!-- Portfolio Section-->
-<section class="page-section portfolio" id="portfolio">
+<section class="home-heading position-relative">
+    <!-- THE ELEMENS TITLE -->
+    <div class="main-title position-absolute w-100">
+        <p class="brand-title from text-center">From</p>
+        <p class="brand-title text-center">The Elements</p>
+    </div>
+    <!-- INTRO SECTION BACKGROUND -->
+    <img src="assets/img/bg01.jpg" alt="" class="intro-img img-fluid">
+</section>
+<section class="page-section portfolio bg-secondary" id="portfolio">
         <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-black fw-light mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
                 <!-- Portfolio Item 1-->

@@ -1,0 +1,35 @@
+.home-heading .main-title {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    color: #FCECDD;
+}
+
+.home-heading {
+    height: 65vh;
+    overflow: hidden;
+}
+
+.home-heading .intro-img {
+    position: fixed !important;
+    bottom: 35vh !important;
+    top: auto !important;
+    display: block !important;
+    transform: translateY(0px) !important;
+}
+
+.home-heading .brand-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    letter-spacing: .8rem;
+    transform-origin: bottom center;
+    transform: perspective(1000px) scaleY(1.5) rotateX(20deg);
+    filter: sepia(1);
+}
+
+.home-heading .from {
+    font-size: .8rem;
+    margin-bottom: 2vh;
+}
