@@ -23,12 +23,12 @@
 <section>
     <div class="container mb-4">
         <div class="row">
-            <div class="col-4">
+            <div class="col-3">
                 <div class="shadow">
                   <img class="shadow-lg card-img " src="./assets/img/cruzzi.jpg" alt="Title">
                 </div>
             </div>
-            <div class="col-8 d-flex flex-column">
+            <div class="col-6 d-flex flex-column">
                 <div class="row">
                     <h3 class="text-primary">Cruz Cafuné</h3>
                 </div>
@@ -50,12 +50,24 @@
                         </h6>   
                     </div>
                 </div>
+            </div>
+            <div class="col-1 d-flex align-items-end">
                 <div class="row">
-                    <div class="col-4" >
-                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                    <div class="col">
+                        <i class="fas fa-arrow-alt-circle-up"></i>
+                        <i class="fas fa-arrow-alt-circle-down"></i>
+                    </div>
+                    <div class="col">
+                       <div class="text-center" style="border:1px solid orange;">
+                            0
+                       </div>
                     </div>
                 </div>
-                
+            </div>
+            <div class="col-2 d-flex align-items-end">
+                    <div class="col" >
+                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                    </div>
             </div>
             
         </div>
