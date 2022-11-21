@@ -12,7 +12,7 @@
 <section class="position-relative p-5 mt-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h4 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h4>
+            <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
             <!-- Icon Divider-->
         </div>
         <div class="nav navbar container">
@@ -30,7 +30,7 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h3 class="text-primary">Cruz Cafuné</h3>
+                    <h2 class="text-primary fw-bold">Cruz Cafuné</h2>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -86,7 +86,7 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h3 class="text-primary">SFDK</h3>
+                    <h2 class="text-primary fw-bold">SFDK</h2>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -143,7 +143,7 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h3 class="text-primary">Vetus Morla</h3>
+                    <h2 class="text-primary fw-bold">Vetus Morla</h2>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -200,7 +200,7 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h3 class="text-primary">Boris Brejcha</h3>
+                    <h2 class="text-primary fw-bold">Boris Brejcha</h2>
                 </div>
                 <div class="row">
                     <div class="col">

@@ -4,7 +4,7 @@
 
 @import './fonts'; 
 
-$font-family-sans-serif: "Reem Kufi",
+$textonormal: "Reem Kufi",
 "Lato",
 -apple-system,
 BlinkMacSystemFont,
@@ -19,7 +19,7 @@ sans-serif,
 "Segoe UI Symbol",
 'Noto Color Emoji';
 
-$headings-font-family: "Newake",
+$titulo: "Newake",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -33,6 +33,15 @@ sans-serif,
 "Segoe UI Symbol",
 'Noto Color Emoji';
 
-$headings-font-weight: 700;
+$titulo-weight: 700;
 $font-size-base: 1rem;
 $font-size-lg:                $font-size-base * 1.75;
+
+
+h1{
+    font-family: $titulo;
+}
+h2,h3,h4,h5,h6{
+    font-family: $textonormal;
+
+}
