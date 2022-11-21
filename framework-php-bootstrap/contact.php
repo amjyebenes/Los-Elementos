@@ -21,7 +21,11 @@
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                <div class="col-12">
-                
+                    <form class="row text-ligth">
+                        <input class="col-lg-4" type="text" value="Nombre" name="nombre">
+                        <input class="col-lg-4" type="text" value="Email" name="email">
+                        <input class="col-lg-4" type="text" value="Nº Pedido (Opcional)" name="nPedido">
+                    </form>
                 </div>
             </div>
         </div>
