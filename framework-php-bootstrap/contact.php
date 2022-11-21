@@ -4,7 +4,7 @@
 <head>
 	<?php include("includes/head-tag-contents.php");?>
 </head>
-<body>
+<body class="altoForm">
 
 <?php include("includes/navigation.php");?>
 <main class="fondoContacto">
@@ -12,11 +12,12 @@
 <section class="page-section" id="contact">
         <div class="container">
             <!-- Icon -->
-            <div class="w-50 mx-auto text-light my-3 text-center">
-                <div class="sizeIcono mx-auto bg-info p-4"><i class="fa-solid fa-info fs-1"></i></div>
+            <div class="w-25 mx-auto text-light my-3 text-center">
+                <div><i class="fa-solid fa-info fs-1 bg-info roundedIcon px-4 py-3"></i></div>
             </div>
             <!-- Contact Section Heading-->
             <h2 class=" text-uppercase text-light mb-0 shadowText">Contacta con nosotros</h2>
+
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">

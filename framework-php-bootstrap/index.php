@@ -19,17 +19,6 @@
 </section>
 <section class="page-section portfolio bg-secondary" id="portfolio">
         <div class="container">
-<<<<<<< HEAD
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-black fw-light mb-0">Portfolio</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fa-solid fa-info"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-=======
->>>>>>> 05a63fbf25aae01f8c26bae4325f04b27defd4d5
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
                 <!-- Portfolio Item 1-->

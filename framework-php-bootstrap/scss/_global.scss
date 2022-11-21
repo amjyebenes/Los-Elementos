@@ -30,21 +30,3 @@ html {
         }
     }
 }
-
-// Clase de fondo para página de Contacto
-.fondoContacto{
-    background-image: url('../assets/img/pexels-picjumbocom-196652.jpg');
-    background-size: cover;
-}
-
-// Clase que dará tamaño a la caja del icono de contacto y un border radius específico
-.sizeIcono{
-    width: 16%;
-    height: auto;
-    border-radius: 30%;
-}
-
-// Clase para dar sombra al titulo de contactos
-.shadowText{
-    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
-}
