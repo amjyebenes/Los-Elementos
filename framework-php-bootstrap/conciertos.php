@@ -30,11 +30,11 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h2 class="text-primary fw-bold">Cruz Cafuné</h2>
+                    <p class="h2 text-primary fw-bold tituloArtista">Cruz Cafuné</p>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h5>22 · OCT · 2022<h5>
+                        <p class="h5 tituloArtista">22 · OCT · 2022</p>
                     </div>
                 </div>
                 <div class="row">
@@ -86,11 +86,11 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h2 class="text-primary fw-bold">SFDK</h2>
+                    <p class="h2 text-primary fw-bold tituloArtista">SFDK</p>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h5>11 · NOV · 2022<h5>
+                        <p class="h5 tituloArtista">11 · NOV · 2022</p>
                     </div>
                 </div>
                 <div class="row">
@@ -143,11 +143,11 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h2 class="text-primary fw-bold">Vetus Morla</h2>
+                    <p class="h2 text-primary fw-bold tituloArtista">Vetus Morla</p>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h5>09 · DIC · 2022<h5>
+                        <p class="h5 tituloArtista">09 · DIC · 2022</p>
                     </div>
                 </div>
                 <div class="row">
@@ -200,11 +200,11 @@
             </div>
             <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h2 class="text-primary fw-bold">Boris Brejcha</h2>
+                    <p class="h2 text-primary fw-bold tituloArtista">Boris Brejcha</p>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h5>22 · OCT · 2022<h5>
+                        <p class="h5 tituloArtista">22 · FEB · 2023</p>
                     </div>
                 </div>
                 <div class="row">
