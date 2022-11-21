@@ -9785,14 +9785,17 @@ html {
   }
 }
 
+.altoForm {
+  height: 100vh;
+}
+
 .fondoContacto {
   background-image: url("../assets/img/pexels-picjumbocom-196652.jpg");
   background-size: cover;
+  z-index: 9;
 }
 
-.sizeIcono {
-  width: 16%;
-  height: auto;
+.roundedIcon {
   border-radius: 30%;
 }
 
