@@ -32,8 +32,11 @@
                             data-sb-validations="required,email" />
                             <label for="pass">Contraseña</label>
                             <!-- Falta el icono para esconder o no la contraseña-->
-                            <div class="invalid-feedback" data-sb-feedback="contraseña:required">Introduzca contraseña</div>
+                            <div class="invalid-feedback" data-sb-feedback="contraseña:required">Introduzca contraseña</div>                            
                         </div>
+
+                        <!-- Div para botón iniciar sesión-->
+                        
                     </form>
                 </div>  
 
