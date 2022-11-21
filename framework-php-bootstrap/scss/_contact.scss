@@ -3,11 +3,15 @@
     height: 100vh;
 }
 
+// Clase para la section
+.page-section-contact{
+    padding: 5rem 0;
+}
+
 // Clase de fondo para página de Contacto
 .fondoContacto{
     background-image: url('../assets/img/pexels-picjumbocom-196652.jpg');
     background-size: cover;
-    z-index: 9;
 }
 
 // Clase que dará tamaño a la caja del icono de contacto y un border radius específico
