@@ -8,10 +8,14 @@
 
 <?php include("includes/navigation.php");?>
 
-    <main>
+    <main class="fondoLogin">
+
 
 
 
     </main> 
+
+<?php include("includes/footer.php");?>
+
 </body>
 </html>
