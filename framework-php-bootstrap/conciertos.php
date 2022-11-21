@@ -12,7 +12,7 @@
 <section class="position-relative p-5 mt-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h4 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h4>
+            <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
             <!-- Icon Divider-->
         </div>
         <div class="nav navbar container">
@@ -28,9 +28,9 @@
                   <img class="shadow-lg card-img " src="./assets/img/cruzzi.jpg" alt="Title">
                 </div>
             </div>
-            <div class="col-6 d-flex flex-column">
+            <div class="col-5 d-flex flex-column">
                 <div class="row">
-                    <h3 class="text-primary">Cruz Cafuné</h3>
+                    <h2 class="text-primary fw-bold">Cruz Cafuné</h2>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -46,25 +46,86 @@
                     <div class="col">
                         <h6 class="text-primary">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                        Malaga - Sala Paris 15
+                        Malaga - Sala Paris 15 
                         </h6>   
                     </div>
                 </div>
             </div>
-            <div class="col-1 d-flex align-items-end">
-                <div class="row">
-                    <div class="col">
-                        <i class="fas fa-arrow-alt-circle-up"></i>
-                        <i class="fas fa-arrow-alt-circle-down"></i>
-                    </div>
-                    <div class="col">
-                       <div class="text-center" style="border:1px solid orange;">
-                            0
+            <div class="col-2 d-flex align-items-end justify-content-end">
+                <div class="row align-items-center">
+                    <div class="col-6 justify-content-center align-items-end pr-3">
+                       <div class="text-center contadorEntrada">
+                            2
                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-6" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-up"></i></button>
+                        </div>
+                        <div class="col-6 mt-2" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end">
+            <div class="col-2 d-flex align-items-end mb-3">
+                    <div class="col" >
+                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-3">
+                <div class="shadow">
+                  <img class="shadow-lg card-img " src="./assets/img/sfdk.jpg" alt="Title">
+                </div>
+            </div>
+            <div class="col-5 d-flex flex-column">
+                <div class="row">
+                    <h2 class="text-primary fw-bold">SFDK</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5>11 · NOV · 2022<h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>VIE - 22:30<h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="text-primary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                        Madrid - WiZink Center
+                        </h6>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-end justify-content-end">
+                <div class="row align-items-center">
+                    <div class="col-6 justify-content-center align-items-end pr-3">
+                       <div class="text-center contadorEntrada">
+                            2
+                       </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-6" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-up"></i></button>
+                        </div>
+                        <div class="col-6 mt-2" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-end mb-3">
                     <div class="col" >
                         <button type="button" class="btn btn-primary">Añadir al carrito</button>
                     </div>
@@ -75,18 +136,118 @@
 
     <div class="container mb-4">
         <div class="row">
-            <div class="col-4">
+            <div class="col-3">
                 <div class="shadow">
-                  <img class="shadow-lg card-img " src="./assets/img/cruzzi.jpg" alt="Title">
+                  <img class="shadow-lg card-img " src="./assets/img/vetustamorla.jpg" alt="Title">
                 </div>
             </div>
-            <div class="col-8">
-                <h3>Cruz cafune</h3>
-                
-            
+            <div class="col-5 d-flex flex-column">
+                <div class="row">
+                    <h2 class="text-primary fw-bold">Vetus Morla</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5>09 · DIC · 2022<h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>SAB - 21:30<h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="text-primary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                        Barcelona - Sala Apolo
+                        </h6>   
+                    </div>
+                </div>
             </div>
+            <div class="col-2 d-flex align-items-end justify-content-end">
+                <div class="row align-items-center">
+                    <div class="col-6 justify-content-center align-items-end pr-3">
+                       <div class="text-center contadorEntrada">
+                            2
+                       </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-6" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-up"></i></button>
+                        </div>
+                        <div class="col-6 mt-2" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-end mb-3">
+                    <div class="col" >
+                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                    </div>
+            </div>
+            
         </div>
     </div>
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-3">
+                <div class="shadow">
+                  <img class="shadow-lg card-img " src="./assets/img/borisbrejcha.jpg" alt="Title">
+                </div>
+            </div>
+            <div class="col-5 d-flex flex-column">
+                <div class="row">
+                    <h2 class="text-primary fw-bold">Boris Brejcha</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5>22 · OCT · 2022<h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>SAB - 21:30<h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="text-primary">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                        Sevilla - Elrow
+                        </h6>   
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-end justify-content-end">
+                <div class="row align-items-center">
+                    <div class="col-6 justify-content-center align-items-end pr-3">
+                       <div class="text-center contadorEntrada">
+                            2
+                       </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="col-6" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-up"></i></button>
+                        </div>
+                        <div class="col-6 mt-2" >
+                            <button class="btn btn-primary botonesFlechas"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-end mb-3">
+                    <div class="col" >
+                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+
 
 </section>
 </main>
