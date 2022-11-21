@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg pb-0 text-uppercase fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg pb-0 text-uppercase fixed-top active" id="mainNav">
     <div class="container">
         <div class="collapse navbar-collapse row justify-content-between align-items-center" id="navbarResponsive">
             <div class="col-4">
@@ -15,7 +15,7 @@
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="">Galería</a></li>
                     <li class="nav-item"><a href="">Términos</a></li>
-                    <li class="nav-item"><a href="">Contacto</a></li>
+                    <li class="nav-item"><a href="contact.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="nav-line position-relative bottom-0"></div>
