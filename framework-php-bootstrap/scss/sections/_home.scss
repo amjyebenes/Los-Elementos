@@ -2,20 +2,31 @@
 // Portfolio
 // 
 
-.portfolio {
-    .portfolio-item {
-        cursor: pointer;
-        position: relative;
-        display: block;
-        max-width: 25rem;
-        border-radius: $border-radius;
-        overflow: hidden;
-        padding-left: $margenLateral;
-        padding-right: $margenLateral;
-        padding-top: $margenVertical;
-        padding-bottom: $margenVertical;
+.home {
+    position: relative;
+    border-top: 1px solid black;
+    background: $bs-primary;
+    padding-top: 5vh !important;
+    max-height: 85vh;
+}
 
-        .portfolio-item-caption {
+.home {
+    .home-item {
+        .home-item-img-con {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-item-img {
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            filter: contrast(.6) saturate(1) hue-rotate(30deg);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .home-item-caption {
             position: absolute;
             top: 0;
             left: 0;
@@ -32,17 +43,21 @@
             }
         }
     }
+
+    .b-line {
+        height: 1px;
+    }
 }
 
 // Styling for the portfolio modals
-.portfolio-modal {
+.home-modal {
     .btn-close {
         color: $primary;
         font-size: 2rem;
         padding: 1rem;
     }
 
-    .portfolio-modal-title {
+    .home-modal-title {
         font-size: 2.25rem;
         line-height: 2rem;
 
