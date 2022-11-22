@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg pb-0 text-uppercase fixed-top active" id="mainNav">
-    <div class="container">
+<nav class="navbar navbar-expand-lg pb-0 text-uppercase fixed-top device-padding active" id="mainNav">
+    <div class="container-fluid">
         <div class="collapse navbar-collapse row justify-content-between align-items-center" id="navbarResponsive">
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="conciertos.php">Conciertos</a></li>
-                    <li class="nav-item"><a href="">Festivales</a></li>
-                    <li class="nav-item"><a href="">Merch</a></li>
+                    <li class="nav-item"><a href="eventos.php">Eventos</a></li>
+                    <li class="nav-item"><a href="">Salas</a></li>
                 </ul>
             </div>
             <div class="col-2 text-center">
@@ -14,11 +14,11 @@
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="">Galería</a></li>
-                    <li class="nav-item"><a href="">Términos</a></li>
                     <li class="nav-item"><a href="contact.php">Contacto</a></li>
+                    <li class="nav-item"><a href="login.php">Login</a></li>
                 </ul>
             </div>
-            <div class="nav-line position-relative bottom-0"></div>
+            <div class="nav-line position-relative bottom-0 col-12"></div>
             <!-- <ul class="navbar-nav ms-auto navbar-botones">
                 <li class="nav-item dropdown">
                     <a class="nav-link py-3 px-0 px-lg-3  dropdown-toggle" href="#" id="navbarDropdown" role="button"
