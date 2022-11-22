@@ -4,8 +4,8 @@
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="conciertos.php">Conciertos</a></li>
-                    <li class="nav-item"><a href="">Festivales</a></li>
-                    <li class="nav-item"><a href="">Merch</a></li>
+                    <li class="nav-item"><a href="eventos.php">Eventos</a></li>
+                    <li class="nav-item"><a href="">Salas</a></li>
                 </ul>
             </div>
             <div class="col-2 text-center">
@@ -14,8 +14,8 @@
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="">Galería</a></li>
-                    <li class="nav-item"><a href="">Términos</a></li>
                     <li class="nav-item"><a href="contact.php">Contacto</a></li>
+                    <li class="nav-item"><a href="login.php">Login</a></li>
                 </ul>
             </div>
             <div class="nav-line position-relative bottom-0"></div>
