@@ -15,7 +15,7 @@
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="">Galería</a></li>
                     <li class="nav-item"><a href="">Términos</a></li>
-                    <li class="nav-item"><a href="">Contacto</a></li>
+                    <li class="nav-item"><a href="contact.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="nav-line position-relative bottom-0"></div>

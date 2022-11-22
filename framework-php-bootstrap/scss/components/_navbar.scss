@@ -30,14 +30,14 @@
 #mainNav {
     // padding-top: 1rem;
     // padding-bottom: 1rem;
-    font-family: $headings-font-family;
-    font-weight: $headings-font-weight;
+    font-family: $titulo;
+    font-weight: $titulo-weight;
 
     .navbar-brand {
         color: $white;
     }
     .navbar-botones{
-        font-family: $font-family-sans-serif;
+        font-family: $textonormal;
     }
 
     .navbar-nav {

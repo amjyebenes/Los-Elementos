@@ -4,7 +4,7 @@
                 <!-- Footer Logo-->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                     <div class="w-75">
-                        <img src="assets/img/portfolio/Logo-web00.png" class="img-fluid">
+                        <img src="assets/img/Logo-web00.png" class="img-fluid">
                     </div>
                 </div>
               
