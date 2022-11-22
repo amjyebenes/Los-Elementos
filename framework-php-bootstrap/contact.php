@@ -12,7 +12,7 @@
 <section class="page-section-contact">
         <div class="container">
             <!-- Icon -->
-            <div class="w-25 mx-auto text-light my-3 text-center">
+            <div class="w-25 mx-auto text-light text-center">
                 <div><i class="fa-solid fa-info fs-2 bg-info roundedIcon px-4 py-3"></i></div>
             </div>
             <!-- Contact Section Heading-->
@@ -20,13 +20,23 @@
 
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
-               <div class="col-12">
-                    <form class="row text-ligth">
-                        <input class="col-lg-4" type="text" value="Nombre" name="nombre">
-                        <input class="col-lg-4" type="text" value="Email" name="email">
-                        <input class="col-lg-4" type="text" value="Nº Pedido (Opcional)" name="nPedido">
-                    </form>
-                </div>
+                <form class="opacidadForm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control bg-light" placeholder="Nombre">
+                        </div>
+                        <div class="col-md-4">            
+                            <input type="text" class="form-control bg-light" placeholder="Email">
+                        </div>
+                        <div class="col-md-4">            
+                            <input type="text" class="form-control bg-light" placeholder="Nº Pedido (Opcional)">
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <input type="text" class="form-control my-3 sizeTextArea bg-light" placeholder="Escribe tu consulta aqui...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
             </div>
         </div>
     </section>
