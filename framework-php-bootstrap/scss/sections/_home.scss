@@ -6,7 +6,6 @@
     position: relative;
     border-top: 1px solid black;
     background: $bs-primary;
-    padding-top: 5vh !important;
     max-height: 85vh;
 }
 
@@ -65,5 +64,44 @@
             font-size: 3rem;
             line-height: 2.5rem;
         }
+    }
+}
+
+.home-child {
+    position: relative;
+    background: $bs-primary;
+
+    .b-line {
+        height: 1px;
+    }
+
+    .video-con {
+        position: relative;
+        transform-origin: top center;
+        transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .video-mark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 5rem;
+        mix-blend-mode: overlay;
+    }
+}
+
+.event {
+    .event-title {
+        width: 100%;
+    }
+    
+    .event-location, .event-location-pin {
+        color: $primary;
+    }
+    
+    .event-date {
+        color: rgb(71, 71, 71);
     }
 }

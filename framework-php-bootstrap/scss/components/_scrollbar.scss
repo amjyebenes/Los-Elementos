@@ -1,0 +1,20 @@
+// 
+// SCROLLBAR
+//
+
+body::-webkit-scrollbar {
+    border: none;
+    width: 8px;
+    background: #FCECDD;
+    z-index: 1;
+    /* display: none; */
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF6701; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff7f2a; 
+}

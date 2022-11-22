@@ -21,3 +21,19 @@
 .btn{
     font-family:$textonormal;
 }
+
+// Usado en Home
+.buy-button {
+    padding: 10px;
+    background: $primary;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        cursor: pointer;
+        background: $secondary;
+        transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
