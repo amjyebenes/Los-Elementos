@@ -35,16 +35,16 @@ sans-serif,
 
 $titulo-weight: 700;
 $font-size-base: 1rem;
-$font-size-lg:                $font-size-base * 1.75;
+$font-size-lg: $font-size-base * 1.75;
 
 
 h1,h2,h3,h4,h5,h6{
     font-family: $titulo;
-
 }
+
 .tituloArtista{
     font-family: $textonormal;
 }
 body{
-    font-family: $textonormal;
+    font-family: $textonormal !important;
 }
