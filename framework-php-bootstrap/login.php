@@ -14,13 +14,14 @@
            <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
             <div class="container">
             <!--Meto el icono fontawesome-->
-            <form action="/action_page.php">
+            <form action="" method="POST">
+                    <div class="d-flex justify-content-center mt-5 ">
+                        <i class="fa-solid fa-user-group fa-6x"></i>
+                    </div>
                     <div class="mb-3 mt-3">
-                    
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                     </div>
-                    <div class="mb-3">
-                    
+                    <div class="mb-3">                    
                         <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pass">
                     </div>
                     <div class="form-check mb-3">
