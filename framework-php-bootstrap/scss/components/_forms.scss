@@ -25,3 +25,16 @@
     }
 
 }
+
+form {
+    .search-bar {
+        width: 100%;
+        border-top: none;
+        border-radius: none;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        background: none;
+        font-size: 1.2rem !important;
+    }
+}
