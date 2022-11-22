@@ -4,38 +4,42 @@
 <head>
 	<?php include("includes/head-tag-contents.php");?>
 </head>
-<body class="altoForm">
-
+<body>
 <?php include("includes/navigation.php");?>
+
 <main class="fondoContacto">
 <!-- Contact Section-->
 <section class="page-section-contact">
         <div class="container">
             <!-- Icon -->
             <div class="w-25 mx-auto text-light text-center">
-                <div><i class="fa-solid fa-info fs-2 bg-info roundedIcon px-4 py-3"></i></div>
+                <div><i class="fa-solid fa-info fs-2 bg-info rounded-4 px-4 py-3"></i></div>
             </div>
             <!-- Contact Section Heading-->
             <h2 class=" text-uppercase text-light my-4 shadowText">Contacta con nosotros</h2>
 
             <!-- Contact Section Form-->
-            <div class="row justify-content-center">
-                <form class="opacidadForm">
+            <div class="row justify-content-center my-4">
+                <form action="" method="POST">
                     <div class="row">
                         <div class="col-md-4">
-                            <input type="text" class="form-control bg-light" placeholder="Nombre">
+                            <input type="text" class="form-control bg-light opacidadForm" placeholder="Nombre">
                         </div>
                         <div class="col-md-4">            
-                            <input type="text" class="form-control bg-light" placeholder="Email">
+                            <input type="text" class="form-control bg-light opacidadForm" placeholder="Email">
                         </div>
                         <div class="col-md-4">            
-                            <input type="text" class="form-control bg-light" placeholder="Nº Pedido (Opcional)">
+                            <input type="text" class="form-control bg-light opacidadForm" placeholder="Nº Pedido (Opcional)">
                         </div>
                     </div>
                     <div class="form-group">                    
-                        <input type="text" class="form-control my-3 sizeTextArea bg-light" placeholder="Escribe tu consulta aqui...">
+                        <textarea class="form-control my-4 py-5 bg-light opacidadForm" placeholder="Escribe tu consulta aqui..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <div class="form-check">
+                        
+                        <input class="form-check-input" type="checkbox" name="remember"><label class="form-check-label text-white shadowText">He leído y acepto la <a href="" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                    </div>
+                    <input type="submit" class="btn btn-outline-secondary rounded-3 text-white px-5 mt-4" placeholder="Enviar">
                 </form>
             </div>
         </div>
