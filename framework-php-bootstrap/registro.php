@@ -8,7 +8,7 @@
 <?php include("includes/navigation.php");?>
             <main class="fondoLogin">
                 <!--Creo la caja grande para almacenar el resto  -->
-                <section class="page-section">
+                <section class="position-relative p-5 mt-5 portfolio mb-0">
                 <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
                         <div class="container d-flex justify-content-center">
                             <div class="row col-6 ">
@@ -16,9 +16,7 @@
                                 <div class="d-flex justify-content-center mt-5 mb-5">
                                     <i class="fa-solid fa-user-plus fa-6x iconoLogin"></i>
                                     
-                                </div>
-
-                                
+                                </div>                               
                                     <div class="mt-5 mb-3">
                                         <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                                     </div>
@@ -38,18 +36,20 @@
                                         <input type="password" class="form-control" id="pwd" placeholder="Repetir Contraseña" name="pswd">
                                     </div>
                                     <div class="form-check mb-3">
-                                        <a class="button" class="text-white" href="terminosYcondiciones.php " target="_blank">Acepto los Términos y Cóndiciones de Uso & Política y Privacidad
+                                    <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                                         <input class="form-check-input" type="checkbox" name="remember">
-                                        </label>
+                              
                                     </div>                                    
-                                    <button type="submit" class="btn btn-primary bg-secondary">Regístrate</button>
+                                    <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+
+                                    <hr class="text-white fw-bold">
+                                    
                                     <div class="nav navbar container">
                                         <div class="nav-line position-relative bottom-0 bg-white"></div>
                                     </div>
                                     <div class="mb-3">
                                                 <label class="text-white">¿Ya estás registrada/o?
                                                     <a type="button" class="text-white" href="login.php" target="_blank">Inicia Sesión</a>
-
                                                 </label>
                                     </div>
                                 </form>

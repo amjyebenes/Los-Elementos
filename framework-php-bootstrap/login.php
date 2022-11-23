@@ -8,9 +8,9 @@
 
 <?php include("includes/navigation.php");?>
 
-    <main class="fondoLogin">
+    <main class="fondoLogin pb-5">
         <!--Creo la caja grande para almacenar el resto  -->
-        <section class="page-section">
+        <section class="position-relative py-5 portfolio ">
            <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
             <div class="container d-flex justify-content-center">
                 <div class="row col-6 ">
@@ -19,10 +19,10 @@
                             <i class="fa-solid fa-user-group fa-6x iconoLogin"></i>
                         </div>
                         <div class="mb-3 ">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                            <input type="email" class="form-control opacity-75" id="email" placeholder="Email" name="email">
                         </div>
                         <div class="mb-3">                    
-                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pass">
+                            <input type="password" class="form-control opacity-75" id="pwd" placeholder="Contraseña" name="pass">
                         <!-- Esto es el icono del ojo de la contraseña
                             <i class="fa-regular fa-eye-slash"></i> -->
                         </div>
@@ -31,11 +31,15 @@
                             <input class="form-check-input" type="checkbox" name="remember"> Recuérdame
                             </label>
                         </div>
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-outline-primary bg-secondary text-white rounded-3">Iniciar Sesión</button>
-                            <p type="button" class="text-white">¿Olvidaste tu contraseña?</p>
+                        <div class="my-3">
+                            <button type="submit" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>                 
                         </div>
-                        <div class="mb-3">
+
+                        <hr class="text-white fw-bold">
+
+                        
+                        <div class="mb-5">
+                            <p type="button" class="text-white">¿Olvidaste tu contraseña?</p>
                             <label class="text-white">¿No tienes cuenta?
                             <a type="button" class="text-white" href="registro.php" target="_blank">Regístrate</a>
                             </label>
