@@ -89,9 +89,7 @@
                         calidad de los Servicios, en especial la entrega de los productos adquiridos. El usuario registrado no incluirá, en aquellos espacios que el Sitio Web pueda ofertar como “campos de texto libre”,
                          ningún dato de carácter personal que pueda ser calificado dentro de aquellos datos para los que se exige un nivel de protección de tipo medio o alto, sin previo aviso a EleTickets, según define la normativa vigente 
                          (a título enunciativo y no limitativo datos relativos a ideología, religión, creencias, afiliación sindical, salud, origen racial y/o vida sexual).
-
-
-                       </h3> 
+                       </h6> 
                     </div>
                     
                 </section>

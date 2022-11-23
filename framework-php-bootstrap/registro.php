@@ -38,17 +38,17 @@
                                         <input type="password" class="form-control" id="pwd" placeholder="Repetir Contraseña" name="pswd">
                                     </div>
                                     <div class="form-check mb-3">
-                                        <label class="form-check-label text-white">Acepto los Términos y Cóndiciones de Uso & Política y Privacidad
+                                        <a class="button" class="text-white" href="terminosYcondiciones.php " target="_blank">Acepto los Términos y Cóndiciones de Uso & Política y Privacidad
                                         <input class="form-check-input" type="checkbox" name="remember">
                                         </label>
                                     </div>                                    
                                     <button type="submit" class="btn btn-primary bg-secondary">Regístrate</button>
-                                    <div class="nav navbar container ">
+                                    <div class="nav navbar container">
                                         <div class="nav-line position-relative bottom-0 bg-white"></div>
                                     </div>
                                     <div class="mb-3">
                                                 <label class="text-white">¿Ya estás registrada/o?
-                                                <a type="button" class="text-white" href="login.php" target="_blank">Inicia Sesión</a>
+                                                    <a type="button" class="text-white" href="login.php" target="_blank">Inicia Sesión</a>
 
                                                 </label>
                                     </div>
