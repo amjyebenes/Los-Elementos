@@ -9,7 +9,7 @@
 <?php include("includes/navigation.php");?>
 <main>
 <!-- Portfolio Section-->
-<section class="position-relative p-5 mt-5 portfolio mb-0" id="portfolio">
+<section class="position-relative pt-5 mt-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
@@ -22,8 +22,8 @@
 
 <section>
     <div class="container mb-4">
-        <div class="row">
-            <div class="col-3">
+        <div class="row shadow">
+            <div class="col-3 p-0">
                 <div class="shadow">
                   <img class="shadow-lg card-img " src="./assets/img/cruzzi.jpg" alt="Title">
                 </div>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end justify-content-end">
+            <div class="col-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center">
                     <div class="col-6 justify-content-center align-items-end pr-3">
                        <div class="text-center contadorEntrada">
@@ -69,17 +69,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end mb-3">
+            <div class="col-2 d-flex align-items-end mb-4">
                     <div class="col" >
-                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                        <button type="button" class="btn btn-primary rounded-3">Añadir al carrito</button>
                     </div>
             </div>
             
         </div>
     </div>
     <div class="container mb-4">
-        <div class="row">
-            <div class="col-3">
+        <div class="row shadow">
+            <div class="col-3 p-0">
                 <div class="shadow">
                   <img class="shadow-lg card-img " src="./assets/img/sfdk.jpg" alt="Title">
                 </div>
@@ -106,8 +106,8 @@
                         </h6>   
                     </div>
                 </div>
-            </div>
-            <div class="col-2 d-flex align-items-end justify-content-end">
+            </div> 
+            <div class="col-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center">
                     <div class="col-6 justify-content-center align-items-end pr-3">
                        <div class="text-center contadorEntrada">
@@ -125,9 +125,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end mb-3">
+            <div class="col-2 d-flex align-items-end mb-4">
                     <div class="col" >
-                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                        <button type="button" class="btn btn-primary rounded-3">Añadir al carrito</button>
                     </div>
             </div>
             
@@ -135,8 +135,8 @@
     </div>
 
     <div class="container mb-4">
-        <div class="row">
-            <div class="col-3">
+        <div class="row shadow">
+            <div class="col-3 p-0">
                 <div class="shadow">
                   <img class="shadow-lg card-img " src="./assets/img/vetustamorla.jpg" alt="Title">
                 </div>
@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end justify-content-end">
+            <div class="col-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center">
                     <div class="col-6 justify-content-center align-items-end pr-3">
                        <div class="text-center contadorEntrada">
@@ -182,9 +182,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end mb-3">
+            <div class="col-2 d-flex align-items-end mb-4">
                     <div class="col" >
-                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                        <button type="button" class="btn btn-primary rounded-3">Añadir al carrito</button>
                     </div>
             </div>
             
@@ -192,8 +192,8 @@
     </div>
 
     <div class="container mb-4">
-        <div class="row">
-            <div class="col-3">
+        <div class="row shadow d-flex justify-content-left">
+            <div class="col-3 p-0">
                 <div class="shadow">
                   <img class="shadow-lg card-img " src="./assets/img/borisbrejcha.jpg" alt="Title">
                 </div>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end justify-content-end">
+            <div class="col-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center">
                     <div class="col-6 justify-content-center align-items-end pr-3">
                        <div class="text-center contadorEntrada">
@@ -239,9 +239,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex align-items-end mb-3">
+            <div class="col-2 d-flex align-items-end mb-4">
                     <div class="col" >
-                        <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                        <button type="button" class="btn btn-primary rounded-3">Añadir al carrito</button>
                     </div>
             </div>
             
