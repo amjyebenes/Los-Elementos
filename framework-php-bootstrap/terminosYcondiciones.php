@@ -8,9 +8,9 @@
 
         <?php include("includes/navigation.php");?>
             <main>
-                <section class="position-relative p-5 mt-5 portfolio mb-0" id="portfolio">
+                <section class="position-relative p-5 mt-5 portfolio " id="portfolio">
                     <div class="container">
-                        <h1 class="text-left text-black fw-light m-0">Términos y Condiciones</h1>
+                        <h1 class="text-left text-black fw-light">Términos y Condiciones</h1>
                     </div>
                 </section>
 

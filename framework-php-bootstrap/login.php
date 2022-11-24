@@ -41,7 +41,7 @@
                         <div class="mb-5">
                             <p type="button" class="text-white">¿Olvidaste tu contraseña?</p>
                             <label class="text-white">¿No tienes cuenta?
-                            <a type="button" class="text-white" href="registro.php" target="_blank">Regístrate</a>
+                            <a type="button" class="text-white text-decoration-underline" href="registro.php" target="_blank">Regístrate</a>
                             </label>
                         </div>                
                 </form>

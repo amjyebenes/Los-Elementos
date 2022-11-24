@@ -6,18 +6,25 @@
 </head>
 <body>
 <?php include("includes/navigation.php");?>
-            <main class="fondoLogin">
+            <main class="fondoLogin pb-5">
                 <!--Creo la caja grande para almacenar el resto  -->
-                <section class="position-relative p-5 mt-5 portfolio mb-0">
+                <section class="position-relative py-5 portfolio ">
                 <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
                         <div class="container d-flex justify-content-center">
                             <div class="row col-6 ">
                                 <form action="" method="POST">
                                 <div class="d-flex justify-content-center mt-5 mb-5">
-                                    <i class="fa-solid fa-user-plus fa-6x iconoLogin"></i>
-                                    
-                                </div>                               
-                                    <div class="mt-5 mb-3">
+                                    <i class="fa-solid fa-user-plus fa-6x iconoLogin"></i>                                    
+                                </div> 
+                                <div class="d-flex flex-column mb-3">
+                                    <i class="fa-solid fa-ticket text-white"></i>
+                                    <label class="text-white">Consigue entradas antes que nadie en nuestra preventa</label>
+                                    </div>
+                                <div class="d-flex flex-column mb-3">
+                                    <i class="fa-regular fa-envelope text-white"></i>
+                                   <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales, conciertos y eventos</label> 
+                                </div>
+                                    <div class="mb-3">
                                         <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                                     </div>
                                     <div class="mb-3">
@@ -49,7 +56,7 @@
                                     </div>
                                     <div class="mb-3">
                                                 <label class="text-white">¿Ya estás registrada/o?
-                                                    <a type="button" class="text-white" href="login.php" target="_blank">Inicia Sesión</a>
+                                                    <a type="button" class="text-white text-decoration-underline" href="login.php" target="_blank">Inicia Sesión</a>
                                                 </label>
                                     </div>
                                 </form>
