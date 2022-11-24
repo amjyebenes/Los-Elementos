@@ -67,10 +67,6 @@
                                     </div>
 
                                 </div>
-
-
-
-
                             </div>
                             <div class="row col-sm-6">
                                 <p class="h5 tituloArtista textoNaranja"><u>DATOS DE CUENTA</u></p>
