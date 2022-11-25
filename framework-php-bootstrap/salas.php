@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-3">
                 <div class="row">
-                    <p class="h2 text-primary fw-bold tituloSala">Salas París 15</p>
+                    <p class="h2 text-primary fw-bold tituloSala">Sala París 15</p>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -34,15 +34,18 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h6>SAB - 21:30<h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
                         <h6 class="text-primary">
-                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                        Malaga - Sala Paris 15 
-                        </h6>   
+                            <i class="fa-solid fa-location-dot"></i>
+                            C/La Orotava 25-27
+                        </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            info@paris15.es
+                        </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            952845623                   
+                        </h6> 
                     </div>
                 </div>
 
@@ -67,15 +70,18 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h6>SAB - 21:30<h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
                         <h6 class="text-primary">
-                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                        Malaga - Sala Paris 15 
-                        </h6>   
+                            <i class="fa-solid fa-location-dot"></i>
+                            Av. Felipe II, s/n. 28009 MADRID
+                        </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            hablemos@WiZinkCenter.es
+                        </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            914449949                   
+                        </h6> 
                     </div>
                 </div>
 
@@ -101,15 +107,18 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h6>SAB - 21:30<h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
                         <h6 class="text-primary">
-                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                        Malaga - Sala Paris 15 
-                        </h6>   
+                            <i class="fa-solid fa-location-dot"></i>
+                            Calle Nou de la Rambla, 107
+                        </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            info@sala-apolo.com
+                            </h6>
+                        <h6 class="text-primary">
+                            <i class="fa-solid fa-inbox "></i>
+                            934414001                   
+                        </h6> 
                     </div>
                 </div>
 
