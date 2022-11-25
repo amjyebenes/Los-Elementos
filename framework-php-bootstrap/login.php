@@ -8,11 +8,11 @@
 
 <?php include("includes/navigation.php");?>
 
-    <main class="fondoLogin pb-5">
+    <main class="fondoLogin device-padding">
         <!--Creo la caja grande para almacenar el resto  -->
         <section class="position-relative py-5 portfolio ">
            <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
-            <div class="container d-flex justify-content-center">
+            <div class="container d-flex justify-content-center pt-5">
                 <div class="row col-6 ">
                     <form action="" method="POST">
                         <div class="d-flex justify-content-center mt-5 mb-5">

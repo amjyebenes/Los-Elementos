@@ -10,19 +10,19 @@
                 <!--Creo la caja grande para almacenar el resto  -->
                 <section class="position-relative py-5">
                 <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
-                        <div class="container d-flex justify-content-center">
+                        <div class="container d-flex justify-content-center pt-5">
                             <div class="row col-6 ">
                                 <form action="" method="POST">
                                 <div class="d-flex justify-content-center mt-5 mb-5">
                                     <i class="fa-solid fa-user-plus fa-6x iconoLogin"></i>                                    
                                 </div> 
-                                <div class="d-flex flex-column mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-3">
                                     <i class="fa-solid fa-ticket text-white"></i>
                                     <label class="text-white">Consigue entradas antes que nadie en nuestra preventa</label>
                                     </div>
-                                <div class="d-flex flex-column mb-3">
+                                <div class="d-flex align-items-center gap-2 mb-3">
                                     <i class="fa-regular fa-envelope text-white"></i>
-                                   <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales, conciertos y eventos</label> 
+                                   <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label> 
                                 </div>
                                     <div class="mb-3">
                                         <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
