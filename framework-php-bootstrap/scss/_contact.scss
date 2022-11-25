@@ -5,7 +5,8 @@
 
 // Clase de fondo para página de Contacto
 .fondoContacto{
-   // height: 100vh;
+    max-height: 100vh;
+    min-height: 83vh;
     background-image: url('../assets/img/bg-contact-blur.jpg');
     background-size: cover;
 }
