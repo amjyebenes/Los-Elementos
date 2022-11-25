@@ -10,7 +10,7 @@
 <main class="fondoContacto device-padding">
 <!-- Contact Section-->
 <section class="page-section-contact">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Icon -->
             <div class="w-25 mx-auto text-light text-center">
                 <div><i class="fa-solid fa-info fs-2 bg-info rounded-4 px-4 py-3 mb-1"></i></div>
@@ -32,7 +32,7 @@
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nº Pedido (Opcional)">
                         </div>
                     </div>
-                    <div class="form-group">                    
+                    <div class="form-group py-2">                    
                         <textarea class="form-control my-4 py-5 bg-light opacity-75 resize-none " placeholder="Escribe tu consulta aqui..."></textarea>
                     </div>
                     <div class="form-check">

@@ -4,9 +4,9 @@
         <div class="collapse navbar-collapse row justify-content-between align-items-center" id="navbarResponsive">
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
-                    <li class="nav-item"><a href="conciertos.php">Conciertos</a></li>
-                    <li class="nav-item"><a href="eventos.php">Eventos</a></li>
-                    <li class="nav-item"><a href="salas.php">Salas</a></li>
+                    <li class="nav-item text-capitalize"><a href="conciertos.php">Conciertos</a></li>
+                    <li class="nav-item text-capitalize"><a href="eventos.php">Eventos</a></li>
+                    <li class="nav-item text-capitalize"><a href="salas.php">Salas</a></li>
                 </ul>
             </div>
             <div class="col-2 text-center">
@@ -14,9 +14,9 @@
             </div>
             <div class="col-4">
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
-                    <li class="nav-item"><a href="contact.php">Contacto</a></li>
-                    <li class="nav-item"><a href="login.php">Login</a></li>
-                    <li class="nav-item"><a href="micuenta.php">Cesta + usuario</a></li>
+                    <li class="nav-item text-capitalize"><a href="contact.php">Contacto</a></li>
+                    <li class="nav-item text-capitalize"><a href="login.php">Login</a></li>
+                    <li class="nav-item text-capitalize"><a href="micuenta.php">Cesta + usuario</a></li>
                 </ul>
             </div>
             <div class="nav-line position-relative mt-2 bottom-0 col-12"></div>
@@ -42,22 +42,22 @@
 <div class="collapse position-absolute w-100 collapse-horizontal navbar-collapse device-padding" id="navbarSupportedContent">
     <div class="nav-line position-relative bottom-0 col-12"></div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" aria-current="page" href="conciertos.php">Conciertos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" href="eventos.php">Eventos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" href="salas.php">Salas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" href="contact.php">Contacto</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" href="login.php">Login</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item text-capitalize">
             <a class="nav-link" href="micuenta.php">Cuenta</a>
         </li>
     </ul>
