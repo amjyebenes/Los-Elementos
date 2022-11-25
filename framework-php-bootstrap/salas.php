@@ -9,7 +9,7 @@
 <?php include("includes/navigation.php");?>
 <main>
 <!-- Portfolio Section-->
-<section class="position-relative p-5 mt-5 portfolio mb-0" id="portfolio">
+<section class="position-relative p-5 mt-5 mb-0">
         <div class="container">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Salas</h1>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="h5 tituloSala">22 · OCT · 2022</p>
+                        <p class="h5 tituloSala">Información: </p>
                     </div>
                 </div>
                 <div class="row">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="h5 tituloSala">22 · OCT · 2022</p>
+                        <p class="h5 tituloSala">Información: </p>
                     </div>
                 </div>
                 <div class="row">
