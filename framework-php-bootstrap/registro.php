@@ -8,7 +8,7 @@
 <?php include("includes/navigation.php");?>
             <main class="fondoLogin pb-5">
                 <!--Creo la caja grande para almacenar el resto  -->
-                <section class="position-relative py-5 portfolio ">
+                <section class="position-relative py-5">
                 <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
                         <div class="container d-flex justify-content-center">
                             <div class="row col-6 ">
