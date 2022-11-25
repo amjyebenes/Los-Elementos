@@ -213,6 +213,7 @@
 </main>
 
 <?php include("includes/footer.php");?>
+<script src="./js/navbar.js"></script>
 
 </body>
 </html>
