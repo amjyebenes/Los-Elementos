@@ -5,7 +5,8 @@
 
 // Clase de fondo para página de Contacto
 .fondoContacto{
-    //height: 82vh;
+    max-height: 100vh;
+    min-height: 83vh;
     background-image: url('../assets/img/bg-contact-blur.jpg');
     background-size: cover;
 }
@@ -15,7 +16,7 @@
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
-// Clase para dar opacidad a los form
-.opacidadForm{ 
-    opacity: 0.7;
+// Clase para quitar el resize del text Area
+.resize-none{
+    resize: none;
 }
