@@ -7,8 +7,8 @@
     <body>
 
         <?php include("includes/navigation.php");?>
-            <main>
-                <section class="position-relative p-5 mt-5 portfolio " id="portfolio">
+            <main class="bs-primary py-5 device-padding">
+                <section class="position-relative p-5 mt-5 ">
                     <div class="container">
                         <h1 class="text-left text-black fw-light">Términos y Condiciones</h1>
                     </div>

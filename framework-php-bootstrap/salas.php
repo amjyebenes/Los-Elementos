@@ -56,7 +56,7 @@
                 </div>
                 <!--Segunda sala -->
                 <div class="row justify-content-center mb-4">
-                    <div class="col-3 bg-white pe-0">
+                    <div class="col-lg-3 col-12 bg-white">
                         <div class="row">
                             <p class="h2 text-primary fw-bold tituloSala">Wizink Center</p>
                             <div class="col">
@@ -77,7 +77,7 @@
                         </div>
 
                     </div>
-                    <div class="col-5 d-flex flex-column ps-0">
+                    <div class="col-lg-5 col-12 d-flex flex-column px-0">
                         <div class="shadow">
                             <img class="shadow-lg card-img " src="./assets/img/wizink.png" alt="Title">
                         </div>
@@ -85,17 +85,10 @@
                 </div>
                 <!--Tercera sala -->
                 <div class="row justify-content-center mb-4">
-                    <div class="col-3 bg-white pe-0">
-                        <div class="row">
-                            <p class="h2 text-primary fw-bold tituloSala">Sala Apolo</p>
-                        </div>
+                    <div class="col-lg-3 bg-white">
                         <div class="row">
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
                                 <h6 class="text-primary">
                                     <i class="fa-solid fa-location-dot"></i>
                                     Calle Nou de la Rambla, 107
@@ -112,7 +105,7 @@
                         </div>
 
                     </div>
-                    <div class="col-5 d-flex flex-column ps-0">
+                    <div class="col-lg-5 d-flex flex-column px-0">
                         <div class="shadow">
                             <img class="shadow-lg card-img " src="./assets/img/apolo.png" alt="Title">
                         </div>
