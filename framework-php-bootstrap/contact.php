@@ -25,7 +25,7 @@
                         <div class="col-md-4">
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nombre">
                         </div>
-                        <div class="col-md-4 my-3 my-sm-0">            
+                        <div class="col-md-4 my-3 my-md-0">            
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Email">
                         </div>
                         <div class="col-md-4">            
