@@ -87,6 +87,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 bg-white">
                         <div class="row">
+                            <p class="h2 text-primary fw-bold tituloSala">Sala Apolo</p>
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
                                 <h6 class="text-primary">
