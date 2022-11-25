@@ -9,6 +9,7 @@ $icono: #FFC288;
 $myorange: #FF6701;
 $mydark: #291F1F;
 $mynavbg: rgba(252, 236, 221, 0.8);
+$my-mobile-nav-bg: #fcecdd41;
 $myicon: #FFC288;
 
 //- Override primary color
@@ -21,6 +22,7 @@ $bs-dark: $mydark;
 $nav-link-color: black;
 $link-color: $mydark;
 $link-hover-color: $myactive;
+$nav-link-hover-color: $myactive;
 $link-decoration: none;
 // $danger: yellow;
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
