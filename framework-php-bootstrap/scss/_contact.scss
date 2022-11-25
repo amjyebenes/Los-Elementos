@@ -15,7 +15,7 @@
     text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
-// Clase para dar opacidad a los form
-.opacidadForm{ 
-    opacity: 0.7;
+// Clase para quitar el resize del text Area
+.resize-none{
+    resize: none;
 }
