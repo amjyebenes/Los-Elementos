@@ -5,7 +5,7 @@
                 <ul class="navbar-nav navbar-botones justify-content-center gap-5">
                     <li class="nav-item"><a href="conciertos.php">Conciertos</a></li>
                     <li class="nav-item"><a href="eventos.php">Eventos</a></li>
-                    <li class="nav-item"><a href="">Salas</a></li>
+                    <li class="nav-item"><a href="salas.php">Salas</a></li>
                 </ul>
             </div>
             <div class="col-2 text-center">

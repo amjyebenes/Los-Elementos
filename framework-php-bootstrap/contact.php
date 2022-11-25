@@ -37,8 +37,13 @@
                     </div>
                     <div class="form-check">
                         
+<<<<<<< HEAD
                         <input class="form-check-input" type="checkbox" name="remember"><label class="form-check-label text-white shadowText">He leído y acepto la <a href="" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                     </div>            
+=======
+                        <input class="form-check-input" type="checkbox" name="remember"><label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                    </div>
+>>>>>>> d8aa3160681a055c11d777f5a93bda94230faef1
                     <input type="submit" class="btn btn-outline-secondary rounded-3 text-white px-5 mt-4" placeholder="Enviar">
                 </form>
             </div>
