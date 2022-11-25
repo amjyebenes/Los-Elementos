@@ -9,7 +9,7 @@
 
 <main class="fondoContacto">
 <!-- Contact Section-->
-<!--<section class="page-section-contact">-->
+<section class="page-section-contact">
         <div class="container">
             <!-- Icon -->
             <div class="w-25 mx-auto text-light text-center">
@@ -43,7 +43,7 @@
                 </form>
             </div>
         </div>
-  <!--  </section>-->
+  </section>
 </main>
 <?php include("includes/footer.php");?>
 
