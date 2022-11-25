@@ -7,7 +7,7 @@
 <body>
 <?php include("includes/navigation.php");?>
 
-<main class="fondoContacto">
+<main class="fondoContacto device-padding">
 <!-- Contact Section-->
 <section class="page-section-contact">
         <div class="container">
