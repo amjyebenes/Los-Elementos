@@ -15,24 +15,16 @@ html {
 
 // Styling for page sections
 .page-section {
-    padding: 6vh 5vw;
-    position: relative;
     z-index: 10;
-
-    .page-section-heading {
-        font-size: 2.25rem;
-        line-height: 2rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        .page-section-heading {
-            font-size: 3rem;
-            line-height: 2.5rem;
-        }
-    }
 }
 
+// Clases globales de los espaciados
 .device-padding {
-    padding-right: 5vw;
-    padding-left: 5vw;
+    padding-right: $paddingLateral;
+    padding-left: $paddingLateral;
+}
+
+.section-padding {
+    padding-top: $paddingVertical;
+    padding-bottom: $paddingVertical;
 }

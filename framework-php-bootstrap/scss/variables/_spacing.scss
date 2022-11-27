@@ -2,7 +2,9 @@
 // Spacing
 // 
 
-$navbar-height: 4.5rem;
-//Creamos variables de márgenes según la guía de estilos
-$margenLateral: 5vw;
-$margenVertical: 5vh;
+// Altura del navbar (para el scroll-padding-top en global.scss)
+$navbar-height: 6vh;
+
+//Creamos variables de espaciados según la guía de estilos
+$paddingLateral: 5vw;
+$paddingVertical: 5vh;

@@ -2,32 +2,21 @@
 // Colors
 // 
 
-//- Override and add to color system
-$mybackground: #FCECDD;
-$myactive: #FEA82F;
-$icono: #FFC288;
-$myorange: #FF6701;
-$mydark: #291F1F;
+//- Variables propias
 $mynavbg: rgba(252, 236, 221, 0.8);
 $my-mobile-nav-bg: #fcecddd4;
 
-//- Override primary color
-$primary: $myorange;
-$secondary: $myactive;
-$info: $icono;
-$bs-primary: $mybackground;
-$body-bg: $mybackground;
-$bs-dark: $mydark;
+//- Override bootstrap colors
+$primary: #FF6701;
+$secondary: #FEA82F;
+$info: #FFC288;
+$light: #FCECDD;
+$dark: #291F1F;
+$body-bg: $light;
 $nav-link-color: black;
-$link-color: $mydark;
-$link-hover-color: $myactive;
-$nav-link-hover-color: $myactive;
+$link-color: $dark;
+$link-hover-color: $secondary;
+$nav-link-hover-color: $secondary;
 $link-decoration: none;
-// $danger: yellow;
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio: 2.4;
 
-.textoNaranja{
-    color:$myorange;
-}
+$min-contrast-ratio: 2.4;
