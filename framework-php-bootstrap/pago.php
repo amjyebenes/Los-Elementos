@@ -12,9 +12,9 @@
     <main class="device-padding">
         <section class="pt-md-5 mt-md-5 mb-0">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row justify-content-between">
                     <div class="col-12">
-                    <!-- Compra Section Heading-->
+                        <!-- Compra Section Heading-->
                         <h6 class="bg-primary p-1 ps-4 rounded-bottom rounded-1 text-white text-uppercase shadow">Compra</h6>
                     </div>
                     <!-- Columna izq datos de pago -->

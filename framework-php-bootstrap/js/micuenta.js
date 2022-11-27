@@ -15,7 +15,7 @@ function clickUsuario(){
     let botondatos = document.getElementById("botonDatos");
     botondatos.classList.add("iconoCuentaSelected");
     let icono = document.getElementById("iconoUsuario");
-    icono.classList.add("iconoCuentaBlanco")
+    icono.classList.add("iconoCuentaBlanco");
     let texto = document.getElementById("textoUsuario");
     texto.classList.add("text-white");
     let div = document.getElementById("divCompras");

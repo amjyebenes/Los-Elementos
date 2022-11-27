@@ -12,7 +12,7 @@
     <main class="my-lg-5 pb-5 device-padding">
 
         <div class="container-fluid d-flex justify-content-center pt-lg-4">
-            <div class="row col col-md-10 col-lg-8 pt-lg-4 ">
+            <div class="row col col-md-10 col-lg-12 pt-lg-4 ">
                 <h6 class="bg-primary p-1 ps-4 rounded-top-3"><span class="text-white shadow">MI&nbsp&nbspZONA</span></h6>
 
                 <div class="row mt-4 pt-4 d-flex justify-content-center">

@@ -36,7 +36,7 @@
                     <p>Concierto 1</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="home-item-img img-fluid">
+                    <img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid">
                 </div>
             </article>
             <!-- Concierto 2-->
@@ -46,7 +46,7 @@
                     <p>Concierto 2</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 home-item-img img-fluid">
+                    <img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid">
                 </div>
             </article>
             <!-- Concierto 3-->
@@ -56,7 +56,7 @@
                     <p>Concierto 3</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 home-item-img img-fluid">
+                    <img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid">
                 </div>
             </article>
         </div>

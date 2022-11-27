@@ -1,7 +1,8 @@
 // 
-// Portfolio
+// Index
 // 
 
+// Sección Conciertos
 .conciertos {
     .conciertos-item {
         .conciertos-item-img-con {
@@ -19,6 +20,7 @@
     }
 }
 
+// Sección Evento
 .event {
     .video-con {
         transform-origin: top center;
@@ -31,7 +33,7 @@
     }
 }
 
-@media only screen and (max-width: 768px){
+@include media-breakpoint-down(md) {
     .conciertos-item-img-con {
         max-height: 40vh !important;
     }
