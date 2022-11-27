@@ -39,7 +39,7 @@
                     <div class="row col justify-content-between" id="divDatos">
                         <div class="col col-sm-4 ">
                             <div class="col">
-                                <label class="h5 tituloArtista textoNaranja"><u>DATOS DE FACTURACION</u></label>
+                                <label class="h5 tituloArtista text-primary"><u>DATOS DE FACTURACION</u></label>
                                 <div class="col">
                                     <div class="row d-flex align-items-baseline">
                                         <div class="col-7">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="col-sm-8 row d-flex justify-content-center">
-                            <p class="h5 tituloArtista textoNaranja"><u>DATOS DE CUENTA</u></p>
+                            <p class="h5 tituloArtista text-primary"><u>DATOS DE CUENTA</u></p>
                             <div class="col d-flex flex-column justify-content-between">
                                 <div class="row ">
                                     <div class="col-5 ">
