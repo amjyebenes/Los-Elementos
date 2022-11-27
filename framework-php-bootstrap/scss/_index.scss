@@ -1,0 +1,47 @@
+// 
+// Portfolio
+// 
+
+.conciertos {
+    .conciertos-item {
+        .conciertos-item-img-con {
+            max-height: 85vh;
+        }
+
+        .conciertos-item-img {
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            filter: contrast(.6) saturate(1) hue-rotate(30deg);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.event {
+    .video-con {
+        transform-origin: top center;
+        transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .video-mark {
+        transform: translate(-50%, -50%);
+        mix-blend-mode: overlay;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .conciertos-item-img-con {
+        max-height: 40vh !important;
+    }
+
+    .conciertos-item-img {
+        transform: translateY(-30vh);
+    }
+}
+
+// Separador
+.b-line {
+    height: 1px;
+}

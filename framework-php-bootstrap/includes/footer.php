@@ -1,4 +1,4 @@
-<footer class="footer text-center">
+<footer class="footer text-center device-padding section-padding bg-dark">
         <div class="container">
             <div class="row">
                 <!-- Footer Logo-->

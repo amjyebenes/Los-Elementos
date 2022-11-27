@@ -8,8 +8,6 @@
 
 .navbar {
     z-index: 20;
-    text-decoration: none;
-    color: $mydark;
 }
 
 .navbar.active {
@@ -17,39 +15,26 @@
     background: $mynavbg;
 }
 
-.navbar a {
-    font-weight: lighter;
-}
-
 .nav-line {
     height: 1px !important;
-    background: $mydark;
-    margin-top: $navbar-padding-y;
-}
-
-.navbar .nav-lineOrange {
-    height: 2px !important;
-    background: $myorange;
     margin-top: $navbar-padding-y;
 }
 
 .collapse {
-    transition: 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 2;
     background: $my-mobile-nav-bg;
     backdrop-filter: blur(5px);
 
     div.collapsing {
         height: auto !important;
-        /* transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; */
         overflow: auto !important;
         opacity: 0;
+        transform: translate(0,0) !important;
     }
     
     div.collapse:not(.show) {
         display: flex !important;
         transform: translate(-100%, 0) !important;
-        /* transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; */
         opacity: 0;
     }
 
@@ -63,37 +48,36 @@
     }
 
     a.nav-link a.dropdown-item {
-        color: $white;
+        color: $dark;
 
         &:hover {
-            color: $primary;
+            color: $secondary;
         }
 
         &:active,
         &:focus {
-            color: $white;
+            color: $dark;
         }
 
         &.active {
-            color: $primary;
+            color: $secondary;
         }
     }
 }
 
 .collapsing {
-    opacity: 0;
+    background: $my-mobile-nav-bg !important;
+    backdrop-filter: blur(5px) !important;
 }
 
 .main-title {
     bottom: 10%;
     transform: translate(-50%, 0);
     z-index: 1;
-    color: #FCECDD;
 }
 
 .intro-img {
     bottom: 35vh;
-    top: auto;
     transform: translateY(0px);
 }
 
@@ -111,43 +95,38 @@
 }
 
 .mainNav {
-    // padding-top: 1rem;
-    // padding-bottom: 1rem;
     font-family: $titulo;
     font-weight: $titulo-weight;
 
     .navbar-brand {
-        color: $white;
+        color: $dark;
     }
     .navbar-botones{
         font-family: $textonormal;
     }
 
     .navbar-nav {
-        // margin-top: 2rem;
-
         li.nav-item {
             a.nav-link a.dropdown-item {
-                color: $white;
+                color: $dark;
 
                 &:hover {
-                    color: $primary;
+                    color: $secondary;
                 }
 
                 &:active,
                 &:focus {
-                    color: $white;
+                    color: $dark;
                 }
 
                 &.active {
-                    color: $primary;
+                    color: $secondary;
                 }
             }
             div.dropdown-menu{
                 a.dropdown-item{
                     &:hover {
-                        background-color: $primary;
-
+                        background-color: $secondary;
                     }
                 }
             }
@@ -156,15 +135,10 @@
 
     .navbar-toggler {
         width: 2rem;
-        border: 0 !important;
         gap: 0.65rem;
-        padding: 0 !important;
 
         > div {
-            background-color: black;
             height: 1px;
-            width: 100%;
-            border-radius: 5px;
             transition: all .5s;
             transform-origin: left;
             opacity: 1;
@@ -177,43 +151,31 @@
 }
 
 
+.dropdown {
+    .btn, .show  {
+        &:hover {
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    .show {
+        background-color: $secondary;
+        border-color: $secondary; 
+    }
+
+    .dropdown-item {
+        &:hover {
+            background-color: $light;
+        }
+    }
+
+    &::after {
+        border-color: $dark !important;
+    }
+}
+
 @include media-breakpoint-up(lg) {
-    #mainNav {
-        // padding-top: 1.5rem;
-        // padding-bottom: 1.5rem;
-        transition: padding-top 0.3s, padding-bottom 0.3s;
-
-        .navbar-brand {
-            font-size: 1.75em;
-            transition: font-size 0.3s;
-        }
-
-        .navbar-nav {
-            margin-top: 0;
-        }
-
-        .navbar-nav>li.nav-item>a.nav-link.active {
-            color: $white;
-            background: $primary;
-
-            &:active,
-            &:focus,
-            &:hover {
-                color: $white;
-                background: $primary;
-            }
-        }
-    }
-
-    #mainNav.navbar-shrink { 
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-
-        .navbar-brand {
-            font-size: 1.5em;
-        }
-    }
-
     .collapse {
         backdrop-filter: none;
         background: none;
@@ -227,10 +189,10 @@
     }
 
     .nav-link {
-        border-bottom: 0.5px solid black;
+        border-bottom: 0.5px solid $dark;
 
         &:hover {
-            color: $myactive;
+            color: $secondary;
         }
     }
 
@@ -262,10 +224,14 @@
     }
 
     .navbar-collapse {
-        height: 100%;
+        height: 100% !important;
     }
 
     .menu {
         height: 40vh;
+    }
+
+    .home-nav {
+        z-index: 20;
     }
 }

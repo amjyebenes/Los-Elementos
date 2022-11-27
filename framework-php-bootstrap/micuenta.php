@@ -17,13 +17,13 @@
 
                 <div class="row mt-4 pt-4 d-flex justify-content-center">
                     <div class="col-6 col-lg-3 ms-5 me-5 mb-4 d-flex">
-                        <button class="rounded-3 cajaMiCuenta row col justify-content-center text-center" id="botonDatos" onclick="clickUsuario()">
+                        <button class="rounded-3 border-top border-primary row col justify-content-center text-center" id="botonDatos" onclick="clickUsuario()">
                             <i class="fas fa-user fa-7x iconoCuenta mt-3 w100" id="iconoUsuario"></i>
                             <span class="text-primary mt-2 mb-3 h5 tituloArtista" id="textoUsuario">Mis datos</span>
                         </button>
                     </div>
                     <div class="col-6 col-lg-3 ms-5 me-5 mb-4 d-flex ">
-                        <button class="rounded-3 cajaMiCuenta row col justify-content-center text-center" id="botonCompras" onclick="clickCompras()">
+                        <button class="rounded-3 border-top border-primary row col justify-content-center text-center" id="botonCompras" onclick="clickCompras()">
                             <i class="fa-solid fa-basket-shopping fa-5x iconoCuenta mt-4 w-100" id="iconoCompras"></i>
                             <span class="text-primary mt-2 mb-3 h5 tituloArtista" id="textoCompras">Mis compras</span>
                         </button>

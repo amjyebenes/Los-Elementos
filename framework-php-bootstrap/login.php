@@ -16,7 +16,7 @@
                 <div class="row col-6 ">
                     <form action="" method="POST">
                         <div class="d-flex justify-content-center mt-5 mb-5">
-                            <i class="fa-solid fa-user-group fa-6x iconoLogin"></i>
+                            <i class="fa-solid fa-user-group fa-6x text-info"></i>
                         </div>
                         <div class="mb-3 ">
                             <input type="email" class="form-control opacity-75" id="email" placeholder="Email" name="email">
@@ -56,6 +56,6 @@
     </main> 
 
 <?php include("includes/footer.php");?>
-
+<script src="./js/navbar.js"></script>
 </body>
 </html>
