@@ -1,0 +1,42 @@
+// 
+// Index
+// 
+
+// Sección Evento
+.event {
+    .video-con {
+        transform-origin: top center;
+        transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .video-mark {
+        transform: translate(-50%, -50%);
+        mix-blend-mode: overlay;
+    }
+}
+
+// Para que el nav no se coma la primera sección
+.fix-top {
+    margin-top: 10vh;
+    padding-bottom: 6vh;
+    max-height: max-content;
+}
+
+@include media-breakpoint-down(md) {
+    .fix-top {
+        margin-top: 0 !important;
+    }
+
+    .conciertos-item-img-con {
+        max-height: 40vh !important;
+    }
+
+    .conciertos-item-img {
+        transform: translateY(-30vh);
+    }
+}
+
+// Separador
+.b-line {
+    height: 1px;
+}

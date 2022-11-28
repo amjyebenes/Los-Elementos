@@ -28,3 +28,10 @@ html {
     padding-top: $paddingVertical;
     padding-bottom: $paddingVertical;
 }
+
+.btn-primary {
+    &:hover {
+        background-color: $secondary !important;
+        border-color: $secondary !important;
+    }
+}
