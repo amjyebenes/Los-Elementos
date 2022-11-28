@@ -17,11 +17,11 @@
                 <!-- Entrada -->
                 <div class="row py-3">
                     <div class="col-12 justify-content-center row mx-1 px-0">
-                        <div class="col-md-4 col-12 px-0">
+                        <div class="col-md-2 col-12 px-0">
                             <img class="card-img" src="./assets/img/borisbrejcha.jpg">
                         </div>
-                        <div class="col-md-8 col-12 row fw-bold fs-5 align-items-center shadow">
-                            <div class="col-md-10 col-12 pt-3 pt-md-0">
+                        <div class="col-md-10 col-12 row fw-bold fs-5 align-items-center shadow">
+                            <div class="col-md-10 col-12 pt-3 pt-md-0 ps-md-5">
                                 <p class="pb-md-5 pt-0">22/02/2023</p>
                                 <p>2 x Boris Brejcha · Brunch In The Park · Barcelona</p>
                             </div>
@@ -34,11 +34,11 @@
                 <!-- Entrada -->
                 <div class="row py-3">
                     <div class="col-12 justify-content-center row mx-1 px-0">
-                        <div class="col-md-4 col-12 px-0">
+                        <div class="col-md-2 col-12 px-0">
                             <img class="card-img" src="./assets/img/cruzzi.jpg">
                         </div>
-                        <div class="col-md-8 col-12 row fw-bold fs-5 align-items-center shadow">
-                            <div class="col-md-10 col-12 pt-3 pt-md-0">
+                        <div class="col-md-10 col-12 row fw-bold fs-5 align-items-center shadow">
+                            <div class="col-md-10 col-12 pt-3 pt-md-0 ps-md-5">
                                 <p class="pb-md-5 pt-0">01/02/2025</p>
                                 <p>5 x Cruz Cafuné · Sala París · Málaga</p>
                             </div>
