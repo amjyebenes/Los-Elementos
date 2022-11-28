@@ -9,7 +9,7 @@
 <?php include("includes/navigation.php");?>
 <main class="device-padding">
 <!-- Portfolio Section-->
-<section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
+<section class="position-relative pt-lg-5 mt-lg-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
