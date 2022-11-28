@@ -9,7 +9,7 @@
 <?php include("includes/navigation.php");?>
 <main class="device-padding">
 <!-- Portfolio Section-->
-<section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
+<section class="position-relative pt-lg-5 mt-lg-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
@@ -25,7 +25,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title">
+                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -67,7 +67,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title">
+                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -109,7 +109,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
+                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -151,7 +151,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title">
+                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
