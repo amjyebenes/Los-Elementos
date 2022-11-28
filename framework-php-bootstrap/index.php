@@ -5,7 +5,7 @@
 	<?php include("includes/head-tag-contents.php");?>
     <!-- <script src="https://kit.fontawesome.com/9e9e2fd9c0.js" crossorigin="anonymous"></script> -->
 </head>
-<body>
+<body class="index">
 <?php include("includes/navigation-home.php");?>
 <main>
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->

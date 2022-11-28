@@ -12,8 +12,8 @@
         <!--Creo la caja grande para almacenar el resto  -->
         <section class="position-relative py-5 portfolio pb-5">
            <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
-            <div class="container d-flex justify-content-center pt-5 pb-5">
-                <div class="row col-6 ">
+            <div class="container d-flex justify-content-center pt-5">
+                <div class="row col-md-6 col-12 ">
                     <form action="" method="POST">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-group fa-6x text-info"></i>
