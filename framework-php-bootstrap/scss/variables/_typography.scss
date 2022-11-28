@@ -33,16 +33,12 @@ sans-serif,
 "Segoe UI Symbol",
 'Noto Color Emoji';
 
-$titulo-weight: 700;
 $font-size-base: 1rem;
 $font-size-lg: $font-size-base * 1.75;
-$nav-link-font-size: 1.5rem;
-
-
-h1,h2,h3,h4,h5,h6{
-    font-family: $titulo;
-}
-
-body{
-    font-family: $textonormal !important;
-}
+$nav-link-font-size: $font-size-base + .5;
+// Fuente de títulos
+$headings-font-family: $titulo;
+$headings-font-weight: 500;
+// Fuente de párrafos
+$font-family-base: $textonormal;
+$font-weight-base: normal;
