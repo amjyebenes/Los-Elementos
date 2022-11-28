@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="mb-3">
                                                 <label class="text-white">¿Ya estás registrada/o?
-                                                    <a type="button" class="text-white text-decoration-underline" href="login.php" target="_blank">Inicia Sesión</a>
+                                                    <a type="button" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
                                                 </label>
                                     </div>
                                 </form>
