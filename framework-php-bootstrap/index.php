@@ -100,7 +100,7 @@
                             quas ipsam tempora? Mollitia quam earum assumenda laborum? Mollitia, hic?</p>
                     </div>
                     <div class="d-flex justify-content-start align-self-start">
-                        <button type="button" class="buy-button">Ver eventos</button>
+                        <button type="button" class="buy-button btn rounded-3">Ver eventos</button>
                     </div>
                     <div class="d-none d-md-block mt-auto">
                         <div class="b-line"></div>
