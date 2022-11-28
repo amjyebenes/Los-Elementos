@@ -125,93 +125,64 @@
                 </div>
 
 
-                <div class="pt-4  d-flex ">
+                <div class="pt-4 d-flex">
                     <div class="row col justify-content-center pb-5" id="divCompras">
                         <div class="row shadow mb-4">
-                            <div class="col-4 col-sm-3 col-md-2 p-0 shadow">
+                            <div class="col-5 col-sm-4 col-md-3 col-lg-2 p-0 d-flex align-items-center ">
                                 <img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title">
                             </div>
-                            <div class="col-5 col-sm-6 col-md-8 d-flex flex-column">
-                                <div class="row">
-                                    <p class="h2 text-primary fw-bold tituloArtista">Cruz Cafuné</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="h5 tituloArtista">22 · OCT · 2022</p>
+                            <div class="row col col-sm-8 col-md-9 col-lg-10">
+                                <div class="col-12 col-sm">
+                                    <div class="row">
+                                        <p class="h2 text-primary fw-bold tituloArtista">Cruz Cafuné</p>
+                                        <div class="col">
+                                            <p class="h5 tituloArtista">22 · OCT · 2022</p>
+                                            <h6>SAB - 21:30<h6>
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                        Malaga - Sala Paris 15
+                                                    </h6>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <h6>SAB - 21:30<h6>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="text-primary">
-                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                            Malaga - Sala Paris 15
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex align-items-center justify-content-center mb-2 m-1">
-                                <div class="row align-items-center">
-                                    <label class="col justify-content-center align-items-end pr-3 text-center">
+                                <div class="col-12 col-sm d-flex align-items-center justify-content-center mb-2 m-1">
+                                    <div class="row align-items-center">
+                                        <label class="col justify-content-center align-items-end pr-3 text-center">
                                             x2: <span class="h5">150€</span>
-                                    </label>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="row shadow mb-4">
-                            <div class="col p-0">
-                                <div class="shadow">
-                                    <img class="shadow-lg card-img W-100" src="./assets/img/borisbrejcha.jpg" alt="Title">
-                                </div>
+                            <div class="col-5 col-sm-4 col-md-3 col-lg-2 p-0 d-flex align-items-center ">
+                                <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
                             </div>
-                            <div class="col-5 d-flex flex-column">
-                                <div class="row">
-                                    <p class="h2 text-primary fw-bold tituloArtista">Boris Brejcha</p>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="h5 tituloArtista">22 · FEB · 2023</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <h6>SAB - 21:30<h6>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="text-primary">
-                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                            Elrow - Sevilla
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2 d-flex align-items-center justify-content-center mb-2">
-                                <div class="row align-items-center">
-                                    <div class="col-6 justify-content-center align-items-end pr-3">
-                                        <div class="text-center">
-                                            x1
+                            <div class="row col col-sm-8 col-md-9 col-lg-10">
+                                <div class="col-12 col-sm">
+                                    <div class="row">
+                                        <p class="h2 text-primary fw-bold tituloArtista">Boris Brejcha</p>
+                                        <div class="col">
+                                            <p class="h5 tituloArtista">22 · FEB · 2023</p>
+                                            <h6>MON - 13:30<h6>
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                        elRow - Sevilla
+                                                    </h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-3 d-flex align-items-center justify-content-center mb-2">
-                                <div class="row align-items-center">
-                                    <div class="col-6 justify-content-center align-items-end pr-3">
-                                        <div class="text-center">
-                                            TOTAL: 75€
-                                        </div>
+                                <div class="col-12 col-sm d-flex align-items-center justify-content-center mb-2 m-1">
+                                    <div class="row align-items-center">
+                                        <label class="col justify-content-center align-items-end pr-3 text-center">
+                                            x2: <span class="h5">150€</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
