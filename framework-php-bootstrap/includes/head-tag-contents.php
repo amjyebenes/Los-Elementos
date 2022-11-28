@@ -6,7 +6,7 @@
 <meta name="author" content="Los Elementos" />
 <title>EleTickets</title>
 <!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="../assets/img/Logo-web00.png" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/c3714a2851.js" crossorigin="anonymous"></script>
