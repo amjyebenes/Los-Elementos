@@ -12,14 +12,17 @@
 
     <section class="position-relative mt-5 mb-0">
             <div class="container">
-                <h1 class="text-center text-uppercase text-black m-0">Juan Tamariz - 24 Junio - Cines Callao </h1>
-            </div>
-            <div class="nav navbar container">
-                <div class="nav-line position-relative bottom-0"></div>
+                <h1 class="text-center text-black m-0">Boris Brejcha · Barcelona · Brunch In The Park · 22/02/2023</h1>
             </div>
     </section>
     <section>
-        <div class="container fluid">
+        <div class="container-fluid row">
+            <div class="col-5">
+                
+            </div>
+            <div class="col-7">
+
+            </div>
             
         </div>
     </section>
