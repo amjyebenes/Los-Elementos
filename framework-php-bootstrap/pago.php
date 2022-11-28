@@ -72,7 +72,7 @@
                     </div>
 
                     <!-- Columna der imagen de evento/concierto -->
-                    <div class="col-md-5 d-none d-md-inline pt-4">
+                    <div class="col-md-5 d-none d-md-flex py-4 justify-content-end">
                         <img class="img-fluid shadow" src="assets/img/cartel.png">
                     </div>
                 </div>    
