@@ -4,7 +4,7 @@
                 <!-- Footer Logo-->
                 <div class="col-lg-3 col-sm-6 col-8 d-flex justify-content-end justify-content-sm-start align-items-center pb-2 pb-sm-0">
                     <div class="w-50">
-                        <img src="assets/img/Logo-web00.png" class="img-fluid">
+                        <a href="index.php"><img src="assets/img/Logo-web00.png" class="img-fluid"></a>
                     </div>
                 </div>
               
