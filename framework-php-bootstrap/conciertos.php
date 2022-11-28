@@ -9,7 +9,7 @@
 <?php include("includes/navigation.php");?>
 <main class="device-padding">
 <!-- Portfolio Section-->
-<section class="position-relative pt-lg-5 mt-lg-5 portfolio mb-0" id="portfolio">
+<section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
@@ -30,9 +30,9 @@
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
                 <div class="row">
-                    <p class="h1 text-primary fw-bold tituloArtista">Cruz Cafuné</p>
+                    <p class="h1 text-primary ">Cruz Cafuné</p>
                     <div class="col pb-1">
-                        <p class="h5 tituloArtista">22 · OCT · 2022</p>
+                        <p class="h5">22 · OCT · 2022</p>
                         <h6>SAB - 21:30<h6>
                         <h6 class="text-primary">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -60,7 +60,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -72,9 +72,9 @@
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
                 <div class="row">
-                    <p class="h1 text-primary fw-bold tituloArtista">SFDK</p>
+                    <p class="h1 text-primary ">SFDK</p>
                     <div class="col pb-1">
-                        <p class="h5 tituloArtista">14 · DIC · 2023</p>
+                        <p class="h5">14 · DIC · 2023</p>
                         <h6>LUN - 22:30<h6>
                         <h6 class="text-primary">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -102,7 +102,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -114,9 +114,9 @@
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
                 <div class="row">
-                    <p class="h1 text-primary fw-bold tituloArtista">Boris Brejcha</p>
+                    <p class="h1 text-primary ">Boris Brejcha</p>
                     <div class="col pb-1">
-                        <p class="h5 tituloArtista">22 · FEB · 2023</p>
+                        <p class="h5">22 · FEB · 2023</p>
                         <h6>JUE - 01:30<h6>
                         <h6 class="text-primary">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -144,7 +144,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -156,9 +156,9 @@
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
                 <div class="row">
-                    <p class="h1 text-primary fw-bold tituloArtista">Vetusta Morla</p>
+                    <p class="h1 text-primary ">Vetusta Morla</p>
                     <div class="col pb-1">
-                        <p class="h5 tituloArtista">19 · NOV · 2023</p>
+                        <p class="h5">19 · NOV · 2023</p>
                         <h6>DOM - 11:30<h6>
                         <h6 class="text-primary">
                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -186,7 +186,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>

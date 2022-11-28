@@ -32,9 +32,9 @@
                     </div>
                     <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
                         <div class="row">
-                            <p class="h1 text-primary fw-bold tituloArtista">Mago Pop</p>
+                            <p class="h1 text-primary  ">Mago Pop</p>
                             <div class="col pb-1">
-                                <p class="h5 tituloArtista">13 · OCT · 2023</p>
+                                <p class="h5 ">13 · OCT · 2023</p>
                                 <h6>SAB - 21:30<h6>
                                     <h6 class="text-primary">
                                         <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -57,9 +57,9 @@
                     </div>
                     <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
                         <div class="row">
-                            <p class="h1 text-primary fw-bold tituloArtista">Juan Tamariz</p>
+                            <p class="h1 text-primary  ">Juan Tamariz</p>
                             <div class="col pb-1">
-                                <p class="h5 tituloArtista">02 · MAR · 2023</p>
+                                <p class="h5 ">02 · MAR · 2023</p>
                                 <h6>SAB - 21:30<h6>
                                     <h6 class="text-primary">
                                         <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -82,9 +82,9 @@
                     </div>
                     <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
                         <div class="row">
-                            <p class="h1 text-primary fw-bold tituloArtista">Festival del Rey León</p>
+                            <p class="h1 text-primary  ">Festival del Rey León</p>
                             <div class="col pb-1">
-                                <p class="h5 tituloArtista">15 · JUN · 2023</p>
+                                <p class="h5 ">15 · JUN · 2023</p>
                                 <h6>DOM - 17:30<h6>
                                     <h6 class="text-primary">
                                         <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                            <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                            <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -107,9 +107,9 @@
                     </div>
                     <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
                         <div class="row">
-                            <p class="h1 text-primary fw-bold tituloArtista">Jose Sacristán - Obra Teatral</p>
+                            <p class="h1 text-primary  ">Jose Sacristán - Obra Teatral</p>
                             <div class="col pb-1">
-                                <p class="h5 tituloArtista">6 · OCT · 2022</p>
+                                <p class="h5 ">6 · OCT · 2022</p>
                                 <h6>SAB - 21:30<h6>
                                     <h6 class="text-primary">
                                         <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
