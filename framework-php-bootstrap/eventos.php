@@ -45,7 +45,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionEntradas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionEntradas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                            <a href="seleccionEntradas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                            <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
-                        <a href="seleccionEntradas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
+                        <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 tituloArtista">Seleccionar butacas</span></button></a>
                         </div>
                     </div>
                 </div>

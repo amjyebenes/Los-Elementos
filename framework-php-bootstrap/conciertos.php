@@ -25,7 +25,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
+                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -67,7 +67,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title"></a>
+                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -109,7 +109,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title"></a>
+                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">
@@ -151,7 +151,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
-                  <a href="verConcierto.php"><img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title"></a>
+                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column">

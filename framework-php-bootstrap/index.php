@@ -36,7 +36,7 @@
                     <p>Concierto 1</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="verConcierto.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 2-->
@@ -46,7 +46,7 @@
                     <p>Concierto 2</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="verConcierto.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 3-->
@@ -56,7 +56,7 @@
                     <p>Concierto 3</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="verConcierto.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
                 </div>
             </article>
         </div>
@@ -100,7 +100,7 @@
                             quas ipsam tempora? Mollitia quam earum assumenda laborum? Mollitia, hic?</p>
                     </div>
                     <div class="d-flex justify-content-start align-self-start">
-                        <button type="button" class="buy-button">Ver eventos</button>
+                        <button type="button" class="buy-button btn rounded-3">Ver eventos</button>
                     </div>
                     <div class="d-none d-md-block mt-auto">
                         <div class="b-line"></div>

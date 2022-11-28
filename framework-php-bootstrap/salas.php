@@ -29,7 +29,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 col-12 bg-white shadow">
                         <div class="row">
-                            <p class="h2 text fw-bold tituloSala">Sala París 15</p>
+                            <a href="https://paris15.es/" class="h2 text fw-bold tituloSala">Sala París 15</a> 
 
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
@@ -58,7 +58,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 col-12 bg-white shadow">
                         <div class="row">
-                            <p class="h2 text fw-bold tituloSala">Wizink Center</p>
+                            <a href="https://www.wizinkcenter.es/" class="h2 text fw-bold tituloSala">Wizink Center</a>
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
                                 <h6 class="text-primary">
@@ -87,7 +87,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 bg-white shadow">
                         <div class="row">
-                            <p class="h2 text fw-bold tituloSala">Sala Apolo</p>
+                            <a href="https://www.sala-apolo.com/es/" class="h2 text fw-bold tituloSala">Sala Apolo</a>
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
                                 <h6 class="text-primary">

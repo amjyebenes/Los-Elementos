@@ -50,7 +50,7 @@
                             <button class="btn btn-primary rounded-5"><i class="fas fa-arrow-alt-circle-down"></i></button>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary rounded-3"><span class="sm-h3">Añadir al carrito</span></button>
+                            <button type="button" class="btn btn-primary rounded-3" onclick='alert("Añadido a la cesta");'><span class="sm-h3">Añadir al carrito</span></button>
                         </div>
                     </div>
 
