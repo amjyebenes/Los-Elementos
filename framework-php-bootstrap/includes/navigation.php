@@ -20,7 +20,7 @@
                             <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
                             <div class="dropdown">
                                 <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-user text-dark"></i>
+                                    <i class="fa-solid fa-user text-light"></i>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
@@ -73,7 +73,7 @@
                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
                 <div class="dropdown dropup">
                     <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-user text-dark"></i>
+                        <i class="fa-solid fa-user text-light"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
