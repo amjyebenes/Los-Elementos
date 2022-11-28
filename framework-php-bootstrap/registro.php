@@ -14,7 +14,7 @@
                             <div class="row col-6 ">
                                 <form action="" method="POST">
                                 <div class="d-flex justify-content-center mt-5 mb-5">
-                                    <i class="fa-solid fa-user-plus fa-6x iconoLogin"></i>                                    
+                                    <i class="fa-solid fa-user-plus fa-6x text-info"></i>                                    
                                 </div> 
                                 <div class="d-flex align-items-center gap-2 mb-3">
                                     <i class="fa-solid fa-ticket text-white"></i>
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="mb-3">
                                                 <label class="text-white">¿Ya estás registrada/o?
-                                                    <a type="button" class="text-white text-decoration-underline" href="login.php" target="_blank">Inicia Sesión</a>
+                                                    <a type="button" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
                                                 </label>
                                     </div>
                                 </form>
