@@ -36,6 +36,10 @@
 			$CURRENT_PAGE = "Términos y Condiciones"; 
 			$PAGE_TITLE = "Términos y Condiciones - EleTickets";
 			break;
+		case "/eventos.php":
+			$CURRENT_PAGE = "Eventos - EleTickets"; 
+			$PAGE_TITLE = "Eventos - EleTickets";
+			break;
 		default:
 			$CURRENT_PAGE = "Index";
 			$PAGE_TITLE = "No te quedes sin tus entradas - EleTickets";
