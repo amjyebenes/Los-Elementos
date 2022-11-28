@@ -49,15 +49,15 @@
                             <p class="col-md-9  fs-5">Detalles de pago</p>
                             
                                 <div class="border-bottom border-primary mb-3">
-                                    <input class="form-control-plaintext" type="text" value="Nombre del titular" name="titular">
+                                    <input class="form-control-plaintext" type="text" placeholder="Nombre del titular" name="titular">
                                 </div>
                                 <div class="border-bottom border-primary mb-3 d-flex gap-2">
-                                    <input class="form-control-plaintext w-75" type="text" value="Número de la Tarjeta" name="num_tarjeta">
+                                    <input class="form-control-plaintext w-75" type="text" placeholder="Número de la Tarjeta" name="num_tarjeta">
                                     <i class="fa-brands fa-cc-mastercard display-6"></i> <i class="fa-brands fa-cc-visa display-6"></i>                                    
                                 </div>
                                 <div class="border-bottom border-primary d-flex mb-3">
-                                    <input class="form-control-plaintext w-75" type="text" value="Fecha de Caducidad" name="fechaCad">
-                                    <input class="form-control-plaintext w-25" type="text" value="CVV" name="cvv">
+                                    <input class="form-control-plaintext w-75" type="text" placeholder="Fecha de Caducidad" name="fechaCad">
+                                    <input class="form-control-plaintext w-25" type="text" placeholder="CVV" name="cvv">
                                 </div>
                                 <label class="text-primary mb-5">Al hacer click en “Confirmar Pago”  aceptas el acuerdo de los términos y condiciones de usuario de EleTickets</label>
                                 <div class="row mb-5">
@@ -67,8 +67,7 @@
                                     <div class="col-6 text-end">
                                         <input class="btn btn-primary rounded-3" type="submit" value="Confirmar Pago" name="confirmarPago">
                                     </div>
-                                </div>
-                            
+                                </div>                            
                         </div>    
                     </div>
 
