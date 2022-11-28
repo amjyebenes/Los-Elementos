@@ -9,9 +9,9 @@
 <body>
 
     <?php include("includes/navigation.php"); ?>
-    <main class="py-5 container-fluid">
+    <main class="py-md-5 py-3 container-fluid">
         <!-- Portfolio Section-->
-        <section class="position-relative mt-5 mb-0 ">
+        <section class="position-relative mt-md-5 mt-0 mb-0 ">
 
             <div class="container">
                 <!-- Portfolio Section Heading-->
@@ -29,7 +29,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 col-12 bg-white shadow">
                         <div class="row">
-                            <a href="https://paris15.es/" class="h2 text fw-bold tituloSala">Sala París 15</a> 
+                            <a href="https://paris15.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala París 15</a> 
 
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
@@ -58,7 +58,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 col-12 bg-white shadow">
                         <div class="row">
-                            <a href="https://www.wizinkcenter.es/" class="h2 text fw-bold tituloSala">Wizink Center</a>
+                            <a href="https://www.wizinkcenter.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Wizink Center</a>
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
                                 <h6 class="text-primary">
@@ -87,7 +87,7 @@
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-3 bg-white shadow">
                         <div class="row">
-                            <a href="https://www.sala-apolo.com/es/" class="h2 text fw-bold tituloSala">Sala Apolo</a>
+                            <a href="https://www.sala-apolo.com/es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala Apolo</a>
                             <div class="col">
                                 <p class="h5 tituloSala">Información: </p>
                                 <h6 class="text-primary">
