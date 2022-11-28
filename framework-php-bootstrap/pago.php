@@ -65,7 +65,7 @@
                                         <a href="cesta.php"><button class="btn btn-outline-primary bg-info text-primary rounded-3" name="atras"><i class="fa-solid fa-arrow-left"></i>Atrás</button></a>
                                     </div>
                                     <div class="col-6 text-end">
-                                        <input class="btn btn-primary rounded-3" type="submit" value="Confirmar Pago" name="confirmarPago">
+                                        <input class="btn btn-primary rounded-3" type="submit" value="Confirmar Pago" name="confirmarPago" onclick='alert("Pago confirmado");'>
                                     </div>
                                 </div>                            
                         </div>    

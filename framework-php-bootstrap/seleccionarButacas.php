@@ -44,7 +44,7 @@
                 </div>
                 <div class="row d-flex justify-content-around pt-lg-5">
                     <a class="col-auto col-lg-4 pb-4 pb-lg-0" href="index.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
-                    <a class="col-auto col-lg-4 pb-4 pb-lg-0" href="cesta.php"><button class="w-100 btn btn-primary text-white rounded-3">Ir a la cesta</button></a>
+                    <a class="col-auto col-lg-4 pb-4 pb-lg-0" href="index.php"><button class="w-100 btn btn-primary text-white rounded-3" onclick='alert("Añadido a la cesta");'>Añadir a la cesta</button></a>
                 </div>
             </div>
             
