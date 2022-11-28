@@ -69,8 +69,18 @@
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="login.php">Login</a>
             </li>
-            <li class="nav-item text-capitalize">
-                <a class="nav-link" href="micuenta.php">Cuenta</a>
+            <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
+                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                <div class="dropdown dropup">
+                    <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user text-dark"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
+                        <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
+                        <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
