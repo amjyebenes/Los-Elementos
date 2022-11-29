@@ -19,7 +19,7 @@
                     <span>                        
                         <p class="m-0">Contacto +34 922 928 789</p>
                     </span>
-                    <span class="gap-2">
+                    <span class="d-flex gap-3">
                         <i class="fa-brands fa-twitter text-white fa-lg"></i>
                         <i class="fa-brands fa-facebook text-white fa-lg"></i>
                         <i class="fa-brands fa-github text-white fa-lg"></i>
