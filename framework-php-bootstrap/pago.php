@@ -84,8 +84,7 @@
     </main>
 
     <?php include("includes/footer.php"); ?>
-
-    <script src="./js/micuenta.js"></script>
+    <script src="./js/navbar.js"></script>
 </body>
 
 </html>
