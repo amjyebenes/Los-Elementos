@@ -29,7 +29,7 @@
                 </div>
                 <div class="row d-flex align-items-center pb-1">
                     <div class="col-12 col-lg-9">
-                        <img class="shadow-lg card-img" src="./assets/img/butacas.png" alt="Title">
+                        <img class="card-img" src="./assets/img/butacas-sinfondo.png" alt="Title">
                     </div>
                     <div class="col-12 col-lg-3 flex-column">
                         <div class="row d-flex justify-content-center pt-3 pt-lg-0">
