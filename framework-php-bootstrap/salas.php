@@ -11,9 +11,9 @@
     <?php include("includes/navigation.php"); ?>
     <main class="py-md-5 py-3 container-fluid">
         <!-- Portfolio Section-->
-        <section class="position-relative mt-md-5 mt-0 mb-0 ">
+        <section class="position-relative mt-md-5 mt-0 mb-0 device-padding">
 
-            <div class="container">
+            <div class="container-fluid">
                 <!-- Portfolio Section Heading-->
                 <h1 class="text-left text-uppercase text-black m-0">Salas</h1>
                 <!-- Icon Divider-->
@@ -23,11 +23,11 @@
             </div>
         </section>
 
-        <section>
+        <section class="device-padding">
             <div class="container-fluid">
                 <!--Primera sala -->
                 <div class="row justify-content-center mb-4">
-                    <div class="col-lg-3 col-12 bg-white shadow">
+                    <div class="col-lg-5 col-12 bg-white shadow">
                         <div class="row">
                             <a href="https://paris15.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala París 15</a> 
 
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12 d-flex flex-column px-0">
+                    <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
                             <img class="shadow-lg card-img " src="./assets/img/SalaParis.png" alt="Title">
                         </div>
@@ -56,7 +56,7 @@
                 </div>
                 <!--Segunda sala -->
                 <div class="row justify-content-center mb-4">
-                    <div class="col-lg-3 col-12 bg-white shadow">
+                    <div class="col-lg-5 col-12 bg-white shadow">
                         <div class="row">
                             <a href="https://www.wizinkcenter.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Wizink Center</a>
                             <div class="col">
@@ -77,7 +77,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-5 col-12 d-flex flex-column px-0">
+                    <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
                             <img class="shadow-lg card-img " src="./assets/img/wizink.png" alt="Title">
                         </div>
@@ -85,7 +85,7 @@
                 </div>
                 <!--Tercera sala -->
                 <div class="row justify-content-center mb-4">
-                    <div class="col-lg-3 bg-white shadow">
+                    <div class="col-lg-5 bg-white shadow">
                         <div class="row">
                             <a href="https://www.sala-apolo.com/es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala Apolo</a>
                             <div class="col">
@@ -106,7 +106,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-5 d-flex flex-column px-0">
+                    <div class="col-lg-7 d-flex flex-column px-0">
                         <div class="shadow">
                             <img class="shadow-lg card-img " src="./assets/img/apolo.png" alt="Title">
                         </div>
