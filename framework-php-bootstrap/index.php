@@ -12,7 +12,7 @@
         <!-- Título y barra de búsqueda -->
         <div class="row justify-content-center">
             <div class="col-12 text-center mt-0">
-                <h1 class="text-secondary h1 page-section-heading">Consigue tus entradas</h1>
+                <h1 class="text-primary h1 page-section-heading">Consigue tus entradas</h1>
             </div>
             <div class="col-lg-4 col-xl-3 col-md-5 col-11">
                 <form class="d-flex justify-content-between" role="search" action="">
