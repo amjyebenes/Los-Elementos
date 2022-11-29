@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-4 col-xl-3 col-md-5 col-11">
                 <form class="d-flex justify-content-between" role="search" action="">
-                    <input class="me-md-2 me-0 search-bar" type="search" placeholder="Busca tu artista favorito" aria-label="Search">
+                    <input class="me-md-2 me-0 border-0 border-bottom border-dark w-100 bg-light" type="search" placeholder="Busca tu artista favorito" aria-label="Search">
                     <button class="btn search-icon py-0 px-1 py-md-auto px-md-auto" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -33,7 +33,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark d-none d-md-block"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p>Concierto 1</p>
+                    <p class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid"></a>
@@ -43,7 +43,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p>Concierto 2</p>
+                    <p class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
@@ -53,7 +53,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p>Concierto 3</p>
+                    <p class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</p>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
@@ -100,7 +100,7 @@
                             quas ipsam tempora? Mollitia quam earum assumenda laborum? Mollitia, hic?</p>
                     </div>
                     <div class="d-flex justify-content-start align-self-start">
-                        <button type="button" class="buy-button btn rounded-3">Ver eventos</button>
+                        <button type="button" class="buy-button btn btn-primary rounded-3 p-2">Ver eventos</button>
                     </div>
                     <div class="d-none d-md-block mt-auto">
                         <div class="b-line"></div>

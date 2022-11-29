@@ -38,7 +38,7 @@
 
     <!-- BOOSTRAP NAVBAR FOR SMALL AND MEDIUM DEVICES -->
     <nav class="navbar navbar-expand-lg py-2 navbar-dark text-decoration-none text-dark text-uppercase device-padding active d-flex d-lg-none mainNav">
-        <div class="container-fluid small-nav-padding">
+        <div class="container-fluid">
             <a class="navbar-brand logo-mobile" href="index.php">
                 <img src="assets/img/Logo-web00.png" alt="" class="img-fluid">
             </a>
