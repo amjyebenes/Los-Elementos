@@ -49,7 +49,7 @@
                                     </div>                                    
                                     <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
 
-                                    <hr class="text-white fw-bold">
+                                    <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                                     
                                     <div class="nav navbar container">
                                         <div class="nav-line position-relative bottom-0 bg-white"></div>

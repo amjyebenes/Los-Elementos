@@ -13,7 +13,7 @@
                 <!-- Cesta Section Heading-->
                 <h1 class="text-uppercase m-0">Resumen de la compra</h1>
                 <!-- Divider top-->
-                <hr class="opacity-50 mt-1 mb-4">
+                <div class="b-line w-100 bg-dark"></div>
                 <!-- Entrada -->
                 <div class="row py-3">
                     <div class="col-12 justify-content-center row mx-1 px-0">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <!-- Divider bottom-->
-                <hr class="opacity-50 my-4">
+                <div class="b-line w-100 bg-dark"></div>
 
                 <div class="row fw-bold pt-4 pb-5 justify-content-center align-items-center">
                     <div class="col-md-8 col-auto">

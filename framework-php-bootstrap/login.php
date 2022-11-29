@@ -35,7 +35,7 @@
                             <button type="submit" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>                 
                         </div>
 
-                        <hr class="text-white fw-bold">
+                        <div class="b-line w-100 bg-light opacity-25 my-2"></div>
 
                         
                         <div class="mb-5">
