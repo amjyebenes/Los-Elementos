@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="row d-flex align-items-baseline">
                                         <div class="col-7">
-                                            <label class="h6 text-left">TELEFONO: </label>
+                                            <label class="text-left">TELEFONO: </label>
                                         </div>
                                         <div class="col-5">
                                             <label class="h6 text-center">95544115</label>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="row d-flex align-items-baseline">
                                         <div class="col-7">
-                                            <label class="h6 text-left">DIRECCION: </label>
+                                            <label class="text-left">DIRECCION: </label>
                                         </div>
                                         <div class="col-5">
                                             <label class="h6 text-center">c/las pilas</label>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-5">
-                                        <label class="h6 text-left">NUEVA CONTRASEÑA: </label>
+                                        <label class="text-left">NUEVA CONTRASEÑA: </label>
                                     </div>
                                     <div class="col-7 py-1">
                                         <input type="password" class="opacity-50 text-center col-12">
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-5">
-                                        <label class="h6 text-left">CONFIRMAR CONTRASEÑA: </label>
+                                        <label class="text-left">CONFIRMAR CONTRASEÑA: </label>
                                     </div>
                                     <div class="col-7 py-1">
                                         <input type="password" class="opacity-50 text-center col-12">
