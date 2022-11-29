@@ -3,7 +3,6 @@
 <html>
 <head>
 	<?php include("includes/head-tag-contents.php");?>
-    <!-- <script src="https://kit.fontawesome.com/9e9e2fd9c0.js" crossorigin="anonymous"></script> -->
 </head>
 <body class="index">
 <?php include("includes/navigation-home.php");?>
@@ -33,7 +32,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark d-none d-md-block"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París</p>
+                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid"></a>
@@ -43,7 +42,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</p>
+                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
@@ -53,7 +52,7 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <p class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</p>
+                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
                     <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
