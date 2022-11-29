@@ -1,21 +1,27 @@
 <footer class="footer text-center device-padding section-padding bg-dark">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <!-- Footer Logo-->
-                <div class="col-lg-3 col-sm-6 col-8 d-flex justify-content-end justify-content-sm-start align-items-center pb-2 pb-sm-0">
+                <div class="col-md-3 col-8 d-flex justify-content-end justify-content-sm-start align-items-center pb-2 pb-md-0">
                     <div class="w-50">
                         <a href="index.php"><img src="assets/img/Logo-web00.png" class="img-fluid"></a>
                     </div>
                 </div>
-              
+   
                 <!-- Footer Contacto-->
-                <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center justify-content-sm-end align-items-center ms-lg-5">
+                <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
+                    <span>
+                        <a class="text-decoration-none text-primary" href="terminosYcondiciones.php"><p class="m-0">Ley de Términos y Condiciones</p></a>
+                    </span>
+                </div>
+
+                <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
                     <span>
                         <p class="m-0">© Copyright - The Elements - 2022</p>
                     </span>
                 </div>
 
-                <div class="col-lg-4 col-sm-12 col-12 d-flex gap-4 justify-content-center justify-content-sm-end align-items-center">
+                <div class="col-md-3 col-12 d-flex gap-4 justify-content-center justify-content-md-end align-items-center">
                     <span>                        
                         <p class="m-0">Contacto +34 922 928 789</p>
                     </span>
