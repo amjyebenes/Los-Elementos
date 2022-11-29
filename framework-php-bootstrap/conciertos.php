@@ -10,18 +10,18 @@
 <main class="device-padding">
 <!-- Portfolio Section-->
 <section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Portfolio Section Heading-->
             <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
             <!-- Icon Divider-->
         </div>
-        <div class="nav navbar container">
+        <div class="nav navbar container-fluid">
             <div class="nav-line position-relative bottom-0"></div>
         </div>
         </section>
 
 <section>
-    <div class="container mb-4 d-flex flex-column gap-5">
+    <div class="container-fluid mb-4 d-flex flex-column gap-5">
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow m-2">
