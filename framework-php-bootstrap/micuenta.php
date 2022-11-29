@@ -15,7 +15,7 @@
             <div class="row col col-md-10 col-lg-12 pt-lg-4">
                 <h6 class="bg-primary p-1 ps-4 rounded-top-3"><span class="text-white shadow">MI&nbsp&nbspZONA</span></h6>
 
-                <div class="row mt-4 pt-4 d-flex justify-content-center">
+                <div class="row mt-4 pt-4 justify-content-center">
                     <div class="col-6 col-lg-3 ms-5 me-5 mb-4 d-flex">
                         <button class="rounded-3 border-top border-primary row col justify-content-center text-center" id="botonDatos" onclick="clickUsuario()">
                             <i class="fas fa-user fa-7x iconoCuenta mt-3 w100" id="iconoUsuario"></i>
@@ -41,7 +41,7 @@
                             <div class="col">
                                 <label class="h5 text-primary"><u>DATOS DE FACTURACION</u></label>
                                 <div class="col">
-                                    <div class="row d-flex align-items-baseline">
+                                    <div class="row align-items-baseline">
                                         <div class="col-7">
                                             <label class="text-left">NOMBRE: </>
                                         </div>
@@ -49,7 +49,7 @@
                                             <label class="h6 text-center">juan</label>
                                         </div>
                                     </div>
-                                    <div class="row d-flex align-items-baseline">
+                                    <div class="row align-items-baseline">
                                         <div class="col-7">
                                             <label class="text-left">DNI/CIF: </label>
                                         </div>
@@ -57,7 +57,7 @@
                                             <label class="h6 text-center">25146463s</label>
                                         </div>
                                     </div>
-                                    <div class="row d-flex align-items-baseline">
+                                    <div class="row align-items-baseline">
                                         <div class="col-7">
                                             <label class="text-left">TELEFONO: </label>
                                         </div>
@@ -65,7 +65,7 @@
                                             <label class="h6 text-center">95544115</label>
                                         </div>
                                     </div>
-                                    <div class="row d-flex align-items-baseline">
+                                    <div class="row align-items-baseline">
                                         <div class="col-7">
                                             <label class="text-left">DIRECCION: </label>
                                         </div>
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-8 row d-flex justify-content-center">
+                        <div class="col-sm-8 row justify-content-center">
                             <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
                             <div class="col d-flex flex-column justify-content-between">
                                 <div class="row">
@@ -114,10 +114,8 @@
                                 </div>
 
                             </div>
-                            <div class="row">
-                                <div class="d-flex justify-content-end pt-2">
-                                    <button type="button" class="btn btn-primary rounded-5 col col-sm-10 col-xl-6">Guardar cambios</button>
-                                </div>
+                            <div class="row justify-content-end pt-2">
+                                <button type="button" class="btn btn-primary rounded-5 col col-sm-10 col-xl-6">Guardar cambios</button>
                             </div>
                         </div>
                     </div>
