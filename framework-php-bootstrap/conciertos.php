@@ -60,7 +60,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col" onclick="alert('Añadido al carrito correctamente');"><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col" onclick="alert('Añadido al carrito correctamente');"><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -144,7 +144,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col" onclick="alert('Añadido al carrito correctamente');"><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
@@ -186,7 +186,7 @@
             </div>
             <div class="col col-md-2 d-flex align-items-center align-items-sm-end mb-4">
                     <div class="col d-flex justify-content-center pb-4">
-                        <button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3">Añadir al carrito</span></button>
+                        <button type="button" class="btn btn-primary rounded-3 col" onclick="alert('Añadido al carrito correctamente');"><span class="sm-h3">Añadir al carrito</span></button>
                     </div>
             </div>
         </div>
