@@ -16,19 +16,19 @@
                 <div><i class="fa-solid fa-info fs-2 bg-info rounded-4 px-4 py-3 mb-1"></i></div>
             </div>
             <!-- Contact Section Heading-->
-            <h2 class=" text-uppercase text-light text-center text-sm-start my-5 shadowText">Contacta con nosotros</h2>
+            <h2 class=" text-uppercase text-light text-center text-md-start my-5 shadowText">Contacta con nosotros</h2>
 
             <!-- Contact Section Form-->
-            <div class="row justify-content-center text-center text-sm-start my-4">
+            <div class="row justify-content-center text-center text-md-start my-4">
                 <form action="" method="POST">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-12">
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nombre">
                         </div>
-                        <div class="col-md-4 my-3 my-md-0">            
+                        <div class="col-md-4 col-12 my-3 my-md-0">            
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Email">
                         </div>
-                        <div class="col-md-4">            
+                        <div class="col-md-4 col-12">            
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nº Pedido (Opcional)">
                         </div>
                     </div>
