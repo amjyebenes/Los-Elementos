@@ -17,8 +17,9 @@
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
             filter: contrast(.6) saturate(1) hue-rotate(30deg);
 
+            // Se activa otro elemento con Js
             &:hover {
-                cursor: pointer;
+                cursor: none;
             }
         }
     }
@@ -29,9 +30,15 @@
     .video-con {
         transform-origin: top center;
         transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        
+        // Se activa otro elemento con Js
+        &:hover {
+            cursor: none;
+        }
     }
 
     .video-mark {
+        pointer-events: none;
         transform: translate(-50%, -50%);
         mix-blend-mode: overlay;
     }
@@ -45,4 +52,21 @@
     .conciertos-item-img {
         transform: translateY(-30vh);
     }
+}
+
+/* TEXT TRACKING */
+.text-track {
+    mix-blend-mode: exclusion;
+    z-index: 21;
+    transition: opacity .1s ease-in-out;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.con-textTrackH {
+    mix-blend-mode: exclusion;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
 }

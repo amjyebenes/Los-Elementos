@@ -5,7 +5,14 @@
 	<?php include("includes/head-tag-contents.php");?>
 </head>
 <body class="index">
+<!-- TEXT TRACKING FOR IMG HOVER -->
+<div class="text-track position-fixed text-dark opacity-0 ">
+    <div class="con-textTrackH w-100 h-100 d-flex justify-content-center align-items-center rounded-circle bg-white">
+        <h1 class="textTrackH h1 p-0 m-0 mt-2"></h1>
+    </div>
+</div>
 <?php include("includes/navigation-home.php");?>
+<!-- MAIN CONTENT -->
 <main>
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
     <section class="container-fluid page-section device-padding section-padding bg-light position-relative border-top border-dark">
@@ -35,7 +42,7 @@
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 2-->
@@ -45,7 +52,7 @@
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 3-->
@@ -55,7 +62,7 @@
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
         </div>
@@ -75,7 +82,7 @@
             <div class="col-md-8 col-12 overflow-hidden">
                 <div class="video-con position-relative">
                     <h1 class="video-mark position-absolute top-50 start-50 text-center display-1">VIDEO OVERLAY</h1>
-                    <img src="assets/img/bg02.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/bg02.jpg" alt="" class="img-fluid hover-img">
                 </div>
             </div>
             <!-- Descripción -->
@@ -114,5 +121,6 @@
 
 <?php include("includes/footer.php");?>
 <script src="./js/navbar.js"></script>
+<script src="./js/scripts.js"></script>
 </body>
 </html>
