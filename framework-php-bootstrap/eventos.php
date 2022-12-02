@@ -12,12 +12,8 @@
     <main class="device-padding">
         <!-- Portfolio Section-->
         <section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
-            <div class="pb-4">
-                <!-- Portfolio Section Heading-->
-                <h1 class="text-left text-uppercase text-black fw-light m-0">Eventos</h1>
-                <!-- Icon Divider-->
-            </div>
-            <div class="b-line w-100 bg-dark"></div>
+            <h1 class="text-left text-uppercase text-black fw-light m-0 pt-3">Eventos</h1>
+            <div class="b-line w-100 bg-dark my-4"></div>
         </section>
 
         <section>
