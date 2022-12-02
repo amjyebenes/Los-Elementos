@@ -18,9 +18,8 @@
                 <h1 class="text-left text-uppercase text-black m-0">Salas</h1>
                 <!-- Icon Divider-->
             </div>
-            <div class="nav navbar container">
-                <div class="nav-line position-relative bottom-0"></div>
-            </div>
+            <div class="b-line w-100 bg-dark my-4"></div>
+
         </section>
 
         <section class="device-padding">
