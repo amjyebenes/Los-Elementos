@@ -20,15 +20,15 @@
 
             <!-- Contact Section Form-->
             <div class="row justify-content-center text-center text-md-start my-4">
-                <form action="" method="POST">
+                <form class="col-12" action="" method="POST">
                     <div class="row">
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-4">
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nombre">
                         </div>
-                        <div class="col-md-4 col-12 my-3 my-md-0">            
+                        <div class="col-md-4 my-3 my-md-0">            
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Email">
                         </div>
-                        <div class="col-md-4 col-12">            
+                        <div class="col-md-4">            
                             <input type="text" class="form-control bg-light opacity-75" placeholder="Nº Pedido (Opcional)">
                         </div>
                     </div>
