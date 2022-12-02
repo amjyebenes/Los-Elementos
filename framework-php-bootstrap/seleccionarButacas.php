@@ -16,7 +16,7 @@
             </div>
     </section>
     <section class="d-flex justify-content-center py-lg-5">
-        <div class="container row d-flex ">
+        <div class="container row ">
             <div class="col-12 col-lg-5 pb-5">
                 <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
             </div>
@@ -24,27 +24,27 @@
                 <div class="row">
                     <hr class="opacity-75">
                 </div>
-                <div class="row d-flex justify-content-center">
+                <div class="row justify-content-center">
                     <span class="h3 text-center tituloArtista">Selecciona tus butacas: 2</span>
                 </div>
-                <div class="row d-flex align-items-center pb-1">
+                <div class="row align-items-center pb-1">
                     <div class="col-12 col-lg-9">
                         <img class="card-img" src="./assets/img/butacas-sinfondo.png" alt="Title">
                     </div>
                     <div class="col-12 col-lg-3 flex-column">
-                        <div class="row d-flex justify-content-center pt-3 pt-lg-0">
+                        <div class="row justify-content-center pt-3 pt-lg-0">
                             <img class="col-2 col-lg-3" src="./assets/img/bolanegra.png" alt="Title">
                             <span class="text-center">Asiento ocupado</span>
                         </div>
-                        <div class="row d-flex justify-content-center">
+                        <div class="row justify-content-center">
                             <img class="col-2 col-lg-3" src="./assets/img/bolanaranja.png" alt="Title">
                             <span class="text-center">Asiento libre</span>
                         </div>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-around pt-lg-5">
-                    <a class="col-auto col-lg-4 pb-4 pb-lg-0" href="index.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
-                    <a class="col-auto col-lg-4 pb-4 pb-lg-0" href="index.php"><button class="w-100 btn btn-primary text-white rounded-3" onclick='alert("Añadido a la cesta");'>Añadir a la cesta</button></a>
+                <div class="row justify-content-around pt-lg-3">
+                    <a class="col-auto col-lg-4 pb-4 pb-md-0 pb-lg-0" href="index.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
+                    <a class="col-auto col-lg-4 pb-4 pb-md-0 pb-lg-0" href="index.php"><button class="w-100 btn btn-primary text-white rounded-3" onclick='alert("Añadido a la cesta");'>Añadir a la cesta</button></a>
                 </div>
             </div>
             

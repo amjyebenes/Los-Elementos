@@ -10,13 +10,13 @@
 <main class="device-padding">
 <!-- Portfolio Section-->
 <section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
-        <div class="container-fluid pb-4 px-0">
-            <!-- Portfolio Section Heading-->
-            <h1 class="text-left text-uppercase text-black fw-light m-0">Conciertos</h1>
-            <!-- Icon Divider-->
-        </div>
-        <div class="b-line w-100 bg-dark"></div>
-        </section>
+    <div class="px-0">
+        <!-- Portfolio Section Heading-->
+        <h1 class="text-left text-uppercase text-black fw-light m-0 pt-3">Conciertos</h1>
+        <!-- Icon Divider-->
+    </div>
+    <div class="b-line w-100 bg-dark my-4"></div>
+</section>
 
 <section>
     <div class="container-fluid mb-4 d-flex flex-column gap-5">

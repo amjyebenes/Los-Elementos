@@ -11,13 +11,9 @@
     <?php include("includes/navigation.php"); ?>
     <main class="device-padding">
         <!-- Portfolio Section-->
-        <section class="position-relative pt-lg-5 mt-lg-5 portfolio mb-0" id="portfolio">
-            <div class="container-fluid-fluid pb-4">
-                <!-- Portfolio Section Heading-->
-                <h1 class="text-left text-uppercase text-black fw-light m-0">Eventos</h1>
-                <!-- Icon Divider-->
-            </div>
-            <div class="b-line w-100 bg-dark"></div>
+        <section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
+            <h1 class="text-left text-uppercase text-black fw-light m-0 pt-3">Eventos</h1>
+            <div class="b-line w-100 bg-dark my-4"></div>
         </section>
 
         <section>
@@ -28,7 +24,7 @@
                             <img class="shadow-lg card-img" src="./assets/img/magopop.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column">
                         <div class="row">
                             <p class="h1 text-primary  ">Mago Pop</p>
                             <div class="col pb-1">
@@ -41,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
+                    <div class="col col-md-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
                         <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
@@ -53,7 +49,7 @@
                             <img class="shadow-lg card-img" src="./assets/img/juantamariz2.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column">
                         <div class="row">
                             <p class="h1 text-primary  ">Juan Tamariz</p>
                             <div class="col pb-1">
@@ -66,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
+                    <div class="col col-md-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
                         <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
@@ -78,7 +74,7 @@
                             <img class="shadow-lg card-img" src="./assets/img/ReyLeon.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column">
                         <div class="row">
                             <p class="h1 text-primary  ">Festival del Rey León</p>
                             <div class="col pb-1">
@@ -91,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
+                    <div class="col col-md-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
                             <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
@@ -103,7 +99,7 @@
                             <img class="shadow-lg card-img" src="./assets/img/senora-de-rojo-sobre-fondo-gris.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 col-lg-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column">
                         <div class="row">
                             <p class="h1 text-primary  ">Jose Sacristán - Obra Teatral</p>
                             <div class="col pb-1">
@@ -116,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-3 col-lg-3 d-flex align-items-center align-items-sm-end">
+                    <div class="col col-md-3 d-flex align-items-center align-items-sm-end">
                         <div class="col d-flex justify-content-center pb-4">
                         <a href="seleccionarButacas.php"><button type="button" class="btn btn-primary rounded-3 col "><span class="sm-h3 ">Seleccionar butacas</span></button></a>
                         </div>
