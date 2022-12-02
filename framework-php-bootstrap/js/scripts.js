@@ -77,6 +77,5 @@ function checkWidth() {
         homeBG.classList.add('w-auto');
         window.removeEventListener('scroll', moveBG);
         window.removeEventListener('mousemove', moveText);
-        observer.disconnect;
     }
 }
