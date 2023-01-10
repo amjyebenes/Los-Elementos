@@ -27,7 +27,7 @@
                                     <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
-                                    <li><a class="dropdown-item" href="pong.html" target="_blank">Pong</a> </li>
+                                    <li><a class="dropdown-item" href="pong.html" target="_blank">Pong Adri</a> </li>
                                 </ul>
                             </div>
                         </li>
@@ -81,7 +81,7 @@
                         <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
                         <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                         <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
-                        <li><a class="dropdown-item" href="pong.html" target="_blank">Pong</a></li>
+                        <li><a class="dropdown-item" href="pong.html" target="_blank">Pong Adri</a></li>
                     </ul>
                 </div>
             </li>
