@@ -24,14 +24,16 @@
                 <div class="ratio ratio-16x9 bg-dark  rounded-3">
                     <video class="video" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"></video>
                     <div>
-                        <div class="controls rounded-3">
+                        <div class="controls rounded-3 d-none" id="barraBotones">
                             <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
                                 <i class="bi bi-play-fill"></i>
                                 <i class="bi bi-pause-fill d-none"></i>
                             </button>
                             <div class="px-1 w-100">
                                 <div class="progress w-100 rounded-3">
-                                    <div class="progress-bar"></div>
+                                    <div class="progress-bar">
+                                    <span class="progress-bar-text d-none" id="porcentaje">15%</span>
+                                    </div>
                                 </div>
                             </div>
                             <button class="btn btn-lg btn-video-pip" title="Play picture in picture">
@@ -68,6 +70,7 @@
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
     <script src="./js/videoplayer.js"></script>
+    <script src="./js/instanciaVideo.js"></script>
 </body>
 
 </html>

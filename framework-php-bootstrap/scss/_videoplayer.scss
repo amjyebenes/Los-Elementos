@@ -8,7 +8,11 @@ $default-color-dark: #eee;
 $default-bg-progress-dark: #ccc;
 $default-bg-progress-bar-dark: #999;
 
+
+@import './variables/typography';
+
 .videoplayer{
+    
     position: relative;
     display: block;
     video{
@@ -25,9 +29,15 @@ $default-bg-progress-bar-dark: #999;
         background-color: $default-bg; // Default background-color
         .progress{
             background-color: $default-bg-progress; // Default background-color
+            border-radius:30px;
             .progress-bar{
                 transition: none !important;
                 background-color: $default-bg-progress-bar; // Default background-color
+                .progress-bar-text {
+                    margin-left: 15px;
+                    font-weight: $titulo;
+                    color: $default-bg-progress;
+                }
             }
         }
         &.controls-light{
