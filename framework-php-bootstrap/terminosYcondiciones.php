@@ -13,7 +13,7 @@
                 </section>
 
                 <section>
-                    <div class="class container">
+                    <div class="container">
                         <h3>1. Tratamiento de datos</h3>
                         <p>Para acceder a y/o utilizar los servicios de EleTickets es necesario que los usuarios proporcionen previamente a EleTickets ciertos datos de carácter personal. 
                             De conformidad con lo establecido en la Ley Orgánica 15/1999 de Protección de Datos (LOPD) de Carácter Personal queremos comunicarles que los datos recabados 
@@ -83,13 +83,25 @@
                         </p>
 
                         <h3>6. Campos de texto libre</h3>
-                       <p>Los campos de texto libre que, a disposición del usuario registrado, puedan aparecer en el Sitio Web, tienen como única y exclusiva finalidad el recabar información para mejorar la 
-                        calidad de los Servicios, en especial la entrega de los productos adquiridos. El usuario registrado no incluirá, en aquellos espacios que el Sitio Web pueda ofertar como “campos de texto libre”,
-                         ningún dato de carácter personal que pueda ser calificado dentro de aquellos datos para los que se exige un nivel de protección de tipo medio o alto, sin previo aviso a EleTickets, según define la normativa vigente 
-                         (a título enunciativo y no limitativo datos relativos a ideología, religión, creencias, afiliación sindical, salud, origen racial y/o vida sexual).
-                       </p> 
+                        <p>Los campos de texto libre que, a disposición del usuario registrado, puedan aparecer en el Sitio Web, tienen como única y exclusiva finalidad el recabar información para mejorar la 
+                            calidad de los Servicios, en especial la entrega de los productos adquiridos. El usuario registrado no incluirá, en aquellos espacios que el Sitio Web pueda ofertar como “campos de texto libre”,
+                            ningún dato de carácter personal que pueda ser calificado dentro de aquellos datos para los que se exige un nivel de protección de tipo medio o alto, sin previo aviso a EleTickets, según define la normativa vigente 
+                            (a título enunciativo y no limitativo datos relativos a ideología, religión, creencias, afiliación sindical, salud, origen racial y/o vida sexual).
+                        </p> 
+
+                        <h3>7. Licencias de Contenido Multimedia</h3>
+                        <p>En este apartado se nombrará de cada página el contenido multimedia de esta y se indicará el tipo de licencia que tiene dicho contenido y se nombrará su autor:</p>
+                        <h5>Página Principal(Home)</h5>
+                        <ul>
+                            <li>Imágenes - CC-BY-SA license - <a class="fw-bold" href="https://opengameart.org/content/pong-graphics">Assets Pong - Nicolás A. Ortega</a></li>                                                
+                        </ul>
+                        <h5>Página Juego Pong Adrián</h5>
+                        <ul>
+                            <li>Imágenes - CC-BY-SA license - <a class="fw-bold" href="https://opengameart.org/content/pong-graphics">Assets Pong - Nicolás A. Ortega</a></li>
+                            <li>Video - Licencia gratuita - <a class="fw-bold" href="https://es.vecteezy.com/video/2018623-luces-de-neon-por-borde-girando-a-la-izquierda">luces de neón por borde girando a la izquierda Vídeos de stocko por Vecteezy</a></li>
+                            <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
+                        </ul> 
                     </div>
-                    
                 </section>
             </main>
         <?php include("includes/footer.php");?>
