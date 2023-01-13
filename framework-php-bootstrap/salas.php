@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/SalaParis.png" alt="Title">
+                            <img class="shadow-lg card-img " src="./assets/img/SalaParis.jpg" alt="Title">
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/wizink.png" alt="Title">
+                            <img class="shadow-lg card-img " src="./assets/img/wizink.jpg" alt="Title">
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-lg-7 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/apolo.png" alt="Title">
+                            <img class="shadow-lg card-img " src="./assets/img/apolo.jpg" alt="Title">
                         </div>
                     </div>
                 </div>
