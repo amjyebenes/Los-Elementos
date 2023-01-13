@@ -103,6 +103,13 @@
                             </li>                                                
                         </ul>
 
+                        <h5>Página Conciertos</h5>
+                        <ul>
+                            <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Sfdk_.jpg">SFDK</a></li>
+                            <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Vetusta_Morla.jpg">Vetusta Morla</a></li>
+                            <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg">Boris Brejcha</a></li>
+                        </ul>    
+
                         <h5>Página Contacto</h5>
                         <ul>
                             <li>Imagen: Licencia gratuita - Pexel: <a class="fw-bold" href="https://www.pexels.com/es-es/foto/multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche-196652/">Multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche</a></li>
