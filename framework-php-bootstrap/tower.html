@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower 3D Game</title>
+    <link rel="stylesheet" href="./css_juegos/juego_miguel_main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js" integrity="sha512-avLcnGxl5mqAX/wIKERdb1gFNkOLHh2W5JNCfJm5OugpEPBz7LNXJJ3BDjjwO00AxEY1MqdNjtEmiYhKC0ld7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.147.0/three.min.js" integrity="sha512-GWXLkqxMENYgBdQvA/lTeOV+R2auhasgKQxjMTWBFt3Z6GJVZ9owiyAMOzz0Wt6J1ri8bf/g2kHJV0uvWpJTuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="goBack">
+        <a href="index.php">Volver a Inicio</a>
+    </div>
+    <div class="parallax-bg" style="transform: translateY(0px);"></div>
+    <div class="con-score">
+        <h1 class="score">0</h1>
+    </div>
+    <div class="con-gamemode">
+        <h1 class="gamemode-title">Selecciona modo de juego</h1>
+        <div class="list">
+            <span>
+                <h1 id="normal">Normal</h1>
+            </span>
+            <span>
+                <h1 id="hell">Hell</h1>
+            </span>
+            <span>
+                <h1 id="swing">Swing</h1>
+            </span>
+            <span>
+                <h1 id="speed">Speed</h1>
+            </span>
+        </div>
+    </div>
+    <div class="con-restart">
+        <h1>Has perdido</h1>
+        <a href="">Volver a jugar</a>
+    </div>
+    <script type="module" src="js/js_juego_miguel/app.js"></script>
+</body>
+</html>
