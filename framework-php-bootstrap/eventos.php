@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-7 col-md-6 d-flex flex-column">
                         <div class="row">
-                            <p class="h1 text-primary  ">Jose Sacristán - Obra Teatral</p>
+                            <p class="h1 text-primary  ">Eva Hache</p>
                             <div class="col pb-1">
                                 <p class="h5 ">6 · OCT · 2022</p>
                                 <h6>SAB - 21:30<h6>
