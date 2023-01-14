@@ -514,15 +514,11 @@ function updatePhysics() {
 }
 
 function updateScroll() {
-    let scrollTop = window.scrollY + 100;
-    // document.body.scrollTop += 100;
-    // document.documentElement.scrollTop += 100;
-    window.scrollTo({
-        top: scrollTop,
-        left: 0,
-        behavior: 'smooth'
-    })
-    // bg.style.top = window.scrollY / 2 * .8;
+    let translate = bg.style.transform.split(' ', 1);
+    console.log(translate[0]);
+    let top = translate[0].match(/\d+/);
+    console.log(top);
+    bg.style.transform = `translateY(${(Number(top) + 400) * -1}px)`;
 }
 
 function missedTheSpot() {
