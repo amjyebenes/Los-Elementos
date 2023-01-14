@@ -1,0 +1,13 @@
+.fondo-pong{
+    background-image: url(../assets/img/bg.jpg); 
+    overflow: hidden;   
+}
+.main-pong{
+    width: 100%;  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}  
+#contenedor-pong{  
+    margin-top: 20px;
+}

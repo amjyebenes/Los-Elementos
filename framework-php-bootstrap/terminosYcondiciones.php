@@ -110,6 +110,13 @@
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg">Boris Brejcha</a></li>
                         </ul>    
 
+                        <h5>Página Eventos</h5>
+                        <ul>
+                            <li>Imagen - CC-BY license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Andrea_Levy_descubre_una_placa_que_homenajea_a_Antonio_D%C3%ADaz,_El_Mago_Pop,_como_el_mago_europeo_m%C3%A1s_taquillero_del_mundo_02.jpg">Mago Pop</a></li>
+                            <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Tamariz.jpg">Juan Tamariz</a></li>
+                            <li>Imagen - CC-BY-SA license - Carlos Delgado <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Eva_Hache_-_01.jpg">Eva Hache</a></li>
+                        </ul>  
+
                         <h5>Página Contacto</h5>
                         <ul>
                             <li>Imagen: Licencia gratuita - Pexel: <a class="fw-bold" href="https://www.pexels.com/es-es/foto/multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche-196652/">Multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche</a></li>
