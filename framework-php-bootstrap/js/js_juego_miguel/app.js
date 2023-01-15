@@ -1,45 +1,63 @@
-// import * as THREE from '../node_modules/three/build/three.min.js';
-// import * as CANNON from '../node_modules/cannon-es';
-
 window.onbeforeunload = function () {
     window.scrollTo(0,0);
 };
 
 window.focus();
+
 /**
- * Constants & Variables
+ * DOM Constants & Variables
  */
 const scoreDom = document.querySelector('.score');
 const restartDom = document.querySelector('.con-restart');
 const lvlMenu = document.querySelector('.con-gamemode');
+const title = document.querySelector('.title');
+const bg = document.querySelector('.parallax-bg');
+
+/**
+ * Sound
+ */
 let music;
 let lvlup;
 
-let camera, scene, renderer, soundLoader; // Three Js globals
+/**
+ * Three.js globals
+ */
+let camera, scene, renderer, soundLoader;
 let ambientLight, directionalLight;
 const width = 15; // Camera width
 const height = width * (window.innerHeight / window.innerWidth); // Camera height
 
 // Global Textures & Images
 let textureLoader;
-let bgCatClose, bgCatOpen;
 let bgBlue;
-let brickTexture, brickMaterial;
-// let skybox;
 
+/**
+ * Cannon.js
+ */
 let world; // CannonJs world
-const originalBoxSize = 4; // Original width and height of a box
+
+/**
+ * Others
+ */
 let lastTime; // Last timestamp of animation
 let stack = []; // Parts that stay solid on top of each other
 let overhangs = []; // Overhanging parts that fall down
-const boxHeight = 1; // Height of each layer
-const zoom = 1;
+
+/**
+ * Flags
+ */
+let gameEnded;
+let gamemode;
+
+/**
+ * Variables
+ */
+let score = 0;
 let speed = 0.20; // Speed of boxes
 let gravity = -10; // Gravity
-let gameEnded;
-let score = 0;
-let gamemode;
-let bg = document.querySelector('.parallax-bg');
+const boxHeight = 1; // Height of each layer
+const zoom = 1;
+const originalBoxSize = 4; // Original width and height of a box
 
 /**
  * Init
@@ -66,16 +84,6 @@ function init() {
     textureLoader = new THREE.TextureLoader();
     textureLoader.setCrossOrigin("");
     loadTextures();
-
-    // Scene Background
-    /*let skyboxImage = 'mettle';
-    const skyboxMaterial = createMaterialArray(skyboxImage);
-    const skyboxGeo = new THREE.BoxGeometry(80, 80, 50, 50);
-    skybox = new THREE.Mesh(skyboxGeo, skyboxMaterial);
-    scene.add(skybox);*/
-    
-    // scene.background = bgCatClose;
-    // scene.background = bgBlue;
 
     // Foundation
     addLayer(0, 0, originalBoxSize, originalBoxSize);
@@ -127,7 +135,6 @@ function init() {
         lvlup.setBuffer( buffer );
         lvlup.setLoop( false );
         lvlup.setVolume( 0.2 );
-        // lvlup.play();
     });
 
     const audioLoaderMusic = new THREE.AudioLoader();
@@ -135,13 +142,13 @@ function init() {
         music.setBuffer( buffer );
         music.setLoop( true );
         music.setVolume( 0.5 );
-        // sound.play();
     });
 
     // Renderer
     renderer = new THREE.WebGLRenderer({ antialias : true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.render(scene, camera);
+
     // Add it to HTML
     document.body.appendChild(renderer.domElement);
 }
@@ -165,64 +172,8 @@ function addLayer (x, z, width, depth, direction) {
  * Loads all materials and textures
  */
 function loadTextures() {
-    // Brick Texture
-    brickTexture = textureLoader.load( '../assets/assets_juego_miguel/Bricks/brick2.png' );
-    let brickNormals = textureLoader.load( '../assets/assets_juego_miguel/Bricks/bricksNormalMap.png');
-    let brickDisplacement = textureLoader.load( '../assets/assets_juego_miguel/Bricks/DisplacementMap.png');
-    brickTexture.wrapT = THREE.RepeatWrapping;
-    brickTexture.offset.set( 0, 0 );
-    brickTexture.repeat.set( .5, .5 );
-    
-    // Immediately use the texture for material creation
-    brickMaterial = new THREE.MeshToonMaterial( { map: brickTexture } );
-    brickMaterial.normalMap = brickNormals;
-
     // Scene Background Images
     bgBlue = textureLoader.load('../assets/assets_juego_miguel/bg_blue.jpg');
-    bgCatClose = textureLoader.load('../assets/assets_juego_miguel/gato.gif',
-        function ( texture ) {
-            var img = texture.image;
-        } 
-    );
-
-    bgCatOpen = textureLoader.load('../assets/assets_juego_miguel/gato.jpg',
-        function ( texture ) {
-            var img = texture.image;
-        } 
-    );
-}
-
-/**
- * Creates a material from multiple images
- * @param {*} filename 
- * @returns 
- */
-function createMaterialArray(filename) {
-    const skyboxImagepaths = createPathStrings(filename);
-    const materialArray = skyboxImagepaths.map(image => {
-        let texture = textureLoader.load(image);
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set( 8, 8 );
-        return new THREE.MeshPhongMaterial({ map: texture, side: THREE.BackSide, shininess: 900 });
-    });
-    return materialArray;
-  }
-
-/**
- * Returns a path of strings build with image filenames
- * @param {*} filename 
- * @returns 
- */
-function createPathStrings(filename) {
-    const basePath = "../assets/assets_juego_miguel/SkyBox/";
-    const baseFilename = basePath + filename;
-    const fileType = ".png";
-    const sides = ["ft", "bk", "up", "dn", "rt", "lt"];
-    const pathStings = sides.map(side => {
-        return baseFilename + "_" + side + fileType;
-    });
-    return pathStings;
 }
 
 /**
@@ -324,6 +275,7 @@ window.addEventListener('click', (e) => {
             scoreDom.style.transform = 'translateY(0)';
             lvlMenu.style.opacity = 0;
             lvlMenu.style.display = 'flex';
+            title.style.opacity = 0;
 
             // Background Music
             music.play();
@@ -355,13 +307,9 @@ window.addEventListener('click', (e) => {
             const previousLayer = stack[stack.length - 2]; // Previous box
             
             const direction = topLayer.direction; // Direction of movement
-
             const delta = topLayer.threejs.position[direction] - previousLayer.threejs.position[direction]; // Box cutted piece delta
-
             const overhangSize = Math.abs(delta); // Make it absolute
-
             const size = direction == "x" ? topLayer.width : topLayer.depth; // The size of the box depends on it's direction
-
             const overlap = size - overhangSize; // Box overlap size
 
             // If player fails, the overlap is positive
@@ -384,12 +332,11 @@ window.addEventListener('click', (e) => {
                 const newDepth = topLayer.depth;
                 const nextDirection = direction == "x" ? "z" : "x";
 
-                
                 //if (scoreElement) scoreElement.innerText = stack.length - 1;
                 addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
 
                 // Level completed sound
-                if (stack.length % 12 == 0) {
+                if (stack.length == 12 || stack.length == 22 || stack.length == 32 ||stack.length == 42 || stack.length == 52) {
                     lvlup.play();
                     if (gamemode == "speed") speed += .05;
                 }
@@ -447,6 +394,10 @@ function cutBox(topLayer, overlap, size, delta) {
     topLayer.cannonjs.addShape(shape);
 }
 
+/**
+ * Animation frames
+ * @param {*} time 
+ */
 function animation(time) {
     if (lastTime) {
         const topLayer = stack[stack.length - 1];
