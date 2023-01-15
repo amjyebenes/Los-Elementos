@@ -39,10 +39,10 @@
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark d-none d-md-block"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París</a>
+                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París 15</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-les-entremaliades-1452793.jpg" alt="" class="conciertos-item-img hover-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/cruzziConcierto.jpg" alt="" class="conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 2-->
