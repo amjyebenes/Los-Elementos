@@ -22,11 +22,11 @@
     <div class="container-fluid mb-4 d-flex flex-column gap-5">
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
-                <div class="shadow m-2">
-                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
+                <div class="shadow">
+                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
                 </div>
             </div>
-            <div class="col-7 col-md-5 d-flex flex-column">
+            <div class="col-7 col-md-5 d-flex flex-column p-3">
                 <div class="row">
                     <p class="h1 text-primary ">Cruz Cafuné</p>
                     <div class="col pb-1">
@@ -42,9 +42,7 @@
             <div class="col-5 col-md-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center pb-3">
                     <div class="col-6 justify-content-center align-items-end pr-3">
-                       <div class="text-center contadorEntrada">
-                            2
-                       </div>
+                        <div class="text-center contadorEntrada">2</div>
                     </div>
                     <div class="col-6">
                         <div class="col-6" >
@@ -64,11 +62,11 @@
         </div>
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
-                <div class="shadow m-2">
-                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title"></a>
+                <div class="shadow">
+                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/sfdk.jpg" alt="Title"></a>
                 </div>
             </div>
-            <div class="col-7 col-md-5 d-flex flex-column">
+            <div class="col-7 col-md-5 d-flex flex-column p-3">
                 <div class="row">
                     <p class="h1 text-primary ">SFDK</p>
                     <div class="col pb-1">
@@ -84,9 +82,7 @@
             <div class="col-5 col-md-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center pb-3">
                     <div class="col-6 justify-content-center align-items-end pr-3">
-                       <div class="text-center contadorEntrada">
-                            2
-                       </div>
+                        <div class="text-center contadorEntrada">2</div>
                     </div>
                     <div class="col-6">
                         <div class="col-6" >
@@ -106,11 +102,11 @@
         </div>
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
-                <div class="shadow m-2">
-                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title"></a>
+                <div class="shadow">
+                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title"></a>
                 </div>
             </div>
-            <div class="col-7 col-md-5 d-flex flex-column">
+            <div class="col-7 col-md-5 d-flex flex-column p-3">
                 <div class="row">
                     <p class="h1 text-primary ">Boris Brejcha</p>
                     <div class="col pb-1">
@@ -126,9 +122,7 @@
             <div class="col-5 col-md-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center pb-3">
                     <div class="col-6 justify-content-center align-items-end pr-3">
-                       <div class="text-center contadorEntrada">
-                            2
-                       </div>
+                        <div class="text-center contadorEntrada">2</div>
                     </div>
                     <div class="col-6">
                         <div class="col-6" >
@@ -148,11 +142,11 @@
         </div>
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
-                <div class="shadow m-2">
-                  <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title"></a>
+                <div class="shadow">
+                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/vetustamorla.jpg" alt="Title"></a>
                 </div>
             </div>
-            <div class="col-7 col-md-5 d-flex flex-column">
+            <div class="col-7 col-md-5 d-flex flex-column p-3">
                 <div class="row">
                     <p class="h1 text-primary ">Vetusta Morla</p>
                     <div class="col pb-1">
@@ -168,9 +162,7 @@
             <div class="col-5 col-md-2 d-flex align-items-end justify-content-end mb-2">
                 <div class="row align-items-center pb-3">
                     <div class="col-6 justify-content-center align-items-end pr-3">
-                       <div class="text-center contadorEntrada">
-                            2
-                       </div>
+                        <div class="text-center contadorEntrada">2</div>
                     </div>
                     <div class="col-6">
                         <div class="col-6" >

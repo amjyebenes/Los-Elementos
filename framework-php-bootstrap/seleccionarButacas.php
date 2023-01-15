@@ -18,7 +18,7 @@
     <section class="d-flex justify-content-center py-lg-5">
         <div class="container row ">
             <div class="col-12 col-lg-5 pb-5">
-                <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
+                <img class="shadow-lg h-100 card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
             </div>
             <div class="col-12 col-lg-7 d-flex flex-column gap-4">
                 <div class="row">

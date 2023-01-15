@@ -4,7 +4,7 @@ import Scene_end from './scenes/scene_end.js';
 const config = {
     width: 640,
     height: 400,
-    parent: "container",
+    parent: "contenedor-pong", // El parent debe ser con un id del HTML de lo contrario puede producir errores
     type: Phaser.AUTO, /*En auto el navegador puede coger canvas o webgl.*/
     physics: { // El tipo de fisicas del juego
         default: "arcade",
