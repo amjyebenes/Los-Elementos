@@ -44,11 +44,12 @@
 
                 <article class="col-12 col-md-5 p-0">
                     <div class="card bg-light shadow border-0 rounded-3 m-0">
-                        <img src="..." class="card-img-top" alt="Juego">
+                        <img src="assets/assets_juego_adrian/bg.jpg" class="card-img-top" alt="Juego">
                         <div class="card-body">
-                            <h5 class="card-title">Tower Game</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary rounded-3">Jugar</a>
+                            <h5 class="card-title">Pong Adrián</h5>
+                            <p class="card-text">El clásico juego de pong con un diseño novedoso con colores y luces de neón.</p>
+                            <p>Controles: J1: (W, S) J2: (Teclas de Dirección) </p>
+                            <a href="pong_adrian.html" class="btn btn-primary rounded-3" target="_blank">Jugar</a>
                         </div>
                     </div>
                 </article>
