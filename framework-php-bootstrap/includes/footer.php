@@ -14,7 +14,7 @@
                         <a class="text-decoration-none text-primary" href="terminosYcondiciones.php"><p class="m-0">Ley de Términos y Condiciones</p></a>
                     </span>
                 </div>
-
+                
                 <div class="col-md-3 col-12 d-flex justify-content-center align-items-center">
                     <span>
                         <p class="m-0">© Copyright - The Elements - 2022</p>
@@ -29,6 +29,11 @@
                         <i class="fa-brands fa-twitter text-white fa-lg"></i>
                         <i class="fa-brands fa-facebook text-white fa-lg"></i>
                         <i class="fa-brands fa-github text-white fa-lg"></i>
+                    </span>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <span>
+                        <p class="m-0"><a class="text-decoration-none text-primary" href="juegos.php">Juegos de Eletickets</a></p>
                     </span>
                 </div>
             </div>
