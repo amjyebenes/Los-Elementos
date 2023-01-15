@@ -11,6 +11,8 @@
   "dependencies": {
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.3",
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "three": "^0.148.0",
+    "three-orbitcontrols": "^2.110.3"
   }
 }

@@ -23,7 +23,7 @@
         <div class="row shadow">
             <div class="col-12 col-md-3 p-0">
                 <div class="shadow">
-                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title"></a>
+                    <a href="seleccionarEntradas.php"><img class="shadow-lg card-img" id="cruzzi" src="./assets/img/CruzziDarkBG_Agua2.jpg" alt="Title"></a>
                 </div>
             </div>
             <div class="col-7 col-md-5 d-flex flex-column p-3">

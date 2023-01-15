@@ -29,6 +29,7 @@
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                                     <li><a class="dropdown-item" href="pong_adrian.html" target="_blank">Pong Adri</a> </li>
                                     <li><a class="dropdown-item" href="tower.html" target="_blank">Tower Game</a></li>
+                                    <li><a class="dropdown-item" href="snake.html" target="_blank">Snake 3D</a></li>
                                 </ul>
                             </div>
                         </li>
