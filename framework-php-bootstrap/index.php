@@ -79,31 +79,70 @@
         <!-- Evento -->
         <article class="row justify-content-around">
             <!-- Video -->
-            <div class="col-md-8 col-12 overflow-hidden">
-                <div class="video-con position-relative">
-                    <h1 class="video-mark position-absolute top-50 start-50 text-center display-1">VIDEO OVERLAY</h1>
-                    <img src="assets/img/bg02.jpg" alt="" class="img-fluid hover-img">
+            <div class="col-md-8 col-12 ">
+            <div class="d-flex justify-content-center rounded-3">
+        <div class="videoplayer col-12 rounded-3" id="myCustomPlayer">
+                <div class="ratio ratio-16x9 bg-dark  rounded-3">
+                    <video class="video" src="https://media.istockphoto.com/id/1330503212/es/vídeo/gran-grupo-de-personas-en-una-fiesta-de-concierto.mp4?s=mp4-640x640-is&k=20&c=fx6v0T3NJFGT9JUW6N6uSqKb9j5RrE7ZhYEyanQC2pk="></video>
+                    <div>
+                        <div class="controls rounded-3 d-none" id="barraBotones">
+                        <span class="progress-bar-text d-none" id="porcentaje">15%</span>
+                            <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
+                                <i class="bi bi-play-fill iconoVideoplayer"></i>
+                                <i class="bi bi-pause-fill d-none iconoVideoplayer"></i>
+                            </button>
+                            <div class="px-1 w-100">
+                                <div class="progress w-100 rounded-3">
+                                    <div class="progress-bar">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-lg btn-video-pip" title="Play picture in picture">
+                                <i class="bi bi-pip iconoVideoplayer"></i>
+                            </button>
+                            <button class="btn btn-lg btn-video-fullscreen">
+                                <i class="bi bi-arrows-fullscreen iconoVideoplayer"></i>
+                            </button>
+                            <div class="dropup">
+                                <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume">
+                                    <i class="bi bi-volume-mute-fill iconoVideoplayer"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end dropup-volume">
+                                    <input type="range" class="form-range form-range-volume">
+                                </div>
+                            </div>
+                            <div class="dropup">
+                                <button class="btn btn-lg" data-bs-toggle="dropdown" title="More...">
+                                    <i class="bi bi-three-dots-vertical iconoVideoplayer"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="terminosYcondiciones.php">
+                                        <i class="bi bi-info-circle-fill iconoVideoplayer"></i> Terminos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
             </div>
             <!-- Descripción -->
             <div class="col-md-4 col-12">
                 <div class="d-flex flex-column gap-2 pt-4 h-100">
                     <div class="w-100">
-                        <h1 class="h1 text-dark">TITULO EVENTO</h1>
+                        <h1 class="h1 text-dark">Encuentra los mejores eventos</h1>
                     </div>
                     <div class="event-date-con d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
-                        <p class="m-0">12/11/2020</p>
                         <span>&middot;</span>
-                        <p class="m-0">VIE - 21:00</p>
+                        <p class="m-0">El dia y hora que mejor te vengan</p>
                     </div>
                     <div class="d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
                         <i class="fa-solid fa-location-dot text-primary"></i>
-                        <p class="m-0 text-primary">Madrid - Wizink Center</p>
+                        <p class="m-0 text-primary">En el lugar que elijas</p>
                     </div>
                     <div class="event-info">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat 
-                            vero iure esse, nesciunt velit dolore voluptate quibusdam autem ducimus, 
-                            quas ipsam tempora? Mollitia quam earum assumenda laborum? Mollitia, hic?</p>
+                        <p>¿Qué mejor plan con amigos que ir a un gran concierto de tu artista favorito?</p>
                     </div>
                     <div class="d-flex justify-content-start align-self-start">
                         <button type="button" class="buy-button btn btn-primary rounded-3 p-2">Ver eventos</button>
@@ -122,5 +161,7 @@
 <?php include("includes/footer.php");?>
 <script src="./js/navbar.js"></script>
 <script src="./js/scripts.js"></script>
+<script src="./js/videoplayer.js"></script>
+<script src="./js/instanciaVideo.js"></script>
 </body>
 </html>

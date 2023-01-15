@@ -104,9 +104,27 @@ class BootstrapVideoplayer{
         var percentPlayed = Math.floor(video.currentTime / (video.duration/100))
         if(percentPlayed < 100){
             progressbar.style.width = percentPlayed + '%'
-            let minutos = Math.round(Math.floor(video.currentTime)/60);
-            let segundos = Math.round(Math.floor(video.currentTime)/10^minutos);
-            document.getElementById("porcentaje").innerHTML = minutos + ":" + segundos + "/" + Math.round(video.duration/60); 
+            let currentMinutes = Math.floor(video.currentTime / 60);
+            let currentSeconds = Math.floor(video.currentTime % 60);
+            let durationMinutes = Math.floor(video.duration / 60);
+            let durationSeconds = Math.floor(video.duration % 60);
+
+            // Asegurar que los minutos y segundos tengan 2 dígitos
+            currentMinutes = currentMinutes < 10 ? "0" + currentMinutes : currentMinutes;
+            currentSeconds = currentSeconds < 10 ? "0" + currentSeconds : currentSeconds;
+            durationMinutes = durationMinutes < 10 ? "0" + durationMinutes : durationMinutes;
+            durationSeconds = durationSeconds < 10 ? "0" + durationSeconds : durationSeconds;
+
+            let duracion = document.getElementById("porcentaje");
+            duracion.innerHTML = currentMinutes + ":" + currentSeconds + " / " + durationMinutes + ":" + durationSeconds;
+
+            duracion.style.position = "absolute";
+            duracion.style.width = 50;
+            duracion.style.height = 50;
+            duracion.style.top = 37 + "px";
+            duracion.style.left = 400 + "px";
+
+
             requestAnimationFrame(()=>{this.updateProgressBar(video,button,progressbar)});
         }
         else if(percentPlayed === 100){
@@ -153,4 +171,25 @@ document.getElementById("myCustomPlayer").addEventListener("mouseover",()=>{
 
 document.getElementById("myCustomPlayer").addEventListener("mouseleave",()=>{
     document.getElementById("barraBotones").classList.add("d-none");
+});
+
+// Obtener los elementos del DOM
+const volumeRange = document.querySelector('.form-range-volume');
+const volumeButton = document.querySelector('.btn-video-volume i');
+
+// Asignar un escuchador de eventos al elemento "range"
+volumeRange.addEventListener('input', function() {
+  // Obtener el valor actual del "range"
+  const volume = this.value;
+
+  // Comprobar si el volumen es 0 (mute) o no
+  if (volume === '0') {
+    // Cambiar el icono a "mute"
+    volumeButton.classList.remove('bi-volume-up-fill');
+    volumeButton.classList.add('bi-volume-mute');
+  } else {
+    // Cambiar el icono a "volumen"
+    volumeButton.classList.remove('bi-volume-mute');
+    volumeButton.classList.add('bi-volume-up-fill');
+  }
 });

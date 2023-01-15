@@ -12,7 +12,6 @@ $default-bg-progress-bar-dark: #999;
 @import './variables/typography';
 
 .videoplayer{
-    
     position: relative;
     display: block;
     video{
@@ -100,4 +99,7 @@ $default-bg-progress-bar-dark: #999;
 
 .tooltip{
     z-index: 1400;
+}
+.iconoVideoplayer{
+    color:black;
 }
