@@ -39,7 +39,7 @@ class Scene_play extends Phaser.Scene {
         this.physics.world.setBoundsCollision(false, false, true, true); // Para que las colisiones solo sean de arriba y abajo
         this.ball = this.physics.add.image(center_width, center_height, "ball");
         this.ball.setCollideWorldBounds(true); // Esto es para que rebote cuando choque
-        this.ball.setBounce(1); // Para cuando rebote con algo vaya a la misma velocidad
+        this.ball.setBounce(1.05); // Para cuando rebote con algo vaya a la misma velocidad
         this.ball.setVelocityX(-180); // para que vaya a la izq
 
         // Pared

@@ -14,6 +14,7 @@
                 </div>
                 <div class="col-4">
                     <ul class="navbar-nav navbar-botones justify-content-center align-items-center gap-5">
+                        <li class="nav-item text-capitalize"><a href="juegos.php" class="fw-lighter">Juegos</a></li>
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
@@ -62,6 +63,9 @@
             </li>
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="salas.php">Salas</a>
+            </li>
+            <li class="nav-item">
+                <a href="juegos.php" class="nav-link">Juegos</a>
             </li>
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="contact.php">Contacto</a>

@@ -73,59 +73,58 @@
         <!-- Separador -->
         <div class="row justify-content-start gx-5">
             <div class="col-12">
-                <div class="b-line w-100 bg-dark"></div>
+                <div class="b-line w-100 bg-dark" id="video-trigger"></div>
             </div>
         </div>
         <!-- Evento -->
         <article class="row justify-content-around">
             <!-- Video -->
             <div class="col-md-8 col-12 ">
-            <div class="d-flex justify-content-center rounded-3">
-        <div class="videoplayer col-12 rounded-3" id="myCustomPlayer">
-                <div class="ratio ratio-16x9 bg-dark  rounded-3">
-                    <video class="video" src="https://media.istockphoto.com/id/1330503212/es/vídeo/gran-grupo-de-personas-en-una-fiesta-de-concierto.mp4?s=mp4-640x640-is&k=20&c=fx6v0T3NJFGT9JUW6N6uSqKb9j5RrE7ZhYEyanQC2pk="></video>
-                    <div>
-                        <div class="controls rounded-3 d-none" id="barraBotones">
-                        <span class="progress-bar-text d-none" id="porcentaje">15%</span>
-                            <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
-                                <i class="bi bi-play-fill iconoVideoplayer"></i>
-                                <i class="bi bi-pause-fill d-none iconoVideoplayer"></i>
-                            </button>
-                            <div class="px-1 w-100">
-                                <div class="progress w-100 rounded-3">
-                                    <div class="progress-bar">
+                <div class="d-flex justify-content-center rounded-3">
+                    <div class="videoplayer video-con col-12 rounded-3" id="myCustomPlayer">
+                        <div class="ratio ratio-16x9 bg-dark  rounded-3">
+                            <video class="video" src="https://media.istockphoto.com/id/1330503212/es/vídeo/gran-grupo-de-personas-en-una-fiesta-de-concierto.mp4?s=mp4-640x640-is&k=20&c=fx6v0T3NJFGT9JUW6N6uSqKb9j5RrE7ZhYEyanQC2pk="></video>
+                            <div>
+                                <div class="controls rounded-3 d-none" id="barraBotones">
+                                    <span class="progress-bar-text d-none" id="porcentaje">15%</span>
+                                    <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
+                                        <i class="bi bi-play-fill iconoVideoplayer"></i>
+                                        <i class="bi bi-pause-fill d-none iconoVideoplayer"></i>
+                                    </button>
+                                    <div class="px-1 w-100">
+                                        <div class="progress w-100 rounded-3">
+                                            <div class="progress-bar"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <button class="btn btn-lg btn-video-pip" title="Play picture in picture">
-                                <i class="bi bi-pip iconoVideoplayer"></i>
-                            </button>
-                            <button class="btn btn-lg btn-video-fullscreen">
-                                <i class="bi bi-arrows-fullscreen iconoVideoplayer"></i>
-                            </button>
-                            <div class="dropup">
-                                <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume">
-                                    <i class="bi bi-volume-mute-fill iconoVideoplayer"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end dropup-volume">
-                                    <input type="range" class="form-range form-range-volume">
-                                </div>
-                            </div>
-                            <div class="dropup">
-                                <button class="btn btn-lg" data-bs-toggle="dropdown" title="More...">
-                                    <i class="bi bi-three-dots-vertical iconoVideoplayer"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="terminosYcondiciones.php">
-                                        <i class="bi bi-info-circle-fill iconoVideoplayer"></i> Terminos
-                                    </a>
+                                    <button class="btn btn-lg btn-video-pip" title="Play picture in picture">
+                                        <i class="bi bi-pip iconoVideoplayer"></i>
+                                    </button>
+                                    <button class="btn btn-lg btn-video-fullscreen">
+                                        <i class="bi bi-arrows-fullscreen iconoVideoplayer"></i>
+                                    </button>
+                                    <div class="dropup">
+                                        <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume">
+                                            <i class="bi bi-volume-mute-fill iconoVideoplayer"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-end dropup-volume">
+                                            <input type="range" class="form-range form-range-volume">
+                                        </div>
+                                    </div>
+                                    <div class="dropup">
+                                        <button class="btn btn-lg" data-bs-toggle="dropdown" title="More...">
+                                            <i class="bi bi-three-dots-vertical iconoVideoplayer"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="terminosYcondiciones.php">
+                                                <i class="bi bi-info-circle-fill iconoVideoplayer"></i> Terminos
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
             </div>
             <!-- Descripción -->
             <div class="col-md-4 col-12">
@@ -145,7 +144,7 @@
                         <p>¿Qué mejor plan con amigos que ir a un gran concierto de tu artista favorito?</p>
                     </div>
                     <div class="d-flex justify-content-start align-self-start">
-                        <button type="button" class="buy-button btn btn-primary rounded-3 p-2">Ver eventos</button>
+                        <a class="buy-button btn btn-primary rounded-3 p-2" href="eventos.php">Ver eventos</a>
                     </div>
                     <div class="d-none d-md-block mt-auto">
                         <div class="b-line"></div>

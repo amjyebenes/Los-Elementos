@@ -202,14 +202,16 @@
                             </li>                                                
                         </ul>
 
-                        <h5>Página Conciertos</h5>
+                        <h5>Página Conciertos & Página Seleccionar Entradas & Página Cesta</h5>
                         <ul>
+                            <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/cruzziConcierto.jpg">Cruz Cafuné</a></li>
+                            <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/CruzziDarkBG_Agua2.jpg">Cruz Cafuné</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Sfdk_.jpg">SFDK</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Vetusta_Morla.jpg">Vetusta Morla</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg">Boris Brejcha</a></li>
                         </ul>    
 
-                        <h5>Página Eventos & Página Seleccionar Butacas & Página Seleccionar Entradas & Página Cesta</h5>
+                        <h5>Página Eventos & Página Seleccionar Butacas & Página Cesta</h5>
                         <ul>
                             <li>Imagen - CC-BY license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Andrea_Levy_descubre_una_placa_que_homenajea_a_Antonio_D%C3%ADaz,_El_Mago_Pop,_como_el_mago_europeo_m%C3%A1s_taquillero_del_mundo_02.jpg">Mago Pop</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Tamariz.jpg">Juan Tamariz</a></li>
@@ -238,7 +240,12 @@
                             <li>Audio - Licencia publica de Eclipse - <a class="fw-bold" href="https://code.google.com/archive/p/py-pong/">Assets - Pygame Pong</a></li>
                             <li>Video - Licencia gratuita - <a class="fw-bold" href="https://es.vecteezy.com/video/2018623-luces-de-neon-por-borde-girando-a-la-izquierda">luces de neón por borde girando a la izquierda Vídeos de stocko por Vecteezy</a></li>
                             <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
-                        </ul>                    
+                        </ul>   
+                        
+                        <h5>Licencia de los recursos propios</h5>
+                        <ul>
+                            <li>El contenido de Eletickets están publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
+                        </ul>   
                     </div>
                 </section>
             </main>
