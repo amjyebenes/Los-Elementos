@@ -204,6 +204,8 @@
 
                         <h5>Página Conciertos & Página Seleccionar Entradas & Página Cesta</h5>
                         <ul>
+                            <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/cruzziConcierto.jpg">Cruz Cafuné</a></li>
+                            <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/CruzziDarkBG_Agua2.jpg">Cruz Cafuné</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Sfdk_.jpg">SFDK</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Vetusta_Morla.jpg">Vetusta Morla</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg">Boris Brejcha</a></li>
@@ -238,7 +240,12 @@
                             <li>Audio - Licencia publica de Eclipse - <a class="fw-bold" href="https://code.google.com/archive/p/py-pong/">Assets - Pygame Pong</a></li>
                             <li>Video - Licencia gratuita - <a class="fw-bold" href="https://es.vecteezy.com/video/2018623-luces-de-neon-por-borde-girando-a-la-izquierda">luces de neón por borde girando a la izquierda Vídeos de stocko por Vecteezy</a></li>
                             <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
-                        </ul>                    
+                        </ul>   
+                        
+                        <h5>Licencia de los recursos propios</h5>
+                        <ul>
+                            <li>El contenido de Eletickets están publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
+                        </ul>   
                     </div>
                 </section>
             </main>
