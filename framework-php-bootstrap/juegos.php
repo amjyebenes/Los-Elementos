@@ -56,7 +56,7 @@
 
                 <article class="col-12 col-md-5 p-0">
                     <div class="card bg-light shadow border-0 rounded-3 m-0">
-                        <img src="..." class="card-img-top" alt="Juego">
+                        <img src="assets/assets_juego_marita/portada.png" class="card-img-top" alt="Juego">
                         <div class="card-body">
                             <h5 class="card-title">Pong Sencillo</h5>
                             <p class="card-text">El clásico juego de pong</p>
