@@ -120,7 +120,10 @@ const update= () => {
     paddleDerecha.draw()
     checkCollitions()
     //genera la animación de la pelota
+    //document.getElementById("resultado").classList.add("d-none")
+
     requestAnimationFrame(update)
+   // document.getElementById("resultado").classList.add("d-none")
 
 }
 
@@ -161,12 +164,30 @@ const checkCollitions = () => {
         ball.y = 145 // ""
         ball.isMoving = false
         score.left++
+    
         
     }else if(ball.x>canvas.width-ball.w){
     ball.x = 145 //para llevar la bola al centro del tablero
     ball.y = 145 // ""
     ball.isMoving = false
     score.right++
+    }
+    if (score.left==3 || score.right==3){
+        let ganador; //0 izq 1 derecha
+        if(score.left-3 ==0){
+            ganador = 0
+        }else{
+            ganador = 1
+        }
+        score.left=0
+        score.right=0
+        ball.x = 145 //para llevar la bola al centro del tablero
+        ball.y = 145 // ""
+        ball.isMoving = false
+        let resultado = ganador==0 ?"derecho":"izquierdo"
+       // alert ("Ha ganado el jugador " + resultado )
+       document.getElementById("resultado").innerHTML= "Ha ganado el jugador " + resultado
+       //document.getElementById("resultado").classList.remove('d-none')
     }
 }
 

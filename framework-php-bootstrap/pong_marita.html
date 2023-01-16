@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" >
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css" >
     <title>PONG</title>
+    <style>
+        .spanresultado{
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    width: 300px;
+    height: 30px;
+    background-color: #FEA82F;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: black;
+    display: none;
+
+}
+    </style>
 </head>
 <body>
+    <div id = "resultado" class="spanresultado">
+    </div>
     <canvas></canvas>
     <script src="js/js_juego_marita/script.js"></script>
- 
 </body>
 </html>
