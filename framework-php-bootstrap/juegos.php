@@ -58,9 +58,9 @@
                     <div class="card bg-light shadow border-0 rounded-3 m-0">
                         <img src="..." class="card-img-top" alt="Juego">
                         <div class="card-body">
-                            <h5 class="card-title">Tower Game</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary rounded-3">Jugar</a>
+                            <h5 class="card-title">Pong Sencillo</h5>
+                            <p class="card-text">El clásico juego de pong</p>
+                            <a href="pong_marita.html" class="btn btn-primary rounded-3">Jugar</a>
                         </div>
                     </div>
                 </article>
