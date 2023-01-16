@@ -187,7 +187,7 @@ const checkCollitions = () => {
         let resultado = ganador==0 ?"derecho":"izquierdo"
        // alert ("Ha ganado el jugador " + resultado )
        document.getElementById("resultado").innerHTML= "Ha ganado el jugador " + resultado
-       //document.getElementById("resultado").classList.remove('d-none')
+       document.getElementById("resultado").classList.remove('d-none')
     }
 }
 
