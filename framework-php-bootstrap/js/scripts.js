@@ -3,6 +3,10 @@
 // Poner aquí los scripts 
 // 
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 // PARALLAX for intro background (Desktop)
 const homeBG = document.querySelector('.intro-img');
 const moveBG = (e) => {
@@ -16,6 +20,23 @@ const moveBG = (e) => {
         homeBG.classList.add('d-block');
         homeBG.style.transform = `translateY(${scrollY * 0.2}px`;
     }
+}
+
+// VIDEO SHOW-OFF OBSERVER (Desktop)
+const video = document.querySelector('.videoplayer');
+var observer = new IntersectionObserver(function(e) {
+    if (e[0].intersectionRatio > 0) {
+        // console.log('Element has just become visible in screen');
+        setTimeout(showVideo, 100);
+    } 
+}, { threshold: [1] });
+
+observer.observe(document.querySelector("#video-trigger"));
+
+function showVideo() {
+    // console.log("Video Showed");
+    video.style.transform = "perspective(1000px) rotateX(0)";
+    video.style.opacity = 1;
 }
 
 // Text tracking (Desktop)
