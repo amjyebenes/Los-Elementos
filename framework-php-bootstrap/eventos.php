@@ -20,11 +20,11 @@
             <div class="container-fluid mb-4 d-flex flex-column gap-5">
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
-                        <div class="shadow m-2">
-                            <img class="shadow-lg card-img" src="./assets/img/magopop.jpg" alt="Title">
+                        <div class="shadow">
+                            <img class="shadow-lg card-img" src="./assets/img/magopop1.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column p-3">
                         <div class="row">
                             <p class="h1 text-primary  ">Mago Pop</p>
                             <div class="col pb-1">
@@ -45,11 +45,11 @@
                 </div>
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
-                        <div class="shadow m-2">
-                            <img class="shadow-lg card-img" src="./assets/img/juantamariz2.jpg" alt="Title">
+                        <div class="shadow">
+                            <img class="shadow-lg card-img" src="./assets/img/juantamariz1.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column p-3">
                         <div class="row">
                             <p class="h1 text-primary  ">Juan Tamariz</p>
                             <div class="col pb-1">
@@ -70,11 +70,11 @@
                 </div>
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
-                        <div class="shadow m-2">
+                        <div class="shadow">
                             <img class="shadow-lg card-img" src="./assets/img/ReyLeon.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column p-3">
                         <div class="row">
                             <p class="h1 text-primary  ">Festival del Rey León</p>
                             <div class="col pb-1">
@@ -95,13 +95,13 @@
                 </div>
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
-                        <div class="shadow m-2">
-                            <img class="shadow-lg card-img" src="./assets/img/senora-de-rojo-sobre-fondo-gris.jpg" alt="Title">
+                        <div class="shadow">
+                            <img class="shadow-lg card-img" src="./assets/img/evaHache1.jpg" alt="Title">
                         </div>
                     </div>
-                    <div class="col-7 col-md-6 d-flex flex-column">
+                    <div class="col-7 col-md-6 d-flex flex-column p-3">
                         <div class="row">
-                            <p class="h1 text-primary  ">Jose Sacristán - Obra Teatral</p>
+                            <p class="h1 text-primary  ">Eva Hache</p>
                             <div class="col pb-1">
                                 <p class="h5 ">6 · OCT · 2022</p>
                                 <h6>SAB - 21:30<h6>

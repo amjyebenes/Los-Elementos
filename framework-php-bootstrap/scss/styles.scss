@@ -8,6 +8,12 @@
 // Import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
+// import bootstrap-icons via scss.
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+
+
 // Import custom styles
 @import "./global.scss";
 @import "./index.scss";
@@ -16,6 +22,8 @@
 @import "./contact.scss";
 @import "./login.scss";
 @import "./micuenta.scss";
+@import "./videoplayer.scss";
+@import "./juegos.scss";
 
 // Components
 @import "./components/divider.scss";
@@ -23,4 +31,9 @@
 @import "./components/scrollbar";
 @import "./components/footer.scss";
 
-// Sections
+// Juegos
+@import "./juego_adrian_main.scss";
+@import "./juego_angel.scss";
+@import "./pongmarita.scss";
+
+

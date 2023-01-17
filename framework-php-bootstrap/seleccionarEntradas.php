@@ -8,13 +8,13 @@
 <?php include("includes/navigation.php");?>
 <main>
     <!-- SECCION 3 | EVENTO PRÓXIMO -->
-    <section class="container-fluid event fix-top page-section device-padding section-padding bg-light">
+    <section class="container-fluid concert fix-top page-section device-padding section-padding bg-light">
         <!-- Evento -->
         <article class="row justify-content-around">
             <!-- Video -->
             <div class="col-md-5 col-12 overflow-hidden">
-                <div class="video-con border-top border-dark">
-                    <img src="assets/img/cruz-cafune-sala-paris.jpeg" alt="" class="img-fluid">
+                <div class="img-con border-top border-dark overflow-hidden">
+                    <img src="assets/img/cruzziConcierto.jpg" id="cruzziConcierto" alt="" class="img-fluid">
                 </div>
             </div>
             <!-- Descripción -->
@@ -30,7 +30,7 @@
                     </div>
                     <div class="d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
                         <i class="fa-solid fa-location-dot text-primary"></i>
-                        <p class="m-0 text-primary">Madrid - Wizink Center</p>
+                        <p class="m-0 text-primary">Málaga - Sala París 15</p>
                     </div>
                     <div class="event-info">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat 
@@ -65,13 +65,13 @@
                         <h3 class="h3 text-capitalize">Otros conciertos</h3>
                     </div>
                     <div class="col-4">
-                        <img src="assets/img/choco.png" alt="" class="img-fluid">
+                        <img src="assets/img/choco.png" alt="" class="img-fluid concierto-hov">
                     </div>
                     <div class="col-4">
-                        <img src="assets/img/alba.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/alba.jpg" alt="" class="img-fluid concierto-hov">
                     </div>
                     <div class="col-4">
-                        <img src="assets/img/delaossa.jpg" alt="" class="img-fluid">
+                        <img src="assets/img/delaossa.jpg" alt="" class="img-fluid concierto-hov">
                     </div>
                 </div>
             </div>
