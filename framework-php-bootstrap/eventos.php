@@ -21,7 +21,7 @@
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img" src="./assets/img/magopop.jpg" alt="Title">
+                            <img class="shadow-lg card-img" src="./assets/img/magopop1.jpg" alt="Title">
                         </div>
                     </div>
                     <div class="col-7 col-md-6 d-flex flex-column p-3">
@@ -46,7 +46,7 @@
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img" src="./assets/img/juantamariz2.jpg" alt="Title">
+                            <img class="shadow-lg card-img" src="./assets/img/juantamariz1.jpg" alt="Title">
                         </div>
                     </div>
                     <div class="col-7 col-md-6 d-flex flex-column p-3">
@@ -96,7 +96,7 @@
                 <div class="row shadow">
                     <div class="col-12 col-md-3 p-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img" src="./assets/img/evaHache.jpg" alt="Title">
+                            <img class="shadow-lg card-img" src="./assets/img/evaHache1.jpg" alt="Title">
                         </div>
                     </div>
                     <div class="col-7 col-md-6 d-flex flex-column p-3">

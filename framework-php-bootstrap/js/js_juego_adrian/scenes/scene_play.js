@@ -39,7 +39,8 @@ class Scene_play extends Phaser.Scene {
         this.physics.world.setBoundsCollision(false, false, true, true); // Para que las colisiones solo sean de arriba y abajo
         this.ball = this.physics.add.image(center_width, center_height, "ball");
         this.ball.setCollideWorldBounds(true); // Esto es para que rebote cuando choque
-        this.ball.setBounce(1); // Para cuando rebote con algo vaya a la misma velocidad
+        this.ball.setBounce(1.05); // Para cuando rebote con algo vaya a la misma velocidad.        
+        console.log(this.ball.body.bounce);
         this.ball.setVelocityX(-180); // para que vaya a la izq
 
         // Pared
@@ -130,19 +131,19 @@ class Scene_play extends Phaser.Scene {
         // Pala Izquierda
         if (this.cursor_S.isDown) {
             // Si el cursor va hacia abajo
-            this.left_paddle.body.setVelocityY(350);
+            this.left_paddle.body.setVelocityY(400);
         } else if (this.cursor_W.isDown) {
             // Si va hacia arriba
-            this.left_paddle.body.setVelocityY(-350);
+            this.left_paddle.body.setVelocityY(-400);
         } else {
             this.left_paddle.body.setVelocityY(0);
         }
 
         // Pala Derecha
         if (this.cursor.down.isDown) {
-            this.right_paddle.body.setVelocityY(350);
+            this.right_paddle.body.setVelocityY(400);
         } else if (this.cursor.up.isDown) {
-            this.right_paddle.body.setVelocityY(-350);
+            this.right_paddle.body.setVelocityY(-400);
         } else {
             this.right_paddle.body.setVelocityY(0);
         }
