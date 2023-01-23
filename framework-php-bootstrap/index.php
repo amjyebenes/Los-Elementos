@@ -85,7 +85,7 @@
                         <div class="ratio ratio-16x9 bg-dark  rounded-3">
                             <video class="video" src="https://media.istockphoto.com/id/1330503212/es/vídeo/gran-grupo-de-personas-en-una-fiesta-de-concierto.mp4?s=mp4-640x640-is&k=20&c=fx6v0T3NJFGT9JUW6N6uSqKb9j5RrE7ZhYEyanQC2pk="></video>
                             <div>
-                                <div class="controls rounded-3 d-none" id="barraBotones">
+                                <div class="controls rounded-3 opacity-0" id="barraBotones">
                                     <span class="progress-bar-text d-none" id="porcentaje">15%</span>
                                     <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
                                         <i class="bi bi-play-fill iconoVideoplayer"></i>
