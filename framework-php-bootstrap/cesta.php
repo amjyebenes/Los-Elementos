@@ -40,7 +40,7 @@
                     <div class="col-12">
                         <div class="row mx-1 px-0 justify-content-center">
                             <div class="col-md-2 px-0">
-                                <img class="card-img h-100" src="./assets/img/cruzzi.jpg">
+                                <img class="card-img h-100" src="./assets/img/CruzziDarkBG_Agua2.jpg">
                             </div>
                             <div class="col-md-10">
                                 <div class="row h-100 fw-bold fs-5 align-items-center shadow p-3">

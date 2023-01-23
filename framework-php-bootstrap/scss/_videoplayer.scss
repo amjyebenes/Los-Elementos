@@ -26,6 +26,7 @@ $default-bg-progress-bar-dark: #999;
         align-items: center;
         bottom: 0;
         background-color: $default-bg; // Default background-color
+        transition: .8s cubic-bezier(0.165, 0.84, 0.44, 1);
         .progress{
             background-color: $default-bg-progress; // Default background-color
             border-radius:30px;

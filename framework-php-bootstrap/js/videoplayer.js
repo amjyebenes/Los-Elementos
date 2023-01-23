@@ -166,11 +166,11 @@ class BootstrapVideoplayer{
 }
 
 document.getElementById("myCustomPlayer").addEventListener("mouseover",()=>{
-    document.getElementById("barraBotones").classList.remove("d-none");
+    document.getElementById("barraBotones").classList.remove("opacity-0");
 });
 
 document.getElementById("myCustomPlayer").addEventListener("mouseleave",()=>{
-    document.getElementById("barraBotones").classList.add("d-none");
+    document.getElementById("barraBotones").classList.add("opacity-0");
 });
 
 // Obtener los elementos del DOM

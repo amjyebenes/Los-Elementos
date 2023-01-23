@@ -1,3 +1,9 @@
 .juego-card img {
     height: 60vh;
 }
+
+@include media-breakpoint-down(md) {
+    .juego-card img {
+        height: 50vh;
+    }
+}
