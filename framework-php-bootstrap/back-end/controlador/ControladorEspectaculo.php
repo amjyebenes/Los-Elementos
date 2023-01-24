@@ -1,14 +1,15 @@
 <?php
-require_once './modelo/Espectaculo.php';
 require_once 'Conexion.php';
+require_once 'back-end/modelo/Espectaculo.php';
+
 
 class ControladorEspectaculo{
 
     public static function put($espec) {
         try {
             $conex=new Conexion();
-            $reg=$conex->exec("INSERT INTO espectaculo (id_usuario,id_espectaculo,valoracion,comentario) "
-                    . "VALUES('$espec->id_usuario','$espec->id_espectaculo','$espec->valoracion','$espec->comentario')");
+            $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha_publicacion,texto,imagen) "
+                    . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->texto','$espec->imagen')");
             unset($conex);
             return $reg;
         } catch (PDOException $ex) {
@@ -24,7 +25,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha_publicacion,$reg->texto,$reg->imagen);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;

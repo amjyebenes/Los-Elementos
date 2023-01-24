@@ -51,7 +51,7 @@ class Usuario {
      * @return mixed
      */
     public function __get($name) {
-        return $this->name;
+        return $this->$name;
     }
 
     /**
@@ -62,7 +62,7 @@ class Usuario {
      */
     public function __set($name, $value)
     {
-        $this->name = $value;
+        $this->$name = $value;
     }
     
 }
