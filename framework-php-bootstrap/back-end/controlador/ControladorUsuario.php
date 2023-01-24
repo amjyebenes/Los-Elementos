@@ -42,6 +42,10 @@ class ControladorUsuario {
         }
     }
 
+    /**
+     * Summary of getAllUsuarios
+     * @return array<Usuario>|bool
+     */
     public static function getAll() {
         try {
             $conex = new Conexion();
