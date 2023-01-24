@@ -2,7 +2,7 @@
 require_once '../modelo/Usuario.php';
 require_once 'Conexion.php';
 
-class UsuarioController {
+class ControladorUsuario {
     
     /**
      * Summary of insertar
