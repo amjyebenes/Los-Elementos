@@ -4,11 +4,7 @@ require_once 'Conexion.php';
 
 class ControladorUsuario {
     
-    /**
-     * Summary of insertar
-     * @param mixed $u
-     * @return void
-     */
+  
     public static function put($u) {
         try {
             $conex = new Conexion();
@@ -20,11 +16,6 @@ class ControladorUsuario {
         unset($conex);
     }
 
-    /**
-     * Summary of buscarUsuario
-     * @param mixed $id
-     * @return Usuario|bool
-     */
     public static function get($id) {
         try {
             $conex = new Conexion();
@@ -42,10 +33,7 @@ class ControladorUsuario {
         }
     }
 
-    /**
-     * Summary of getAllUsuarios
-     * @return array<Usuario>|bool
-     */
+
     public static function getAll() {
         try {
             $conex = new Conexion();
