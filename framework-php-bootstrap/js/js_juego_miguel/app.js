@@ -336,9 +336,10 @@ window.addEventListener('click', (e) => {
                 addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
 
                 // Level completed sound
-                if (stack.length == 12 || stack.length == 22 || stack.length == 32 ||stack.length == 42 || stack.length == 52) {
+                if (stack.length == 7 || stack.length == 12 || stack.length == 17 ||stack.length == 22 || stack.length == 27
+                    || stack.length == 32 || stack.length == 37 || stack.length == 42 || stack.length == 47 || stack.length == 52) {
                     lvlup.play();
-                    if (gamemode == "speed") speed += .05;
+                    if (gamemode == "speed") speed += .02;
                 }
 
                 success();
