@@ -1,5 +1,5 @@
 <?php
-require_once '../modelo/Usuario.php';
+require_once 'back-end/modelo/Usuario.php';
 require_once 'Conexion.php';
 
 class ControladorUsuario {
@@ -9,7 +9,7 @@ class ControladorUsuario {
      * @param mixed $u
      * @return void
      */
-    public static function insertarUsuario($u) {
+    public static function put($u) {
         try {
             $conex = new Conexion();
             $reg = $conex->exec("INSERT INTO usuario VALUES ($u->id, '$u->usuario', '$u->pass', '$u->nombre', "
@@ -25,10 +25,10 @@ class ControladorUsuario {
      * @param mixed $id
      * @return Usuario|bool
      */
-    public static function buscarUsuario($id) {
+    public static function get($id) {
         try {
             $conex = new Conexion();
-            $result = $conex->query("SELECT * FROM usuairo WHERE id = $id");
+            $result = $conex->query("SELECT * FROM usuario WHERE id = $id");
             if ($result->rowCount()) {
                 $reg = $result->fetchObject();
                 $usuario = new Usuario(
@@ -42,7 +42,7 @@ class ControladorUsuario {
         }
     }
 
-    public static function getAllUsuarios() {
+    public static function getAll() {
         try {
             $conex = new Conexion();
             $result = $conex->query("SELECT * FROM usuario");
