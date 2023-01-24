@@ -1,6 +1,7 @@
 <?php
-require_once './modelo/Espectaculo.php';
 require_once 'Conexion.php';
+require_once 'back-end/modelo/Espectaculo.php';
+
 
 class ControladorEspectaculo{
 
