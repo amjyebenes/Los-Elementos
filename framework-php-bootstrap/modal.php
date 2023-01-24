@@ -1,19 +1,32 @@
 <?php include("includes/a_config.php"); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <?php include("includes/head-tag-contents.php"); ?>
 </head>
 
 <body>
+
     <?php include("includes/navigation.php"); ?>
-    <main class="fondoLogin">
-        <!--Creo la caja grande para almacenar el resto  -->
-        <section class="position-relative py-5">
-            <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
-            <div class="container d-flex justify-content-center pt-5">
-                <div class="row col-md-6 col-12">
+
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Regístrate
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-primary">
+
+                <div class="modal-body">
+                    <div class="d-flex justify-content-end">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form action="" method="POST">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
@@ -45,14 +58,9 @@
                             <input type="password" class="form-control" id="pwd" placeholder="Repetir Contraseña" name="pswd">
                         </div>
                         <div class="form-check mb-3">
-                            <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                            <label class="form-check-label text-black shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                             <input class="form-check-input" type="checkbox" name="remember">
-
                         </div>
-                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
-
-                        <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
-
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>
                         </div>
@@ -63,9 +71,12 @@
                         </div>
                     </form>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Aceptar</button>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
