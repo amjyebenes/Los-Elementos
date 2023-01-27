@@ -47,12 +47,23 @@
                         <div class="form-check mb-3">
                             <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                             <input class="form-check-input" type="checkbox" name="remember">
-
                         </div>
                         <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+                        <div>
+                            <label for="captcha"><b>
+                                    <?php if (isset($_GET["captchaerror"]))
+                                        echo "Invalid code. Please enter de Captcha Text.";
+                                    else
+                                        echo "Please Enter the Captcha Text<b>";
+                                    ?>
+                                </b></label>
+                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
 
+
+                        </div>
+                        <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
-
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>
                         </div>
@@ -62,11 +73,16 @@
                             </label>
                         </div>
                     </form>
+                    <script>
+                        var refreshButton = document.querySelector(".refresh-captcha");
+                        refreshButton.onclick = function() {
+                            document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
+                        }
+                    </script>
                 </div>
             </div>
         </section>
     </main>
-
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
 </body>

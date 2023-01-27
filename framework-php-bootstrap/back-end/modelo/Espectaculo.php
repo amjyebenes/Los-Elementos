@@ -1,13 +1,13 @@
 <?php
 class Espectaculo{
-    private $id,$titulo,$tipo,$fecha_publicacion,$texto,$imagen;
+    private $id,$titulo,$tipo,$fecha,$ubicacion,$imagen;
 
-    public function __construct( $id,$titulo,$tipo,$fecha_publicacion,$texto,$imagen){
+    public function __construct( $id,$titulo,$tipo,$fecha,$ubicacion,$imagen){
         $this->id = $id;
         $this->titulo = $titulo;
         $this->tipo = $tipo;
-        $this->fecha_publicacion = $fecha_publicacion;
-        $this->texto = $texto;
+        $this->fecha = $fecha;
+        $this->ubicacion = $ubicacion;
         $this->imagen = $imagen;
     }
 

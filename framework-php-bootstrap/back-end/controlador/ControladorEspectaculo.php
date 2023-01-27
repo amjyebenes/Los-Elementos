@@ -8,7 +8,7 @@ class ControladorEspectaculo{
     public static function put($espec) {
         try {
             $conex=new Conexion();
-            $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha_publicacion,texto,imagen) "
+            $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha,ubicacion,imagen) "
                     . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->texto','$espec->imagen')");
             unset($conex);
             return $reg;
@@ -25,7 +25,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha_publicacion,$reg->texto,$reg->imagen);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;
