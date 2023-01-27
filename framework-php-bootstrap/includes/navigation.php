@@ -16,6 +16,7 @@
                     <ul class="navbar-nav navbar-botones justify-content-center align-items-center gap-5">
                         <li class="nav-item text-capitalize"><a href="juegos.php" class="fw-lighter">Juegos</a></li>
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
+                        <li class="nav-item text-capitalize"><a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a></li>
                         <li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
                             <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
@@ -27,6 +28,7 @@
                                     <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -69,6 +71,9 @@
             </li>
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="contact.php">Contacto</a>
+            </li>
+            <li class="nav-item text-capitalize">
+                <a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a>
             </li>
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="login.php">Login</a>
