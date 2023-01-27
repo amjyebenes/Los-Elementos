@@ -8,7 +8,7 @@ class ControladorEspectaculo{
     public static function put($espec) {
         try {
             $conex=new Conexion();
-            $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha_publicacion,texto,imagen) "
+            $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha,ubicacion,imagen) "
                     . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->texto','$espec->imagen')");
             unset($conex);
             return $reg;
