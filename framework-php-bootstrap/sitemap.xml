@@ -1,0 +1,44 @@
+<urlset>
+	<url>
+		<loc>https://amjyebenes.github.io/</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1</priority>
+	</url>
+    <url>
+		<loc>https://amjyebenes.github.io/conciertos.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1</priority>
+	</url>
+    <url>
+		<loc>https://amjyebenes.github.io/eventos.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1</priority>
+	</url>
+    <url>
+		<loc>https://amjyebenes.github.io/salas.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+    <url>
+		<loc>https://amjyebenes.github.io/contacto.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>    
+    <url>
+		<loc>https://amjyebenes.github.io/login.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1</priority>
+	</url>    
+<url>
+		<loc>https://amjyebenes.github.io/registro.php</loc>
+		<lastmod>2023-01-24</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1</priority>
+	</url>
+</urlset>
