@@ -73,6 +73,9 @@
                 <a class="nav-link" href="contact.php">Contacto</a>
             </li>
             <li class="nav-item">
+                <a href="modal.php" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="login.php">Login</a>
             </li>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
