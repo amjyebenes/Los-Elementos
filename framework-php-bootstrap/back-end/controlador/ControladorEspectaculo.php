@@ -25,7 +25,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha_publicacion,$reg->texto,$reg->imagen);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;
