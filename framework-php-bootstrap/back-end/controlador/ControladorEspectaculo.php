@@ -9,7 +9,7 @@ class ControladorEspectaculo{
         try {
             $conex=new Conexion();
             $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha,ubicacion,imagen) "
-                    . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->texto','$espec->imagen')");
+                    . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->ubicacion','$espec->imagen')");
             unset($conex);
             return $reg;
         } catch (PDOException $ex) {
