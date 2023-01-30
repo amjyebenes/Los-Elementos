@@ -19,6 +19,27 @@
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <li class="nav-item text-capitalize"><a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a></li>
                         <li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>
+                        
+                        <li class="nav-item text-capitalize">
+                        <?php	
+                        if  ($login_button == '')
+                        {
+                            echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="image-circle" />';
+                        }
+                        else
+                        {
+                            echo '<div align="center">'.$login_button . '</div>';
+                        }
+                        ?>
+                        </li>
+                        <?php	
+                        if  ($login_button == '')
+                        {
+                            echo '<li>'.$_SESSION['user_first_name'].' '.$_SESSION['user_last_name'].'</li>'; 
+                            echo '<li>'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
+                        } 
+                        ?>
+
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
                             <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
                             <div class="dropdown">
