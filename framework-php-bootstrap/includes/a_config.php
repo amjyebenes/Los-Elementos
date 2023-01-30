@@ -58,7 +58,7 @@ $google_client->setClientId('913628667611-jhg70pu4n56umq4hu8kudgt2apjb9mhi.apps.
 $google_client->setClientSecret('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');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('http://'.$_SERVER['SERVER_NAME'].'/redirect.php');
+$google_client->setRedirectUri('http://localhost:5555/index.php');
 
 
 $google_client->addScope('email');
