@@ -1,6 +1,6 @@
 <?php
-require_once '../modelo/Usuario.php';
 require_once 'Conexion.php';
+require_once 'back-end/modelo/Usuario.php';
 
 class ControladorUsuario {
     
