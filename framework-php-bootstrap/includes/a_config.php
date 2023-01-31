@@ -68,5 +68,6 @@ $google_client->addScope('profile');
 //start session on web page
 session_start();
 
+
 $login_button = '';
 ?>

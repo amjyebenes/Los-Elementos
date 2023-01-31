@@ -1,4 +1,6 @@
 <?php
+include("dbconnection.php");
+include("a_config.php");
 //Cuando el index.php es llamado desde Google tras la autenticación
 //nos pasa el parámetro "code" mediante una petición get.    
 if(isset($_GET["code"]))
