@@ -50,19 +50,19 @@
                         </div>
                         <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
                         <div>
-                            <label for="captcha"><b>
-                                    <?php if (isset($_GET["captchaerror"]))
-                                        echo "Invalid code. Please enter de Captcha Text.";
-                                    else
-                                        echo "Please Enter the Captcha Text<b>";
-                                    ?>
-                                </b></label>
-                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                            <label for="captcha">
+                                <?php if (isset($_GET["captchaerror"]))
+                                    echo "<p class='text-white'>Captcha erróneo. Vuelva a introducirlo</p>";
+                                else
+                                    echo "<p class='text-white'>Introduce el captcha</p>";
+                                ?>
+                            </label>
+                            <br>
+                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha"></i><br><br>
                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+                            <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
 
-
-                        </div>
-                        <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
+                        </div><br>
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>

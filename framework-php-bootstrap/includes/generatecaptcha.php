@@ -39,9 +39,10 @@ for($i = 0; $i < 10; $i++) {
 $black = imagecolorallocate($image, 0, 0, 0);
 $white = imagecolorallocate($image, 255, 255, 255);
 $textcolors = [$black, $white];
- 
-$fonts = [dirname(__FILE__).'\fuentes\ReemKufi-Regular.ttf', dirname(__FILE__).'\fuentes\Newake-Font-Demo.otf'];
- 
+
+
+$fonts = ['..\assets\fuentes\ReemKufi-Regular.ttf'];
+
 $string_length = 6;
 $captcha_string = generate_string($permitted_chars, $string_length);
  

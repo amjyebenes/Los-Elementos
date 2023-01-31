@@ -26,7 +26,7 @@
                         } 
                         else {
                             echo '<li class="nav-item text-capitalize"><a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackgrop">Registrar</a></li>';
-                            echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Lodin</a></li>';
+                            echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
                         }
                         ?>
 
