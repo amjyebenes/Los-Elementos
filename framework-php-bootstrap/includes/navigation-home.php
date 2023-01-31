@@ -17,31 +17,27 @@
                     <ul class="navbar-nav navbar-botones justify-content-center align-items-center gap-5">
                         <li class="nav-item text-capitalize"><a href="juegos.php" class="fw-lighter">Juegos</a></li>
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
-                        <li class="nav-item text-capitalize"><a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a></li>
-                        <li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>
-                        
-                        <li class="nav-item text-capitalize">
+
                         <?php	
                         if  ($login_button == '')
                         {
-                            echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="image-circle" />';
-                        }
-                        else
-                        {
-                            echo '<div align="center">'.$login_button . '</div>';
-                        }
-                        ?>
-                        </li>
-                        <?php	
-                        if  ($login_button == '')
-                        {
-                            echo '<li>'.$_SESSION['user_first_name'].' '.$_SESSION['user_last_name'].'</li>'; 
-                            echo '<li>'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
+                            echo '<li class="nav-item text-capitalize">'.$_SESSION['user_first_name'].'</li>'; 
+                            // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
                         } 
+                        else {
+                            echo '<li class="nav-item text-capitalize"><a href="modal.php" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackgrop">Registrar</a></li>';
+                            echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Lodin</a></li>';
+                        }
                         ?>
 
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
-                            <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                            <?php
+                            if ($login_button == '') {
+                                ?>
+                                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                                <?php
+                            }
+                            ?>
                             <div class="dropdown">
                                 <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-solid fa-user text-light"></i>
@@ -50,6 +46,12 @@
                                     <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
+                                    <?php
+                                    if  ($login_button == '')
+                                    {
+                                        echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
+                                    } 
+                                    ?>
                                 </ul>
                             </div>
                         </li>

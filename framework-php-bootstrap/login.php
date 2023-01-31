@@ -1,4 +1,7 @@
-<?php include("includes/a_config.php");?>
+<?php 
+include("includes/a_config.php");
+include("includes/googleconnect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +45,9 @@
                             <p type="button" class="text-white">¿Olvidaste tu contraseña?</p>
                             <label class="text-white">¿No tienes cuenta?
                             <a type="button" class="text-white text-decoration-underline" href="registro.php">Regístrate</a>
+                            <?php	
+                            echo '<div align="center">'.$login_button . '</div>';
+                            ?>
                             </label>
                         </div>                
                 </form>
