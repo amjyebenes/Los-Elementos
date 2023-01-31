@@ -1,19 +1,14 @@
-<?php include("includes/a_config.php"); ?>
-<!DOCTYPE html>
-<html>
 
-<head>
-    <?php include("includes/head-tag-contents.php"); ?>
-</head>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-primary">
 
-<body>
-    <?php include("includes/navigation.php"); ?>
-    <main class="fondoLogin">
-        <!--Creo la caja grande para almacenar el resto  -->
-        <section class="position-relative py-5">
-            <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
-            <div class="container d-flex justify-content-center pt-5">
-                <div class="row col-md-6 col-12">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-end">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <form action="" method="POST">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
@@ -42,28 +37,12 @@
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw">
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pwd" placeholder="Repetir Contraseña" name="pswd">
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
                         </div>
                         <div class="form-check mb-3">
-                            <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                            <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                             <input class="form-check-input" type="checkbox" name="remember">
                         </div>
-                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
-                        <div>
-                            <label for="captcha">
-                                <?php if (isset($_GET["captchaerror"]))
-                                    echo "<p class='text-white'>Captcha erróneo. Vuelva a introducirlo</p>";
-                                else
-                                    echo "<p class='text-white'>Introduce el captcha</p>";
-                                ?>
-                            </label>
-                            <br>
-                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha"></i><br><br>
-                            <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
-                            <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
-
-                        </div><br>
-                        <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>
                         </div>
@@ -73,18 +52,10 @@
                             </label>
                         </div>
                     </form>
-                    <script>
-                        var refreshButton = document.querySelector(".refresh-captcha");
-                        refreshButton.onclick = function() {
-                            document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
-                        }
-                    </script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Aceptar</button>
                 </div>
             </div>
-        </section>
-    </main>
-    <?php include("includes/footer.php"); ?>
-    <script src="./js/navbar.js"></script>
-</body>
-
-</html>
+        </div>
+    </div>

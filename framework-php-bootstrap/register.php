@@ -13,8 +13,8 @@ $birthdate=$_POST['birthdate'];
 $postalcode=$_POST['postalcode'];
 
 // ESTO HAY Q REVISARLO Y CAMBIAR LOS CAMPOS DE LA BASE DE DATOS
-$sql = "INSERT INTO user (firstname,lastname,email,birthdate,postalcode)".
-       " VALUES ('$firstname','$lastname','$email','$birthdate','$postalcode')";
+$sql = "INSERT INTO usuario (usuario,pass,nombre,apellido1,apellido2, correo, fecha_nac, pais, cod_postal, telefono, rol)".
+       " VALUES (null,null,'$firstname','$lastname',null,'$email','$birthdate',null,'$postalcode',null,null)";
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION['iduser']=$conn->insert_id;

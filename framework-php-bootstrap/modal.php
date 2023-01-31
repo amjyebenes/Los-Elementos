@@ -55,7 +55,7 @@
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw">
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pwd" placeholder="Repetir Contraseña" name="pswd">
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
                         </div>
                         <div class="form-check mb-3">
                             <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>

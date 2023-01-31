@@ -53,7 +53,7 @@ if(isset($_GET["code"]))
   //A continuación recuperamos el usuario de la base de datos
   //Su id quedará almacenado en la sesión para uso posterior.
   
-  $sql = "SELECT iduser FROM user WHERE email = '$email'";
+  $sql = "SELECT id FROM usuario WHERE correo = '$email'";
 
   if (!$resultado = $conn->query($sql)) {
     // ¡Oh, no! La consulta falló. 
@@ -83,6 +83,6 @@ if(isset($_GET["code"]))
 if(!isset($_SESSION['access_token']))
 {
  //Create a URL to obtain user authorization
- $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="img/signin.png" class="googlebtn"/></a>';
+ $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="assets/img/signin.png" class="googlebtn"/></a>';
 }
 ?>
