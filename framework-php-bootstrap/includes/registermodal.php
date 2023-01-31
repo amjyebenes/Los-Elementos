@@ -1,6 +1,6 @@
-<!--MODULAR DE REGISTRO -->
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-primary">
 
@@ -40,7 +40,7 @@
                             <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
                         </div>
                         <div class="form-check mb-3">
-                            <label class="form-check-label text-black shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                            <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                             <input class="form-check-input" type="checkbox" name="remember">
                         </div>
                         <div class="nav navbar container">
