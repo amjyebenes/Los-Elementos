@@ -19,9 +19,10 @@ include("includes/googleconnect.php");
 <!-- MAIN CONTENT -->
 <main>
     <?php
-    if (($login_button == '') && (!isset($_SESSION['iduser']))){
+    // VER CÓMO FUNCIONA $login_button 
+    if (($login_button != '') && (!isset($_SESSION['iduser']))){
         include("includes/registermodal.php");
-    } 
+    }
     ?>
 
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
