@@ -1,6 +1,4 @@
 <?php
-include("dbconnection.php");
-include("a_config.php");
 //Cuando el index.php es llamado desde Google tras la autenticación
 //nos pasa el parámetro "code" mediante una petición get.    
 if(isset($_GET["code"]))
@@ -55,7 +53,7 @@ if(isset($_GET["code"]))
   //A continuación recuperamos el usuario de la base de datos
   //Su id quedará almacenado en la sesión para uso posterior.
   
-  $sql = "SELECT iduser FROM user WHERE email = '$email'";
+  $sql = "SELECT id FROM usuario WHERE correo = '$email'";
 
   if (!$resultado = $conn->query($sql)) {
     // ¡Oh, no! La consulta falló. 

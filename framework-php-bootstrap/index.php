@@ -1,5 +1,6 @@
 <?php 
 include("includes/a_config.php");
+include("includes/dbconnection.php");
 include("includes/googleconnect.php");
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,11 @@ include("includes/googleconnect.php");
 <?php include("includes/navigation-home.php");?>
 <!-- MAIN CONTENT -->
 <main>
-    <?php include("includes/registermodal.php"); ?>
+    <?php
+    if (($login_button == '') && (!isset($_SESSION['iduser']))){
+        include("includes/registermodal.php");
+    } 
+    ?>
 
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
     <section class="container-fluid page-section device-padding section-padding bg-light position-relative border-top border-dark">
