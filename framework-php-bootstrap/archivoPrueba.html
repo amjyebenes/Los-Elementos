@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        :root{
+        --color-fondo-aviso: #fff;
+        --color-del-parrafo: #000;
+        --tamano-parrafo: 16px;
+        --color-boton-aceptar: #00748e;
+        --color-texto-boton-aceptar: #fff;
+        --color-texto-leer-mas: #00748e;
+        }
+        .cookie-container{
+            position:fixed;
+            bottom:-100%;left:0;
+            right:0;
+            z-index:999999999999999;
+            transition:400ms;
+            background:var(--color-fondo-aviso);
+            padding:15px;
+            box-shadow:1px 7px 14px -5px rgba(0,0,0,.15);
+            text-align:center;
+            font-size:var(--tamano-parrafo)
+        }
+        .cookie-content{
+            color:var(--color-del-parrafo)
+        }
+        .cookie-container.active{
+            bottom:0
+        }
+        .cookie-content .buttons{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center
+        }
+        .cookie-content .buttons button{
+            padding:10px 15px;
+            border:none;
+            outline:0;
+            color:var(--color-texto-boton-aceptar);
+            font-size:16px;
+            font-weight:500;
+            border-radius:5px;
+            background:var(--color-boton-aceptar);
+            cursor:pointer;
+            transition:all .3s ease
+        }
+        .cookie-content .buttons button:hover{
+            transform:scale(0.97)
+        }
+        .buttons .item{
+            margin:0 10px
+        }
+        .cookie-content .buttons a{
+            color:var(--color-texto-leer-mas);
+            font-weight:700
+        }
+    </style>
+</head>
+
+<body>
+    <div class='cookie-container'>
+        <div class='cookie-content'>
+            Este sitio utiliza cookies para mejorar tu experiencia. Asumiré que estás de acuerdo con esto.
+            <div class='buttons'>
+                <button class='item'>Acepto</button>
+                <a class='item' href='cookies.php' target='_blank'>Leer más</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const cookieContainer = document.querySelector(".cookie-container");
+        const cookieButton = document.querySelector("button.item");
+
+
+        cookieButton.addEventListener("click", () => {
+            cookieContainer.classList.remove("active");
+            localStorage.setItem("cookieBannerDisplayed", "true");
+        });
+
+
+        setTimeout(() => {
+            if (!localStorage.getItem("cookieBannerDisplayed")) {
+                cookieContainer.classList.add("active");
+            }
+        }, 2000);
+    </script>
+</body>
+
+</html>

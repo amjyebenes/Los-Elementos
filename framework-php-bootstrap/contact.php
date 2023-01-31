@@ -45,6 +45,7 @@
         </div>
   </section>
 </main>
+<?php include("includes/aviso_cookies.php");?>
 <?php include("includes/footer.php");?>
 <script src="./js/navbar.js"></script>
 </body>
