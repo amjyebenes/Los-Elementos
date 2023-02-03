@@ -22,6 +22,8 @@ if(isset($_GET["code"]))
 
   //Get user profile data from google
   $data = $google_service->userinfo->get();
+  $data2 = $google_service->userinfo_v2_me->get();
+
 
   //Below you can find Get profile data and store into $_SESSION variable
   if(!empty($data['given_name']))
@@ -48,6 +50,13 @@ if(isset($_GET["code"]))
   {
    $_SESSION['user_image'] = $data['picture'];
   }
+
+  if(!empty($data2['phoneNumber']))
+  {
+   $_SESSION['user_number'] = $data2['phoneNumber'];
+  }
+  
+
   $email=$data['email'];
 
   //A continuación recuperamos el usuario de la base de datos

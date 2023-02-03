@@ -25,7 +25,12 @@
                                     <i class="fa-solid fa-user text-light"></i>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
+
+                                    <?php
+                                        if(isset($_SESSION['user_first_name'])){
+                                        echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
+                                        } 
+                                    ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                                     
