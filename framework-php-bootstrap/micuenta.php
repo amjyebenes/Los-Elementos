@@ -13,7 +13,7 @@
 
         <div class="container-fluid d-flex justify-content-center pt-md-4">
             <div class="row col">
-                <h6 class="bg-primary p-1 ps-4 rounded-top-3"><span class="text-white shadow">MI&nbsp&nbspZONA</span></h6>
+                <h6 class="bg-primary p-1 mt-3 ps-4 rounded-top-3"><span class="text-white shadow">MI&nbsp&nbspZONA</span></h6>
 
                 <div class="row mt-4 pt-4 justify-content-center">
                     <div class="col-6 col-md-3 ms-5 me-5 mb-4 d-flex">
