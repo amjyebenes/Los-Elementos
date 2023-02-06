@@ -48,6 +48,9 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 //Include Google Client Library for PHP autoload file
 require_once 'vendor/autoload.php';
 
+//start session on web page
+session_start();
+
 //Make object of Google API Client for call Google API
 $google_client = new Google_Client();
 
@@ -61,12 +64,14 @@ $google_client->setClientSecret('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');
 $google_client->setRedirectUri('http://localhost:5555/index.php');
 
 
-$google_client->addScope('email');
+$google_client->addScope([
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile"
+]);
+$google_client->setAccessType('offline');
+$google_client->setApprovalPrompt ("force");
 
-$google_client->addScope('profile');
 
-//start session on web page
-session_start();
 
 
 $login_button = '';
