@@ -11,15 +11,11 @@
     <?php include("includes/navigation.php"); ?>
     <main class="bs-primary py-5 device-padding mt-5">
         <section class="position-relative">
-            <h1 class="text-left text-black fw-light">Términos y Condiciones</h1>
+            <h1 class="text-left text-black fw-light">POLÍTICA DE COOKIES</h1>
         </section>
 
         <section>
             <div class="container">
-                <header class="text-center">
-                    <h2 class="m-auto">POLÍTICA DE COOKIES</h2>
-                    <h4><span class="blanc-space">ELECTICKETS</span></h4>
-                </header>
                 <div>
                     <p>El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada Usuario —en los distintos dispositivos que pueda utilizar para navegar— para que el servidor recuerde cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de navegación.</p>
                     <p>Las cookies son procedimientos automáticos de recogida de información relativa a las preferencias determinadas por el Usuario durante su visita al Sitio Web con el fin de reconocerlo como Usuario, y personalizar su experiencia y el uso del Sitio Web, y pueden también, por ejemplo, ayudar a identificar y resolver errores.</p>
@@ -34,7 +30,7 @@
                         <p>Son cookies utilizadas y gestionadas por entidades externas que proporcionan a <span class="blanc-space">Eletickets</span> servicios solicitados por este mismo para mejorar el Sitio Web y la experiencia del usuario al navegar en el Sitio Web. Los principales objetivos para los que se utilizan cookies de terceros son la obtención de estadísticas de accesos y analizar la información de la navegación, es decir, cómo interactúa el Usuario con el Sitio Web.</p>
                         <p>La información que se obtiene se refiere, por ejemplo, al número de páginas visitadas, el idioma, el lugar a la que la dirección IP desde el que accede el Usuario, el número de Usuarios que acceden, la frecuencia y reincidencia de las visitas, el tiempo de visita, el navegador que usan, el operador o tipo de dispositivo desde el que se realiza la visita. Esta información se utiliza para mejorar el Sitio Web, y detectar nuevas necesidades para ofrecer a los Usuarios un Contenido y/o servicio de óptima calidad. En todo caso, la información se recopila de forma anónima y se elaboran informes de tendencias del Sitio Web sin identificar a usuarios individuales.</p>
                         <p>Puede obtener más información sobre las cookies, la información sobre la privacidad, o consultar la descripción del tipo de cookies que se utiliza, sus principales características, periodo de expiración, etc. en el siguiente(s) enlace(s):</p>
-                        <pre><span class="blanc-space"><p class="text-wrap">{{ entidades }}</p></span></pre>
+                       
                         <p>La(s) entidad(es) encargada(s) del suministro de cookies podrá(n) ceder esta información a terceros, siempre y cuando lo exija la ley o sea un tercero el que procese esta información para dichas entidades.</p>
                     </div>
                     <h4>Deshabilitar, rechazar y eliminar cookies</h4>

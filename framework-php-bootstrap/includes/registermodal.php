@@ -1,17 +1,15 @@
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal d-flex w-100">
         <div class="modal-dialog">
             <div class="modal-content bg-primary">
-
                 <div class="modal-body">
                     <div class="d-flex justify-content-end">
-
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="" method="POST">
+                    <form action="/register.php" method="POST">
                         <div class="d-flex justify-content-center mt-0 mb-3">
-                            <i class="fa-solid fa-user-plus fa-6x text-info"></i>
+                            <i class="fa-solid fa-user-plus fa-4x text-info"></i>
                         </div>
                         <div class="d-flex align-items-center gap-2 mb-1">
                             <i class="fa-solid fa-ticket text-white"></i>
@@ -22,40 +20,51 @@
                             <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                         </div>
                         <div class="mb-1">
-                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                            <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username" required>
                         </div>
                         <div class="mb-1">
-                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname" required>
                         </div>
                         <div class="mb-1">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos">
+                            <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" required>
                         </div>
                         <div class="mb-1">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name">
+                            <input type="text" class="form-control" id="apellido2" placeholder="Segundo apellido" name="lastname2" required>
                         </div>
                         <div class="mb-1">
-                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="mb-1 d-flex gap-2 align-items-center">
+                            <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" required>
                         </div>
                         <div class="mb-1">
-                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
+                            <input type="text" class="form-control" id="pais" placeholder="País" name="pais" required>
                         </div>
-                        <div class="form-check mb-2">
+                        <div class="mb-1">
+                            <input type="text" class="form-control" id="tlfn" placeholder="Teléfono" name="tlfn" required>
+                        </div>
+                        <div class="mb-1">
+                            <input type="text" class="form-control" id="codPos" placeholder="Código Postal" name="CodPos" required>
+                        </div>
+                        <div class="mb-1">
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
+                        </div>
+                        <div class="mb-1">
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd" required>
+                        </div>
+                        <div class="form-check">
                             <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
-                            <input class="form-check-input" type="checkbox" name="remember">
+                            <input class="form-check-input" type="checkbox" name="remember" required>
                         </div>
-                        <div class="nav navbar container">
-                            <div class="nav-line position-relative bottom-0 bg-white"></div>
-                        </div>
-                        <div class="mb-1">
-                            <label class="text-white">¿Ya estás registrada/o?
-                                <a type="button" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
-                            </label>
-                        </div>
-                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">Aceptar</button>
+                <div class="modal-footer d-flex justify-content-between align-items-center">
+                    <label class="text-white">¿Ya estás registrada/o?
+                        <a type="submit" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
+                    </label>
+                    <button type="submit" class="btn btn-secondary rounded-2">Aceptar</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>

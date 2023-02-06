@@ -46,15 +46,15 @@
                                             <label class="text-left">NOMBRE: </>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center">juan</label>
+                                            <label class="h6 text-center"><?php echo $_SESSION['user_first_name'] ?></label>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
                                         <div class="col-7">
-                                            <label class="text-left">DNI/CIF: </label>
+                                            <label class="text-left">1º APELLIDO: </label>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center">25146463s</label>
+                                            <label class="h6 text-center"><?php echo $_SESSION['user_last_name'] ?></label>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
@@ -62,7 +62,7 @@
                                             <label class="text-left">TELEFONO: </label>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center">95544115</label>
+                                            <label class="h6 text-center"><?php echo $_SESSION['user_number'] ?></label>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
