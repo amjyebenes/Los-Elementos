@@ -1,3 +1,4 @@
+<?php include("includes/aviso_cookies.php");?>
 <footer class="footer text-center device-padding section-padding bg-dark">
         <div class="container-fluid">
             <div class="row">
