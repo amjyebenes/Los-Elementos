@@ -73,6 +73,11 @@
         let modal = document.querySelector('.modal');
         let close = document.querySelector('.btn-close');
         close.addEventListener('click', () => {
-            modal.remove();
-        })
+            modal.classList.remove('d-flex');
+        });
+
+        let trigger = document.querySelector('#modalTrigger');
+        trigger.addEventListener('click', () => {
+            modal.classList.add('d-flex');
+        });
     </script>
