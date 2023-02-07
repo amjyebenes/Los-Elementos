@@ -25,7 +25,7 @@
                             // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
                         } 
                         else {
-                            echo '<li class="nav-item text-capitalize"><a href="#" class="fw-lighter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a></li>';
+                            echo '<li class="nav-item text-capitalize"><a href="#" class="fw-lighter" id="modalTrigger">Registrar</a></li>';
                             echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
                         }
                         ?>
@@ -100,7 +100,7 @@
                 <a class="nav-link" href="contact.php">Contacto</a>
             </li>
             <li class="nav-item">
-                <a href="modal.php" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar</a>
+                <a href="modal.php" class="nav-link" id="modalTrigger">Registrar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Login</a>

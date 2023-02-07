@@ -13,7 +13,7 @@ include("includes/googleconnect.php");
 
     <main class="fondoLogin device-padding pb-5">
         <!--Creo la caja grande para almacenar el resto  -->
-        <section class="position-relative py-5 portfolio pb-5">
+        <section class="position-relative py-md-5 py-2 portfolio">
            <!-- Creo el div donde meteremos el contenedor que almacena el formulario--> 
             <div class="container d-flex justify-content-center py-5">
                 <div class="row col-md-6 col-12 pb-3">
@@ -29,24 +29,26 @@ include("includes/googleconnect.php");
                         <!-- Esto es el icono del ojo de la contraseña
                             <i class="fa-regular fa-eye-slash"></i> -->
                         </div>
-                        <div class="form-check mb-3">
-                            <label class="form-check-label text-white">
-                            <input class="form-check-input" type="checkbox" name="remember"> Recuérdame
-                            </label>
-                        </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>                 
+                        <div class="d-flex flex-column gap-2 align-items-center d-md-block mb-3 mb-md-0">
+                            <div class="form-check">
+                                <label class="form-check-label text-white">
+                                <input class="form-check-input" type="checkbox" name="remember"> Recuérdame
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>
                         </div>
 
                         <div class="b-line w-100 bg-light opacity-25 my-2"></div>
 
                         
-                        <div class="mb-5">
-                            <p type="button" class="text-white">¿Olvidaste tu contraseña?</p>
-                            <label class="text-white">¿No tienes cuenta?
-                            <a type="button" class="text-white text-decoration-underline" href="registro.php">Regístrate</a>
+                        <div class="mb-5 row justify-content-between align-items-center flex-column flex-md-row">
+                            <div class="col-12 col-md-5 text-center text-md-start">
+                                <p type="button" class="text-white mb-1">¿Olvidaste tu contraseña?</p>
+                                <label class="text-white">¿No tienes cuenta?
+                                <a type="button" class="text-white text-decoration-underline" href="registro.php">Regístrate</a>
+                            </div>
                             <?php	
-                            echo '<div align="center">'.$login_button . '</div>';
+                            echo '<div class="col-10 col-md-5 mt-2 mt-md-0">'.$login_button . '</div>';
                             ?>
                             </label>
                         </div>                
