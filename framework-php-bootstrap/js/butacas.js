@@ -14,4 +14,6 @@ container.addEventListener("click", (e) => {
     updateSelectedCount();
   }
 }); */
-
+element.addEventListener("click", function() {
+    this.style.backgroundColor = "red";
+  });
