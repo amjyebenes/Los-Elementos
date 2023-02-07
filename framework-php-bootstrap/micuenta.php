@@ -59,15 +59,6 @@
                                     </div>
                                     <div class="row align-items-baseline">
                                         <div class="col-7">
-                                            <label class="text-left">TELEFONO: </label>
-                                        </div>
-                                        <div class="col-5">
-                                            <label class="h6 text-center"><?php if (isset($_SESSION['user_number'])) echo $_SESSION['user_number'];
-                                                                            else echo "No especificado"; ?></label>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-baseline">
-                                        <div class="col-7">
                                             <label class="text-left">IMAGEN: </label>
                                         </div>
                                         <div class="col-5">
@@ -79,43 +70,44 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="#">
-                        <div class="col-sm-8 row justify-content-center">
-                            <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
-                            <div class="col d-flex flex-column justify-content-between">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <label class="text-left">EMAIL: </label>
-                                    </div>
-                                    <div class="col-7 py-1">
-                                        <input type="email" class="opacity-50 text-center col-12" 
-                                        value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
-                                        else echo "No especificado"; ?>">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <label class="text-left">NUEVA CONTRASEÑA: </label>
-                                    </div>
-                                    <div class="col-7 py-1">
-                                        <input type="password" class="opacity-50 text-center col-12">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <label class="text-left">CONFIRMAR CONTRASEÑA: </label>
-                                    </div>
-                                    <div class="col-7 py-1">
-                                        <input type="password" class="opacity-50 text-center col-12">
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div class="row justify-content-end pt-2">
-                                <button type="button" class="btn btn-primary rounded-5 col col-sm-10 col-xl-6">Guardar cambios</button>
-                            </div>
+                        <div class="col-sm-8 row justify-content-center">
+                            <form action="#">
+                                <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
+                                <div class="col d-flex flex-column justify-content-between">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <label class="text-left">EMAIL: </label>
+                                        </div>
+                                        <div class="col-7 py-1">
+                                            <input type="email" class="opacity-50 text-center col-12" value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
+                                                                                                                else echo "No especificado"; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <label class="text-left">NUEVA CONTRASEÑA: </label>
+                                        </div>
+                                        <div class="col-7 py-1">
+                                            <input type="password" class="opacity-50 text-center col-12">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <label class="text-left">CONFIRMAR CONTRASEÑA: </label>
+                                        </div>
+                                        <div class="col-7 py-1">
+                                            <input type="password" class="opacity-50 text-center col-12">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-end pt-2 me-4">
+                                    <button type="button" class="btn btn-primary rounded-5 col col-sm-10 col-xl-6">Guardar cambios</button>
+                                </div>
+                            </form>
                         </div>
-                        </form>
+
                     </div>
 
                 </div>
