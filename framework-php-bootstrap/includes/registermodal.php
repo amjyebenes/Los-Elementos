@@ -1,11 +1,11 @@
 
     <!-- Modal -->
-    <div class="modal d-flex w-100">
+    <div class="modal d-flex" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content bg-primary">
                 <div class="modal-body">
                     <div class="d-flex justify-content-end">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form action="/register.php" method="POST">
                         <div class="d-flex justify-content-center mt-0 mb-3">
@@ -68,3 +68,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let modal = document.querySelector('.modal');
+        let close = document.querySelector('.btn-close');
+        close.addEventListener('click', () => {
+            modal.remove();
+        })
+    </script>
