@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
@@ -37,12 +37,10 @@ include("includes/googleconnect.php");
                             <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" title="Debe de completar este campo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" title="Código Postal incorrecto" 
-                            pattern="^\d{5}$" required>
+                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" title="Código Postal incorrecto" pattern="^\d{5}$" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" title="Formato de email incorrecto" 
-                            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" title="Formato de email incorrecto" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
@@ -55,6 +53,7 @@ include("includes/googleconnect.php");
                             <input class="form-check-input" type="checkbox" name="remember">
                         </div>
                         <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+
                         <div>
                             <label for="captcha">
                                 <?php if (isset($_GET["captchaerror"]))
@@ -64,10 +63,10 @@ include("includes/googleconnect.php");
                                 ?>
                             </label>
                             <br>
-                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha"></i><br><br>
+                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image">
+                            <i class="text-white fa-lg fas fa-redo refresh-captcha" onclick="refreshCaptcha()"></i><br><br>
                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                             <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
-
                         </div><br>
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
@@ -79,18 +78,18 @@ include("includes/googleconnect.php");
                             </label>
                         </div>
                     </form>
-                    <script>
-                        var refreshButton = document.querySelector(".refresh-captcha");
-                        refreshButton.onclick = function() {
-                            document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
-                        }
-                    </script>
+
                 </div>
             </div>
         </section>
     </main>
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
+    <script>
+    function refreshCaptcha() {
+        document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
+    }
+</script>
 </body>
 
 </html>
