@@ -25,9 +25,8 @@ include("includes/googleconnect.php");
             <article class="row justify-content-around">
                 <!-- Video -->
                 <div class="col-md-5 col-12 overflow-hidden">
-                    <div class="img-con border-top border-dark overflow-hidden">
-                        <img src="assets/img/cruzziConcierto.jpg" id="cruzziConcierto" alt="" class="img-fluid">
-                        <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($_SESSION['idConcierto']->imagen); ?>" alt="Title">
+                    <div class="img-con border-top border-dark overflow-hidden">                        
+                        <img class="shadow-lg img-fluid" src="data:jpg;base64,<?php echo base64_encode($_SESSION['idConcierto']->imagen); ?>" alt="Title">
                     </div>
                 </div>
                 <!-- Descripción -->
