@@ -40,7 +40,7 @@
                     <div class="mb-1">
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email" 
                         required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; 
-                        else if (isset($_SESSION['email'])) echo $_SESSION['email'];?>">
+                        else if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];?>">
                     </div>
                     <div class="mb-1 d-flex gap-2 align-items-center">
                         <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
