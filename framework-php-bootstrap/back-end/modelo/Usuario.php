@@ -29,9 +29,9 @@ class Usuario {
      * @param mixed $telefono
      * @param mixed $rol
      */
-    function __construct($id, $usuario, $pass, $nombre, $apellido1, $apellido2, $correo, $fecha_nac, $pais, $cod_postal, $telefono, $rol)
+    function __construct($usuario, $pass, $nombre, $apellido1, $apellido2, $correo, $fecha_nac, $pais, $cod_postal, $telefono, $rol)
     {
-        $this->id = $id;
+        $this->id = ControladorUsuario::get($correo)->id;
         $this->usuario = $usuario;
         $this->pass = $pass;
         $this->nombre = $nombre;

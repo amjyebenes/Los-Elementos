@@ -16,10 +16,10 @@ class ControladorUsuario {
         unset($conex);
     }
 
-    public static function get($id) {
+    public static function get($correo) {
         try {
             $conex = new Conexion();
-            $result = $conex->query("SELECT * FROM usuario WHERE id = $id");
+            $result = $conex->query("SELECT * FROM usuario WHERE correo = '$correo'");
             if ($result->rowCount()) {
                 $reg = $result->fetchObject();
                 $usuario = new Usuario(
@@ -58,7 +58,7 @@ class ControladorUsuario {
             $conex = new Conexion();
             // hago el update
             $md5pass = md5($nuevapass);
-            $reg = $conex->exec("UPDATE usuario set pass = $md5pass where id = $id");
+            $reg = $conex->exec("UPDATE usuario set pass = '$md5pass' where id = $id");
             if($reg){
                 echo "Actualización correcta";
             }else echo "Actualización ERRONEA";
