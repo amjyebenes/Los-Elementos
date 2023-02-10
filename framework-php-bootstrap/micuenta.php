@@ -4,12 +4,25 @@ include("includes/dbconnection.php");
 include("includes/googleconnect.php");
 ?>
 <?php
-        if(isset($_POST["enviar"])){
-            $user = ControladorUsuario::get($_SESSION['user_email_address']);
-            if($user && $_POST['newpass'] == $_POST['confirmpass']){
+require_once 'back-end/controlador/ControladorUsuario.php';
 
-            }
+$banderaContrasena = false;
+$banderaRegistro = false;
+
+if (isset($_POST["enviar"])) {
+    $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if ($user) {
+        if ($_POST['newpass'] == $_POST['confirmpass']) {
+            ControladorUsuario::cambiarContrasena($user->id, $_POST['newpass']);
+        } else {
+            $banderaContrasena = true;
         }
+    } else {
+        $banderaRegistro = true;
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +35,14 @@ include("includes/googleconnect.php");
 
     <?php include("includes/navigation.php"); ?>
     <main class="my-md-5 pb-5 device-padding">
-
+        <?php
+        if ($banderaContrasena) {
+            include("includes/contrasenaerronea.php");
+        }
+        if ($banderaRegistro) {
+            include("includes/registermodal.php");
+        }
+        ?>
         <div class="container-fluid d-flex justify-content-center pt-md-4">
             <div class="row col">
                 <h6 class="bg-primary p-1 mt-3 ps-4 rounded-top-3"><span class="text-white shadow">MI&nbsp&nbspZONA</span></h6>
