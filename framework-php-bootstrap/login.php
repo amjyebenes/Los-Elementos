@@ -1,5 +1,6 @@
 <?php 
 include("includes/a_config.php");
+include("includes/dbconnection.php");
 include("includes/googleconnect.php");
 ?>
 <!DOCTYPE html>
