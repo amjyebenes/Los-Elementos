@@ -18,7 +18,7 @@ include("includes/googleconnect.php");
             <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
             <div class="container d-flex justify-content-center pt-5">
                 <div class="row col-md-6 col-12">
-                    <form action="" method="POST">
+                    <form action="" method="POST" class="formulario-contacto">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
                         </div>
@@ -42,7 +42,7 @@ include("includes/googleconnect.php");
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" placeholder="Email" name="name" title="Formato de email incorrecto" 
-                            pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$" required>
+                            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
