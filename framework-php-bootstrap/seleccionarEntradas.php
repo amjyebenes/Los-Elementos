@@ -1,9 +1,13 @@
 <?php
+require_once './back-end/controlador/ControladorEspectaculo.php';
 session_start();
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
 }
+$_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 include("includes/a_config.php");
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,16 +33,16 @@ include("includes/a_config.php");
                 <div class="col-md-7 col-12 border-top-1 d-flex flex-column justify-align-content-between h-100">
                     <div class="d-flex flex-column gap-1 pt-4 border-top border-dark">
                         <div class="w-100">
-                            <h1 class="h1 text-dark text-uppercase mb-0"><?php echo $_POST['titulo'];?></h1>
+                            <h1 class="h1 text-dark text-uppercase mb-0"><?php echo $_SESSION['idConcierto']->titulo;?></h1>
                         </div>
                         <div class="event-date-con d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
-                            <p class="m-0">12/11/2020</p>
+                            <p class="m-0"><?php echo $_SESSION['idConcierto']->fecha;?></p>
                             <span>&middot;</span>
-                            <p class="m-0">VIE - 21:00</p>
+                            <p class="m-0"><?php echo $_SESSION['idConcierto']->fecha;?></p>
                         </div>
                         <div class="d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
                             <i class="fa-solid fa-location-dot text-primary"></i>
-                            <p class="m-0 text-primary">Málaga - Sala París 15</p>
+                            <p class="m-0 text-primary"><?php echo $_SESSION['idConcierto']->ubicacion;?></p>
                         </div>
                         <div class="event-info">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat
