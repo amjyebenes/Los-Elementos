@@ -1,9 +1,11 @@
-<?php
+<?php 
 session_start();
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
 }
 include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
 ?>
 <!DOCTYPE html>
 <html>
