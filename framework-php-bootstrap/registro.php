@@ -1,4 +1,8 @@
-<?php include("includes/a_config.php"); ?>
+<?php
+include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +18,7 @@
             <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
             <div class="container d-flex justify-content-center pt-5">
                 <div class="row col-md-6 col-12">
-                    <form action="" method="POST">
+                    <form action="" method="POST" class="formulario-contacto">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
                         </div>
@@ -27,16 +31,16 @@
                             <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                         </div>
                         <div class="mb-3">
-                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php if($banderaErrorCaptcha) echo $_POST['nombre'];?>">
+                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" title="Debe de completar este campo" required value="<?php if($banderaErrorCaptcha) echo $_POST['nombre'];?>">
                         </div>
                         <div class="mb-3">
-                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" value="<?php if($banderaErrorCaptcha) echo $_POST['apellidos'];?>">
+                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" title="Debe de completar este campo" required value="<?php if($banderaErrorCaptcha) echo $_POST['apellidos'];?>">
                         </div>
                         <div class="mb-3">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" value="<?php if($banderaErrorCaptcha) echo $_POST['CodPos'];?>">
+                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" title="Código Postal incorrecto" pattern="^\d{5}$" required value="<?php if($banderaErrorCaptcha) echo $_POST['CodPos'];?>">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" value="<?php if($banderaErrorCaptcha) echo $_POST['name'];?>">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email" title="Formato de email incorrecto" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required value="<?php if($banderaErrorCaptcha) echo $_POST['email'];?>">
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" value="<?php if($banderaErrorCaptcha) echo $_POST['psw'];?>">
@@ -49,6 +53,7 @@
                             <input class="form-check-input" type="checkbox" name="remember">
                         </div>
                         <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+
                         <div>
                             <label for="captcha">
                                 <?php if (isset($_GET["captchaerror"]))
@@ -58,10 +63,10 @@
                                 ?>
                             </label>
                             <br>
-                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha"></i><br><br>
+                            <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image">
+                            <i class="text-white fa-lg fas fa-redo refresh-captcha" onclick="refreshCaptcha()"></i><br><br>
                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                             <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
-
                         </div><br>
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
@@ -73,18 +78,18 @@
                             </label>
                         </div>
                     </form>
-                    <script>
-                        var refreshButton = document.querySelector(".refresh-captcha");
-                        refreshButton.onclick = function() {
-                            document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
-                        }
-                    </script>
+
                 </div>
             </div>
         </section>
     </main>
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
+    <script>
+    function refreshCaptcha() {
+        document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
+    }
+</script>
 </body>
 
 </html>

@@ -17,13 +17,32 @@
                         <li class="nav-item text-capitalize"><a href="juegos.php" class="fw-lighter">Juegos</a></li>
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
-                        <li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>
-                        <li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>
+                        <?php	
+                        if  ($login_button == '')
+                        {
+                            echo '<li class="nav-item text-capitalize">'.$_SESSION['user_first_name'].'</li>'; 
+                            // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
+                        } 
+                        else {
+                            // id="modalTrigger"
+                            echo '<li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>';
+                            echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
+                        }
+                        ?>
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
-                            <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                            <?php
+                            if ($login_button == '') {
+                                ?>
+                                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                                <?php
+                            }
+                            ?>
                             <div class="dropdown">
-                                <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-user text-light"></i>
+                                <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2"; else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?php
+                                        if (isset($_SESSION['user_image'])) echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
+                                        else echo "<i class='fa-solid fa-user text-light'></i>"
+                                    ?>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
@@ -34,7 +53,12 @@
                                     ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
-                                    
+                                    <?php
+                                    if  ($login_button == '')
+                                    {
+                                        echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
+                                    } 
+                                    ?>
                                 </ul>
                             </div>
                         </li>
@@ -78,25 +102,41 @@
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="contact.php">Contacto</a>
             </li>
-            <li class="nav-item text-capitalize">
-            <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
-                <a href="registro.php" class="fw-lighter">Registrar</a>
-            </li>
-            <li class="nav-item text-capitalize">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
+            <?php	
+            if  ($login_button == '')
+            {
+                echo '<li class="nav-item fs-2 mt-3 mb-0">'.$_SESSION['user_first_name'].'</li>'; 
+                // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="nav-link">Logout</a>'.'</li>';
+            } 
+            else {
+                // id="modalTrigger"
+                echo '<li class="nav-item text-capitalize"><a href="registro.php" class="nav-link">Registrar</a></li>';
+                echo '<li class="nav-item text-capitalize"><a href="login.php" class="nav-link">Login</a></li>';
+            }
+            ?>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                    
                 <div class="dropdown dropup">
-                    <button class="btn rounded-5 btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-user text-light"></i>
+                    <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2"; else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">             
+                    <?php
+                        if (isset($_SESSION['user_image'])) echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
+                        else echo "<i class='fa-solid fa-user text-light'></i>"
+                    ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>
-                        <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
+                        <?php
+                            if(isset($_SESSION['user_first_name'])){
+                            echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
+                            } 
+                        ?>
                         <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
-                        <li><a class="dropdown-item" href="pong_adrian.html" target="_blank">Pong Adri</a></li>
-                        <li><a class="dropdown-item" href="tower.html" target="_blank">Tower Game</a></li>
+                        <?php
+                        if  ($login_button == '')
+                        {
+                            echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
+                        } 
+                        ?>
                     </ul>
                 </div>
             </li>

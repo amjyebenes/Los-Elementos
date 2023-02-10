@@ -1,4 +1,8 @@
-<?php include("includes/a_config.php"); ?>
+<?php 
+include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
+?>
 <?php
 require_once 'back-end/controlador/ControladorUsuario.php';
 

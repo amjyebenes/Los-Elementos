@@ -46,8 +46,41 @@ class ControladorEspectaculo{
             unset($conex);
             return $espectaculos;
         } catch (PDOException $ex) {
-           echo $ex->getMessage();
+            echo $ex->getMessage();
         }
-    }    
- 
+    }  
+    
+    public static function getAllConciertos(){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("select * from espectaculo where tipo = 'concierto'");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espectaculos[]=$espec;
+                }
+            }else $espectaculos=false;
+            unset($conex);
+            return $espectaculos;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    } 
+    
+    public static function getAllEventos(){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("select * from espectaculo where tipo != 'concierto'");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espectaculos[]=$espec;
+                }
+            }else $espectaculos=false;
+            unset($conex);
+            return $espectaculos;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }   
 }
