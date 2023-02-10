@@ -20,15 +20,18 @@
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username"
-                         required value="<?php /*GOOGLE*/if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>">
+                         required value="<?php if (isset($_SESSION['username'])) echo $_SESSION['username']; 
+                                                ?>">
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname"
-                         required value="<?php if (isset($_SESSION['firstname'])) echo $_SESSION['firstname']; ?>">
+                         required value="<?php if (isset($_SESSION['firstname'])) echo $_SESSION['firstname']; 
+                                                else if (isset($_SESSION['user_first_name'])) echo $_SESSION['user_first_name'];?>">
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" 
-                        required value="<?php if (isset($_SESSION['lastname1'])) echo $_SESSION['lastname1']; ?>">
+                        required value="<?php if (isset($_SESSION['lastname1'])) echo $_SESSION['lastname1']; 
+                        else if (isset($_SESSION['user_last_name'])) echo $_SESSION['user_last_name'];?>">
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="apellido2" placeholder="Segundo apellido" name="lastname2"
@@ -36,7 +39,8 @@
                     </div>
                     <div class="mb-1">
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email" 
-                        required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; ?>">
+                        required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; 
+                        else if (isset($_SESSION['email'])) echo $_SESSION['email'];?>">
                     </div>
                     <div class="mb-1 d-flex gap-2 align-items-center">
                         <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
