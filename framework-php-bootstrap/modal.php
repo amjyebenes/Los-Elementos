@@ -22,7 +22,7 @@
         <div class="modal-dialog">
             <div class="modal-content bg-primary">
 
-                <div class="modal-body">2
+                <div class="modal-body">
                     <div class="d-flex justify-content-end">
 
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
