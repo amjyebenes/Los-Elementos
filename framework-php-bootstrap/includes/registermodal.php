@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username"
-                         required value="<?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>">
+                         required value="<?php /*GOOGLE*/if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>">
                     </div>
                     <div class="mb-1">
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname"
@@ -76,7 +76,7 @@
                             ?>
                         </label>
                         <br>
-                        <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha"></i><br><br>
+                        <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha" onclick="refreshCaptcha()"></i><br><br>
                         <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                         <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
                     </div>
@@ -86,6 +86,11 @@
                         </label>
                         <button type="submit" class="btn btn-secondary rounded-2">Aceptar</button>
                     </div>
+                    <?php 
+                        if(isset($_SESSION['insercionCorrecta'])){
+                            echo "insertado correctamente";
+                        }else echo "fallo al insertar";
+                    ?>
                 </form>
             </div>
         </div>
@@ -103,4 +108,9 @@
     trigger.addEventListener('click', () => {
         modal.classList.add('d-flex');
     });
+</script>
+<script>
+    function refreshCaptcha() {
+        document.querySelector(".captcha-image").src = 'includes/generatecaptcha.php?' + Date.now();
+    }
 </script>

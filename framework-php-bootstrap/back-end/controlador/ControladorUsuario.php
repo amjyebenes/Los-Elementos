@@ -10,6 +10,7 @@ class ControladorUsuario {
             $md5pass = md5($u->pass);
             $reg = $conex->exec("INSERT INTO usuario VALUES ($u->id, '$u->usuario', '$md5pass', '$u->nombre', "
             ."'$u->apellido1', '$u->apellido2', '$u->correo', '$u->fecha_nac', '$u->pais', $u->cod_postal, $u->telefono, '$u->rol')");
+            return $reg ? true : false;
         } catch (PDOException $ex) {
             die("ERROR en la BD. " . $ex->getMessage());
         }

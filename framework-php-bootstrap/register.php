@@ -6,6 +6,8 @@ require_once 'back-end/controlador/ControladorUsuario.php';
 
 
 if ($_SESSION['captcha_text'] != $_POST['captcha_challenge']) {
+  echo "<h1>".$_SESSION['captcha_text']."</h1>";
+  echo "<h1>".$_POST['captcha_challenge']."</h1>"; 
   $_SESSION['username'] = $_POST['username'];
   $_SESSION['firstname'] = $_POST['firstname'];
   $_SESSION['lastname1'] = $_POST['lastname1'];
@@ -21,9 +23,10 @@ if ($_SESSION['captcha_text'] != $_POST['captcha_challenge']) {
 } else {
   $usuario = new Usuario(
     $_POST['username'], $_POST['pswd'], $_POST['firstname'], $_POST['lastname1'], $_POST['lastname2'],
-    $_POST['email'], $_POST['fechaNac'], $_POST['pais'], $_POST['codPos'], $_POST['tlfn'],
-    "usuario"
-  );
+    $_POST['email'], $_POST['fechaNac'], $_POST['pais'], $_POST['codPos'], $_POST['tlfn'],"usuario");
 
-  ControladorUsuario::put($usuario);
+  $insert = ControladorUsuario::put($usuario);
+  
+  $_SESSION['insercionCorrecta'] = $insert == false ? true : true;
+  header("Location:index.php");
 }
