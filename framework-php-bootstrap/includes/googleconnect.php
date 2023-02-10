@@ -77,7 +77,7 @@ if(isset($_GET["code"]))
   }else{
     if ($resultado->num_rows>0){
       $usuario = $resultado->fetch_assoc();
-      $_SESSION['iduser']=$usuario['iduser'];
+      $_SESSION['iduser']=$usuario['id'];
     }else
       $resultado->free();
   }
