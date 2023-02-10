@@ -27,16 +27,18 @@
                             <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                         </div>
                         <div class="mb-3">
-                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
+                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" title="Debe de completar este campo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" required>
+                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" title="Debe de completar este campo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" required>
+                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" title="Código Postal incorrecto" 
+                            pattern="^\d{5}$" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" title="Formato de email incorrecto" 
+                            pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$" required>
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
