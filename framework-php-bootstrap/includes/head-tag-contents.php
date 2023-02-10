@@ -4,7 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="Proyecto de venta de entradas de conciertos" />
 <meta name="author" content="Los Elementos" />
-<title>EleTickets</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="../assets/img/Logo-web00.png" />
 <!-- Font Awesome icons (free version)-->
