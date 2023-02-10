@@ -27,22 +27,22 @@
                             <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                         </div>
                         <div class="mb-3">
-                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" required>
                         </div>
                         <div class="mb-3">
-                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" required>
                         </div>
                         <div class="mb-3">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos">
+                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw">
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd" required>
                         </div>
                         <div class="form-check mb-3">
                             <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
