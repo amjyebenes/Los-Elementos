@@ -1,4 +1,9 @@
 <?php include("includes/a_config.php"); ?>
+<?php
+        if(isset($_POST["enviar"])){
+            // AQUI FALTA IMPLEMENTAR QUE SE GUARDE LA CONTRASEÑA ACTUALIZADA
+        }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -72,7 +77,7 @@
                         </div>
 
                         <div class="col-sm-8 row justify-content-center">
-                            <form action="#">
+                            <form action="#" method="POST">
                                 <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
                                 <div class="col d-flex flex-column justify-content-between">
                                     <div class="row">
@@ -80,7 +85,7 @@
                                             <label class="text-left">EMAIL: </label>
                                         </div>
                                         <div class="col-7 py-1">
-                                            <input type="email" class="opacity-50 text-center col-12" value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
+                                            <input type="email" class="opacity-50 text-center col-11" value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
                                                                                                                 else echo "No especificado"; ?>">
                                         </div>
                                     </div>
@@ -89,7 +94,8 @@
                                             <label class="text-left">NUEVA CONTRASEÑA: </label>
                                         </div>
                                         <div class="col-7 py-1">
-                                            <input type="password" class="opacity-50 text-center col-12">
+                                            <input type="password" name="newpass" id="password" class="opacity-50 text-center col-11" required>
+                                            <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword"></i>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -97,14 +103,16 @@
                                             <label class="text-left">CONFIRMAR CONTRASEÑA: </label>
                                         </div>
                                         <div class="col-7 py-1">
-                                            <input type="password" class="opacity-50 text-center col-12">
+                                            <input type="password" name="confirmpass" id="password2" class="opacity-50 text-center col-11" required>
+                                            <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword2"></i>
+                                        </div>
+                                        <div class="row justify-content-end pt-2 col-12">
+                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3" name='enviar'>Guardar cambios</button>
                                         </div>
                                     </div>
+                                </div>
 
-                                </div>
-                                <div class="row justify-content-end pt-2 me-4">
-                                    <button type="button" class="btn btn-primary rounded-5 col col-sm-10 col-xl-6">Guardar cambios</button>
-                                </div>
+
                             </form>
                         </div>
 
@@ -177,11 +185,11 @@
             </div>
         </div>
     </main>
-
     <?php include("includes/footer.php"); ?>
 
     <script src="./js/micuenta.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="./js/password_eye.js"></script>
 </body>
 
 </html>

@@ -4,11 +4,11 @@ require_once 'back-end/modelo/Usuario.php';
 
 class ControladorUsuario {
     
-  
     public static function put($u) {
         try {
             $conex = new Conexion();
-            $reg = $conex->exec("INSERT INTO usuario VALUES ($u->id, '$u->usuario', '$u->pass', '$u->nombre', "
+            $md5pass = md5($u->pass);
+            $reg = $conex->exec("INSERT INTO usuario VALUES ($u->id, '$u->usuario', '$md5pass', '$u->nombre', "
             ."'$u->apellido1', '$u->apellido2', '$u->correo', '$u->fecha_nac', '$u->pais', $u->cod_postal, $u->telefono, '$u->rol')");
         } catch (PDOException $ex) {
             die("ERROR en la BD. " . $ex->getMessage());
@@ -33,7 +33,6 @@ class ControladorUsuario {
         }
     }
 
-
     public static function getAll() {
         try {
             $conex = new Conexion();
@@ -52,5 +51,20 @@ class ControladorUsuario {
         } catch (PDOException $ex) {
             die("ERROR en la BD. " . $ex->getMessage());
         }
+    }
+
+    public static function cambiarContrasena($id, $nuevapass){
+        try {
+            $conex = new Conexion();
+            // hago el update
+            $md5pass = md5($nuevapass);
+            $reg = $conex->exec("UPDATE usuario set pass = $md5pass where id = $id");
+            if($reg){
+                echo "Actualización correcta";
+            }else echo "Actualización ERRONEA";
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+        unset($conex);
     }
 }
