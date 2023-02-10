@@ -23,16 +23,16 @@
                             <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username" required>
                         </div>
                         <div class="mb-1">
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname" required>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname" required <?php if(isset($_SESSION['user_first_name'])) echo "value='$_SESSION[user_first_name]'"; ?>>
                         </div>
                         <div class="mb-1">
-                            <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" required>
+                            <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" required <?php if(isset($_SESSION['user_last_name'])) echo "value='$_SESSION[user_last_name]'"; ?>>
                         </div>
                         <div class="mb-1">
                             <input type="text" class="form-control" id="apellido2" placeholder="Segundo apellido" name="lastname2" required>
                         </div>
                         <div class="mb-1">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required <?php if(isset($_SESSION['user_email_address'])) echo "value='$_SESSION[user_email_address]'"; ?>>
                         </div>
                         <div class="mb-1 d-flex gap-2 align-items-center">
                             <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>

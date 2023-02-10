@@ -1,4 +1,8 @@
-<?php include("includes/a_config.php"); ?>
+<?php 
+include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
+?>
 <?php
         if(isset($_POST["enviar"])){
             $user = ControladorUsuario::get($_SESSION['user_email_address']);

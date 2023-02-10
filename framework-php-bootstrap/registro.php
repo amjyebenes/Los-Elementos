@@ -1,4 +1,8 @@
-<?php include("includes/a_config.php"); ?>
+<?php 
+include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +18,7 @@
             <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
             <div class="container d-flex justify-content-center pt-5">
                 <div class="row col-md-6 col-12">
-                    <form action="" method="POST">
+                    <form action="" method="POST" class="formulario-contacto">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
                         </div>
@@ -27,22 +31,24 @@
                             <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                         </div>
                         <div class="mb-3">
-                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                            <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre" title="Debe de completar este campo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos">
+                            <input type="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" name="apellidos" title="Debe de completar este campo" required>
                         </div>
                         <div class="mb-3">
-                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos">
+                            <input type="codpos" class="form-control" id="CodPos" placeholder="Código Postal" name="CodPos" title="Código Postal incorrecto" 
+                            pattern="^\d{5}$" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="name">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="name" title="Formato de email incorrecto" 
+                            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw">
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" required>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd">
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd" required>
                         </div>
                         <div class="form-check mb-3">
                             <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
