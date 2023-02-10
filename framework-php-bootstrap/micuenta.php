@@ -5,7 +5,10 @@ include("includes/googleconnect.php");
 ?>
 <?php
         if(isset($_POST["enviar"])){
-            // AQUI FALTA IMPLEMENTAR QUE SE GUARDE LA CONTRASEÑA ACTUALIZADA
+            $user = ControladorUsuario::get($_SESSION['user_email_address']);
+            if($user && $_POST['newpass'] == $_POST['confirmpass']){
+
+            }
         }
 ?>
 <!DOCTYPE html>

@@ -18,6 +18,20 @@ class ControladorEspectaculo{
         }
         unset($conex);
     }
+    public static function get($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT * FROM espectaculo WHERE id = $id");
+            if ($result->rowCount()) {
+                $reg = $result->fetchObject();
+                $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+            } else $espec = false;
+            unset($conex);
+            return $espec;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
     
     public static function getAll(){
         try{
@@ -32,8 +46,41 @@ class ControladorEspectaculo{
             unset($conex);
             return $espectaculos;
         } catch (PDOException $ex) {
-           echo $ex->getMessage();
+            echo $ex->getMessage();
         }
-    }    
- 
+    }  
+    
+    public static function getAllConciertos(){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("select * from espectaculo where tipo = 'concierto'");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espectaculos[]=$espec;
+                }
+            }else $espectaculos=false;
+            unset($conex);
+            return $espectaculos;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    } 
+    
+    public static function getAllEventos(){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("select * from espectaculo where tipo != 'concierto'");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espectaculos[]=$espec;
+                }
+            }else $espectaculos=false;
+            unset($conex);
+            return $espectaculos;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }   
 }
