@@ -1,5 +1,6 @@
 <?php 
-session_start();
+// session_start();
+
 require_once './back-end/controlador/ControladorEspectaculo.php';
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
