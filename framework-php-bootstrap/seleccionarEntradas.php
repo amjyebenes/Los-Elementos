@@ -1,14 +1,12 @@
-<?php 
-// session_start();
-
+<?php
+include("includes/a_config.php");
+include("includes/dbconnection.php");
+include("includes/googleconnect.php");
 require_once './back-end/controlador/ControladorEspectaculo.php';
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
 }
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
-include("includes/a_config.php");
-include("includes/dbconnection.php");
-include("includes/googleconnect.php");
 ?>
 <!DOCTYPE html>
 <html>
