@@ -25,6 +25,52 @@
     &:hover {
         cursor: default;
     }
+
+    .rating {
+        label {
+            display: inline-block;
+            padding: 0;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    
+        label.reset {
+            font-size: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 10px 5px;
+            padding: 2px 3px;
+        }
+    
+        label.star {
+            width: 30px;
+            height: 27px;
+        }
+    
+    
+        /* ocultamos los radiobuttons */
+        input[name=rating] {
+            display: none;
+        }
+    
+        /* estrellas inmediatamente despues de un radiobutton van amarillas */
+        input[type=radio]+label.star svg path {
+            fill: rgb(11, 255, 76)
+        }
+    
+        /* estrellas a la derecha del radiobutton checked van blanco */
+        input[type=radio]:checked~label.star svg path {
+            fill: #4f4f4f;
+            outline: #000;
+        }
+    }
+
+    #standalone-container {
+        // Text editor
+    }
+    #editor-container {
+        min-height: 100px;
+    }
 }
 
 .concierto-hov {
