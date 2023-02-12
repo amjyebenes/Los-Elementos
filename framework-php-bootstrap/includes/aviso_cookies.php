@@ -1,4 +1,4 @@
-    <div class='cookie-container fixed-bottom left-0 right-0 shadow-sm p-4 bg-primary rounded text-center text-white' id='cookieNotice'>
+    <div class='cookie-container d-none fixed-bottom left-0 right-0 shadow-sm p-4 bg-primary rounded text-center text-white' id='cookieNotice'>
         <div class='cookie-content'>
             <p class="fw-bold">Este sitio utiliza cookies para mejorar tu experiencia. Asumiré que estás de acuerdo con esto.</p>
             <div class='buttons d-flex justify-content-center align-items-center gap-4 '>
