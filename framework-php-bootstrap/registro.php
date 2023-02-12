@@ -44,7 +44,7 @@ include("includes/googleconnect.php");
                         </div>
                         <div class="mb-3">
                             <label for="imagen" class="text-white w-50">Elija una foto de perfil:</label>
-                            <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen" required value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
+                            <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen"  value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" placeholder="Email" name="email" title="Formato de email incorrecto" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; ?>">
@@ -73,7 +73,6 @@ include("includes/googleconnect.php");
                             <label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
                             <input class="form-check-input" type="checkbox" name="remember">
                         </div>
-                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
 
                         <div>
                             <label for="captcha">
@@ -87,8 +86,12 @@ include("includes/googleconnect.php");
                             <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image">
                             <i class="text-white fa-lg fas fa-redo refresh-captcha" onclick="refreshCaptcha()"></i><br><br>
                             <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
-                            <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
+                            
+                           <!-- <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>-->
+
                         </div><br>
+                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>
