@@ -94,11 +94,6 @@
                         </label>
                         <button type="submit" class="btn btn-secondary rounded-2">Aceptar</button>
                     </div>
-                    <?php 
-                        if(!isset($_GET['captchaerror'])){
-                            echo "insertado correctamente";
-                        }else echo "fallo al insertar";
-                    ?>
                 </form>
             </div>
         </div>

@@ -29,12 +29,11 @@ if($user){
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
                         <?php	
-                        if  ($login_button == '' && isset($_SESSION['user_first_name']))
+                        if  (isset($_SESSION['user_first_name']))
                         {
                             echo '<li class="nav-item text-capitalize">'.$_SESSION['user_first_name'].'</li>'; 
                             // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
-                        } 
-                        else {
+                        }else {
                             // id="modalTrigger"
                             echo '<li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>';
                             echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
@@ -69,7 +68,7 @@ if($user){
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                                     <?php
-                                    if  ($login_button == '')
+                                    if  ($login_button == '' || isset($_SESSION['user_first_name']))
                                     {
                                         echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
                                     } 

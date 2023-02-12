@@ -19,7 +19,6 @@ include("includes/googleconnect.php");
 <!-- MAIN CONTENT -->
 <main>
     <?php
-    // VER CÓMO FUNCIONA $login_button 
     if (($login_button == '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
         include("includes/registermodal.php");
     }
