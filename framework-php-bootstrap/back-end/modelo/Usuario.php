@@ -13,6 +13,7 @@ class Usuario {
     private $cod_postal;
     private $telefono;
     private $rol;
+    private $imagen;
 
     /**
      * Summary of __construct
@@ -28,10 +29,11 @@ class Usuario {
      * @param mixed $cod_postal
      * @param mixed $telefono
      * @param mixed $rol
+     * @param mixed $imagen
      */
-    function __construct($usuario, $pass, $nombre, $apellido1, $apellido2, $correo, $fecha_nac, $pais, $cod_postal, $telefono, $rol)
+    function __construct($id, $usuario, $pass, $nombre, $apellido1, $apellido2, $correo, $fecha_nac, $pais, $cod_postal, $telefono, $rol, $imagen)
     {
-        $this->id = ControladorUsuario::get($correo)->id;
+        $this->id = $id;
         $this->usuario = $usuario;
         $this->pass = $pass;
         $this->nombre = $nombre;
@@ -43,6 +45,7 @@ class Usuario {
         $this->cod_postal = $cod_postal;
         $this->telefono = $telefono;
         $this->rol = $rol;
+        $this->imagen = $imagen;
     }
     
     /**

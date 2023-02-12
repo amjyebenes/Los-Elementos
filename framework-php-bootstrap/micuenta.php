@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
@@ -36,10 +36,9 @@ if (isset($_POST["enviar"])) {
     <?php include("includes/navigation.php"); ?>
     <main class="my-md-5 pb-5 device-padding">
         <?php
-        if ($banderaContrasena) {
-            include("includes/contrasenaerronea.php");
-        }
         if ($banderaRegistro) {
+            include("includes/contrasenaerronea.php");
+        } else if ($banderaContrasena) {
             include("includes/registermodal.php");
         }
         ?>
@@ -98,13 +97,18 @@ if (isset($_POST["enviar"])) {
                                                                             else echo "Sin imagen" ?></label>
                                         </div>
                                     </div>
-
+                                    <form action="actualizarfoto.php" method="POST" enctype="multipart/form-data" class="pb-3">
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenperfil">
+                                            <button class="btn btn-outline-secondary" type="submit" name="actualizarfoto" id="inputGroupFileAddon04">Guardar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-sm-8 row justify-content-center">
-                            <form action="#" method="POST">
+                            <form action="" method="POST">
                                 <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
                                 <div class="col d-flex flex-column justify-content-between">
                                     <div class="row">

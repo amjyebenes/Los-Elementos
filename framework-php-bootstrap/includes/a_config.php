@@ -40,6 +40,14 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "Eventos - EleTickets"; 
 		$PAGE_TITLE = "Eventos - EleTickets";
 		break;
+	case "/juegos.php":
+		$CURRENT_PAGE = "Juegos - EleTickets"; 
+		$PAGE_TITLE = "Juegos - EleTickets";
+		break;
+	case "/seleccionarEntradas.php":
+		$CURRENT_PAGE = "Selecciona tus entradas - EleTickets"; 
+		$PAGE_TITLE = "Selecciona tus entradas - EleTickets";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "No te quedes sin tus entradas - EleTickets";

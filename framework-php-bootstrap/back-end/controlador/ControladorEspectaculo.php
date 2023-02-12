@@ -21,7 +21,7 @@ class ControladorEspectaculo{
     public static function get($id) {
         try {
             $conex = new Conexion();
-            $result = $conex->query("SELECT * FROM espectaculo WHERE correo = $id");
+            $result = $conex->query("SELECT * FROM espectaculo WHERE id = $id");
             if ($result->rowCount()) {
                 $reg = $result->fetchObject();
                 $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
