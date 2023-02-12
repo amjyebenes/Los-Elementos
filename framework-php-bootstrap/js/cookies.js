@@ -1,7 +1,6 @@
-
-
 const cookieContainer = document.querySelector(".cookie-container");
 const cookieButton = document.querySelector("button.item");
+var enableCookies = false;
 
 cookieButton.addEventListener("click", () => {
     // Llamo a la funcion de aceptar cookie que crea una por defecto con valor true
@@ -50,7 +49,7 @@ function getCookie(cname) {
 function acceptCookies() {
     setCookie("cookiesAccepted", "true", 30);
     // Oculta el panel de la cookie
-    document.getElementById("cookieNotice").style.display = "none";
+    document.getElementById("cookieNotice").classList.add('d-none');
 }
 
 /**
@@ -59,13 +58,20 @@ function acceptCookies() {
 function checkCookie() {
     var cookiesAccepted = getCookie("cookiesAccepted");
     if (cookiesAccepted != "true") {
-        document.getElementById("cookieNotice").style.display = "block";
+        enableCookies = true;
     } else {
-        document.getElementById("cookieNotice").style.display = "none";
+        enableCookies = false;
     }
 }
 
 // Compruebo la existencia de la cookie en el DOM
-document.addEventListener("DOMContentLoaded", function (event) {
+window.onload = () => {
     checkCookie();
-});
+
+    if (enableCookies) {
+        document.getElementById("cookieNotice").classList.remove('d-none');
+    }
+    else {
+        document.getElementById("cookieNotice").classList.add('d-none');
+    }
+}
