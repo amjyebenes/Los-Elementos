@@ -45,7 +45,7 @@
                     <div class="mb-1">
                         <label for="imagen" class="text-white w-50">Elija una foto de perfil:</label>
                         <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen" 
-                        required value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
+                         value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
                     </div>
                     <div class="mb-1 d-flex gap-2 align-items-center">
                         <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
