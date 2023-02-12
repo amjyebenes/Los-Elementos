@@ -8,7 +8,7 @@ class ControladorValoracion{
     public static function put($val) {
         try {
             $conex=new Conexion();
-            $reg=$conex->exec("INSERT INTO valoracion (id_usuario,id_valoracion,valoracion,comentario) "
+            $reg=$conex->exec("INSERT INTO valoracion (id_usuario,id_espectaculo,valoracion,comentario) "
                     . "VALUES('$val->id_usuario','$val->id_espectaculo','$val->valoracion','$val->comentario')");
             unset($conex);
             return $reg;

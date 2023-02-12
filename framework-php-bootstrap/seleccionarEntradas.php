@@ -11,10 +11,16 @@ if (!isset($_POST['consultaConcierto'])) {
 }
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 
-if (isset($_POST['send-rating'])) {
-    // $val = new Valoracion();
-    // ControladorValoracion::put($val);
+if (isset($_SESSION['iduser'])) {
+    if (isset($_POST['send-rating'])) {
+        $val = new Valoracion($_SESSION['iduser'], $_POST['id'], $_POST['rating'], $_POST['valoracion']);
+        ControladorValoracion::put($val);
+    }
+} else {
+    // Logeate para valorar
+    echo "Logueate";
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -155,11 +161,11 @@ if (isset($_POST['send-rating'])) {
                     <div id="editor-container"></div>
                 </div>
 
-                <div class="w-100 text-center">
+                <!-- <div class="w-100 text-center">
                     <button type="button" class="btn btn-primary btn-sm" aria-label="Close" onclick="JavaScript: alert(quill.root.innerHTML);">
                         Obtener texto HTML mostrado en el editor
                     </button>
-                </div>
+                </div> -->
 
                 <!-- STARS RATING -->
                 <div class="rating w-100">
@@ -198,9 +204,11 @@ if (isset($_POST['send-rating'])) {
                             <input id="rating5" type="radio" value="5" name="rating" />
                         </fieldset>
                         
-                        <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>">
-                        <input type="hidden" name="consultaConcierto" class="btn btn-primary rounded-3" value="a">
-                        <input type="submit" class="btn btn-primary rounded-3" name="send-rating" value="Calificar" />
+                        <input type="hidden" name="valoracion" id="valoracion" value="" />
+                        <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>" />
+                        <input type="hidden" name="finalRating" id="finalRating" value="">
+                        <input type="hidden" name="consultaConcierto" class="btn btn-primary rounded-3" value="a" />
+                        <input type="submit" class="btn btn-primary rounded-3" name="send-rating" value="Enviar"  onclick="getQuillValue()"/>
                     </form>
                 </div>
             </article>
@@ -232,7 +240,16 @@ if (isset($_POST['send-rating'])) {
         });
 
         function getRating() {
+            // Paso al value del input el valor del rating
             let estrellas = document.querySelector('input[name=rating]:checked').value;
+            let finalRating = document.querySelector('#finalRating');
+            finalRating.value = estrellas;
+        }
+
+        function getQuillValue() {
+            // Paso al value del input el contenido del editor de texto
+            const valoracion = document.querySelector('#valoracion');
+            valoracion.value = quill.getText();
         }
     </script>
 </body>
