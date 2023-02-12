@@ -10,9 +10,8 @@ require_once 'back-end/modelo/Espectaculo.php';
 
 $banderaContrasena = false;
 $banderaRegistro = false;
-
+$user = ControladorUsuario::get($_SESSION['user_email_address']);
 if (isset($_POST["enviar"])) {
-    $user = ControladorUsuario::get($_SESSION['user_email_address']);
     if ($user) {
         if ($_POST['newpass'] == $_POST['confirmpass']) {
             ControladorUsuario::cambiarContrasena($user->id, $_POST['newpass']);
@@ -23,6 +22,28 @@ if (isset($_POST["enviar"])) {
         $banderaRegistro = true;
     }
 }
+
+
+$errorImagen = false;
+$foto = false;
+if($user){
+    $foto = ControladorUsuario::getFotoPerfil($user->id);
+}
+
+if (isset($_POST['actualizarfoto'])) {
+    $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if ($user && isset($_FILES['imagenperfil']['name'])) {
+            $nombre_archivo = time().$_FILES['imagenperfil']['name'];
+            $ruta = "assets/img/imagenes/".$nombre_archivo;
+            $archivo = $_FILES['imagenperfil']['tmp_name'];
+            $foto = $ruta;
+            move_uploaded_file($archivo,$ruta);
+            ControladorUsuario::cambiarFotodePerfil($user->id, $ruta);
+    }else{
+        $errorImagen = true;
+    }
+}
+
 
 // Historial de compras
 $compras = ControladorCompras::getAll();
@@ -96,11 +117,24 @@ $compras = ControladorCompras::getAll();
                                             <label class="text-left">IMAGEN: </label>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center"><?php if (isset($_SESSION['user_image'])) echo '<img width="80" height="80" src=' . $_SESSION['user_image'] . '>';
-                                                                            else echo "Sin imagen" ?></label>
+                                            <label class="h6 text-center">
+                                                <?php 
+                                                if ($foto) 
+                                                    echo '<img width="80" height="80" src=' . $foto . '>';
+                                                else if(isset($_SESSION['user_image']))
+                                                    echo '<img width="80" height="80" src=' . $_SESSION['user_image'] . '>';
+                                                else
+                                                    echo 'Sin imagen';
+
+
+                                                if($errorImagen)
+                                                    echo "ERROR AL SUBIR IMAGEN, INTENTE DE NUEVO";
+
+                                                ?>
+                                            </label>
                                         </div>
                                     </div>
-                                    <form action="actualizarfoto.php" method="POST" enctype="multipart/form-data" class="pb-3">
+                                    <form action="" method="POST" enctype="multipart/form-data" class="pb-3">
                                         <div class="input-group">
                                             <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenperfil">
                                             <button class="btn btn-outline-secondary" type="submit" name="actualizarfoto" id="inputGroupFileAddon04">Guardar</button>

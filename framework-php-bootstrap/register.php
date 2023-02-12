@@ -7,7 +7,7 @@ require_once 'back-end/controlador/ControladorUsuario.php';
 
 if (isset($_POST['captcha_challenge'])) {
   if ($_SESSION['captcha_text'] != $_POST['captcha_challenge']) {
-    echo "<h1>" . $_SESSION['captcha_text'] . "</h1>";
+    
     echo "<h1>" . $_POST['captcha_challenge'] . "</h1>";
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['firstname'] = $_POST['firstname'];
@@ -21,8 +21,20 @@ if (isset($_POST['captcha_challenge'])) {
     $_SESSION['postalcode'] = $_POST['postalcode'];
     $_SESSION['pswd'] = $_POST['pswd'];
     $_SESSION['imagen'] = $_POST['imagen'];
-    header("Location:" . $_SERVER['HTTP_REFERER'] . "?captchaerror=true");
+    header("Location:index.php?captchaerror=true");
   } else {
+    $ruta = "error";
+    $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if ($user && isset($_FILES['imagen']['name'])) {
+            $nombre_archivo = time().$_FILES['imagen']['name'];
+            $ruta = "assets/img/imagenes/".$nombre_archivo;
+            $archivo = $_FILES['imagen']['tmp_name'];
+            $foto = $ruta;
+            move_uploaded_file($archivo,$ruta);
+            ControladorUsuario::cambiarFotodePerfil($user->id, $ruta);
+    }else{
+        $errorImagen = true;
+    }
 
     $nextId = (ControladorUsuario::getUltimoId()) + 1;
     $usuario = new Usuario(
@@ -38,14 +50,13 @@ if (isset($_POST['captcha_challenge'])) {
       $_POST['CodPos'],
       $_POST['tlfn'],
       "usuario",
-      $_POST['imagen']
+      $ruta
     );
 
     $insert = ControladorUsuario::put($usuario);
-
-    $_SESSION['insercionCorrecta'] = $insert == false ? true : true;
+    $_SESSION['insertado'] = true;
     header("Location:index.php");
   }
 }else{
-  header("Location:" . $_SERVER['HTTP_REFERER'] . "?captchaerror=true");
+  header("Location:index.php?captchaerror=true");
 }

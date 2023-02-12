@@ -6,13 +6,12 @@
                 <div class="d-flex justify-content-end">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="/register.php" method="POST">
+                <form action="/register.php" method="POST" enctype="multipart/form-data">
                     <div class="d-flex justify-content-center mt-0 mb-3">
                         <i class="fa-solid fa-user-plus fa-4x text-info"></i>
                     </div>
-                    <div class="d-flex align-items-center gap-2 mb-1">
-                        <i class="fa-solid fa-ticket text-white"></i>
-                        <label class="text-white">Consigue entradas antes que nadie en nuestra preventa</label>
+                    <div class="d-flex justify-content-center mb-1">
+                        <label class="text-white h5">Rellene el formulario para finalizar su registro en nuestra web</label>
                     </div>
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <i class="fa-regular fa-envelope text-white"></i>
@@ -44,8 +43,7 @@
                     </div>
                     <div class="mb-1">
                         <label for="imagen" class="text-white w-50">Elija una foto de perfil:</label>
-                        <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen" 
-                         value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
+                        <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen">
                     </div> 
                     <div class="mb-1 d-flex gap-2 align-items-center">
                         <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
@@ -78,8 +76,10 @@
                     </div>
                     <div>
                         <label for="captcha">
-                            <?php if (isset($_SESSION['pswd']))
+                            <?php if (isset($_GET['captchaerror'])){
                                 echo "<p class='text-white'>Captcha erróneo. Vuelva a introducirlo</p>";
+                                echo "<h1>" . $_SESSION['captcha_text'] . "</h1>";
+                            }
                             else
                                 echo "<p class='text-white'>Introduce el captcha</p>";
                             ?>
@@ -87,7 +87,6 @@
                         <br>
                         <img src="includes/generatecaptcha.php" alt="CAPTCHA" class="captcha-image"><i class="text-white fa-lg fas fa-redo refresh-captcha" onclick="refreshCaptcha()"></i><br><br>
                         <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
-                        <button class="g-recaptcha btn btn-outline-secondary rounded-3 text-white " data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>NO SOY UN ROBOT</button>
                     </div>
                     <div class="modal-footer d-flex justify-content-between align-items-center">
                         <label class="text-white">¿Ya estás registrada/o?
@@ -96,7 +95,7 @@
                         <button type="submit" class="btn btn-secondary rounded-2">Aceptar</button>
                     </div>
                     <?php 
-                        if(isset($_SESSION['insercionCorrecta'])){
+                        if(!isset($_GET['captchaerror'])){
                             echo "insertado correctamente";
                         }else echo "fallo al insertar";
                     ?>

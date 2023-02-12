@@ -1,4 +1,15 @@
 <!-- NAVBAR PERSONALIZADO PARA LA PÁGINA PRINCIPAL -CONTIENE LA IMAGEN DE ENTRADA- -->
+<?php
+include('back-end/controlador/ControladorUsuario.php');
+$user = false;
+if(isset($_SESSION['user_email_address'])){
+    $user = ControladorUsuario::get($_SESSION['user_email_address']);
+}
+$foto = false;
+if($user){
+    $foto = ControladorUsuario::getFotoPerfil($user->id);
+}
+?>
 <header class="menu w-100 overflow-hidden">
     <nav class="navbar navbar-expand-lg pb-0 text-uppercase text-decoration-none text-dark fixed-top device-padding active mainNav">
         <div class="container-fluid">
@@ -43,8 +54,12 @@
                                 <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2"; else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     
                                     <?php
-                                        if (isset($_SESSION['user_image'])) echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
-                                        else echo "<i class='fa-solid fa-user text-light'></i>"
+                                        if ($foto) 
+                                            echo '<img width="50" height="50" src=' . $foto . '>';
+                                        else if(isset($_SESSION['user_image']))
+                                            echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
+                                        else 
+                                        echo "<i class='fa-solid fa-user text-light'></i>"
                                     ?>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

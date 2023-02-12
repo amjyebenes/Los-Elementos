@@ -101,5 +101,19 @@ class ControladorUsuario {
         unset($conex);
     }
 
+    public static function getFotoPerfil($id){
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT imagen FROM usuario where id = $id");
+            if ($result->rowCount()) {
+                return $result->fetchObject()->imagen;
+            } else $result = false;
+            unset($conex);
+            return $result;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
+
     
 }

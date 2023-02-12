@@ -1,6 +1,5 @@
 <?php
- 
- 
+session_start();
 $permitted_chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
   
 function generate_string($input, $strength = 10) {
