@@ -2,9 +2,11 @@
 include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
-?>
-<?php
 require_once 'back-end/controlador/ControladorUsuario.php';
+require_once 'back-end/controlador/ControladorCompras.php';
+require_once 'back-end/controlador/ControladorEspectaculo.php';
+require_once 'back-end/modelo/Compra.php';
+require_once 'back-end/modelo/Espectaculo.php';
 
 $banderaContrasena = false;
 $banderaRegistro = false;
@@ -22,7 +24,8 @@ if (isset($_POST["enviar"])) {
     }
 }
 
-
+// Historial de compras
+$compras = ControladorCompras::getAll();
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +37,7 @@ if (isset($_POST["enviar"])) {
 <body>
 
     <?php include("includes/navigation.php"); ?>
-    <main class="my-md-5 pb-5 device-padding">
+    <main class="my-md-5 device-padding">
         <?php
         if ($banderaRegistro) {
             include("includes/contrasenaerronea.php");
@@ -61,7 +64,7 @@ if (isset($_POST["enviar"])) {
                     </div>
                 </div>
 
-                <div class="pt-4 justify-content-center">
+                <div class="pt-4 px-0 justify-content-center">
                     <div class="bg-primary p-1">
                     </div>
                 </div>
@@ -77,7 +80,7 @@ if (isset($_POST["enviar"])) {
                                             <label class="text-left">NOMBRE: </>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center"><?php echo $_SESSION['user_first_name'] ?></label>
+                                            <label class="text-center"><?php echo $_SESSION['user_first_name'] ?></label>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
@@ -85,7 +88,7 @@ if (isset($_POST["enviar"])) {
                                             <label class="text-left">APELLIDOS: </label>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center"><?php echo $_SESSION['user_last_name'] ?></label>
+                                            <label class="text-center"><?php echo $_SESSION['user_last_name'] ?></label>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
@@ -153,36 +156,44 @@ if (isset($_POST["enviar"])) {
 
 
                 <div class="pt-4">
-                    <div class="row col justify-content-center pb-5" id="divCompras">
-                        <div class="row shadow mb-4">
-                            <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
-                                <img class="shadow-lg card-img" src="./assets/img/cruzzi.jpg" alt="Title">
-                            </div>
-                            <div class="row col col-md-10">
-                                <div class="col-12 col-sm">
-                                    <div class="row">
-                                        <p class="h2 text-primary">Cruz Cafuné</p>
-                                        <div class="col">
-                                            <p class="h5">22 · OCT · 2022</p>
-                                            <h6>SAB - 21:30<h6>
-                                                    <h6 class="text-primary">
-                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                                        Malaga - Sala Paris 15
-                                                    </h6>
+                    <div class="row col justify-content-center" id="divCompras">
+                        <?php
+                        foreach ($compras as $compra) {
+                            $concierto = ControladorEspectaculo::get($compra->id_espectaculo);
+                            ?>
+                            <div class="row shadow mb-4 px-0">
+                                <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
+                                    <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($concierto->imagen); ?>" alt="Title">
+                                </div>
+                                <div class="row col col-md-10">
+                                    <div class="col-12 col-sm">
+                                        <div class="row">
+                                            <p class="h2 text-primary"><?php echo $concierto->titulo; ?></p>
+                                            <div class="col">
+                                                <p class="h5"><?php echo $concierto->fecha; ?></p>
+                                                <h6 class="text-primary">
+                                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                    <?php echo $concierto->ubicacion; ?>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
+                                        <div class="row align-items-center">
+                                            <label class="col justify-content-center align-items-end pr-3 text-center">
+                                                x2: <span class="h5"><?php echo $compra->importe; ?></span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
-                                    <div class="row align-items-center">
-                                        <label class="col justify-content-center align-items-end pr-3 text-center">
-                                            x2: <span class="h5">150€</span>
-                                        </label>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                            <?php
+                        }
+                        ?>
 
-                        <div class="row shadow mb-4">
+                        
+
+                        <!-- <div class="row shadow mb-4 px-0">
                             <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
                                 <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
                             </div>
@@ -208,7 +219,7 @@ if (isset($_POST["enviar"])) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

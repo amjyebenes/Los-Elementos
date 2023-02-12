@@ -55,21 +55,20 @@ if (isset($_SESSION['iduser'])) {
                         </div>
                         <div class="event-date-con d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
                             <p class="m-0"><?php echo $_SESSION['idConcierto']->fecha; ?></p>
-                            <span>&middot;</span>
-                            <p class="m-0"><?php echo $_SESSION['idConcierto']->fecha; ?></p>
+                            <!-- <span>&middot;</span>
+                            <p class="m-0"><?php echo $_SESSION['idConcierto']->fecha; ?></p> -->
                         </div>
                         <div class="d-flex flex-row justify-content-start w-100 align-items-baseline gap-2">
                             <i class="fa-solid fa-location-dot text-primary"></i>
                             <p class="m-0 text-primary"><?php echo $_SESSION['idConcierto']->ubicacion; ?></p>
                         </div>
                         <div class="event-info">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat
-                                vero iure esse, nesciunt velit dolore voluptate quibusdam autem ducimus,
-                                quas ipsam tempora? Mollitia quam earum assumenda laborum? Mollitia, hic?</p>
+                            <p><?php echo "Selecciona tus entradas para ".$_SESSION['idConcierto']->titulo." en ".$_SESSION['idConcierto']->ubicacion."." ?></p>
                         </div>
 
                         <!-- Botones Comprar -->
                         <div class="d-flex align-items-center justify-content-start gap-2 mt-0 pb-2">
+                        <a class="me-5" href="conciertos.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
                             <div class="d-flex justify-content-center align-items-end pr-3">
                                 <div class="text-center contadorEntrada">
                                     2
@@ -171,37 +170,37 @@ if (isset($_SESSION['iduser'])) {
                 <div class="rating w-100">
                     <form action="" class="d-flex justify-content-center align-items-center gap-3" method="POST">
                         <fieldset>
-                            <input id="rating0" type="radio" value="0" name="rating" checked />
-                            <label class="star" for="rating1">
+                            <input id="rating0" type="radio" value="0" name="rating" checked class="d-none"/>
+                            <label class="star d-inline-block p-0" for="rating1">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
                                 </svg>
                             </label>
-                            <input id="rating1" type="radio" value="1" name="rating" />
-                            <label class="star" for="rating2">
+                            <input id="rating1" type="radio" value="1" name="rating" class="d-none"/>
+                            <label class="star d-inline-block p-0" for="rating2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
                                 </svg>
                             </label>
-                            <input id="rating2" type="radio" value="2" name="rating" />
-                            <label class="star" for=rating3>
+                            <input id="rating2" type="radio" value="2" name="rating" class="d-none" />
+                            <label class="star d-inline-block p-0" for=rating3>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
                                 </svg>
                             </label>
-                            <input id="rating3" type="radio" value="3" name="rating" />
-                            <label class="star" for=rating4>
+                            <input id="rating3" type="radio" value="3" name="rating" class="d-none"/>
+                            <label class="star d-inline-block p-0" for=rating4>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
                                 </svg>
                             </label>
-                            <input id="rating4" type="radio" value="4" name="rating" />
-                            <label class="star" for="rating5">
+                            <input id="rating4" type="radio" value="4" name="rating" class="d-none"/>
+                            <label class="star d-inline-block p-0" for="rating5">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
                                 </svg>
                             </label>
-                            <input id="rating5" type="radio" value="5" name="rating" />
+                            <input id="rating5" type="radio" value="5" name="rating" class="d-none"/>
                         </fieldset>
                         
                         <input type="hidden" name="valoracion" id="valoracion" value="" />

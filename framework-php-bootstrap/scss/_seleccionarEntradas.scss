@@ -28,8 +28,6 @@
 
     .rating {
         label {
-            display: inline-block;
-            padding: 0;
             cursor: pointer;
             vertical-align: middle;
         }
@@ -47,21 +45,14 @@
             height: 27px;
         }
     
-    
-        /* ocultamos los radiobuttons */
-        input[name=rating] {
-            display: none;
-        }
-    
         /* estrellas inmediatamente despues de un radiobutton van amarillas */
         input[type=radio]+label.star svg path {
-            fill: rgb(11, 255, 76)
+            fill: $primary;
         }
     
         /* estrellas a la derecha del radiobutton checked van blanco */
         input[type=radio]:checked~label.star svg path {
-            fill: #4f4f4f;
-            outline: #000;
+            fill: #bababa;
         }
     }
 
