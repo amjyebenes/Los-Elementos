@@ -31,7 +31,7 @@
                         <div class="col-12 col-lg-9">
                             <ul class="showcase">
                                 <li>
-                                    <div class="seat"></div>
+                                    <div class="seat"></div> 
                                     <small>N/A</small>
                                 </li>
                                 <li>
