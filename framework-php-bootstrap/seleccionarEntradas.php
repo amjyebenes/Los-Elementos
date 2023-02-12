@@ -4,11 +4,13 @@ include("includes/dbconnection.php");
 include("includes/googleconnect.php");
 require_once './back-end/controlador/ControladorEspectaculo.php';
 require_once './back-end/controlador/ControladorValoracion.php';
+require_once './back-end/modelo/Espectaculo.php';
 require_once './back-end/modelo/Valoracion.php';
 
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
 }
+
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 
 if (isset($_SESSION['iduser'])) {
@@ -19,6 +21,11 @@ if (isset($_SESSION['iduser'])) {
 } else {
     // Logeate para valorar
     echo "Logueate";
+}
+
+if (isset($_POST['entradas'])) {
+    $item = [$_POST['id'], $_POST['entradas']];
+    $_SESSION['cesta'][] = $item;
 }
 
 ?>
@@ -67,21 +74,22 @@ if (isset($_SESSION['iduser'])) {
                         </div>
 
                         <!-- Botones Comprar -->
-                        <div class="d-flex align-items-center justify-content-start gap-2 mt-0 pb-2">
-                        <a class="me-5" href="conciertos.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
+                        <form action="" method="POST" class="d-flex align-items-center justify-content-start gap-2 mt-0 pb-2">
+                            <a class="me-5" href="conciertos.php"><button class="w-100 btn btn-outline-primary bg-info text-primary rounded-3"><i class="fa-solid fa-arrow-left"></i> Seguir comprando</button></a>
                             <div class="d-flex justify-content-center align-items-end pr-3">
                                 <div class="text-center contadorEntrada">
-                                    2
+                                    <input type="number" name="entradas" id="entradas" value="1" class="w-100">
+                                    <input type="hidden" name="id" value="<?php echo $_POST['id']; ?>" />
                                 </div>
                             </div>
                             <div class="d-flex flex-column gap-2">
-                                <button class="btn btn-primary rounded-5"><i class="fas fa-arrow-alt-circle-up"></i></button>
-                                <button class="btn btn-primary rounded-5"><i class="fas fa-arrow-alt-circle-down"></i></button>
+                                <button class="btn btn-primary rounded-5 up" type="button"><i class="fas fa-arrow-alt-circle-up up"></i></button>
+                                <button class="btn btn-primary rounded-5 down" type="button"><i class="fas fa-arrow-alt-circle-down down"></i></button>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary rounded-3" onclick='alert("Añadido a la cesta");'><span class="sm-h3">Añadir al carrito</span></button>
+                                <button type="submit" class="btn btn-primary rounded-3" onclick='alert("Añadido a la cesta");'><span class="sm-h3">Añadir al carrito</span></button>
                             </div>
-                        </div>
+                        </form>
 
                         <div class="d-none d-md-block mt-auto w-100 bg-dark my-2">
                             <div class="b-line"></div>
@@ -250,6 +258,21 @@ if (isset($_SESSION['iduser'])) {
             const valoracion = document.querySelector('#valoracion');
             valoracion.value = quill.getText();
         }
+
+        // Selección de entradas
+        const up = document.querySelector('.up');
+        const dowm = document.querySelector('.down');
+        const entradas = document.querySelector('#entradas');
+        
+        document.addEventListener('click', (e) => {
+            if (e.target.matches(".up")) {
+                entradas.value++;
+            }
+
+            if (e.target.matches(".down")) {
+                if (entradas.value > 1) entradas.value--;
+            }
+        })
     </script>
 </body>
 
