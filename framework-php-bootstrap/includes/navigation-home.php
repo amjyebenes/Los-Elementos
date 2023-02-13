@@ -2,13 +2,19 @@
 <?php
 include('back-end/controlador/ControladorUsuario.php');
 $user = false;
+$admin = false;
 if(isset($_SESSION['user_email_address'])){
     $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if($user->rol == 'administrador'){
+        $admin = true;
+    }
 }
 $foto = false;
 if($user){
     $foto = ControladorUsuario::getFotoPerfil($user->id);
 }
+
+
 ?>
 <header class="menu w-100 overflow-hidden">
     <nav class="navbar navbar-expand-lg pb-0 text-uppercase text-decoration-none text-dark fixed-top device-padding active mainNav">
@@ -39,6 +45,9 @@ if($user){
                             echo '<li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>';
                             echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
                         }
+                        if($admin){
+                            echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
+                        }
                         ?>
 
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
@@ -66,6 +75,9 @@ if($user){
                                         if(isset($_SESSION['user_first_name']) || isset($_SESSION['firstname'])){
                                         echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
                                         } 
+                                        if($admin){
+                                            echo '<li><a class="dropdown-item" href="vistaAdmin.php">Administrar web</a></li>';
+                                        }
                                     ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
