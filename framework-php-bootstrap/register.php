@@ -23,18 +23,7 @@ if (isset($_POST['captcha_challenge'])) {
     $_SESSION['imagen'] = $_POST['imagen'];
     header("Location:index.php?captchaerror=true");
   } else {
-    $ruta = "error";
-    $user = ControladorUsuario::get($_SESSION['user_email_address']);
-    if ($user && isset($_FILES['imagen']['name'])) {
-            $nombre_archivo = time().$_FILES['imagen']['name'];
-            $ruta = "assets/img/imagenes/".$nombre_archivo;
-            $archivo = $_FILES['imagen']['tmp_name'];
-            $foto = $ruta;
-            move_uploaded_file($archivo,$ruta);
-            ControladorUsuario::cambiarFotodePerfil($user->id, $ruta);
-    }else{
-        $errorImagen = true;
-    }
+    
 
     $nextId = (ControladorUsuario::getUltimoId()) + 1;
     $usuario = new Usuario(
@@ -50,12 +39,35 @@ if (isset($_POST['captcha_challenge'])) {
       $_POST['CodPos'],
       $_POST['tlfn'],
       "usuario",
-      $ruta
+      "NULL"
     );
+
+    $_SESSION['username'] = $usuario->usuario;
+    $_SESSION['user_first_name'] = $usuario->nombre;
+    $_SESSION['user_last_name'] = $usuario->apellido1." ".$usuario->apellido2;
+    $_SESSION['user_email_address'] = $usuario->correo;
+    $_SESSION['fechaNac'] = $usuario->fecha_nac;
+    $_SESSION['pais'] = $usuario->pais;
+    $_SESSION['tlfn'] = $usuario->telefono;
+    $_SESSION['CodPos'] = $usuario->cod_postal;
+    $_SESSION['pswd'] = $usuario->pass;
+    $_SESSION['user_image'] = $usuario->imagen;
 
     $insert = ControladorUsuario::put($usuario);
     $_SESSION['insertado'] = true;
-    header("Location:login.php?registrado=true");
+
+    $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if ($user && isset($_FILES['imagen']['name'])) {
+            $nombre_archivo = time().$_FILES['imagen']['name'];
+            $ruta = "assets/img/imagenes/".$nombre_archivo;
+            $archivo = $_FILES['imagen']['tmp_name'];
+            $foto = $ruta;
+            move_uploaded_file($archivo,$ruta);
+            ControladorUsuario::cambiarFotodePerfil($user->id, $ruta);
+    }else{
+        $errorImagen = true;
+    }
+    header("Location:index.php?registrado=true");
   }
 }else{
   header("Location:index.php?captchaerror=true");

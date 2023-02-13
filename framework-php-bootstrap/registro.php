@@ -18,7 +18,7 @@ include("includes/googleconnect.php");
             <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
             <div class="container d-flex justify-content-center pt-5">
                 <div class="row col-md-6 col-12">
-                    <form action="/register.php" method="POST" class="formulario-contacto">
+                    <form action="/register.php" method="POST" class="formulario-contacto" enctype="multipart/form-data">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
                         </div>
