@@ -34,6 +34,23 @@ class ControladorUsuario {
         }
     }
 
+    public static function getById($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT * FROM usuario WHERE id = $id");
+            if ($result->rowCount()) {
+                $reg = $result->fetchObject();
+                $usuario = new Usuario(
+                        $reg->id, $reg->usuario, $reg->pass, $reg->nombre, $reg->apellido1, $reg->apellido2,
+                        $reg->correo, $reg->fecha_nac, $reg->pais, $reg->cod_postal, $reg->telefono, $reg->rol, $reg->imagen);
+            } else $usuario = false;
+            unset($conex);
+            return $usuario;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
+
     public static function getAll() {
         try {
             $conex = new Conexion();
