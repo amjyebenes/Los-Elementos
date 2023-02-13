@@ -16,9 +16,13 @@ if (!isset($_POST['consultaConcierto'])) {
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 
 if (isset($_SESSION['iduser'])) {
-    if (isset($_POST['send-rating'])) {
+    if (isset($_POST['send-rating']) && $_POST['valoracion'] != "") {
         $val = new Valoracion($_SESSION['iduser'], $_POST['id'], $_POST['rating'], $_POST['valoracion']);
         ControladorValoracion::put($val);
+    }
+
+    if ($_POST['valoracion'] == "" || $_POST['valoracion'] == null) {
+        // Ha enviado un mensaje vacío, notificar
     }
 } else {
     // Logeate para valorar
@@ -260,7 +264,7 @@ $valoraciones = ControladorValoracion::getAll();
                                     </div>
                                     <p>(<?php echo $val->valoracion; ?> de 5)</p>
                                 </div>
-                                <p><?php echo $val->comentario; ?></p>
+                                <p><?php echo '"'.$val->comentario.'"'; ?></p>
                             </div>
                             <div class="col-7 col-md-4 d-flex flex-column align-items-end p-3">
                                 <div class="row">
