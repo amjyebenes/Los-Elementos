@@ -233,7 +233,7 @@ $valoraciones = ControladorValoracion::getAll();
                     <h2 class="h2 text-center text-primary">Valoraciones de los usuarios</h2>
                     <?php
                     foreach($valoraciones as $val) {
-                        $user = ControladorUsuario::getById($val->id_usuario);
+                        $user = ControladorUsuario::getUser($val->id_usuario);
                         $espec = ControladorEspectaculo::get($val->id_espectaculo);
                         ?>
                         <div class="col-12 row shadow px-0">
