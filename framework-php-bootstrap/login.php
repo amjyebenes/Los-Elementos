@@ -2,6 +2,47 @@
 include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
+include('back-end/controlador/ControladorUsuario.php');
+
+$flagNotFoundWrongPass = false;
+if(isset($_POST['iniciar'])){
+    if(isset($_POST['remember'])){
+        setcookie('correologin',$_POST['email']);
+        setcookie('passlogin',$_POST['pass']);
+    }else{
+        setcookie('correologin',$_POST['email'],time()-1);
+        setcookie('passlogin',$_POST['pass'],time()-1);
+    }
+
+    $user = ControladorUsuario::get($_POST['email']);
+
+    if($user){
+        if($user->pass == md5($_POST['pass'])){
+            $_SESSION['username'] = $user->usuario;
+            $_SESSION['user_first_name'] = $user->nombre;
+            $_SESSION['user_last_name'] = $user->apellido1." ".$user->apellido2;
+            $_SESSION['user_email_address'] = $user->correo;
+            $_SESSION['fechaNac'] = $user->fecha_nac;
+            $_SESSION['pais'] = $user->pais;
+            $_SESSION['tlfn'] = $user->telefono;
+            $_SESSION['CodPos'] = $user->cod_postal;
+            $_SESSION['pswd'] = $user->pass;
+            $_SESSION['user_image'] = $user->imagen;
+
+            header('location:index.php');
+        }else{
+            $flagNotFoundWrongPass = true;
+        }
+
+    }else{
+        $flagNotFoundWrongPass = true;
+    }
+    
+
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +64,29 @@ include("includes/googleconnect.php");
                             <i class="fa-solid fa-user-group fa-6x text-info"></i>
                         </div>
                         <div class="mb-3 ">
-                            <input type="email" class="form-control opacity-75" id="email" placeholder="Email" name="email">
+                            <?php 
+                                if($flagNotFoundWrongPass){
+                                    echo   '<div class="alert alert-danger h6" role="alert">
+                                                Email o contraseña incorrectos.
+                                            </div>';
+
+                                    $flagNotFoundWrongPass = false;
+                                }
+                            ?>
+                        </div>
+                        <div class="mb-3 ">
+                            <input type="email" class="form-control opacity-75" id="email" placeholder="Email" name="email" 
+                            value="<?php
+                                if(!empty($_COOKIE['correologin']))
+                                    echo $_COOKIE['correologin'];
+                                ?>">
                         </div>
                         <div class="mb-3">                    
-                            <input type="password" class="form-control opacity-75" id="pwd" placeholder="Contraseña" name="pass">
+                            <input type="password" class="form-control opacity-75" id="pass" placeholder="Contraseña" name="pass"
+                            value="<?php 
+                                if(!empty($_COOKIE['passlogin'])) 
+                                    echo $_COOKIE['passlogin'];
+                                ?>">
                         <!-- Esto es el icono del ojo de la contraseña
                             <i class="fa-regular fa-eye-slash"></i> -->
                         </div>
@@ -36,7 +96,7 @@ include("includes/googleconnect.php");
                                 <input class="form-check-input" type="checkbox" name="remember"> Recuérdame
                                 </label>
                             </div>
-                            <button type="submit" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>
+                            <button type="submit" name="iniciar" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>
                         </div>
 
                         <div class="b-line w-100 bg-light opacity-25 my-2"></div>

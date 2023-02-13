@@ -1,8 +1,12 @@
 <?php
 require_once 'back-end/controlador/ControladorUsuario.php';
 $user = false;
+$admin = false;
 if(isset($_SESSION['user_email_address'])){
     $user = ControladorUsuario::get($_SESSION['user_email_address']);
+    if($user->rol == 'administrador'){
+        $admin = true;
+    }
 }
 $foto = false;
 if($user){
@@ -29,15 +33,17 @@ if($user){
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
                         <?php	
-                        if  ($login_button == '' && isset($_SESSION['user_first_name']))
+                        if  (isset($_SESSION['user_first_name']))
                         {
                             echo '<li class="nav-item text-capitalize">'.$_SESSION['user_first_name'].'</li>'; 
                             // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
-                        } 
-                        else {
+                        }else {
                             // id="modalTrigger"
                             echo '<li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>';
                             echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
+                        }
+                        if($admin){
+                            echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
                         }
                         ?>
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
@@ -65,11 +71,14 @@ if($user){
                                         if(isset($_SESSION['user_first_name'])){
                                         echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
                                         } 
+                                        if($admin){
+                                            echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
+                                        }
                                     ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                                     <?php
-                                    if  ($login_button == '')
+                                    if  ($login_button == '' || isset($_SESSION['user_first_name']))
                                     {
                                         echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
                                     } 
