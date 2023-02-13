@@ -4,7 +4,7 @@ $user = false;
 $admin = false;
 if(isset($_SESSION['user_email_address'])){
     $user = ControladorUsuario::get($_SESSION['user_email_address']);
-    if($user->rol == 'administrador'){
+    if($user && $user->rol == 'administrador'){
         $admin = true;
     }
 }
@@ -72,7 +72,7 @@ if($user){
                                         echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
                                         } 
                                         if($admin){
-                                            echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
+                                            echo '<li class="dropdown-item"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
                                         }
                                     ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
@@ -132,11 +132,15 @@ if($user){
                 echo '<li class="nav-item fs-2 mt-3 mb-0">'.$_SESSION['user_first_name'].'</li>'; 
                 // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="nav-link">Logout</a>'.'</li>';
             } 
+            else if($admin){
+                echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
+            }
             else {
                 // id="modalTrigger"
                 echo '<li class="nav-item text-capitalize"><a href="registro.php" class="nav-link">Registrar</a></li>';
                 echo '<li class="nav-item text-capitalize"><a href="login.php" class="nav-link">Login</a></li>';
             }
+            
             ?>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>

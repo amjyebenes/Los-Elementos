@@ -5,7 +5,7 @@ $user = false;
 $admin = false;
 if(isset($_SESSION['user_email_address'])){
     $user = ControladorUsuario::get($_SESSION['user_email_address']);
-    if($user->rol == 'administrador'){
+    if($user && $user->rol == 'administrador'){
         $admin = true;
     }
 }
@@ -135,7 +135,9 @@ if($user){
             {
                 echo '<li class="nav-item fs-2 mt-3 mb-0">'.$_SESSION['user_first_name'].'</li>'; 
                 // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="nav-link">Logout</a>'.'</li>';
-            } 
+            }else if($admin){
+                echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="nav-link" >Administrar web</a></li>';
+            }
             else {
                 // id="modalTrigger"
                 echo '<li class="nav-item text-capitalize"><a href="registro.php" class="nav-link">Registrar</a></li>';
