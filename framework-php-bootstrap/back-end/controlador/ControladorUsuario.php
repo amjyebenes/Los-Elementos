@@ -34,6 +34,23 @@ class ControladorUsuario {
         }
     }
 
+    public static function getUser($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT * FROM usuario WHERE id = '$id'");
+            if ($result->rowCount()) {
+                $reg = $result->fetchObject();
+                $usuario = new Usuario(
+                        $reg->id, $reg->usuario, $reg->pass, $reg->nombre, $reg->apellido1, $reg->apellido2,
+                        $reg->correo, $reg->fecha_nac, $reg->pais, $reg->cod_postal, $reg->telefono, $reg->rol, $reg->imagen);
+            } else $usuario = false;
+            unset($conex);
+            return $usuario;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
+
     public static function getAll() {
         try {
             $conex = new Conexion();
@@ -60,9 +77,7 @@ class ControladorUsuario {
             // hago el update
             $md5pass = md5($nuevapass);
             $reg = $conex->exec("UPDATE usuario set pass = '$md5pass' where id = $id");
-            if($reg){
-                echo "Actualización correcta";
-            }else echo "Actualización ERRONEA";
+            
         } catch (PDOException $ex) {
             die("ERROR en la BD. " . $ex->getMessage());
         }
@@ -89,10 +104,8 @@ class ControladorUsuario {
             // hago el update
             $reg = $conex->exec("UPDATE usuario set imagen = '$imagen' where id = $id");
             if($reg){
-                echo "Actualización correcta";
                 return true;
             }else {
-                echo "Actualización ERRONEA";
                 return false;
             }
         } catch (PDOException $ex) {
@@ -115,5 +128,32 @@ class ControladorUsuario {
         }
     }
 
+    public static function delete($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("DELETE FROM usuario where id = '$id'");
+            return $result;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+        unset($conex);
+    }
+
+    public static function actualizarUsuario($id, $nombre, $apellido, $correo, $imagen){
+        try {
+            $conex = new Conexion();
+            // hago el update
+            $reg = $conex->exec("UPDATE usuario set nombre = '$nombre', apellido1 = '$apellido', correo = '$correo', imagen = '$imagen' where id = $id");
+            if($reg){
+                return true;
+            }else {
+                return false;
+            }
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+        unset($conex);
+    }
+    
     
 }
