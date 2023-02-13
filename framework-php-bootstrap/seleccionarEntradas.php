@@ -16,12 +16,13 @@ if (!isset($_POST['consultaConcierto'])) {
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 
 if (isset($_SESSION['iduser'])) {
-    if (isset($_POST['send-rating']) && $_POST['valoracion'] != "") {
+    if (isset($_POST['send-rating']) &&  strlen($_POST['valoracion']) > 2 && $_POST['valoracion'] != null) {
+        var_dump($_POST['valoracion']);
         $val = new Valoracion($_SESSION['iduser'], $_POST['id'], $_POST['rating'], $_POST['valoracion']);
         ControladorValoracion::put($val);
     }
 
-    if ($_POST['valoracion'] == "" || $_POST['valoracion'] == null) {
+    if (isset($_POST['valoracion']) && ($_POST['valoracion'] == "" || $_POST['valoracion'] == null)) {
         // Ha enviado un mensaje vacío, notificar
     }
 } else {
