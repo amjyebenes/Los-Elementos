@@ -55,7 +55,7 @@ if (isset($_POST['captcha_challenge'])) {
 
     $insert = ControladorUsuario::put($usuario);
     $_SESSION['insertado'] = true;
-    header("Location:index.php");
+    header("Location:login.php?registrado=true");
   }
 }else{
   header("Location:index.php?captchaerror=true");
