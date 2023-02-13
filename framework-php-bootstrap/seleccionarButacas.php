@@ -2,7 +2,15 @@
 include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
+require_once './back-end/controlador/ControladorEspectaculo.php';
+require_once './back-end/modelo/Espectaculo.php';
 
+
+if (!isset($_POST['consultaEvento'])) {
+    header("Location: eventos.php");
+}
+
+$_SESSION['idEvento'] = ControladorEspectaculo::get($_POST['idEv']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,20 +25,20 @@ include("includes/googleconnect.php");
 
         <section class="position-relative mt-lg-5 mb-0 pt-lg-3">
             <div class="container">
-                <h1 class="text-center text-black m-0">Boris Brejcha · Barcelona · Brunch In The Park · 22/02/2023</h1>
+                <h1 class="text-center text-black m-0"><?php echo $_SESSION['idEvento']->titulo; ?></h1>
             </div>
         </section>
         <section class="d-flex justify-content-center py-lg-5">
             <div class="container row ">
                 <div class="col-12 col-lg-5 pb-5">
-                    <img class="shadow-lg h-100 card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
+                <img class="shadow-lg img-fluid" src="data:jpg;base64,<?php echo base64_encode($_SESSION['idEvento']->imagen); ?>" alt="Title">
                 </div>
                 <div class="col-12 col-lg-7 d-flex flex-column gap-4">
                     <div class="row">
                         <hr class="opacity-75">
                     </div>
                     <div class="row justify-content-center">
-                        <span class="h3 text-center tituloArtista">Selecciona tus butacas: 2</span>
+                        <span class="h3 text-center tituloArtista">Selecciona tus butacas: </span>
                     </div>
                     <div class="row align-items-center pb-1 justify-content-center">
 

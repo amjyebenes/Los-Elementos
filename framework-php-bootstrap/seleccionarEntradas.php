@@ -3,9 +3,11 @@ include("includes/a_config.php");
 include("includes/dbconnection.php");
 include("includes/googleconnect.php");
 require_once './back-end/controlador/ControladorEspectaculo.php';
+require_once './back-end/controlador/ControladorUsuario.php';
 require_once './back-end/controlador/ControladorValoracion.php';
 require_once './back-end/modelo/Espectaculo.php';
 require_once './back-end/modelo/Valoracion.php';
+require_once './back-end/modelo/Usuario.php';
 
 if (!isset($_POST['consultaConcierto'])) {
     header("Location: conciertos.php");
@@ -14,19 +16,26 @@ if (!isset($_POST['consultaConcierto'])) {
 $_SESSION['idConcierto'] = ControladorEspectaculo::get($_POST['id']);
 
 if (isset($_SESSION['iduser'])) {
-    if (isset($_POST['send-rating'])) {
+    if (isset($_POST['send-rating']) &&  strlen($_POST['valoracion']) > 2 && $_POST['valoracion'] != null) {
+        var_dump($_POST['valoracion']);
         $val = new Valoracion($_SESSION['iduser'], $_POST['id'], $_POST['rating'], $_POST['valoracion']);
         ControladorValoracion::put($val);
     }
+
+    if (isset($_POST['valoracion']) && ($_POST['valoracion'] == "" || $_POST['valoracion'] == null)) {
+        // Ha enviado un mensaje vacío, notificar
+    }
 } else {
     // Logeate para valorar
-    echo "Logueate";
+    // echo "Logueate";
 }
 
 if (isset($_POST['entradas'])) {
     $item = [$_POST['id'], $_POST['entradas']];
     $_SESSION['cesta'][] = $item;
 }
+
+$valoraciones = ControladorValoracion::getAll();
 
 ?>
 <!DOCTYPE html>
@@ -219,6 +228,66 @@ if (isset($_POST['entradas'])) {
                     </form>
                 </div>
             </article>
+            <?php
+            if (isset($valoraciones) && $valoraciones != null) {
+                ?>
+                <div class="d-none d-md-block mt-4 w-100 bg-dark">
+                    <div class="b-line"></div>
+                </div>
+                <article class="row justify-content-center mt-4 flex-column gap-4 align-items-center">
+                    <h2 class="h2 text-center text-primary">Valoraciones de los usuarios</h2>
+                    <?php
+                    foreach($valoraciones as $val) {
+                        $user = ControladorUsuario::getUser($val->id_usuario);
+                        $espec = ControladorEspectaculo::get($val->id_espectaculo);
+                        ?>
+                        <div class="col-12 row shadow px-0">
+                            <div class="col-12 col-md-3 p-0">
+                                <div class="shadow">
+                                    <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($espec->imagen); ?>" alt="Title">                                    
+                                </div>
+                            </div>
+                            <div class="col-md-5 p-3">
+                                <div class="d-flex gap-3 align-items-baseline">
+                                    <h2 class="h2 text-start mb-3"><?php echo $user->usuario; ?></h2>
+                                    <div class="d-flex gap-2">
+                                        <?php
+                                        for ($i = 0; $i < $val->valoracion; $i++) {
+                                            ?>
+                                            <span class="star2 d-flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                                </svg>
+                                            </span>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                    <p>(<?php echo $val->valoracion; ?> de 5)</p>
+                                </div>
+                                <p><?php echo '"'.$val->comentario.'"'; ?></p>
+                            </div>
+                            <div class="col-7 col-md-4 d-flex flex-column align-items-end p-3">
+                                <div class="row">
+                                    <p class="h1 text-primary text-end"><?php echo $espec->titulo; ?></p>
+                                    <div class="col pb-1">
+                                        <!-- Formato 22 · OCT · 2022 -->
+                                        <p class="h5 text-end"><?php echo $espec->fecha ?></p>
+                                        <h6 class="text-primary text-end">
+                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                            <?php echo $espec->ubicacion; ?>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </article>
+                <?php
+            }
+            ?>
         </section>
     </main>
 

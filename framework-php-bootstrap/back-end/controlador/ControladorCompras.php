@@ -9,7 +9,7 @@ class ControladorCompras{
         try {
             $conex=new Conexion();
             $reg=$conex->exec("INSERT INTO compras (id_usuario,id_espectaculo,importe) "
-                    . "VALUES('$com->id_usuario','$com->id_espectaculo','$com->importe')");
+                    . "VALUES('$com->id_usuario','$com->id_espectaculo','$com->importe', $com->tickets)");
             unset($conex);
             return $reg;
         } catch (PDOException $ex) {
@@ -25,7 +25,7 @@ class ControladorCompras{
             $result=$conex->query("select * from compras");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $com=new Compra($reg->id_user,$reg->id_espec,$reg->importe);
+                    $com=new Compra($reg->id_user,$reg->id_espec,$reg->importe, $reg->tickets);
                     $compras[]=$com;
                 }
             }else $compras=false;

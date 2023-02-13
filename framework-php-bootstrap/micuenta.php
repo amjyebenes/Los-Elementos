@@ -215,7 +215,7 @@ $compras = ControladorCompras::getAll();
                                     <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
                                         <div class="row align-items-center">
                                             <label class="col justify-content-center align-items-end pr-3 text-center">
-                                                x2: <span class="h5"><?php echo $compra->importe; ?></span>
+                                                x<?php echo $compra->tickets; ?>: <span class="h5"><?php echo $compra->importe; ?> €</span>
                                             </label>
                                         </div>
                                     </div>
@@ -224,37 +224,6 @@ $compras = ControladorCompras::getAll();
                             <?php
                         }
                         ?>
-
-                        
-
-                        <!-- <div class="row shadow mb-4 px-0">
-                            <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
-                                <img class="shadow-lg card-img" src="./assets/img/borisbrejcha.jpg" alt="Title">
-                            </div>
-                            <div class="row col col-md-10">
-                                <div class="col-12 col-md">
-                                    <div class="row">
-                                        <p class="h2 text-primary">Boris Brejcha</p>
-                                        <div class="col">
-                                            <p class="h5">22 · FEB · 2023</p>
-                                            <h6>MON - 13:30<h6>
-                                                    <h6 class="text-primary">
-                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                                        elRow - Sevilla
-                                                    </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
-                                    <div class="row align-items-center">
-                                        <label class="col justify-content-center align-items-end pr-3 text-center">
-                                            x2: <span class="h5">150€</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
 

@@ -25,7 +25,7 @@ class ControladorValoracion{
             $result=$conex->query("select * from valoracion");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $val=new valoracion($reg->id,$reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $val=new valoracion($reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
                     $valoraciones[]=$val;
                 }
             }else $valoraciones=false;
