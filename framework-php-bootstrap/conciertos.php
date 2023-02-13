@@ -44,7 +44,7 @@ require_once './back-end/modelo/Espectaculo.php';
                                     <p class="h1 text-primary "><?php echo $concierto->titulo; ?></p>
                                     <div class="col pb-1">
                                         <!-- Formato 22 · OCT · 2022 -->
-                                        <p class="h5"><?php echo $concierto->fecha ?></p>
+                                        <!--<p class="h5"><?php echo $concierto->fecha ?></p>-->
                                         <!-- Formato DIA - 00:00 -->
                                         <h6><?php echo $concierto->fecha ?><h6>
                                                 <h6 class="text-primary">
