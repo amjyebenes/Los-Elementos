@@ -86,25 +86,27 @@ if (isset($_POST['guardar'])) {
                 ?>
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="shadow w-100 d-flex">
-                            <div class="d-flex flex-row align-items-center gap-2 justify-content-center">
-                                <span class="text-primary">Imagen:
-                                    <img class="" width="150" heigth="150" src="<?php echo ($usuario->imagen); ?>" alt="Title">
+                            <div class=" row align-items-center gap-1 justify-content-center">
+                                <span class="text-primary col-2">
+                                    <img class="img-fluid" src="<?php echo ($usuario->imagen); ?>" alt="Title">
                                 </span>
-                                <input type="file" class="form-control" name="imagenUsuario">
-                                <span class="text-primary">Nombre:<input type="text" name="nombre" value="<?php echo $usuario->nombre; ?>"></span>
+                                <span class="text-primary col">
+                                    <input type="file" class="form-control" name="imagenUsuario">
+                                </span>
+                                <span class="text-primary col-1 d-flex flex-column">Nombre:<input type="text" name="nombre" value="<?php echo $usuario->nombre; ?>"></span>
 
-                                <span class="text-primary">Apellido:
+                                <span class="text-primary col-1 d-flex flex-column">Apellido:
                                     <input type="text" name="apellido" value="<?php echo $usuario->apellido1 ?>">
                                 </span>
-                                <span class="text-primary">
-                                    <i class="fa-solid fa-at"></i></i>
-                                    Correo:<input type="text" name="correo" value="<?php echo $usuario->correo; ?>">
+                                <span class="text-primary col-1 d-flex flex-column">
+                                    <span><i class="fa-solid fa-at"></i>Correo:</span>
+                                    <input type="text" name="correo" value="<?php echo $usuario->correo; ?>">
                                 </span>
-                                <span class="text-primary">
-                                    <i class="fa-regular fa-address-book"></i></i>
-                                    Rol:<input type="text" name="rol" value="<?php echo $usuario->rol; ?>">
+                                <span class="text-primary col-1 d-flex flex-column">
+                                    <span><i class="fa-regular fa-address-book"></i>Rol:</span>
+                                    <input type="text" name="rol" value="<?php echo $usuario->rol; ?>">
                                 </span>
-                                <div class="justify-content-center d-flex flex-column p-3">
+                                <div class="justify-content-center d-flex flex-column p-3 col-2">
                                     <input type="submit" name="guardar" class="btn btn-primary rounded-3 m-1" value="Guardar cambios">
                                     <input type="hidden" name="idUser" value="<?php echo $usuario->id; ?>">
                                     <input type="submit" name="eliminar" class="btn btn-secondary rounded-3 m-1" value="Eliminar usuario">
@@ -138,7 +140,7 @@ if (isset($_POST['guardar'])) {
                 ?>
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="shadow w-100 d-flex">
-                            <div class="d-flex align-items-center gap-2 justify-content-between">
+                            <div class="row align-items-center gap-1 justify-content-between">
                                 <span class="text-primary col-2">
                                     <img class="shadow-lg img-fluid" src="data:jpg;base64,<?php echo base64_encode($espec->imagen); ?>" alt="Title">
                                 </span>
