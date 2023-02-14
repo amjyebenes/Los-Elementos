@@ -32,6 +32,7 @@ if (isset($_SESSION['username'])) {
 if (isset($_POST['entradas'])) {
     $item = [$_POST['id'], $_POST['entradas']];
     $_SESSION['cesta'][] = $item;
+    header("location:conciertos.php?cesta=true");
 }
 
 $valoraciones = ControladorValoracion::getAllValoracionesUser(ControladorUsuario::get($_SESSION['user_email_address'])->id, $_SESSION['idConcierto']);

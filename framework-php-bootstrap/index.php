@@ -184,11 +184,6 @@ include("includes/googleconnect.php");
                     Vuelve pronto!!
                 </div>';
     }
-    if(isset($_GET['cesta'])){
-        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
-                    Añadido a la cesta
-                </div>';
-    }
     ?>
 </main>
 

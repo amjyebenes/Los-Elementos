@@ -66,10 +66,18 @@ require_once './back-end/modelo/Espectaculo.php';
                 ?>
             </div>
         </section>
+        <?php 
+        if(isset($_GET['cesta'])){
+            echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaConcierto translate-middle" role="alert">
+                        Añadido a la cesta
+                    </div>';
+        }
+        ?>
     </main>
 
     <?php include("includes/footer.php"); ?>
     <script src="./js/navbar.js"></script>
+    <script src="./js/alerta.js"></script>
 </body>
 
 </html>
