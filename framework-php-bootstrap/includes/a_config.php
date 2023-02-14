@@ -48,6 +48,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "Selecciona tus entradas - EleTickets"; 
 		$PAGE_TITLE = "Selecciona tus entradas - EleTickets";
 		break;
+	case "/vistaAdmin.php":
+		$CURRENT_PAGE = "Admin - EleTickets"; 
+		$PAGE_TITLE = "Admin - EleTickets";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "No te quedes sin tus entradas - EleTickets";
