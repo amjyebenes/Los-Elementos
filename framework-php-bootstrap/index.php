@@ -22,7 +22,10 @@ include("includes/googleconnect.php");
     if (($login_button == '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
         include("includes/registermodal.php");
     }
+    
+    
     ?>
+    
 
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
     <section class="container-fluid page-section device-padding section-padding bg-light position-relative border-top border-dark">
@@ -165,6 +168,28 @@ include("includes/googleconnect.php");
             </div>
         </article>
     </section>
+    <?php 
+    if(isset($_GET['registrado'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Bienvenido a Eletickets!!
+                </div>';
+    }
+    if(isset($_GET['login'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Inicio de sesion correcto
+                </div>';
+    }
+    if(isset($_GET['logout'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Vuelve pronto!!
+                </div>';
+    }
+    if(isset($_GET['cesta'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Añadido a la cesta
+                </div>';
+    }
+    ?>
 </main>
 
 <?php include("includes/footer.php");?>
@@ -172,5 +197,6 @@ include("includes/googleconnect.php");
 <script src="./js/scripts.js"></script>
 <script src="./js/videoplayer.js"></script>
 <script src="./js/instanciaVideo.js"></script>
+<script src="./js/alerta.js"></script>
 </body>
 </html>

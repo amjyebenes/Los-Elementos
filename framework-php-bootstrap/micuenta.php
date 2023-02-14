@@ -61,9 +61,9 @@ $compras = ControladorCompras::getAll();
     <main class="my-md-5 device-padding">
         <?php
         if ($banderaRegistro) {
-            include("includes/contrasenaerronea.php");
-        } else if ($banderaContrasena) {
             include("includes/registermodal.php");
+        } else if ($banderaContrasena) {
+            include("includes/contrasenaerronea.php");
         }
         ?>
         <div class="container-fluid d-flex justify-content-center pt-md-4">

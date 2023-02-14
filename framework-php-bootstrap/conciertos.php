@@ -54,7 +54,7 @@ require_once './back-end/modelo/Espectaculo.php';
                     </div>
                     <div class="col col-md-4 d-flex align-items-center align-items-sm-end mb-4">
                         <div class="col d-flex justify-content-center pb-4">
-                        <form action="seleccionarEntradas.php" method="post"> 
+                        <form action="seleccionarEntradas.php" method="POST"> 
                             <input type="hidden" name="id" value="<?php echo $concierto->id; ?>">                                
                             <input type="submit" name="consultaConcierto" class="btn btn-primary rounded-3" value="Comprar Entradas">
                         </form>
