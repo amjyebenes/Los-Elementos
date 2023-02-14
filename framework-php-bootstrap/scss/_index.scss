@@ -89,3 +89,19 @@
     transition: 1.5s;
     z-index:100;
 }
+
+.botonUsuarioNavigation{
+    width:90px;
+    height: 80px;
+    border-radius:100% !important;
+}
+
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 5px;
+  bottom: 45%;
+}

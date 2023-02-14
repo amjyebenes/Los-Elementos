@@ -2,14 +2,14 @@
 require_once 'back-end/controlador/ControladorUsuario.php';
 $user = false;
 $admin = false;
-if(isset($_SESSION['user_email_address'])){
+if (isset($_SESSION['user_email_address'])) {
     $user = ControladorUsuario::get($_SESSION['user_email_address']);
-    if($user && $user->rol == 'administrador'){
+    if ($user && $user->rol == 'administrador') {
         $admin = true;
     }
 }
 $foto = false;
-if($user){
+if ($user) {
     $foto = ControladorUsuario::getFotoPerfil($user->id);
 }
 ?>
@@ -32,56 +32,58 @@ if($user){
                         <li class="nav-item text-capitalize"><a href="juegos.php" class="fw-lighter">Juegos</a></li>
                         <li class="nav-item text-capitalize"><a href="contact.php" class="fw-lighter">Contacto</a></li>
                         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
-                        <?php	
-                        if  (isset($_SESSION['user_first_name']))
-                        {
-                            echo '<li class="nav-item text-capitalize">'.$_SESSION['user_first_name'].'</li>'; 
+                        <?php
+                        if (isset($_SESSION['user_first_name'])) {
+                            $logueado = true;
                             // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="fw-lighter">Logout</a>'.'</li>';
-                        }else {
+                        } else {
                             // id="modalTrigger"
                             echo '<li class="nav-item text-capitalize"><a href="registro.php" class="fw-lighter" >Registrar</a></li>';
                             echo '<li class="nav-item text-capitalize"><a href="login.php" class="fw-lighter">Login</a></li>';
                         }
-                        if($admin){
+                        if ($admin) {
                             echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
                         }
                         ?>
                         <li class="nav-item d-flex justify-content-between align-items-center gap-3">
                             <?php
                             if ($login_button == '') {
-                                ?>
+                            ?>
                                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
-                                <?php
+                            <?php
                             }
                             ?>
                             <div class="dropdown">
-                                <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2"; else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
+                                                                else echo "py-1 px-0  botonUsuarioNavigation "; ?> dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php
-                                        if ($foto) 
-                                            echo '<img width="50" height="50" src=' . $foto . '>';
-                                        else if(isset($_SESSION['user_image']))
-                                            echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
-                                        else 
-                                        echo "<i class='fa-solid fa-user text-light'></i>"
+                                    if ($foto)
+                                        echo '<div><img width="50" height="50" src=' . $foto . '><div>';
+                                    else if (isset($_SESSION['user_image']))
+                                        echo '<div class="nav-item text-capitalize">
+                                                <img width="50" height="50" src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class=" img-fluid" />
+                                              </div>';
+                                    else
+                                        echo "<i class='fa-solid fa-user text-light'></i>";
                                     ?>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
                                     <?php
-                                        if(isset($_SESSION['user_first_name'])){
+                                    if (isset($_SESSION['user_first_name']) || isset($_SESSION['firstname'])) {
+                                        echo '<li class="dropdown-item border-bottom border-dark text-left d-flex justify-content-between align-items-center">' . $_SESSION['user_first_name'] . '<i class="fa-solid fa-user text-dark"></i></li>';
                                         echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
-                                        } 
-                                        if($admin){
-                                            echo '<li class="dropdown-item"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
-                                        }
+                                    }
+                                    if ($admin) {
+                                        echo '<li class="dropdown-item"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
+                                    }
                                     ?>
                                     <li><a class="dropdown-item" href="cesta.php">Cesta</a></li>
                                     <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                                     <?php
-                                    if  ($login_button == '' || isset($_SESSION['user_first_name']))
-                                    {
+                                    if ($login_button == '' || isset($_SESSION['user_first_name'])) {
                                         echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
-                                    } 
+                                    }
                                     ?>
                                 </ul>
                             </div>
@@ -99,8 +101,7 @@ if($user){
             <a class="navbar-brand logo-mobile" href="index.php">
                 <img src="assets/img/Logo-web00.png" alt="" class="img-fluid">
             </a>
-            <button class="navbar-toggler  border-0 p-0 d-flex flex-column" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler  border-0 p-0 d-flex flex-column" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="bg-dark w-100 rounded-1"></div>
                 <div class="bg-dark w-100 rounded-1"></div>
                 <div class="bg-dark w-100 rounded-1"></div>
@@ -126,44 +127,41 @@ if($user){
             <li class="nav-item text-capitalize">
                 <a class="nav-link" href="contact.php">Contacto</a>
             </li>
-            <?php	
-            if  ($login_button == '')
-            {
-                echo '<li class="nav-item fs-2 mt-3 mb-0">'.$_SESSION['user_first_name'].'</li>'; 
+            <?php
+            if ($login_button == '') {
+                echo '<li class="nav-item fs-2 mt-3 mb-0">' . $_SESSION['user_first_name'] . '</li>';
                 // echo '<li class="nav-item text-capitalize">'.'<a href="logout.php" class="nav-link">Logout</a>'.'</li>';
-            } 
-            else if($admin){
+            } else if ($admin) {
                 echo '<li class="nav-item text-capitalize"><a href="vistaAdmin.php" class="fw-lighter" >Administrar web</a></li>';
-            }
-            else {
+            } else {
                 // id="modalTrigger"
                 echo '<li class="nav-item text-capitalize"><a href="registro.php" class="nav-link">Registrar</a></li>';
                 echo '<li class="nav-item text-capitalize"><a href="login.php" class="nav-link">Login</a></li>';
             }
-            
+
             ?>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
-                    
+
                 <div class="dropdown dropup">
-                    <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2"; else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">             
-                    <?php
-                        if (isset($_SESSION['user_image'])) echo '<img src="'.$_SESSION["user_image"].'" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
+                    <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
+                                                    else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php
+                        if (isset($_SESSION['user_image'])) echo '<img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
                         else echo "<i class='fa-solid fa-user text-light'></i>"
-                    ?>
+                        ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <?php
-                            if(isset($_SESSION['user_first_name'])){
+                        if (isset($_SESSION['user_first_name'])) {
                             echo '<li><a class="dropdown-item" href="micuenta.php">Mi Cuenta</a></li>';
-                            } 
+                        }
                         ?>
                         <li><a class="dropdown-item" href="terminosYcondiciones.php">Términos</a></li>
                         <?php
-                        if  ($login_button == '')
-                        {
+                        if ($login_button == '') {
                             echo '<li><a class="dropdown-item" href="logout.php">Logout</a></li>';
-                        } 
+                        }
                         ?>
                     </ul>
                 </div>

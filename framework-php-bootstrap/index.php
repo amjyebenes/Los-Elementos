@@ -22,11 +22,7 @@ include("includes/googleconnect.php");
     if (($login_button == '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
         include("includes/registermodal.php");
     }
-    
-    
     ?>
-    
-
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
     <section class="container-fluid page-section device-padding section-padding bg-light position-relative border-top border-dark">
         <!-- Título y barra de búsqueda -->
@@ -176,7 +172,7 @@ include("includes/googleconnect.php");
     }
     if(isset($_GET['login'])){
         echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
-                    Inicio de sesion correcto
+                    Bienvenido de nuevo!!
                 </div>';
     }
     if(isset($_GET['logout'])){
