@@ -22,9 +22,7 @@ if (isset($_SESSION['username'])) {
         var_dump($_POST['valoracion']);
         $val = new Valoracion(ControladorUsuario::get($_SESSION['user_email_address'])->id, ControladorEspectaculo::get($_SESSION['idConcierto'])->id, $_POST['rating'], $_POST['valoracion']);
         ControladorValoracion::put($val);
-    }
-
-    if (isset($_POST['valoracion'])) {
+    }else if (isset($_POST['valoracion']) && empty($_POST['textoValoracion'])) {
         header("Location: seleccionarEntradas.php?valoracionVacia=true");
     }
 } else {
@@ -36,7 +34,7 @@ if (isset($_POST['entradas'])) {
     $_SESSION['cesta'][] = $item;
 }
 
-$valoraciones = ControladorValoracion::getAll();
+$valoraciones = ControladorValoracion::getAllValoracionesUser(ControladorUsuario::get($_SESSION['user_email_address'])->id, $_SESSION['idConcierto']);
 
 ?>
 <!DOCTYPE html>
@@ -57,7 +55,7 @@ $valoraciones = ControladorValoracion::getAll();
         <!-- SECCION 3 | EVENTO PRÓXIMO -->
         <section class="container-fluid concert fix-top page-section device-padding section-padding bg-light">
             <!-- Evento -->
-            
+
             <article class="row justify-content-around">
                 <!-- Video -->
                 <div class="col-md-5 col-12 overflow-hidden">
@@ -65,7 +63,7 @@ $valoraciones = ControladorValoracion::getAll();
                         <img class="shadow-lg img-fluid" src="data:jpg;base64,<?php echo base64_encode(ControladorEspectaculo::get($_SESSION['idConcierto'])->imagen); ?>" alt="Title">
                     </div>
                 </div>
-                
+
                 <!-- Descripción -->
                 <div class="col-md-7 col-12 border-top-1 d-flex flex-column justify-align-content-between h-100">
                     <div class="d-flex flex-column gap-1 pt-4 border-top border-dark">
@@ -125,119 +123,120 @@ $valoraciones = ControladorValoracion::getAll();
                     </div>
                 </div>
             </article>
-            
+
             <!-- TEXT EDITOR -->
-            <article class="row justify-content-center mt-5 flex-column gap-4 align-items-center">
-            <?php
-                if (isset($_GET['valoracionVacia'])) {
-                    echo   '<div id="alerta" name="alerta" class="text-center alerta alert bg-primary border border-2 border-dark h6 position-absolute top-50 start-50 translate-middle col-3 justify-content-center" role="alert">
+            <form action="seleccionarEntradas.php" method="POST">
+                <article class="row justify-content-center mt-5 flex-column gap-4 align-items-center">
+                    <?php
+                    if (isset($_GET['valoracionVacia'])) {
+                        echo   '<div id="alerta" name="alerta" class="text-center alerta alert bg-primary border border-2 border-dark h6 position-absolute top-50 start-50 translate-middle col-3 justify-content-center" role="alert">
                             Valoracion vacia: deja tu comentario en la caja de texto
                             </div>';
-                }
-                ?>
-                <div class="d-none d-md-block mt-auto w-100 bg-dark">
-                    <div class="b-line"></div>
-                </div>
-                <div id="standalone-container" class="col-8 d-flex flex-column">
-                    <h2 class="h2 text-center mb-3">Valora este concierto</h2>
-                    <div id="toolbar-container">
-                        <span class="ql-formats">
-                            <select class="ql-font"></select>
-                            <select class="ql-size"></select>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-bold"></button>
-                            <button class="ql-italic"></button>
-                            <button class="ql-underline"></button>
-                            <button class="ql-strike"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <select class="ql-color"></select>
-                            <select class="ql-background"></select>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-script" value="sub"></button>
-                            <button class="ql-script" value="super"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-header" value="1"></button>
-                            <button class="ql-header" value="2"></button>
-                            <button class="ql-blockquote"></button>
-                            <button class="ql-code-block"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-list" value="ordered"></button>
-                            <button class="ql-list" value="bullet"></button>
-                            <button class="ql-indent" value="-1"></button>
-                            <button class="ql-indent" value="+1"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-direction" value="rtl"></button>
-                            <select class="ql-align"></select>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-link"></button>
-                            <button class="ql-image"></button>
-                            <button class="ql-video"></button>
-                            <button class="ql-formula"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-clean"></button>
-                        </span>
+                    }
+                    ?>
+                    <div class="d-none d-md-block mt-auto w-100 bg-dark">
+                        <div class="b-line"></div>
                     </div>
-                    <div id="editor-container"></div>
-                </div>
+                    <div id="standalone-container" class="col-8 d-flex flex-column">
+                        <h2 class="h2 text-center mb-3">Valora este concierto</h2>
+                        <div id="toolbar-container">
+                            <span class="ql-formats">
+                                <select class="ql-font"></select>
+                                <select class="ql-size"></select>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-bold"></button>
+                                <button class="ql-italic"></button>
+                                <button class="ql-underline"></button>
+                                <button class="ql-strike"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <select class="ql-color"></select>
+                                <select class="ql-background"></select>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-script" value="sub"></button>
+                                <button class="ql-script" value="super"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-header" value="1"></button>
+                                <button class="ql-header" value="2"></button>
+                                <button class="ql-blockquote"></button>
+                                <button class="ql-code-block"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-list" value="ordered"></button>
+                                <button class="ql-list" value="bullet"></button>
+                                <button class="ql-indent" value="-1"></button>
+                                <button class="ql-indent" value="+1"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-direction" value="rtl"></button>
+                                <select class="ql-align"></select>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-link"></button>
+                                <button class="ql-image"></button>
+                                <button class="ql-video"></button>
+                                <button class="ql-formula"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-clean"></button>
+                            </span>
+                        </div>
+                        <div id="editor-container" name="textoValoracion"></div>
+                    </div>
 
-                <!-- <div class="w-100 text-center">
+                    <!-- <div class="w-100 text-center">
                     <button type="button" class="btn btn-primary btn-sm" aria-label="Close" onclick="JavaScript: alert(quill.root.innerHTML);">
                         Obtener texto HTML mostrado en el editor
                     </button>
                 </div> -->
 
-                <!-- STARS RATING -->
-                <div class="rating w-100">
-                    <form action="" class="d-flex justify-content-center align-items-center gap-3" method="POST">
-                        <fieldset>
-                            <input id="rating0" type="radio" value="0" name="rating" checked class="d-none" />
-                            <label class="star d-inline-block p-0" for="rating1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                </svg>
-                            </label>
-                            <input id="rating1" type="radio" value="1" name="rating" class="d-none" />
-                            <label class="star d-inline-block p-0" for="rating2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                </svg>
-                            </label>
-                            <input id="rating2" type="radio" value="2" name="rating" class="d-none" />
-                            <label class="star d-inline-block p-0" for=rating3>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                </svg>
-                            </label>
-                            <input id="rating3" type="radio" value="3" name="rating" class="d-none" />
-                            <label class="star d-inline-block p-0" for=rating4>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                </svg>
-                            </label>
-                            <input id="rating4" type="radio" value="4" name="rating" class="d-none" />
-                            <label class="star d-inline-block p-0" for="rating5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                </svg>
-                            </label>
-                            <input id="rating5" type="radio" value="5" name="rating" class="d-none" />
-                        </fieldset>
+                    <!-- STARS RATING -->
+                    <div class="rating w-100">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <fieldset>
+                                <input id="rating0" type="radio" value="0" name="rating" checked class="d-none" />
+                                <label class="star d-inline-block p-0" for="rating1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                    </svg>
+                                </label>
+                                <input id="rating1" type="radio" value="1" name="rating" class="d-none" />
+                                <label class="star d-inline-block p-0" for="rating2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                    </svg>
+                                </label>
+                                <input id="rating2" type="radio" value="2" name="rating" class="d-none" />
+                                <label class="star d-inline-block p-0" for=rating3>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                    </svg>
+                                </label>
+                                <input id="rating3" type="radio" value="3" name="rating" class="d-none" />
+                                <label class="star d-inline-block p-0" for=rating4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                    </svg>
+                                </label>
+                                <input id="rating4" type="radio" value="4" name="rating" class="d-none" />
+                                <label class="star d-inline-block p-0" for="rating5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                                    </svg>
+                                </label>
+                                <input id="rating5" type="radio" value="5" name="rating" class="d-none" />
+                            </fieldset>
 
-                        <input type="hidden" name="valoracion" id="valoracion" value="" />
-                        <input type="hidden" name="id" value="<?php echo $_SESSION['idConcierto']; ?>" />
-                        <input type="hidden" name="finalRating" id="finalRating" value="">
-                        <input type="hidden" name="consultaConcierto" class="btn btn-primary rounded-3" value="a" />
-                        <input type="submit" class="btn btn-primary rounded-3" name="send-rating" value="Enviar" onclick="getQuillValue()" />
-                    </form>
-                </div>
+                            <input type="hidden" name="valoracion" id="valoracion" value="" />
+                            <input type="hidden" name="id" value="<?php echo $_SESSION['idConcierto']; ?>" />
+                            <input type="hidden" name="finalRating" id="finalRating" value="">
+                            <input type="hidden" name="consultaConcierto" class="btn btn-primary rounded-3" value="a" />
+                            <input type="submit" class="btn btn-primary rounded-3" name="send-rating" value="Enviar" onclick="getQuillValue()" />
+            </form>
+            </div>
             </article>
             <?php
             if (isset($valoraciones) && $valoraciones != null) {

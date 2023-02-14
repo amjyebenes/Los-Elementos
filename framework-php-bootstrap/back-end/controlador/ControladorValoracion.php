@@ -79,5 +79,26 @@ class ControladorValoracion{
             die("ERROR en la BD. " . $ex->getMessage());
         }
     }
+
+    public static function getAllValoracionesUser($idUsuario, $idConcierto){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("SELECT * from valoracion, usuario, espectaculo 
+                                    WHERE espectaculo.id = $idConcierto  
+                                    and espectaculo.id = valoracion.id_espectaculo 
+                                    and usuario.id = valoracion.id_usuario");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $val=new valoracion($reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $val->id = $reg->id;
+                    $valoraciones[]=$val;
+                }
+            }else $valoraciones=false;
+            unset($conex);
+            return $valoraciones;
+        } catch (PDOException $ex) {
+           echo $ex->getMessage();
+        }
+    }
  
 }
