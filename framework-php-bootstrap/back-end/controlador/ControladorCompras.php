@@ -34,6 +34,24 @@ class ControladorCompras{
         } catch (PDOException $ex) {
            echo $ex->getMessage();
         }
-    }    
+    }  
+    
+    public static function getByUserId($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT * FROM compras WHERE id_user = '$id'");
+            if ($result->rowCount()) {
+                while ($reg=$result->fetchObject()) {
+                    $com=new Compra($reg->id_user,$reg->id_espec,$reg->importe,$reg->tickets);
+                    $com->id = $reg->id;
+                    $compras[] = $com;
+                }
+            } else $compras = false;
+            unset($conex);
+            return $compras;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
  
 }

@@ -150,7 +150,7 @@ if (isset($_POST['guardar'])) {
                                     <input type="text" name="espec" disabled value="<?php echo $espec->titulo ?>">
                                 </span>
                                 <span class="text-primary col-1 d-flex flex-column">
-                                    Valoración:<input type="number" min="1" max="5" name="valoracion" value="<?php echo $val->valoracion; ?>">
+                                    Valoración:<input type="number" min="0" max="5" name="valoracion" value="<?php echo $val->valoracion; ?>">
                                 </span>
                                 <span class="text-primary col-3 d-flex flex-column">
                                     Comentario:<textarea name="comentario"><?php echo $val->comentario; ?></textarea>

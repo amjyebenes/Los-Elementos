@@ -50,24 +50,23 @@ if ($user) {
                         }
                         ?>
 
-                        <li class="nav-item d-flex justify-content-between align-items-center">
+                        <li class="nav-item d-flex justify-content-between align-items-center gap-3">
                             <?php
-                            if ($login_button == '') {
+                            if ($login_button == '' || isset($_SESSION['username'])) {
                             ?>
                                 <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
                             <?php
                             }
                             ?>
                             <div class="dropdown">
-                                <button class=" btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
-                                                                else echo " py-1 px-0 botonUsuarioNavigation"; ?> dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-
+                                <button class=" btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2 dropdown-toggle";
+                                    else echo "py-0 px-0"; ?> " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php
                                     if ($foto)
-                                        echo '<div><img width="50" height="50" src=' . $foto . '><div>';
+                                        echo '<div class="nav-item"><img src=' . $foto . ' class="img-fluid rounded-circle overflow-hidden"><div>';
                                     else if (isset($_SESSION['user_image']))
                                         echo '<div class="nav-item text-capitalize">
-                                                    <img width="50" height="50" src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class=" img-fluid" />
+                                                    <img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class=" img-fluid" />
                                                   </div>';
                                     else
                                         echo "<i class='fa-solid fa-user text-light'></i>";

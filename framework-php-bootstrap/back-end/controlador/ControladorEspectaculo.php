@@ -49,6 +49,23 @@ class ControladorEspectaculo{
             echo $ex->getMessage();
         }
     }  
+
+    public static function getAllWithLimit($limit, $id){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("select * from espectaculo where tipo = 'concierto' and id != $id limit $limit");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen, $reg->precio);
+                    $espectaculos[]=$espec;
+                }
+            }else $espectaculos=false;
+            unset($conex);
+            return $espectaculos;
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }  
     
     public static function getAllConciertos(){
         try{

@@ -1,6 +1,6 @@
 <?php
 class Compra{
-    private $id_usuario,$id_espectaculo,$importe, $tickets;
+    private $id, $id_usuario,$id_espectaculo,$importe, $tickets;
 
     public function __construct($id_usuario,$id_espectaculo,$importe, $tickets){
         $this->id_usuario = $id_usuario;

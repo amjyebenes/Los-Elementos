@@ -46,7 +46,7 @@ if (isset($_POST['actualizarfoto'])) {
 
 
 // Historial de compras
-$compras = ControladorCompras::getAll();
+$compras = ControladorCompras::getByUserId($user->id);
 ?>
 <!DOCTYPE html>
 <html>
@@ -192,36 +192,40 @@ $compras = ControladorCompras::getAll();
                 <div class="pt-4">
                     <div class="row col justify-content-center" id="divCompras">
                         <?php
-                        foreach ($compras as $compra) {
-                            $concierto = ControladorEspectaculo::get($compra->id_espectaculo);
-                            ?>
-                            <div class="row shadow mb-4 px-0">
-                                <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
-                                    <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($concierto->imagen); ?>" alt="Title">
-                                </div>
-                                <div class="row col col-md-10">
-                                    <div class="col-12 col-sm">
-                                        <div class="row">
-                                            <p class="h2 text-primary"><?php echo $concierto->titulo; ?></p>
-                                            <div class="col">
-                                                <p class="h5"><?php echo $concierto->fecha; ?></p>
-                                                <h6 class="text-primary">
-                                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                                    <?php echo $concierto->ubicacion; ?>
-                                                </h6>
+                        if ($compras) {
+                            foreach ($compras as $compra) {
+                                $concierto = ControladorEspectaculo::get($compra->id_espectaculo);
+                                ?>
+                                <div class="row shadow mb-4 px-0">
+                                    <div class="col-5 col-md-2 p-0 d-flex align-items-center ">
+                                        <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($concierto->imagen); ?>" alt="Title">
+                                    </div>
+                                    <div class="row col col-md-10">
+                                        <div class="col-12 col-sm">
+                                            <div class="row">
+                                                <p class="h2 text-primary"><?php echo $concierto->titulo; ?></p>
+                                                <div class="col">
+                                                    <p class="h5"><?php echo $concierto->fecha; ?></p>
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                                        <?php echo $concierto->ubicacion; ?>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
+                                            <div class="row align-items-center">
+                                                <label class="col justify-content-center align-items-end pr-3 text-center">
+                                                    x<?php echo $compra->tickets; ?>: <span class="h5"><?php echo $compra->importe; ?> €</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md d-flex align-items-center justify-content-center mb-2 m-1">
-                                        <div class="row align-items-center">
-                                            <label class="col justify-content-center align-items-end pr-3 text-center">
-                                                x<?php echo $compra->tickets; ?>: <span class="h5"><?php echo $compra->importe; ?> €</span>
-                                            </label>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <?php
+                                <?php
+                            }
+                        } else {
+                            echo "<p>Todavía no has realizado ninguna compra.</p>";
                         }
                         ?>
                     </div>

@@ -40,12 +40,10 @@ require_once './back-end/modelo/Espectaculo.php';
                                     <div class="col pb-1">
                                         <!-- Formato 22 · OCT · 2022 -->
                                         <p class="h5"><?php echo $evento->fecha ?></p>
-                                        <!-- Formato DIA - 00:00 -->
-                                        <h6><?php echo $evento->fecha ?><h6>
-                                                <h6 class="text-primary">
-                                                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                                    <?php echo $evento->ubicacion; ?>
-                                                </h6>
+                                        <h6 class="text-primary">
+                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                            <?php echo $evento->ubicacion; ?>
+                                        </h6>
                                     </div>
                                 </div>
                             </div>

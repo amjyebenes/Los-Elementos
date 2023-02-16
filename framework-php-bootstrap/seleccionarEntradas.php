@@ -9,6 +9,10 @@ require_once './back-end/modelo/Espectaculo.php';
 require_once './back-end/modelo/Valoracion.php';
 require_once './back-end/modelo/Usuario.php';
 
+if ($login_button != "" && !isset($_SESSION['username'])) {
+    header("Location: login.php?logueate=true");
+}
+
 if (!isset($_POST['consultaConcierto']) && !isset($_GET['valoracionVacia'])) {
     header("Location: conciertos.php");
 }
@@ -17,16 +21,11 @@ if (isset($_POST['id'])) {
     $_SESSION['idConcierto'] = $_POST['id'];
 }
 
-if (isset($_SESSION['username'])) {
-    if (isset($_POST['send-rating']) &&  strlen($_POST['valoracion']) > 2 && $_POST['valoracion'] != null) {
-        var_dump($_POST['valoracion']);
-        $val = new Valoracion(ControladorUsuario::get($_SESSION['user_email_address'])->id, ControladorEspectaculo::get($_SESSION['idConcierto'])->id, $_POST['rating'], $_POST['valoracion']);
-        ControladorValoracion::put($val);
-    }else if (isset($_POST['valoracion']) && empty($_POST['textoValoracion'])) {
-        header("Location: seleccionarEntradas.php?valoracionVacia=true");
-    }
-} else {
-    header("Location: login.php?logueate=true");
+if (isset($_POST['send-rating']) &&  strlen($_POST['valoracion']) > 2 && $_POST['valoracion'] != null) {
+    $val = new Valoracion(ControladorUsuario::get($_SESSION['user_email_address'])->id, ControladorEspectaculo::get($_SESSION['idConcierto'])->id, $_POST['rating'], $_POST['valoracion']);
+    ControladorValoracion::put($val);
+}else if (isset($_POST['valoracion']) && empty($_POST['textoValoracion'])) {
+    header("Location: seleccionarEntradas.php?valoracionVacia=true");
 }
 
 if (isset($_POST['entradas'])) {
@@ -34,6 +33,8 @@ if (isset($_POST['entradas'])) {
     $_SESSION['cesta'][] = $item;
     header("location:conciertos.php?cesta=true");
 }
+
+$conciertosExtra = ControladorEspectaculo::getAllWithLimit(3, $_POST['id']);
 
 $valoraciones = ControladorValoracion::getAllValoracionesUser(ControladorUsuario::get($_SESSION['user_email_address'])->id, $_SESSION['idConcierto']);
 
@@ -112,15 +113,19 @@ $valoraciones = ControladorValoracion::getAllValoracionesUser(ControladorUsuario
                         <div class="col-12">
                             <h3 class="h3 text-capitalize">Otros conciertos</h3>
                         </div>
-                        <div class="col-4">
-                            <img src="assets/img/choco.png" alt="" class="img-fluid concierto-hov">
-                        </div>
-                        <div class="col-4">
-                            <img src="assets/img/alba.jpg" alt="" class="img-fluid concierto-hov">
-                        </div>
-                        <div class="col-4">
-                            <img src="assets/img/delaossa.jpg" alt="" class="img-fluid concierto-hov">
-                        </div>
+                        <?php
+                        foreach ($conciertosExtra as $con) {
+                            ?>
+                            <div class="col-4">
+                                <form action="seleccionarEntradas.php" method="POST">
+                                    <input type="hidden" name="consultaConcierto" value="consulta">
+                                    <input type="hidden" name="id" value="<?php echo $con->id; ?>">
+                                    <button type="submit" class="border-0 bg-transparent"><img class="img-fluid concierto-hov" src="data:jpg;base64,<?php echo base64_encode($con->imagen); ?>" alt="Concierto"></button>
+                                </form>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </article>

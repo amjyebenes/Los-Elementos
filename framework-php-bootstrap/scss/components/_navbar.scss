@@ -146,6 +146,21 @@
     .logo-mobile {
         width: 20%;
     }
+
+    .nav-item img {
+        max-width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+  
+.dropdown-toggle::after {
+    // position: absolute;
+    // right: 5px;
+    // bottom: 45%;
 }
 
 
