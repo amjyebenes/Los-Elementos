@@ -9,7 +9,7 @@ class ControladorEspectaculo{
         try {
             $conex=new Conexion();
             $reg=$conex->exec("INSERT INTO espectaculo (titulo,tipo,fecha,ubicacion,imagen) "
-                    . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->ubicacion','$espec->imagen')");
+                    . "VALUES('$espec->titulo','$espec->tipo','$espec->fecha_publicacion','$espec->ubicacion','$espec->imagen', $espec->precio)");
             unset($conex);
             return $reg;
         } catch (PDOException $ex) {
@@ -24,7 +24,7 @@ class ControladorEspectaculo{
             $result = $conex->query("SELECT * FROM espectaculo WHERE id = $id");
             if ($result->rowCount()) {
                 $reg = $result->fetchObject();
-                $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen, $reg->precio);
             } else $espec = false;
             unset($conex);
             return $espec;
@@ -39,7 +39,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen, $reg->precio);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;
@@ -56,7 +56,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo where tipo = 'concierto'");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen, $reg->precio);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;
@@ -73,7 +73,7 @@ class ControladorEspectaculo{
             $result=$conex->query("select * from espectaculo where tipo != 'concierto'");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen);
+                    $espec=new espectaculo($reg->id,$reg->titulo,$reg->tipo,$reg->fecha,$reg->ubicacion,$reg->imagen, $reg->precio);
                     $espectaculos[]=$espec;
                 }
             }else $espectaculos=false;

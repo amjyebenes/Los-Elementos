@@ -1,6 +1,6 @@
 <?php
 class Valoracion{
-    private $id_usuario,$id_espectaculo,$valoracion,$comentario;
+    private $id, $id_usuario,$id_espectaculo,$valoracion,$comentario;
 
     public function __construct($id_usuario,$id_espectaculo,$valoracion,$comentario){
         $this->id_usuario = $id_usuario;

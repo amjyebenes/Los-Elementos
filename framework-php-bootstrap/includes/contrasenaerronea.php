@@ -26,3 +26,4 @@
         modal.classList.add('d-flex');
     });
 </script>
+<script src="./js/alerta.js"></script>

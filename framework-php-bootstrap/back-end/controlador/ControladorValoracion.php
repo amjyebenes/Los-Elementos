@@ -25,7 +25,8 @@ class ControladorValoracion{
             $result=$conex->query("select * from valoracion");
             if($result->rowCount()){
                 while($reg=$result->fetchObject()){
-                    $val=new valoracion($reg->id,$reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $val=new valoracion($reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $val->id = $reg->id;
                     $valoraciones[]=$val;
                 }
             }else $valoraciones=false;
@@ -34,6 +35,70 @@ class ControladorValoracion{
         } catch (PDOException $ex) {
            echo $ex->getMessage();
         }
-    }    
+    }   
+    
+    public static function delete($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("DELETE FROM valoracion where id = '$id'");
+            return $result;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+        unset($conex);
+    }
+
+    public static function actualizarValoracion($id, $id_usuario, $id_espectaculo, $valoracion, $comentario){
+        try {
+            $conex = new Conexion();
+            // hago el update
+            $reg = $conex->exec("UPDATE valoracion set id_usuario = '$id_usuario', id_espectaculo = '$id_espectaculo', valoracion = '$valoracion', comentario = '$comentario' where id = $id");
+            if($reg){
+                return true;
+            }else {
+                return false;
+            }
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+        unset($conex);
+    }
+
+    public static function get($id) {
+        try {
+            $conex = new Conexion();
+            $result = $conex->query("SELECT * FROM valoracion WHERE id = '$id'");
+            if ($result->rowCount()) {
+                $reg = $result->fetchObject();
+                $val=new valoracion($reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                $val->id = $reg->id;
+            } else $val = false;
+            unset($conex);
+            return $val;
+        } catch (PDOException $ex) {
+            die("ERROR en la BD. " . $ex->getMessage());
+        }
+    }
+
+    public static function getAllValoracionesUser($idUsuario, $idConcierto){
+        try{
+            $conex=new Conexion();
+            $result=$conex->query("SELECT * from valoracion, usuario, espectaculo 
+                                    WHERE espectaculo.id = $idConcierto  
+                                    and espectaculo.id = valoracion.id_espectaculo 
+                                    and usuario.id = valoracion.id_usuario");
+            if($result->rowCount()){
+                while($reg=$result->fetchObject()){
+                    $val=new valoracion($reg->id_usuario,$reg->id_espectaculo,$reg->valoracion,$reg->comentario);
+                    $val->id = $reg->id;
+                    $valoraciones[]=$val;
+                }
+            }else $valoraciones=false;
+            unset($conex);
+            return $valoraciones;
+        } catch (PDOException $ex) {
+           echo $ex->getMessage();
+        }
+    }
  
 }

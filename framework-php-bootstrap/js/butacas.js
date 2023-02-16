@@ -1,19 +1,97 @@
-const container = document.querySelector(".container");
-const seats = document.querySelectorAll(".row .seat:not(.occupied)");
+const container = document.querySelector('.container');
+const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
+const movieSelect = document.getElementById('movie');
 
+populateUI();
 
+let ticketPrice = +movieSelect.value;
 
-/* Seat click event
-container.addEventListener("click", (e) => {
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice) {
+  localStorage.setItem('selectedMovieIndex', movieIndex);
+  localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
+// Update total and count
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+
+  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
+  const selectedSeatsCount = selectedSeats.length;
+
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+  
+  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+}
+
+// Get data from localstorage and populate UI
+function populateUI() {
+  const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+
+  if (selectedSeats !== null && selectedSeats.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add('selected');
+      }
+    });
+  }
+
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
+}
+
+// Movie select event
+movieSelect.addEventListener('change', e => {
+  ticketPrice = +e.target.value;
+  setMovieData(e.target.selectedIndex, e.target.value);
+  updateSelectedCount();
+});
+
+// Seat click event
+container.addEventListener('click', e => {
   if (
-    e.target.classList.contains("seat") &&
-    !e.target.classList.contains("occupied")
+    e.target.classList.contains('seat') &&
+    !e.target.classList.contains('occupied')
   ) {
-    e.target.classList.toggle("selected");
+    e.target.classList.toggle('selected');
 
     updateSelectedCount();
   }
-}); */
-element.addEventListener("click", function() {
-    this.style.backgroundColor = "red";
+});
+
+// Initial count and total set
+updateSelectedCount();
+
+
+// Import Axios library
+import axios from 'axios';
+
+// Get data from local storage
+const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+const selectedMoviePrice = localStorage.getItem('selectedMoviePrice');
+const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+
+// Set up data to send to server
+const data = {
+  selectedMovieIndex: selectedMovieIndex,
+  selectedMoviePrice: selectedMoviePrice,
+  selectedSeats: selectedSeats
+};
+
+// Send data to server
+axios.post('http://localhost:5555/guardarButacas.php', data)
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
   });

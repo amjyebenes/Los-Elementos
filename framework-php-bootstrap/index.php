@@ -19,12 +19,10 @@ include("includes/googleconnect.php");
 <!-- MAIN CONTENT -->
 <main>
     <?php
-    // VER CÓMO FUNCIONA $login_button 
     if (($login_button == '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
         include("includes/registermodal.php");
     }
     ?>
-
     <!-- SECCIÓN CON BARRA DE BÚSQUEDA -->
     <section class="container-fluid page-section device-padding section-padding bg-light position-relative border-top border-dark">
         <!-- Título y barra de búsqueda -->
@@ -166,6 +164,23 @@ include("includes/googleconnect.php");
             </div>
         </article>
     </section>
+    <?php 
+    if(isset($_GET['registrado'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Bienvenido a Eletickets!!
+                </div>';
+    }
+    if(isset($_GET['login'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Bienvenido de nuevo!!
+                </div>';
+    }
+    if(isset($_GET['logout'])){
+        echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaIndex translate-middle" role="alert">
+                    Vuelve pronto!!
+                </div>';
+    }
+    ?>
 </main>
 
 <?php include("includes/footer.php");?>
@@ -173,5 +188,6 @@ include("includes/googleconnect.php");
 <script src="./js/scripts.js"></script>
 <script src="./js/videoplayer.js"></script>
 <script src="./js/instanciaVideo.js"></script>
+<script src="./js/alerta.js"></script>
 </body>
 </html>

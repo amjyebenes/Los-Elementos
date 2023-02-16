@@ -4,6 +4,11 @@
 
 // Sección Evento
 .concert {
+
+    path {
+        pointer-events: none;
+    }
+
     .img-con {
         position: relative;
         transform-origin: top center;
@@ -54,6 +59,11 @@
         input[type=radio]:checked~label.star svg path {
             fill: #bababa;
         }
+    }
+
+    .star2 {
+        width: 20px;
+        height: 17px;
     }
 
     #standalone-container {

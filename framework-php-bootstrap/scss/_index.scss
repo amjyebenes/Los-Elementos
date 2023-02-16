@@ -77,3 +77,31 @@
     transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
 }
+
+.posicionAlertaIndex{
+    top:140px;
+    left:195px;
+    transition: 1.5s;
+}
+.posicionAlertaConcierto{
+    top:40px;
+    left:100px;
+    transition: 1.5s;
+    z-index:100;
+}
+
+.botonUsuarioNavigation{
+    width:90px;
+    height: 80px;
+    border-radius:100% !important;
+}
+
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  right: 5px;
+  bottom: 45%;
+}

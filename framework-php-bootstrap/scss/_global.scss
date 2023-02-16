@@ -12,6 +12,9 @@ html {
     scroll-padding-top: calc(#{$navbar-height} - 1px); 
 }
 
+main {
+    min-height: 80vh;
+}
 
 // Styling for page sections
 .page-section {
