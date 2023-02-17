@@ -31,7 +31,6 @@ if($user){
 }
 
 if (isset($_POST['actualizarfoto'])) {
-    $user = ControladorUsuario::get($_SESSION['user_email_address']);
     if ($user && isset($_FILES['imagenperfil']['name'])) {
             $nombre_archivo = time().$_FILES['imagenperfil']['name'];
             $ruta = "assets/img/imagenes/".$nombre_archivo;
@@ -46,7 +45,10 @@ if (isset($_POST['actualizarfoto'])) {
 
 
 // Historial de compras
+$compras = null;
+if($user){
 $compras = ControladorCompras::getByUserId($user->id);
+}
 ?>
 <!DOCTYPE html>
 <html>
