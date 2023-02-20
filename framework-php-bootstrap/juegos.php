@@ -27,9 +27,9 @@ include("includes/googleconnect.php");
                         <div class="card bg-light shadow border-0 rounded-3 m-0 juego-card">
                             <img src="./assets/assets_juego_miguel/portada.png" class="card-img-top img-fluid" alt="Tower Game">
                             <div class="card-body">
-                                <h5 class="card-title">Tower Game</h5>
+                                <h2 class="card-title">Tower Game</h2>
                                 <p class="card-text">Intenta apilar cuantos puedas!</p>
-                                <a href="tower.php" class="btn btn-primary rounded-3 text-dark" target="_blank">Jugar</a>
+                                <a href="tower.php" class="btn btn-primary rounded-3" target="_blank">Jugar</a>
                             </div>
                         </div>
                     </article>
@@ -38,9 +38,9 @@ include("includes/googleconnect.php");
                         <div class="card bg-light shadow border-0 rounded-3 m-0 juego-card">
                             <img src="assets/assets_juego_angel/capturaSNAKE.png" class="card-img-top" alt="Snake en 3D">
                             <div class="card-body">
-                                <h5 class="card-title">Snake en 3D</h5>
+                                <h2 class="card-title">Snake en 3D</h2>
                                 <p class="card-text">En este juego pasaras un buen rato intentando averiguar como hacer que la serpiente coma manzanas.</p>
-                                <a href="snake.html" class="btn btn-primary rounded-3 text-dark" target="_blank">Jugar</a>
+                                <a href="snake.html" class="btn btn-primary rounded-3" target="_blank">Jugar</a>
                             </div>
                         </div>
                     </article>
@@ -49,10 +49,10 @@ include("includes/googleconnect.php");
                         <div class="card bg-light shadow border-0 rounded-3 m-0 juego-card">
                             <img src="assets/assets_juego_adrian/bg.jpg" class="card-img-top" alt="El clásico juego de pong con un diseño novedoso con colores y luces de neón.">
                             <div class="card-body">
-                                <h5 class="card-title">Pong Adrián</h5>
+                                <h2 class="card-title">Pong Adrián</h2>
                                 <p class="card-text">El clásico juego de pong con un diseño novedoso con colores y luces de neón.</p>
                                 <p>Controles: J1: (W, S) J2: (Teclas de Dirección) </p>
-                                <a href="pong_adrian.html" class="btn btn-primary rounded-3 text-dark" target="_blank">Jugar</a>
+                                <a href="pong_adrian.html" class="btn btn-primary rounded-3" target="_blank">Jugar</a>
                             </div>
                         </div>
                     </article>
@@ -61,9 +61,9 @@ include("includes/googleconnect.php");
                         <div class="card bg-light shadow border-0 rounded-3 m-0 juego-card">
                             <img src="assets/assets_juego_marita/portada.png" class="card-img-top" alt="El clásico juego de pong">
                             <div class="card-body">
-                                <h5 class="card-title">Pong Sencillo</h5>
+                                <h2 class="card-title">Pong Sencillo</h2>
                                 <p class="card-text">El clásico juego de pong</p>
-                                <a href="pong_marita.html" class="btn btn-primary rounded-3 text-dark" target="_blank">Jugar</a>
+                                <a href="pong_marita.html" class="btn btn-primary rounded-3" target="_blank">Jugar</a>
                             </div>
                         </div>
                     </article>

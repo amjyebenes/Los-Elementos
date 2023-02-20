@@ -180,7 +180,7 @@ $compras = ControladorCompras::getByUserId($user->id);
                                             <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword2"></i>
                                         </div>
                                         <div class="row justify-content-end pt-2 col-12">
-                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3 text-dark" name='enviar'>Guardar cambios</button>
+                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3 " name='enviar'>Guardar cambios</button>
                                         </div>
                                     </div>
                                 </div>
