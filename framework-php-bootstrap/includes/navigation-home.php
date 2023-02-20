@@ -60,7 +60,7 @@ if ($user) {
                             ?>
                             <div class="dropdown">
                                 <button class=" btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2 dropdown-toggle";
-                                    else echo "py-0 px-0"; ?> " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    else echo "py-0 px-0"; ?> " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" value="User">
                                     <?php
                                     if ($foto)
                                         echo '<div class="nav-item"><img src=' . $foto . ' class="img-fluid rounded-circle overflow-hidden"><div>';
@@ -71,6 +71,7 @@ if ($user) {
                                     else
                                         echo "<i class='fa-solid fa-user text-light'></i>";
                                     ?>
+                                    <span class="d-none">relleno</span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <?php
@@ -145,7 +146,12 @@ if ($user) {
             ?>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
 
-                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                <span>
+                    <a href="cesta.php" class="fw-lighter">
+                        <i class="fa-solid fa-bag-shopping fa-xl text-primary"></i>
+                        <span class="sr-only">Cesta</span>
+                    </a>
+                </span>
 
                 <div class="dropdown dropup">
                     <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
@@ -154,6 +160,7 @@ if ($user) {
                         if (isset($_SESSION['user_image'])) echo '<img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
                         else echo "<i class='fa-solid fa-user text-light'></i>"
                         ?>
+                        <span class="sr-only">UserIcon</span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <?php
