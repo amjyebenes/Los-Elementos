@@ -83,7 +83,7 @@ include("includes/googleconnect.php");
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/wizink.jpg" alt="Title">
+                            <img class="shadow-lg card-img " src="./assets/img/wizink.jpg" alt="Title" title="Foto al mapa">
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ include("includes/googleconnect.php");
                     </div>
                     <div class="col-lg-7 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/apolo.jpg" alt="Title">
+                            <img class="shadow-lg card-img " src="./assets/img/apolo.jpg" alt="Title" title="Foto al mapa">
                         </div>
                     </div>
                 </div>
