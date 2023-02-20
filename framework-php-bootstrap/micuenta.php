@@ -96,35 +96,35 @@ $compras = ControladorCompras::getByUserId($user->id);
                     <div class="row col justify-content-between" id="divDatos">
                         <div class="col col-sm-4">
                             <div class="col">
-                                <label class="h5 text-primary"><u>DATOS DE FACTURACION</u></label>
+                                <span class="h5 text-primary">DATOS DE FACTURACION</span>
                                 <div class="col">
                                     <div class="row align-items-baseline">
                                         <div class="col-7">
-                                            <label class="text-left">NOMBRE: </>
+                                            <span class="text-left">NOMBRE: </span>
                                         </div>
                                         <div class="col-5">
-                                            <label class="text-center"><?php echo $_SESSION['user_first_name'] ?></label>
+                                            <span class="text-center"><?php echo $_SESSION['user_first_name'] ?></span>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
                                         <div class="col-7">
-                                            <label class="text-left">APELLIDOS: </label>
+                                            <span class="text-left">APELLIDOS: </span>
                                         </div>
                                         <div class="col-5">
-                                            <label class="text-center"><?php echo $_SESSION['user_last_name'] ?></label>
+                                            <span class="text-center"><?php echo $_SESSION['user_last_name'] ?></span>
                                         </div>
                                     </div>
                                     <div class="row align-items-baseline">
                                         <div class="col-7">
-                                            <label class="text-left">IMAGEN: </label>
+                                            <span class="text-left">IMAGEN: </span>
                                         </div>
                                         <div class="col-5">
-                                            <label class="h6 text-center">
+                                            <span class="h6 text-center">
                                                 <?php 
                                                 if ($foto) 
-                                                    echo '<img width="80" height="80" src=' . $foto . '>';
+                                                    echo '<img alt="Imagen de perfil previsualizada" width="90" height="80" src="' . $foto . '" class="my-2">';
                                                 else if(isset($_SESSION['user_image']))
-                                                    echo '<img width="80" height="80" src=' . $_SESSION['user_image'] . '>';
+                                                    echo '<img alt="Imagen de perfil previsualizada" width="90" height="80" src="' . $_SESSION['user_image'] . '" class="my-2">';
                                                 else
                                                     echo 'Sin imagen';
 
@@ -133,12 +133,12 @@ $compras = ControladorCompras::getByUserId($user->id);
                                                     echo "ERROR AL SUBIR IMAGEN, INTENTE DE NUEVO";
 
                                                 ?>
-                                            </label>
+                                            </span>
                                         </div>
                                     </div>
                                     <form action="" method="POST" enctype="multipart/form-data" class="pb-3">
                                         <div class="input-group">
-                                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenperfil">
+                                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenperfil" required>
                                             <button class="btn btn-outline-secondary" type="submit" name="actualizarfoto" id="inputGroupFileAddon04">Guardar</button>
                                         </div>
                                     </form>
@@ -148,36 +148,39 @@ $compras = ControladorCompras::getByUserId($user->id);
 
                         <div class="col-sm-8 row justify-content-center">
                             <form action="" method="POST">
-                                <p class="h5  text-primary"><u>DATOS DE CUENTA</u></p>
+                                <p class="h5  text-primary">DATOS DE CUENTA</p>
                                 <div class="col d-flex flex-column justify-content-between">
                                     <div class="row">
                                         <div class="col-5">
-                                            <label class="text-left">EMAIL: </label>
+                                            <span class="text-left">EMAIL: </span>
                                         </div>
                                         <div class="col-7 py-1">
-                                            <input type="email" class="opacity-50 text-center col-11" value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
+                                            <label for="email" class="d-none">Email</label>
+                                            <input id="email" type="email" class="opacity-50 text-center col-11" value="<?php if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];
                                                                                                                 else echo "No especificado"; ?>">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-5">
-                                            <label class="text-left">NUEVA CONTRASEÑA: </label>
+                                            <span class="text-left">NUEVA CONTRASEÑA: </span>
                                         </div>
                                         <div class="col-7 py-1">
+                                            <label for="password" class="d-none">password</label>
                                             <input type="password" name="newpass" id="password" class="opacity-50 text-center col-11" required>
                                             <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword"></i>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-5">
-                                            <label class="text-left">CONFIRMAR CONTRASEÑA: </label>
+                                            <span class="text-left">CONFIRMAR CONTRASEÑA: </span>
                                         </div>
                                         <div class="col-7 py-1">
+                                            <label for="password2" class="d-none">password2</label>
                                             <input type="password" name="confirmpass" id="password2" class="opacity-50 text-center col-11" required>
                                             <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword2"></i>
                                         </div>
                                         <div class="row justify-content-end pt-2 col-12">
-                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3" name='enviar'>Guardar cambios</button>
+                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3 text-dark" name='enviar'>Guardar cambios</button>
                                         </div>
                                     </div>
                                 </div>
