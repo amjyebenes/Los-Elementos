@@ -25,7 +25,7 @@ if ($user) {
                     </ul>
                 </div>
                 <div class="col-2 text-center">
-                    <a class="navbar-brand p-0 m-0" href="index.php"><img src="../assets/img/Logo-web00.png" alt="" class="img-fluid" width="60%"></a>
+                    <a class="navbar-brand p-0 m-0" href="index.php"><img src="../assets/img/Logo-web00.png" alt="Eletickets_Logo" class="img-fluid" width="60%"></a>
                 </div>
                 <div class="col-4">
                     <ul class="navbar-nav navbar-botones justify-content-center align-items-center gap-5">
@@ -66,6 +66,7 @@ if ($user) {
                                     else
                                         echo "<i class='fa-solid fa-user text-light'></i>";
                                     ?>
+                                    <span class="sr-only">UserIcon</span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <?php
@@ -98,7 +99,7 @@ if ($user) {
     <nav class="navbar navbar-expand-lg py-2 navbar-dark text-decoration-none text-dark text-uppercase device-padding active d-flex d-lg-none mainNav">
         <div class="container-fluid">
             <a class="navbar-brand logo-mobile" href="index.php">
-                <img src="assets/img/Logo-web00.png" alt="" class="img-fluid">
+                <img src="assets/img/Logo-web00.png" alt="Eletickets_Logo" class="img-fluid">
             </a>
             <button class="navbar-toggler  border-0 p-0 d-flex flex-column" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="bg-dark w-100 rounded-1"></div>
@@ -140,7 +141,12 @@ if ($user) {
 
             ?>
             <li class="nav-item d-flex justify-content-start mt-2 align-items-center gap-3">
-                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                <span>
+                    <a href="cesta.php" class="fw-lighter">
+                        <i class="fa-solid fa-bag-shopping fa-xl text-primary"></i>
+                        <span class="sr-only">Cesta</span>
+                    </a>
+                </span>
 
                 <div class="dropdown dropup">
                     <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
@@ -149,6 +155,7 @@ if ($user) {
                         if (isset($_SESSION['user_image'])) echo '<img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
                         else echo "<i class='fa-solid fa-user text-light'></i>"
                         ?>
+                        <span class="sr-only">UserIcon</span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <?php

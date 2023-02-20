@@ -71,7 +71,7 @@ if ($user) {
                                     else
                                         echo "<i class='fa-solid fa-user text-light'></i>";
                                     ?>
-                                    <span class="d-none">relleno</span>
+                                    <span class="sr-only">UserIcon</span>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <?php

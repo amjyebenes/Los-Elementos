@@ -12,7 +12,7 @@
                 <!-- Footer Contacto-->
                 <div class="col-md-2 col-12 d-flex justify-content-center align-items-center">
                     <span>                        
-                        <p class="m-0"><a class="text-decoration-none text-info" href="juegos.php">Juegos de Eletickets</a></p>
+                        <p class="m-0"><a class="text-decoration-none" href="juegos.php">Juegos de Eletickets</a></p>
                     </span>
                 </div>
 
@@ -34,12 +34,12 @@
                 </div>
                 <div class="col-12 d-flex justify-content-center align-items-center pt-1 gap-5">
                     <span>
-                        <a class="text-decoration-none text-info" href="terminosYcondiciones.php">
+                        <a class="text-decoration-none" href="terminosYcondiciones.php">
                             <p class="m-0">Ley de Términos y Condiciones</p>
                         </a>
                     </span>
                     <span>
-                        <a class="text-decoration-none text-info" href="cookies.php">
+                        <a class="text-decoration-none" href="cookies.php">
                             <p class="m-0">Política de Cookies</p>
                         </a>
                     </span>
