@@ -12,7 +12,7 @@ include("includes/googleconnect.php");
 <!-- TEXT TRACKING FOR IMG HOVER -->
 <div class="text-track position-fixed text-dark opacity-0 ">
     <div class="con-textTrackH w-100 h-100 d-flex justify-content-center align-items-center rounded-circle bg-white">
-        <h1 class="textTrackH h1 p-0 m-0 mt-2"></h1>
+        <h1 class="textTrackH h1 p-0 m-0 mt-2">Ver</h1>
     </div>
 </div>
 <?php include("includes/navigation-home.php");?>
@@ -35,6 +35,7 @@ include("includes/googleconnect.php");
                     <input class="me-md-2 me-0 border-0 border-bottom border-dark w-100 bg-light" type="search" placeholder="Busca tu artista favorito" aria-label="Search">
                     <button class="btn search-icon py-0 px-1 py-md-auto px-md-auto" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="sr-only">Buscar</span>
                     </button>
                 </form>
             </div>
@@ -99,6 +100,7 @@ include("includes/googleconnect.php");
                                     <button class="btn btn-lg btn-video-playpause" type="button" title="Play Video">
                                         <i class="bi bi-play-fill iconoVideoplayer"></i>
                                         <i class="bi bi-pause-fill d-none iconoVideoplayer"></i>
+                                        <span class="sr-only">Play/Pause</span>
                                     </button>
                                     <div class="px-1 w-100">
                                         <div class="progress w-100 rounded-3">
@@ -107,21 +109,30 @@ include("includes/googleconnect.php");
                                     </div>
                                     <button class="btn btn-lg btn-video-pip" title="Play picture in picture">
                                         <i class="bi bi-pip iconoVideoplayer"></i>
+                                        <span class="sr-only">OpenWindow</span>
                                     </button>
                                     <button class="btn btn-lg btn-video-fullscreen">
                                         <i class="bi bi-arrows-fullscreen iconoVideoplayer"></i>
+                                        <span class="sr-only">Fullscreen</span>
                                     </button>
                                     <div class="dropup">
                                         <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume">
                                             <i class="bi bi-volume-mute-fill iconoVideoplayer"></i>
+                                            <span class="sr-only">Mute</span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end dropup-volume">
-                                            <input type="range" class="form-range form-range-volume">
+                                            <form action="" method="post">
+                                                <label for="range">
+                                                    <input type="range" id="range" class="form-range form-range-volume">
+                                                    <span class="sr-only">SelectorRango</span>
+                                                </label>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="dropup">
                                         <button class="btn btn-lg" data-bs-toggle="dropdown" title="More...">
                                             <i class="bi bi-three-dots-vertical iconoVideoplayer"></i>
+                                            <span class="sr-only">Opciones</span>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <a class="dropdown-item" href="terminosYcondiciones.php">
