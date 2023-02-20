@@ -5,7 +5,7 @@
                 <!-- Footer Logo-->
                 <div class="col-md-3 col-8 d-flex justify-content-end justify-content-sm-start align-items-center pb-2 pb-md-0">
                     <div class="w-50">
-                        <a href="index.php"><img src="assets/img/Logo-web00.png" class="img-fluid"></a>
+                        <a href="index.php"><img src="assets/img/Logo-web00.png" alt="Eletickets_Logo" class="img-fluid"></a>
                     </div>
                 </div>
 

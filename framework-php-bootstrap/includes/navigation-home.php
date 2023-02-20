@@ -28,7 +28,7 @@ if ($user) {
                     </ul>
                 </div>
                 <div class="col-2 text-center">
-                    <a class="navbar-brand p-0 m-0" href="index.php"><img src="../assets/img/Logo-web00.png" alt="" class="img-fluid" width="60%"></a>
+                    <a class="navbar-brand p-0 m-0" href="index.php"><img src="../assets/img/Logo-web00.png" alt="Eletickets_Logo" class="img-fluid" width="60%"></a>
                 </div>
                 <div class="col-4">
                     <ul class="navbar-nav navbar-botones justify-content-center align-items-center gap-5">
@@ -103,7 +103,7 @@ if ($user) {
     <nav class="navbar navbar-expand-lg py-2 navbar-dark text-decoration-none text-dark text-uppercase device-padding active d-flex d-lg-none mainNav">
         <div class="container-fluid px-0 px-md-1">
             <a class="navbar-brand logo-mobile" href="index.php">
-                <img src="assets/img/Logo-web00.png" alt="" class="img-fluid">
+                <img src="assets/img/Logo-web00.png" alt="Eletickets_Logo" class="img-fluid">
             </a>
             <button class="navbar-toggler border-0 p-0 d-flex flex-column" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="bg-dark w-100 rounded-1"></div>
@@ -179,5 +179,5 @@ if ($user) {
         <p class="brand-title text-center text-uppercase">The Elements</p>
     </div>
     <!-- INTRO SECTION BACKGROUND -->
-    <img src="assets/img/bg01.jpg" alt="" class="intro-img top-auto img-fluid position-fixed">
+    <img src="assets/img/bg01.jpg" alt="LosELementos_bg" class="intro-img top-auto img-fluid position-fixed">
 </header>

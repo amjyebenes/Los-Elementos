@@ -51,7 +51,7 @@ include("includes/googleconnect.php");
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París 15</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/cruzziConcierto.jpg" alt="" class="conciertos-item-img hover-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/cruzziConcierto.jpg" alt="Concierto_CruzCafuné" class="conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 2-->
@@ -61,7 +61,7 @@ include("includes/googleconnect.php");
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="" class="w-100 conciertos-item-img hover-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="Concierto_Stock" class="w-100 conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
             <!-- Concierto 3-->
@@ -71,7 +71,7 @@ include("includes/googleconnect.php");
                     <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</a>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="" class="w-100 conciertos-item-img hover-img img-fluid"></a>
+                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="Concierto_Stock2" class="w-100 conciertos-item-img hover-img img-fluid"></a>
                 </div>
             </article>
         </div>

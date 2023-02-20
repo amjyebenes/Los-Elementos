@@ -1,5 +1,6 @@
 <title><?php print $PAGE_TITLE;?></title>
-
+<meta http-equiv="Content-Language" content="es">
+<html lang = "es">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="Proyecto de venta de entradas de conciertos" />
