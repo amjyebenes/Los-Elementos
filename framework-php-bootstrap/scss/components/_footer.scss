@@ -2,11 +2,11 @@
 // Footer
 // 
 
-.footer {
+.footer, .footer a {
     /*padding-top: 5rem;
     padding-bottom: 5rem;
     */
-    color: $info;
+    color: lighten($primary, 20%);
 }
 
 .copyright {
