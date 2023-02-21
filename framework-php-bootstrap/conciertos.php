@@ -1,7 +1,7 @@
-<?php 
+<?php
 include("includes/a_config.php");
 include("includes/dbconnection.php");
-include("includes/googleconnect.php"); 
+include("includes/googleconnect.php");
 require_once './back-end/controlador/ControladorEspectaculo.php';
 require_once './back-end/modelo/Espectaculo.php';
 ?>
@@ -30,44 +30,44 @@ require_once './back-end/modelo/Espectaculo.php';
         <section>
             <div class="container-fluid mb-4 d-flex flex-column gap-5">
                 <?php
-                $conciertos = ControladorEspectaculo::getAllConciertos();                
-                foreach ($conciertos as $concierto) {                                         
-                ?>                                
-                <div class="row shadow">
-                    <div class="col-12 col-md-3 p-0">
-                        <div class="shadow">
-                                <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($concierto->imagen); ?>" alt="Title">                                    
+                $conciertos = ControladorEspectaculo::getAllConciertos();
+                foreach ($conciertos as $concierto) {
+                ?>
+                    <div class="row shadow">
+                        <div class="col-12 col-md-3 p-0">
+                            <div class="shadow">
+                                <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($concierto->imagen); ?>" alt="<?php echo $concierto->titulo; ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-7 col-md-5 d-flex flex-column p-3">
-                        <div class="row">
-                            <p class="h1 text-primary "><?php echo $concierto->titulo; ?></p>
-                            <div class="col pb-1">
-                                <!-- Formato 22 · OCT · 2022 -->
-                                <p class="h5"><?php echo $concierto->fecha ?></p>
-                                        <h6 class="text-primary">
-                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                                            <?php echo $concierto->ubicacion; ?>
-                                        </h6>
+                        <div class="col-7 col-md-5 d-flex flex-column p-3">
+                            <div class="row">
+                                <h2 class="h1 text-primary "><?php echo $concierto->titulo; ?></h2>
+                                <div class="col pb-1">
+                                    <!-- Formato 22 · OCT · 2022 -->
+                                    <h3 class="h4"><?php echo $concierto->fecha ?></h3>
+                                    <h3 class="h4 text-primary">
+                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                        <?php echo $concierto->ubicacion; ?>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 d-flex align-items-center align-items-sm-end mb-4">
+                            <div class="col d-flex justify-content-center pb-4">
+                                <form action="seleccionarEntradas.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $concierto->id; ?>">
+                                    <input type="submit" name="consultaConcierto" class="btn btn-primary rounded-3" value="Comprar Entradas">
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-4 d-flex align-items-center align-items-sm-end mb-4">
-                        <div class="col d-flex justify-content-center pb-4">
-                        <form action="seleccionarEntradas.php" method="POST"> 
-                            <input type="hidden" name="id" value="<?php echo $concierto->id; ?>">                                
-                            <input type="submit" name="consultaConcierto" class="btn btn-primary rounded-3" value="Comprar Entradas">
-                        </form>
-                        </div>
-                    </div>
-                </div>
                 <?php
-                    }
+                }
                 ?>
             </div>
         </section>
-        <?php 
-        if(isset($_GET['cesta'])){
+        <?php
+        if (isset($_GET['cesta'])) {
             echo   '<div id="alerta" name="alerta" class="alerta alert bg-primary border border-2 border-dark h6 position-absolute posicionAlertaConcierto translate-middle" role="alert">
                         Añadido a la cesta
                     </div>';
