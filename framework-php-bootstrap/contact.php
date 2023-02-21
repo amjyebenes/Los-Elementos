@@ -66,13 +66,16 @@ require_once './back-end/modelo/Contacto.php';
                         </div> -->
                         </div>
                         <div class="form-group py-2">
-                            <textarea class="form-control my-4 py-5 bg-light opacity-75 resize-none " name="consulta" required placeholder="Escribe tu consulta aqui..."></textarea>
+                        <label for="consulta" class="d-none">Consulta</label>
+                            <textarea id="consulta" class="form-control my-4 py-5 bg-light opacity-75 resize-none " name="consulta" required placeholder="Escribe tu consulta aqui..."></textarea>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember"><label class="form-check-label text-white shadowText">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                            <label for="remember" class="d-none">Remember</label>
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember">
+                            <span class="form-check-label text-dark shadowText">He leído y acepto la Política de privacidad y autorizo el tratamiento de mis datos personales</span>
                         </div>
 
-                        <input type="submit" name="enviar" class="btn btn-outline-secondary rounded-3 text-white px-5 mt-4" placeholder="Enviar">
+                        <input type="submit" name="enviar" class="btn btn-outline-secondary rounded-3 text-dark px-5 mt-4" placeholder="Enviar" value="Enviar">
                     </form>
                 </div>
             </div>

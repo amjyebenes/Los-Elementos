@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal d-flex" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div class="modal d-flex" id="exampleModalToggle">
     <div class="modal-dialog">
         <div class="modal-content bg-primary">
             <div class="modal-body">
@@ -18,57 +18,92 @@
                         <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username"
-                         required value="<?php if (isset($_SESSION['username'])) echo $_SESSION['username']; 
-                                                ?>">
+                        <label for="usuario" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" name="username"
+                            required value="<?php if (isset($_SESSION['username'])) echo $_SESSION['username']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname"
-                         required value="<?php if (isset($_SESSION['firstname'])) echo $_SESSION['firstname']; 
+                        <label for="nombre" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="firstname"
+                            required value="<?php if (isset($_SESSION['firstname'])) echo $_SESSION['firstname']; 
                                                 else if (isset($_SESSION['user_first_name'])) echo $_SESSION['user_first_name'];?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" 
-                        required value="<?php if (isset($_SESSION['lastname1'])) echo $_SESSION['lastname1']; 
-                        else if (isset($_SESSION['user_last_name'])) echo $_SESSION['user_last_name'];?>">
+                        <label for="apellido1" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="apellido1" placeholder="Primer apellido" name="lastname1" 
+                            required value="<?php if (isset($_SESSION['lastname1'])) echo $_SESSION['lastname1']; 
+                            else if (isset($_SESSION['user_last_name'])) echo $_SESSION['user_last_name'];?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="apellido2" placeholder="Segundo apellido" name="lastname2"
-                         required value="<?php if (isset($_SESSION['lastname2'])) echo $_SESSION['lastname2']; ?>">
+                        <label for="apellido2" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="apellido2" placeholder="Segundo apellido" name="lastname2"
+                            required value="<?php if (isset($_SESSION['lastname2'])) echo $_SESSION['lastname2']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" 
-                        required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; 
-                        else if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];?>">
+                        <label for="email" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email" 
+                            required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; 
+                            else if (isset($_SESSION['user_email_address'])) echo $_SESSION['user_email_address'];?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <label for="imagen" class="text-white w-50">Elija una foto de perfil:</label>
-                        <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen">
+                        <label for="" class="text-white w-50">Elija una foto de perfil:</label>
+                        <label for="imagen" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen">
+                        </label>
                     </div> 
                     <div class="mb-1 d-flex gap-2 align-items-center">
-                        <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
-                        <input type="date" class="form-control" id="fechaNac" name="fechaNac" 
-                        required value="<?php if (isset($_SESSION['fechaNac'])) echo $_SESSION['fechaNac']; ?>">
+                        <label for="" class="text-white w-50">Fecha de nacimiento:</label>
+                        <label for="fechaNac" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" 
+                            required value="<?php if (isset($_SESSION['fechaNac'])) echo $_SESSION['fechaNac']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="pais" placeholder="País" name="pais" 
-                        required value="<?php if (isset($_SESSION['pais'])) echo $_SESSION['pais']; ?>">
+                        <label for="pais" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="pais" placeholder="País" name="pais" 
+                            required value="<?php if (isset($_SESSION['pais'])) echo $_SESSION['pais']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="tlfn" placeholder="Teléfono" name="tlfn"
-                         required value="<?php if (isset($_SESSION['tlfn'])) echo $_SESSION['tlfn']; ?>">
+                        <label for="tlfn" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="tlfn" placeholder="Teléfono" name="tlfn"
+                            required value="<?php if (isset($_SESSION['tlfn'])) echo $_SESSION['tlfn']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="text" class="form-control" id="codPos" placeholder="Código Postal" name="CodPos" 
-                        required value="<?php if (isset($_SESSION['CodPos'])) echo $_SESSION['CodPos']; ?>">
+                        <label for="codPos" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="text" class="form-control" id="codPos" placeholder="Código Postal" name="CodPos" 
+                            required value="<?php if (isset($_SESSION['CodPos'])) echo $_SESSION['CodPos']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" 
-                        required value="<?php if (isset($_SESSION['psw'])) echo $_SESSION['psw']; ?>">
+                        <label for="pwd" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="psw" 
+                            required value="<?php if (isset($_SESSION['psw'])) echo $_SESSION['psw']; ?>">
+                        </label>
                     </div>
                     <div class="mb-1">
-                        <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd" 
-                        required value="<?php if (isset($_SESSION['pswd'])) echo $_SESSION['pswd']; ?>">
+                        <label for="pswd" class="w-100">
+                            <span class="sr-only">UserIcon</span>
+                            <input type="password" class="form-control" id="pswd" placeholder="Repetir Contraseña" name="pswd" 
+                            required value="<?php if (isset($_SESSION['pswd'])) echo $_SESSION['pswd']; ?>">
+                        </label>
                     </div>
                     <div class="form-check">
                         <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
