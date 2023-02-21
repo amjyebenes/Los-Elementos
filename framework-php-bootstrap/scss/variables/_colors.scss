@@ -5,11 +5,11 @@
 //- Variables propias
 $mynavbg: rgba(252, 236, 221, 0.8);
 $my-mobile-nav-bg: #fcecddd4;
-$footer: #FA6400;
+$primario: #FF6701;
 
 //- Override bootstrap colors
-// $primary: #FF6701;
-$primary: #B84900;
+$primary: darken($primario, 10%);
+// $primary: #B84900;
 $secondary: #FEA82F;
 $info: #FA6400;
 $light: #FCECDD;
