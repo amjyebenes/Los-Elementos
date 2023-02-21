@@ -98,11 +98,11 @@ if (isset($_POST['iniciar'])) {
                         </div>
                         <div class="d-flex flex-column gap-2 align-items-center d-md-block mb-3 mb-md-0">
                             <div class="form-check">
-                                <label class="form-check-label text-white">
+                                <label class="form-check-label text-black">
                                     <input class="form-check-input" type="checkbox" name="remember"> Recuérdame
                                 </label>
                             </div>
-                            <button type="submit" name="iniciar" class="btn btn-outline-secondary text-white rounded-3">Iniciar Sesión</button>
+                            <button type="submit" name="iniciar" class="btn btn-outline-secondary text-black rounded-3">Iniciar Sesión</button>
                         </div>
 
                         <div class="b-line w-100 bg-light opacity-25 my-2"></div>
@@ -110,14 +110,14 @@ if (isset($_POST['iniciar'])) {
 
                         <div class="mb-5 row justify-content-between align-items-center flex-column flex-md-row">
                             <div class="col-12 col-md-5 text-center text-md-start">
-                                <p type="button" class="text-white mb-1">¿Olvidaste tu contraseña?</p>
-                                <label class="text-white">¿No tienes cuenta?
-                                    <a type="button" class="text-white text-decoration-underline" href="registro.php">Regístrate</a>
+                                <p type="button" class="text-black mb-1">¿Olvidaste tu contraseña?</p>
+                                <p class="text-black">¿No tienes cuenta?
+                                    <a type="button" class="text-black text-decoration-underline" href="registro.php">Regístrate</a>
                             </div>
                             <?php
                             echo '<div class="col-10 col-md-5 mt-2 mt-md-0">' . $login_button . '</div>';
                             ?>
-                            </label>
+                            </p>
                         </div>
                     </form>
                 </div>

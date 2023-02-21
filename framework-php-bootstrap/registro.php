@@ -80,11 +80,12 @@ include("includes/googleconnect.php");
                         </div>
 
                         <div class="form-check mb-3">
-                            
+                            <label for="check">
                             <input class="form-check-input" type="checkbox" name="remember" id="check">
                             <p class="form-check-label text-black shadowText">He leído y acepto la
                                 <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales
                             </p>
+                            </label>
                         </div>
 
                         <div>
