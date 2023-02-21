@@ -13,12 +13,12 @@ include("includes/googleconnect.php");
         <?php include("includes/navigation.php");?>
             <main class="bs-primary py-5 device-padding mt-5">
                 <section class="position-relative">
-                    <h1 class="text-left text-black fw-light">Términos y Condiciones</h1>
+                    <h1 class="h1 text-left text-black fw-light">Términos y Condiciones</h1>
                 </section>
 
                 <section>
                     <div class="container">                        
-                        <h3 class="mt-3">I. INFORMACIÓN GENERAL</h3>
+                        <h2 class="h2 mt-3">I. INFORMACIÓN GENERAL</h2>
 
                         <p>En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de Servicios de la Sociedad
                         de la Información y el Comercio Electrónico (LSSI-CE) de 11 de julio, se facilitan a continuación los
@@ -243,12 +243,12 @@ include("includes/googleconnect.php");
                             <li>Imágenes - CC-BY-SA license - <a class="fw-bold" href="https://opengameart.org/content/pong-graphics">Assets Pong - Nicolás A. Ortega</a></li>
                             <li>Audio - Licencia publica de Eclipse - <a class="fw-bold" href="https://code.google.com/archive/p/py-pong/">Assets - Pygame Pong</a></li>
                             <li>Video - Licencia gratuita - <a class="fw-bold" href="https://es.vecteezy.com/video/2018623-luces-de-neon-por-borde-girando-a-la-izquierda">luces de neón por borde girando a la izquierda Vídeos de stocko por Vecteezy</a></li>
-                            <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
+                            <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid" alt="ccbysa01"></li>
                         </ul>   
                         
                         <h5>Licencia de los recursos propios</h5>
                         <ul>
-                            <li>El contenido de Eletickets están publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid"></li>
+                            <li>El contenido de Eletickets están publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid" alt="ccbysa02"></li>
                         </ul>   
                     </div>
                 </section>
