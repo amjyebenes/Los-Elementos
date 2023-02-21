@@ -39,9 +39,9 @@ include("includes/googleconnect.php");
 
                         <p>Email de contacto: <span class="fw-bold">info@eletickets.com</span></p>
 
-                        <h3>II. TÉRMINOS Y CONDICIONES GENERALES DE USO</h3>
+                        <h2 class="h2"> II. TÉRMINOS Y CONDICIONES GENERALES DE USO</h2>
 
-                        <h4>El objeto de las condiciones: El Sitio Web</h4> 
+                        <h3 class="h3">El objeto de las condiciones: El Sitio Web</h3> 
 
                         <p>El objeto de las presentes Condiciones Generales de Uso (en adelante, Condiciones)
                         es regular el acceso y la utilización del Sitio Web. A los efectos de las presentes Condiciones se entenderá
@@ -71,7 +71,7 @@ include("includes/googleconnect.php");
                         
                         <p>La utilización de los Contenidos no requiere previa suscripción o registro alguno.</p>
                         
-                        <h4>El Usuario</h4>
+                        <h3 class="h3">El Usuario</h3>
                         <p>El acceso, la navegación y uso del Sitio Web, así como por los espacios habilitados para interactuar entre los Usuarios,
                         y el Usuario y <span class="fw-bold">EleTickets</span>, como los comentarios y/o espacios de blogging, confiere la condición
                         de Usuario, por lo que se aceptan, desde que se inicia la navegación por el Sitio Web, todas las Condiciones aquí establecidas,
@@ -115,7 +115,7 @@ include("includes/googleconnect.php");
                         y decide acceder y/o navegar en el Sitio Web lo hará bajo su propia responsabilidad, deberá asegurarse de que tal acceso y navegación cumple con la legislación
                         local que le es aplicable, no asumiendo <span class="fw-bold">EleTickets</span> responsabilidad alguna que se pueda derivar de dicho acceso.</p>
                         
-                        <h3>III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD</h3>
+                        <h2 class="h2">III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD</h2>
                         
                         <p><span class="fw-bold">EleTickets</span> no garantiza la continuidad, disponibilidad y utilidad del Sitio Web, ni de los Contenidos o Servicios.
                         <span class="fw-bold">EleTickets</span> hará todo lo posible por el buen funcionamiento del Sitio Web, sin embargo, no se responsabiliza ni garantiza
@@ -129,7 +129,7 @@ include("includes/googleconnect.php");
                         <p><span class="fw-bold">EleTickets</span> tampoco se hace responsable de los daños que pudiesen ocasionarse a los usuarios por un uso inadecuado de este Sitio Web.
                         En particular, no se hace responsable en modo alguno de las caídas, interrupciones, falta o defecto de las telecomunicaciones que pudieran ocurrir.</p>
                         
-                        <h3>IV. POLÍTICA DE ENLACES</h3>
+                        <h2 class="h2">IV. POLÍTICA DE ENLACES</h2>
                         
                         <p>Se informa que el Sitio Web de <span class="fw-bold">EleTickets</span> pone o puede poner a disposición de los Usuarios medios de enlace (como, entre otros, links, banners,
                         botones), directorios y motores de búsqueda que permiten a los Usuarios acceder a sitios web pertenecientes y/o gestionados por terceros.</p>
@@ -164,7 +164,7 @@ include("includes/googleconnect.php");
                         <p>El establecimiento del hipervínculo no implicará la existencia de relaciones entre <span class="fw-bold">EleTickets</span> y el titular del sitio web desde el cual se realice, ni el conocimiento
                         y aceptación de <span class="fw-bold">EleTickets</span> de los contenidos, servicios y/o actividades ofrecidas en dicho sitio web, y viceversa.</p>
                         
-                        <h3>V. PROPIEDAD INTELECTUAL E INDUSTRIAL</h3> 
+                        <h2 class="h2">V. PROPIEDAD INTELECTUAL E INDUSTRIAL</h2> 
                         
                         <p><span class="fw-bold">EleTickets</span> por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos
                         en el mismo (a título enunciativo y no exhaustivo, imágenes, sonido, audio, vídeo, software o textos, marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados,
@@ -181,7 +181,7 @@ include("includes/googleconnect.php");
                         <p>En caso de que el Usuario o tercero considere que cualquiera de los Contenidos del Sitio Web suponga una violación de los derechos de protección de la propiedad intelectual, deberá comunicarlo inmediatamente a
                         <span class="fw-bold">EleTickets</span> a través de los datos de contacto del apartado de INFORMACIÓN GENERAL de este Aviso Legal y Condiciones Generales de Uso.</p>
                             
-                        <h3>VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h3>
+                        <h2 class="h2">VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h3>
                         
                         <p><span class="fw-bold">EleTickets</span> se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes
                         Condiciones.</p>
@@ -192,9 +192,9 @@ include("includes/googleconnect.php");
                         <p>Este documento de Aviso Legal y Condiciones Generales de uso del sitio web ha sido creado mediante el generador de <a class="text-body text-decoration-none" href="https://textos-legales.edgartamarit.com/">plantilla de aviso legal y
                         condiciones de uso</a> online el día 15/01/2023.</p> 
 
-                        <h3>VII. Licencias de Contenido Multimedia</h3>
+                        <h2 class="h2">VII. Licencias de Contenido Multimedia</h2>
                         <p>En este apartado se nombrará de cada página el contenido multimedia de esta y se indicará el tipo de licencia que tiene dicho contenido y se nombrará su autor:</p>
-                        <h5>Página Principal(Home)</h5>
+                        <h3 class="h3">Página Principal(Home)</h3>
                         <ul>
                             <li>Imágenes: Licencia gratuita - Pexel
                                 <ul>
@@ -206,7 +206,7 @@ include("includes/googleconnect.php");
                             </li>                                                
                         </ul>
 
-                        <h5>Página Conciertos & Página Seleccionar Entradas & Página Cesta</h5>
+                        <h3 class="h3">Página Conciertos & Página Seleccionar Entradas & Página Cesta</h3>
                         <ul>
                             <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/cruzziConcierto.jpg">Cruz Cafuné</a></li>
                             <li>Imagen - Licencia Propia - <a class="fw-bold" href="http://localhost/assets/img/CruzziDarkBG_Agua2.jpg">Cruz Cafuné</a></li>
@@ -215,7 +215,7 @@ include("includes/googleconnect.php");
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Boris_brejcha_2017_03_12.jpg">Boris Brejcha</a></li>
                         </ul>    
 
-                        <h5>Página Eventos & Página Seleccionar Butacas & Página Cesta</h5>
+                        <h3 class="h3">Página Eventos & Página Seleccionar Butacas & Página Cesta</h3>
                         <ul>
                             <li>Imagen - CC-BY license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Andrea_Levy_descubre_una_placa_que_homenajea_a_Antonio_D%C3%ADaz,_El_Mago_Pop,_como_el_mago_europeo_m%C3%A1s_taquillero_del_mundo_02.jpg">Mago Pop</a></li>
                             <li>Imagen - CC-BY-SA license - <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Tamariz.jpg">Juan Tamariz</a></li>
@@ -223,22 +223,22 @@ include("includes/googleconnect.php");
                             <li>Imagen - CC-BY-SA license - Carlos Delgado <a class="fw-bold" href="https://commons.wikimedia.org/wiki/File:Teatro_Lope_de_Vega_Baja_Rey_Leon.jpg">Rey León</a></li>
                         </ul>  
                         
-                        <h5>Página Salas</h5>
+                        <h3 class="h3">Página Salas</h3>
                         <ul>
                             <li>Imágenes Mapas Google - <a class="fw-bold" href="https://www.google.com/intl/es/help/terms_maps/">Términos Legales Google Maps</a></li>                        
                         </ul>  
 
-                        <h5>Página Contacto</h5>
+                        <h3 class="h3">Página Contacto</h3>
                         <ul>
                             <li>Imagen: Licencia gratuita - Pexel: <a class="fw-bold" href="https://www.pexels.com/es-es/foto/multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche-196652/">Multitud-delante-de-personas-tocando-instrumentos-musicales-durante-la-noche</a></li>
                         </ul>
 
-                        <h5>Páginas Login & Registro</h5>
+                        <h3 class="h3">Páginas Login & Registro</h3>
                         <ul>
                             <li>Imagen: Licencia gratuita - Pexel: <a class="fw-bold" href="https://www.pexels.com/es-es/foto/personas-reunidas-en-concierto-durante-la-noche-3696395/">Personas-reunidas-en-concierto-durante-la-noche</a></li>
                         </ul>
 
-                        <h5>Página Juego Pong Adrián</h5>
+                        <h3 class="h3">Página Juego Pong Adrián</h3>
                         <ul>
                             <li>Imágenes - CC-BY-SA license - <a class="fw-bold" href="https://opengameart.org/content/pong-graphics">Assets Pong - Nicolás A. Ortega</a></li>
                             <li>Audio - Licencia publica de Eclipse - <a class="fw-bold" href="https://code.google.com/archive/p/py-pong/">Assets - Pygame Pong</a></li>
@@ -246,7 +246,7 @@ include("includes/googleconnect.php");
                             <li>Este juego está publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid" alt="ccbysa01"></li>
                         </ul>   
                         
-                        <h5>Licencia de los recursos propios</h5>
+                        <h3 class="h3">Licencia de los recursos propios</h3>
                         <ul>
                             <li>El contenido de Eletickets están publicado bajo la licencia: Reconocimiento - Compartir Igual (by-sa) <img src="assets/img/CreativeCommonsBySa.png" class="img-fluid" alt="ccbysa02"></li>
                         </ul>   
