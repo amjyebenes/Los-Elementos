@@ -72,10 +72,10 @@ require_once './back-end/modelo/Contacto.php';
                         <div class="form-check">
                             <label for="remember" class="d-none">Remember</label>
                             <input class="form-check-input" type="checkbox" name="remember" id="remember">
-                            <span class="form-check-label text-white shadowText">He leído y acepto la Política de privacidad y autorizo el tratamiento de mis datos personales</span>
+                            <span class="form-check-label text-dark shadowText">He leído y acepto la Política de privacidad y autorizo el tratamiento de mis datos personales</span>
                         </div>
 
-                        <input type="submit" name="enviar" class="btn btn-outline-secondary rounded-3 text-white px-5 mt-4" placeholder="Enviar" value="Enviar">
+                        <input type="submit" name="enviar" class="btn btn-outline-secondary rounded-3 text-dark px-5 mt-4" placeholder="Enviar" value="Enviar">
                     </form>
                 </div>
             </div>

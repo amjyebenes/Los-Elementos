@@ -139,7 +139,7 @@ $compras = ControladorCompras::getByUserId($user->id);
                                     <form action="" method="POST" enctype="multipart/form-data" class="pb-3">
                                         <div class="input-group">
                                             <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenperfil" required>
-                                            <button class="btn btn-outline-secondary" type="submit" name="actualizarfoto" id="inputGroupFileAddon04">Guardar</button>
+                                            <button class="btn btn-outline-secondary text-dark" type="submit" name="actualizarfoto" id="inputGroupFileAddon04">Guardar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -180,7 +180,7 @@ $compras = ControladorCompras::getByUserId($user->id);
                                             <i class="bi bi-eye-slash col-1 ms-2" id="togglePassword2"></i>
                                         </div>
                                         <div class="row justify-content-end pt-2 col-12">
-                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3 " name='enviar'>Guardar cambios</button>
+                                            <button type="submit" class="btn btn-primary rounded-5 col col-sm-10 col-xl-3" name='enviar'>Guardar cambios</button>
                                         </div>
                                     </div>
                                 </div>
