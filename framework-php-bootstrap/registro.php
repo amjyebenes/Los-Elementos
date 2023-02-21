@@ -92,7 +92,7 @@ include("includes/googleconnect.php");
                                 <?php if (isset($_GET["captchaerror"]))
                                     echo "<p class='text-white'>Captcha erróneo. Vuelva a introducirlo</p>";
                                 else
-                                    echo "<p class='text-white'>Introduce el captcha</p>";
+                                    echo "<p class='text-black'>Introduce las letras que indica el cuadro</p>";
                                 ?>
                             </label>
                             <br>
