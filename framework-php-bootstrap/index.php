@@ -19,7 +19,7 @@ include("includes/googleconnect.php");
 <!-- MAIN CONTENT -->
 <main>
     <?php
-    if (($login_button == '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
+    if (($login_button != '') && (!isset($_SESSION['iduser'])) && (!isset($_SESSION['insertado']))){
         include("includes/registermodal.php");
     }
     ?>
@@ -44,38 +44,38 @@ include("includes/googleconnect.php");
 
     <!-- SECCION 2 | CONCIERTOS MÁS PROXIMOS/FAMOSOS -->
     <section class="container-fluid conciertos page-section device-padding section-padding home bg-light position-relative">
-        <div class="row justify-content-center g-4 g-md-auto">
+        <a  href="seleccionarentradas.php" class="row justify-content-center g-4 g-md-auto">
             <!-- Concierto 1-->
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark d-none d-md-block"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París 15</a>
+                    <span class="mb-1 w-100 text-center">Cruz Cafuné - Málaga · Sala París 15</span>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/cruzziConcierto.jpg" alt="Concierto_CruzCafuné" class="conciertos-item-img hover-img img-fluid"></a>
+                    <span><img src="assets/img/cruzziConcierto.jpg" alt="Concierto_CruzCafuné" class="conciertos-item-img hover-img img-fluid"></span>
                 </div>
             </article>
             <!-- Concierto 2-->
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</a>
+                    <span class="mb-1 w-100 text-center">SFDK - Madrid · Wizink Center</span>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="Concierto_Stock" class="w-100 conciertos-item-img hover-img img-fluid"></a>
+                    <span><img src="assets/img/pexels-wendy-wei-1916817.jpg" alt="Concierto_Stock" class="w-100 conciertos-item-img hover-img img-fluid"></span>
                 </div>
             </article>
             <!-- Concierto 3-->
             <article class="col-md-4 col-12 conciertos-item">
                 <div class="b-line w-100 bg-dark"></div>
                 <div class="conciertos-item-title mt-1 d-flex justify-content-between w-100">
-                    <a href="seleccionarEntradas.php" class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</a>
+                    <span class="mb-1 w-100 text-center">Boris Brejcha - Sevilla · elRow</span>
                 </div>
                 <div class="conciertos-item-img-con position-relative overflow-hidden">
-                    <a href="seleccionarEntradas.php"><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="Concierto_Stock2" class="w-100 conciertos-item-img hover-img img-fluid"></a>
+                    <span><img src="assets/img/pexels-wendy-wei-1916818.jpg" alt="Concierto_Stock2" class="w-100 conciertos-item-img hover-img img-fluid"></span>
                 </div>
             </article>
-        </div>
+        </a>
     </section>
 
     <!-- SECCION 3 | EVENTO PRÓXIMO -->

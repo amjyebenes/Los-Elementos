@@ -11,11 +11,11 @@
                         <i class="fa-solid fa-user-plus fa-4x text-info"></i>
                     </div>
                     <div class="d-flex justify-content-center mb-1">
-                        <label class="text-white h5">Rellene el formulario para finalizar su registro en nuestra web</label>
+                        <h1 class="text-white h5">Rellene el formulario para finalizar su registro en nuestra web</h1>
                     </div>
                     <div class="d-flex align-items-center gap-2 mb-3">
                         <i class="fa-regular fa-envelope text-white"></i>
-                        <label class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</label>
+                        <p class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</p>
                     </div>
                     <div class="mb-1">
                         <label for="usuario" class="w-100">
@@ -56,14 +56,14 @@
                         </label>
                     </div>
                     <div class="mb-1">
-                        <label for="" class="text-white w-50">Elija una foto de perfil:</label>
+                        <p class="text-white w-50">Elija una foto de perfil:</p>
                         <label for="imagen" class="w-100">
                             <span class="sr-only">UserIcon</span>
                             <input type="file" class="form-control" id="imagen" placeholder="Repetir Contraseña" name="imagen">
                         </label>
                     </div> 
                     <div class="mb-1 d-flex gap-2 align-items-center">
-                        <label for="" class="text-white w-50">Fecha de nacimiento:</label>
+                        <p class="text-white w-50">Fecha de nacimiento:</p>
                         <label for="fechaNac" class="w-100">
                             <span class="sr-only">UserIcon</span>
                             <input type="date" class="form-control" id="fechaNac" name="fechaNac" 
@@ -106,8 +106,8 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
-                        <input class="form-check-input" type="checkbox" name="remember" required>
+                        <label for="checkbox" class="form-check-label text-black">He leído y acepto la <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales</label>
+                        <input class="form-check-input" type="checkbox" id="checkbox" name="remember" required>
                     </div>
                     <div>
                         <label for="captcha">
@@ -124,9 +124,9 @@
                         <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
                     </div>
                     <div class="modal-footer d-flex justify-content-between align-items-center">
-                        <label class="text-white">¿Ya estás registrada/o?
+                        <span class="text-white">¿Ya estás registrada/o?
                             <a type="submit" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
-                        </label>
+                        </span>
                         <button type="submit" class="btn btn-secondary rounded-2">Aceptar</button>
                     </div>
                 </form>
@@ -142,10 +142,10 @@
         modal.classList.remove('d-flex');
     });
 
-    let trigger = document.querySelector('#modalTrigger');
-    trigger.addEventListener('click', () => {
-        modal.classList.add('d-flex');
-    });
+    // let trigger = document.querySelector('#modalTrigger');
+    // trigger.addEventListener('click', () => {
+    //     modal.classList.add('d-flex');
+    // });
 </script>
 <script>
     function refreshCaptcha() {
