@@ -60,7 +60,7 @@ if (isset($_POST['remove']) && isset($_SESSION['cesta'])) {
                                                 <h2 class="h2"><?php echo ($espec->precio * $item[1])." €" ?></h2>
                                                 <form action="" method="post">
                                                     <input type="hidden" name="toRemove" value="<?php echo $item[0]; ?>">
-                                                    <button type="submit" name="remove" class="btn btn-secondary rounded-3">Eliminar</button>
+                                                    <button type="submit" name="remove" class="btn btn-primary rounded-3">Eliminar</button>
                                                 </form>
                                             </div>
                                         </div>    
