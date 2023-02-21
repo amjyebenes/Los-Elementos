@@ -18,7 +18,7 @@ require_once './back-end/modelo/Espectaculo.php';
     <main class="device-padding">
         <!-- Portfolio Section-->
         <section class="position-relative pt-md-5 mt-md-5 portfolio mb-0" id="portfolio">
-            <h1 class="text-left text-uppercase text-black fw-light m-0 pt-3">Eventos</h1>
+            <h1 class="h1 text-left text-uppercase text-black fw-light m-0 pt-3">Eventos</h1>
             <div class="b-line w-100 bg-dark my-4"></div>
         </section>
 
@@ -31,19 +31,19 @@ require_once './back-end/modelo/Espectaculo.php';
                 <div class="row shadow">
                             <div class="col-12 col-md-3 p-0">
                                 <div class="shadow">
-                                        <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($evento->imagen); ?>" alt="Title">                                    
+                                        <img class="shadow-lg card-img" src="data:jpg;base64,<?php echo base64_encode($evento->imagen); ?>" alt="<?php echo $evento->titulo; ?>">                                    
                                 </div>
                             </div>
                             <div class="col-7 col-md-5 d-flex flex-column p-3">
                                 <div class="row">
-                                    <p class="h1 text-primary "><?php echo $evento->titulo; ?></p>
+                                    <h2 class="h1 text-primary "><?php echo $evento->titulo; ?></h2>
                                     <div class="col pb-1">
                                         <!-- Formato 22 · OCT · 2022 -->
-                                        <p class="h5"><?php echo $evento->fecha ?></p>
-                                        <h6 class="text-primary">
+                                        <h3 class="h4"><?php echo $evento->fecha ?></h3>
+                                        <h3 class="h4 text-primary">
                                             <i class="fa fa-location-arrow" aria-hidden="true"></i>
                                             <?php echo $evento->ubicacion; ?>
-                                        </h6>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>

@@ -53,11 +53,11 @@ if (isset($_POST['remove']) && isset($_SESSION['cesta'])) {
                                     <div class="col-md-10">
                                         <div class="row h-100 fw-bold fs-5 align-items-center shadow p-3">
                                             <div class="col-md-10 pt-3 pt-md-0 ps-md-5">
-                                                <p class="pb-md-5 pt-0"><?php echo $espec->fecha; ?></p>
-                                                <p><?php echo $item[1]." x ".$espec->titulo; ?></p>
+                                                <h2 class="pb-md-5 pt-0 h2"><?php echo $espec->fecha; ?></h2>
+                                                <h class="h2"><?php echo $item[1]." x ".$espec->titulo; ?></h2>
                                             </div>
                                             <div class="col-md-2 d-flex flex-column align-items-center justify-content-center">
-                                                <p class=""><?php echo ($espec->precio * $item[1])." €" ?></p>
+                                                <h2 class="h2"><?php echo ($espec->precio * $item[1])." €" ?></h2>
                                                 <form action="" method="post">
                                                     <input type="hidden" name="toRemove" value="<?php echo $item[0]; ?>">
                                                     <button type="submit" name="remove" class="btn btn-secondary rounded-3">Eliminar</button>
