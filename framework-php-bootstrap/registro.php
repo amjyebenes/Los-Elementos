@@ -17,18 +17,18 @@ include("includes/googleconnect.php");
         <section class="position-relative py-5">
             <!-- Creo el div donde meteremos el contenedor que almacena el formulario-->
             <div class="container d-flex justify-content-center pt-5">
-                <div class="row col-md-6 col-12 text-white">
+                <div class="row col-md-6 col-12 text-black">
                     <form action="/register.php" method="POST" class="formulario-contacto" enctype="multipart/form-data">
                         <div class="d-flex justify-content-center mt-5 mb-5">
                             <i class="fa-solid fa-user-plus fa-6x text-info"></i>
                         </div>
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <i class="fa-solid fa-ticket text-white"></i>
-                            <p class="text-white">Consigue entradas antes que nadie en nuestra preventa</p>
+                            <i class="fa-solid fa-ticket text-black"></i>
+                            <p class="text-black">Consigue entradas antes que nadie en nuestra preventa</p>
                         </div>
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <i class="fa-regular fa-envelope text-white"></i>
-                            <p class="text-white">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</p>
+                            <i class="fa-regular fa-envelope text-black"></i>
+                            <p class="text-black">Recibe nuestra newsletter y correos accerca de nuestros últimos festivales y eventos</p>
                         </div>
                         <div class="mb-3">
                             <label for="username">Nombre Usuario</label>
@@ -47,7 +47,7 @@ include("includes/googleconnect.php");
                             <input type="text" class="form-control" id="apellido2" name="apellido2" title="Debe de completar este campo" required value="<?php if (isset($_SESSION['lastname2'])) echo $_SESSION['lastname2']; ?>">
                         </div>
                         <div class="mb-3">
-                            <label for="imagen" class="text-white w-50">Elija una foto de perfil:</label>
+                            <label for="imagen" class="text-black w-50">Elija una foto de perfil:</label>
                             <input type="file" class="form-control" id="imagen" name="imagen" value="<?php if (isset($_SESSION['imagen'])) echo $_SESSION['imagen']; ?>">
                         </div>
                         <div class="mb-3">
@@ -55,7 +55,7 @@ include("includes/googleconnect.php");
                             <input type="email" class="form-control" id="email" placeholder="Email" name="email" title="Formato de email incorrecto" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; ?>">
                         </div>
                         <div class="mb-3 d-flex gap-2 align-items-center">
-                            <label for="fechaNac" class="text-white w-50">Fecha de nacimiento:</label>
+                            <label for="fechaNac" class="text-black w-50">Fecha de nacimiento:</label>
                             <input type="date" class="form-control" id="fechaNac" name="fechaNac" required value="<?php if (isset($_SESSION['fechaNac'])) echo $_SESSION['fechaNac']; ?>">
                         </div>
                         <div class="mb-3">
@@ -80,9 +80,10 @@ include("includes/googleconnect.php");
                         </div>
 
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" name="remember">
-                            <p class="form-check-label text-white shadowText">He leído y acepto la
-                                <a href="terminosYcondiciones.php" class="text-decoration-underline text-white">Política de privacidad</a> y autorizo el tratamiento de mis datos personales
+                            
+                            <input class="form-check-input" type="checkbox" name="remember" id="check">
+                            <p class="form-check-label text-black shadowText">He leído y acepto la
+                                <a href="terminosYcondiciones.php" class="text-decoration-underline text-black">Política de privacidad</a> y autorizo el tratamiento de mis datos personales
                             </p>
                         </div>
 
@@ -91,7 +92,7 @@ include("includes/googleconnect.php");
                                 <?php if (isset($_GET["captchaerror"]))
                                     echo "<p class='text-white'>Captcha erróneo. Vuelva a introducirlo</p>";
                                 else
-                                    echo "<p class='text-white'>Introduce el captcha</p>";
+                                    echo "<p class='text-black'>Introduce las letras que indica el cuadro</p>";
                                 ?>
                             </label>
                             <br>
@@ -104,15 +105,15 @@ include("includes/googleconnect.php");
                         </div><br>
 
 
-                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-white">Regístrate</button>
+                        <button type="submit" class="btn btn-outline-secondary rounded-3 text-black">Regístrate</button>
 
                         <div class="b-line w-100 bg-light opacity-25 mt-3"></div>
                         <div class="nav navbar container">
                             <div class="nav-line position-relative bottom-0 bg-white"></div>
                         </div>
                         <div class="mb-3">
-                            <p class="text-white">¿Ya estás registrada/o?
-                                <a type="button" class="text-white text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
+                            <p class="text-black">¿Ya estás registrada/o?
+                                <a type="button" class="text-black text-decoration-underline" href="login.php" target="">Inicia Sesión</a>
                             </p>
                         </div>
                     </form>
