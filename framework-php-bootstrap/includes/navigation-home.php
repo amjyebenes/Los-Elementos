@@ -187,8 +187,8 @@ if ($user) {
 
     <!-- THE ELEMENS TITLE -->
     <div class="main-title text-light position-relative w-100 start-50 top-50 d-flex flex-column justify-content-center">
-        <p class="brand-title from text-center mb-md-3 mb-0 text-uppercase">From</p>
-        <p class="brand-title text-center text-uppercase">The Elements</p>
+        <h1 class="brand-title from text-center mb-md-3 mb-0 text-uppercase">From</h1>
+        <h1 class="brand-title text-center text-uppercase">The Elements</h1>
     </div>
     <!-- INTRO SECTION BACKGROUND -->
     <img src="assets/img/bg01.jpg" alt="LosELementos_bg" class="intro-img top-auto img-fluid position-fixed">
