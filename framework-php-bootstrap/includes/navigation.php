@@ -49,7 +49,12 @@ if ($user) {
                             <?php
                             if ($login_button == '' || isset($_SESSION['username'])) {
                             ?>
-                                <span><a href="cesta.php" class="fw-lighter"><i class="fa-solid fa-bag-shopping fa-xl text-primary"></i></i></a></span>
+                                <span>
+                                    <a href="cesta.php" class="fw-lighter">
+                                        <i class="fa-solid fa-bag-shopping fa-xl text-primary"></i>
+                                        <span class="sr-only">UserIcon</span>
+                                    </a>
+                                </span>
                             <?php
                             }
                             ?>
@@ -58,10 +63,10 @@ if ($user) {
                                     else echo "py-0 px-0"; ?>" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php
                                     if ($foto)
-                                        echo '<div class="nav-item"><img src=' . $foto . ' class="img-fluid rounded-circle overflow-hidden"><div>';
+                                        echo '<div class="nav-item"><img src=' . $foto . ' class="img-fluid rounded-circle overflow-hidden" alt="user_img"><div>';
                                     else if (isset($_SESSION['user_image']))
                                         echo '<div class="nav-item text-capitalize">
-                                                <img width="50" height="50" src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class=" img-fluid" />
+                                                <img width="50" height="50" src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class=" img-fluid" alt="user_img" />
                                               </div>';
                                     else
                                         echo "<i class='fa-solid fa-user text-light'></i>";
@@ -152,7 +157,7 @@ if ($user) {
                     <button class="btn rounded-5 <?php if (!isset($_SESSION['user_image'])) echo "btn-primary p-2";
                                                     else echo "py-1 px-0"; ?> dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php
-                        if (isset($_SESSION['user_image'])) echo '<img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" />';
+                        if (isset($_SESSION['user_image'])) echo '<img src="' . $_SESSION["user_image"] . '" referrerpolicy="no-referrer" class="rounded-circle w-50 img-fluid" alt="user_img" />';
                         else echo "<i class='fa-solid fa-user text-light'></i>"
                         ?>
                         <span class="sr-only">UserIcon</span>
