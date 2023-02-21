@@ -81,12 +81,14 @@ if (isset($_POST['iniciar'])) {
                             ?>
                         </div>
                         <div class="mb-3 ">
+                            <label for="email">Email</label>
                             <input type="email" class="form-control opacity-75" id="email" placeholder="Email" name="email" value="<?php
                                                                                                                                     if (!empty($_COOKIE['correologin']))
                                                                                                                                         echo $_COOKIE['correologin'];
                                                                                                                                     ?>">
                         </div>
                         <div class="mb-3">
+                            <label for="pass">Contraseña</label>
                             <input type="password" class="form-control opacity-75" id="pass" placeholder="Contraseña" name="pass" value="<?php
                                                                                                                                             if (!empty($_COOKIE['passlogin']))
                                                                                                                                                 echo $_COOKIE['passlogin'];

@@ -1,7 +1,7 @@
-<?php 
+<?php
 include("includes/a_config.php");
 include("includes/dbconnection.php");
-include("includes/googleconnect.php"); 
+include("includes/googleconnect.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,29 +32,28 @@ include("includes/googleconnect.php");
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-5 col-12 bg-white shadow">
                         <div class="row">
-                            <a href="https://paris15.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala París 15</a> 
-
+                            <h1><a href="https://paris15.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala París 15</a></h1>
+                            
                             <div class="col">
-                                <p class="h5 tituloSala">Información: </p>
-                                <h6 class="text-primary">
+                                <h2 class="h3 tituloSala">Información: </h1>
+                                <h3 class="h4 text-primary">
                                     <i class="fa-solid fa-location-dot"></i>
                                     C/La Orotava 25-27
-                                </h6>
-                                <h6 class="text-primary">
+                                </h3>
+                                <h4 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     info@paris15.es
-                                </h6>
-                                <h6 class="text-primary">
+                                </h4>
+                                <h4 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     952845623
-                                </h6>
+                                </h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/SalaParis.jpg" alt="Title" title="Foto al mapa">
-
+                            <img class="shadow-lg card-img " src="./assets/img/SalaParis.jpg" alt="Sala París" title="Localización de la Sala">
                         </div>
                     </div>
                 </div>
@@ -62,28 +61,28 @@ include("includes/googleconnect.php");
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-5 col-12 bg-white shadow">
                         <div class="row">
-                            <a href="https://www.wizinkcenter.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Wizink Center</a>
+                          <h1><a href="https://www.wizinkcenter.es/" class="fs-2 text fw-bold text-decoration-none text-primary">Wizink Center</a> </h1>
                             <div class="col">
-                                <p class="h5 tituloSala">Información: </p>
-                                <h6 class="text-primary">
+                                <h2 class="h3 tituloSala">Información: </h1>
+                                <h3 class="h4 text-primary">
                                     <i class="fa-solid fa-location-dot"></i>
                                     Av. Felipe II, s/n. 28009 MADRID
-                                </h6>
-                                <h6 class="text-primary">
+                                </h3>
+                                <h3 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     hablemos@WiZinkCenter.es
-                                </h6>
-                                <h6 class="text-primary">
+                                </h3>
+                                <h3 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     914449949
-                                </h6>
+                                </h3>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-7 col-12 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/wizink.jpg" alt="Title" title="Foto al mapa">
+                            <img class="shadow-lg card-img " src="./assets/img/wizink.jpg" alt="Wizink Center" title="Localización de la Sala">
                         </div>
                     </div>
                 </div>
@@ -91,28 +90,28 @@ include("includes/googleconnect.php");
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-5 bg-white shadow">
                         <div class="row">
-                            <a href="https://www.sala-apolo.com/es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala Apolo</a>
+                           <h1> <a href="https://www.sala-apolo.com/es/" class="fs-2 text fw-bold text-decoration-none text-primary">Sala Apolo</a></h1>
                             <div class="col">
-                                <p class="h5 tituloSala">Información: </p>
-                                <h6 class="text-primary">
+                                <h2 class="h3 tituloSala">Información: </h2>
+                                <h3 class="h4 text-primary">
                                     <i class="fa-solid fa-location-dot"></i>
                                     Calle Nou de la Rambla, 107
-                                </h6>
-                                <h6 class="text-primary">
+                                </h3>
+                                <h3 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     info@sala-apolo.com
-                                </h6>
-                                <h6 class="text-primary">
+                                </h3>
+                                <h3 class="text-primary">
                                     <i class="fa-solid fa-inbox "></i>
                                     934414001
-                                </h6>
+                                </h3>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-7 d-flex flex-column px-0">
                         <div class="shadow">
-                            <img class="shadow-lg card-img " src="./assets/img/apolo.jpg" alt="Title" title="Foto al mapa">
+                            <img class="shadow-lg card-img " src="./assets/img/apolo.jpg" alt="Sala Apolo" title="Aproximacion a la sala">
                         </div>
                     </div>
                 </div>
